@@ -78,6 +78,8 @@
   display: block;
   position: relative;
   background-color: rgb(25,25,25);
+  top: 0px;
+  left: 0px;
   height: 50px;
   width: 50px;
   border: none;
