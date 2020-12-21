@@ -87,16 +87,10 @@
   z-index: 5;
   transform: rotate(0deg);
   transition: background-color 0.2s linear;
-}
-
-.Slide_Menu_Label{
-  position: relative;
-  top: 22%;
   font-size: 50px;
   color: rgb(170,170,170);
-  line-height: 1px;
-
 }
+
 
 .Slide_Menu_Button:hover{
     transition: background-color;

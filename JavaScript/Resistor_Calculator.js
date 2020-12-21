@@ -354,10 +354,6 @@ function Navigation_Button_Pressed(){
   console.log(Button_Index);
   var Pages = ["./index.html","","","",""];
   window.location.href = Pages[Button_Index];
-
-  
-  
-  
 }
 
 function Add_To_Recents(){
