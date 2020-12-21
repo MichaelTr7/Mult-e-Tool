@@ -1,0 +1,237 @@
+
+.Top_Bar{
+  position: fixed;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-gap: 1%;
+  background-color: rgb(20,20,20);
+  padding: 6px 0px 6px 0px;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
+  padding-bottom: 10px;
+  z-index: 5;
+  width: 100%;
+  top: 0px;
+  margin-left: -20px;
+}
+
+.Top_Bar > button{
+  border-radius: 3em; 
+  border: none;
+  height: 50px;
+  background-color: rgba(0,0,0,0);
+  color: rgb(170,170,170);
+  margin: 4px;
+  font-size: 0.7em;
+  /* font-size: 10.5px; */
+  /* box-shadow: inset 0px 5px 10px 2px rgba(0, 0, 0, 0.25), inset 0px -1px 1px 1px rgba(255, 255, 255, 0.1); */
+  box-shadow: inset 2px 2px 3px 1px rgba(0,0,0,0.5), inset -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
+  text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+  font-weight: bold;
+  transition: background-color 0.2s linear, transform 0.7s ease-out, color 0.2s;
+  font-family: sans-serif;
+}
+
+.Top_Bar > button:nth-child(1){
+  margin-left: 20px;
+}
+
+.Top_Bar > button:nth-last-of-type(1){
+  margin-right: 20px;
+}
+
+.Top_Bar > button:hover {
+  transition: background-color;
+  background-color: rgb(55,55,55);
+  color: rgb(255,255,255);
+  /* transform: scale(1.05); */
+}
+
+.Bottom_Bar{
+  position: relative;
+  height: 5px;
+  width: 100%;
+  grid-column: 1 / span 6;
+  background-color: rgb(20,20,20);
+  top: 200%;
+  transition-duration: 0.4s;
+
+}
+
+.Arrow{ 
+  position: relative;
+  grid-column: 1 / span 6;
+  height: 0px;
+  width: 0px;
+  left: 9.2%; 
+  margin-bottom: -20px;
+  padding-bottom: 2px;
+  background-color: rgb(20,20,20);
+  border-left: 9px solid rgb(20,20,20);
+  border-right: 9px solid rgb(20,20,20);
+  border-bottom: 9px solid rgb(20,20,20);
+  transition: border-bottom 0.4s, left 0.5s ease-out;
+
+}
+
+
+.Slide_Menu_Button{
+  display: block;
+  position: relative;
+  background-color: rgb(25,25,25);
+  height: 50px;
+  width: 50px;
+  font-size: 50px;
+  color: rgb(170,170,170);
+  line-height: 1px;
+  padding-bottom: 10px;
+  border: none;
+  font-weight: normal;
+  box-shadow: inset -1px 0px 2px rgba(0,0,0,0.5);
+  transition-duration: 0.2s;
+  z-index: 5;
+  transform: rotate(0deg);
+  transition: background-color 0.2s linear;
+}
+
+.Slide_Menu_Button:hover{
+    transition: background-color;
+    background-color: rgb(55,55,55);
+}
+
+.Slide_Menu_Button_Rotate{
+  color: rgb(245,245,245);
+  animation: Rotate_Keyframes 0.1s linear forwards;
+}
+
+@keyframes Rotate_Keyframes{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(90deg);
+  }
+}
+
+.Slide_Menu_Button_Revert_Rotate{
+  transform: rotate(0deg);
+  background-color: rgb(26,26,26);
+  color: rgb(170,170,170);
+  animation: Rotate_Keyframes 0.1s linear reverse forwards;
+}
+
+.Scale_Up_Animation{
+  animation: Scale_Up_Keyframes 0.2s linear forwards;
+}
+
+@keyframes Scale_Up_Keyframes{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+
+.Jump_Animation_2{
+  animation: Jump_Keyframes_2 0.3s ease-out forwards;
+}
+
+@keyframes Jump_Keyframes_2{
+  0%{
+    transform: translateY(0px) scaleX(1);
+  }
+  10%{
+    transform: translateY(2px) scaleX(1.05);
+  }
+  40%{
+    transform: translateY(-4px) scaleX(0.9);    
+  }  
+  75%{
+    transform: translateY(2px) scaleX(1.05);    
+  } 
+  100%{
+    transform: translateY(0px) scaleX(1);;        
+  }
+}
+
+.Drop_Down_Content_Wrapper{
+  position: absolute;
+  top: -100vh;
+  background: linear-gradient(180deg, rgba(20,20,20,1) 0%, rgba(20,20,20,0.95) 100%);
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  z-index: 5;
+}
+
+.Drop_Down_Content_Wrapper > a{
+  position: relative;
+  display: block;
+  color: black;
+  left: 10%;
+  width: 74%;
+  padding: 10px;
+  text-align: left;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 0.7em;
+  font-weight: bold;
+  color: rgb(200,200,200);
+  border-bottom: 1px solid rgb(200,200,200);
+  transition: 0.5s ease-out;
+}
+
+.Drop_Down_Content_Wrapper > a:hover{
+  transform: scale(1.1) translateX(20px);
+  color: white;
+}
+
+
+.Slide_Up_Animation{
+  animation: Slide_Up_Keyframes 0.3s ease-out forwards;
+}
+
+.Slide_Down_Animation{
+  animation: Slide_Down_Keyframes 0.3s ease-out forwards;
+}
+
+@keyframes Slide_Down_Keyframes{
+  from{
+    top: -100vh;
+  }
+  50%{
+    top: 70px;
+  }  
+  to{
+    top: 50px;
+  }
+
+}
+
+@keyframes Slide_Up_Keyframes{
+  0%{
+    top: 50px;
+  }
+  100%{
+    top: -100vh;
+  }
+}
+
+@keyframes Appear_Keyframes{
+  0%{
+    opacity: 0;
+  }
+  60%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+
+

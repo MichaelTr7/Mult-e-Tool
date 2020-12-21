@@ -1,0 +1,106 @@
+
+.Top > button{
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  background-color: rgb(35,35,35);
+  border: none;
+  box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
+  transition: background-color 0.2s linear;
+}
+
+.Top > button:hover{
+  transition: background-color;
+  background-color: rgb(55,55,55);
+}
+
+.Select_5{
+  grid-row: 2 / span 1;   
+}
+
+.Add_To_Recents_Button{
+  grid-row: 3 / span 1;
+  color: rgba(255,255,255,0.2);
+  color: rgb(170,170,170);
+  font-family: sans-serif;
+  font-weight: bold;     
+}
+
+#Plus_Symbol{
+  font-size: 30px;
+}
+
+.Band_Select_Button{
+  color: rgba(255,255,255,0.2);
+  color: rgb(170,170,170);
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.Select_4{
+  position: relative;
+  display: grid;
+  grid-template-rows: 48% repeat(5,10px);
+  color: rgb(225,225,225);
+}
+
+#Four_Band_Label{
+  position: relative;
+  top: 14px;
+}
+
+.Select_5{
+  display: grid;
+  grid-template-rows: 48% repeat(6,10px);
+}
+
+#Five_Band_Label{
+  position: relative;
+  top: 14px;
+}
+
+.LED_Light_Bar_1,.LED_Light_Bar_2{
+  display: block;
+  position: relative;
+  background: rgba(35,35,35,1);
+  -webkit-box-shadow: 0px 0.5px 0.2px 0.5px rgb(0,0,0) inset, inset 0px -0.1px 0.1px 0.5px rgba(255,255,255,0.2);
+  box-shadow: inset 0px 0.5px 0.2px 0.5px rgb(0,0,0), inset 0px -0.1px 0.1px 0.5px rgba(255,255,255,0.2);
+  height: 5px;
+  width: 30px;
+  left: 50%;
+  margin-left: -15px;
+  border-radius: 3px;   
+  z-index: 4;
+  box-shadow: inset 0px 0.5px 0.5px 1px rgb(0,0,0,0.3), inset 0px -0.4px 0.4px 0.5px rgba(255,255,255,0.2);                 
+  transition: background-color 0.2s linear;
+  filter: brightness(0.85);
+}
+
+.LED_Light_Bar_Active{
+  background-color: rgba(255,255,255,0.95);
+  transition: background-color;
+}
+
+.Squeeze_Animation{
+  animation: Squeeze_Keyframes 0.3s ease-out forwards;
+}
+
+.LED_Light_Bar_2{
+  margin-top: -5px;
+}
+
+@keyframes Squeeze_Keyframes{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(0.95);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+
+
+

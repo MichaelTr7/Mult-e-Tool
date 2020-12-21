@@ -1,0 +1,499 @@
+
+body {
+  margin: 0px 20px 0px 20px;
+  background-color: rgb(20,20,20);
+  font-size: 100%;
+}
+
+.Panel_Wrapper {
+  margin-top: 165px;
+  display: grid;
+  background: red;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 20px;
+  background-color: rgba(25,25,25,0);
+  animation: Translate_Up 1s forwards;
+}
+
+.Panel_Wrapper > div:not(:nth-last-child(1)){
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgb(35,35,35);
+  box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
+}
+
+.Top{
+  display: grid;
+  grid-template-columns: 3fr 6fr;
+  grid-auto-rows: 32% 32%;
+  grid-gap: 10px;
+}
+
+.Resistor_Preview{
+  align-self: center;
+  background: white;
+  height: 100%;
+  width: 100%;
+  grid-row: 1 / span 3;  
+  grid-column: 2 /span 4;
+  border-radius: 8px;
+  background-color: rgb(35,35,35);
+  box-shadow: inset 4px 4px 7px 1px rgba(0,0,0,0.5), inset -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
+  margin-left: 5px;
+  background-image: url("./Assets/Labels.png");
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-position: 49% 41%;
+}
+
+.Bottom{
+  display: grid;
+  grid-template-columns: 3fr 6fr 3f;
+  grid-auto-rows: 40px;
+}
+
+.Bottom > div {
+  height: 35px;
+  align-self: center;
+  border: none;
+  margin-top: 20px;
+}
+
+
+.Title{
+  grid-column: 1 / span 2;   
+  grid-row: 1;   
+  margin-bottom: 20px;
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: rgba(255,255,255,0.1);
+  text-shadow: 0px -1px 0.5px black;
+}
+
+#Resistor{
+  position: relative;
+  width: 80px;
+  left: 50%;
+  margin-left: -40px;
+  top: -25px;
+}
+
+.Resistor_Bands{
+  position: relative;
+  background-color: rgb(20,20,20);
+  top: -280px; 
+  left: 50%; 
+  margin-left: -25px;
+  height: 14px;
+  width: 50px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 8px;
+  line-height: 15px;
+  border-radius: 2px;
+  color: rgba(255,255,255,0.8);
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
+  filter: brightness(1);
+  box-shadow: 0px 2px 1px rgba(0,0,0,0.5), inset 0px 0.5px 0.2px rgba(255,255,255,0.2);
+  transition-duration: 0.5s;
+  filter: brightness(0.85);
+}
+
+.Band_Strip_3{
+  box-shadow: none;
+}
+
+.Band_Strip_5{
+    margin-top: 20px;
+    margin-bottom: -150px;
+    background-color: rgb(103, 49, 0);
+}
+
+.Resistor_Bands_Vertical{
+  position: relative;
+  background-color: rgba(20,20,20,1);
+  top: -254px; 
+  left: 50%; 
+  height: 14px;
+  width: 50px;
+  margin-left: -25px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 8px;
+  line-height: 15px;
+  color: rgba(255,255,255,0.5);
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  border-radius: 2px;
+  filter: brightness(1);
+  box-shadow: 0px 2px 1px rgba(0,0,0,0.5), inset 0px 0.5px 0.2px rgba(255,255,255,0.2);
+  transition-duration: 0.5s;
+  filter: brightness(0.85);
+}
+
+.Band_Strip_Vertical_3{
+  box-shadow: none;
+}
+
+.Band_Strip_Vertical_5{
+  margin-top: 20px;
+  margin-bottom: -150px;
+  background-color: rgb(103, 49, 0);
+}
+
+.Band_3{
+  opacity: 0;
+}
+.Band_3_Holder{
+  opacity: 0;    
+}
+
+/*Five band formatting*/
+.Band_3_Active{
+  grid-row: 4;  
+  grid-column: 1 / span 1;   
+  opacity: 1;   
+}
+.Band_3_Holder_Active{
+  grid-row: 4;  
+  grid-column: 2 / span 1;      
+  opacity: 1;
+}
+
+.Band_Strip_3{
+  background-color: rgba(0,0,0,0);
+  color: rgba(0,0,0,0);
+  text-shadow: none;
+}
+
+.Band_Strip_Vertical_3{
+  background-color: rgba(0,0,0,0);
+  color: rgba(0,0,0,0);
+  text-shadow: none;
+}
+
+.Band_Strip_3_Active{
+  background-color: rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.8);
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.Band_Strip_Vertical_3_Active{
+  background-color: rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.8);
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+#Mobile_Menu{
+  position: fixed;
+  display: none;
+  background-color: rgb(25,25,25);
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 50px;
+  z-index: 7;
+  animation: Appear_Keyframes 1s ease-out forwards;
+}
+
+#Result_Label{
+  font-size: 25px;
+  width: 100%;
+  font-family: sans-serif;
+  color: rgb(170,170,170);
+  font-weight: bold;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 10px;
+  background-color: rgb(35,35,35,0);
+  text-shadow: 0px -1px 0.5px black;
+}
+
+.Recents{
+  margin-top: -5px;
+  height: 21vw;
+  grid-column: 1 / span 2;
+  border-radius: 0px;
+  background-color: rgb(20,20,20);
+}
+
+.Recent_Resistors_Wrapper{
+  display: grid;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: 1fr 20fr;
+  grid-gap: 2%;
+}
+
+.Recent_Resistors_Wrapper > li{
+  grid-row: 2;
+  height: 100%;
+  width: 100%;
+  background-color: grey;
+  list-style-type: none;  
+  border-radius: 5%;
+  background-color: rgb(35,35,35);
+  box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
+}
+
+.Recents_Label{
+  grid-column: 1 / span 5;
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: rgba(255,255,255,0.6);
+  font-family: sans-serif;
+  margin-bottom: 5px;
+}
+
+
+.Horizontal_Squeeze_Animation{
+  animation: Horizontal_Squeeze_Keyframes 0.4s ease-out forwards;
+}
+
+#Page_Footer{
+  position: relative;
+  grid-column: 1 / span 2;
+  background-color: white;
+  margin-top: -50px;
+  width: 100%;
+  left: 0px;
+  height: 20px;
+  padding-bottom: 0px;
+  background-color: rgb(20,20,20);
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgb(50,50,50);
+  text-align: right;
+}
+
+@keyframes Horizontal_Squeeze_Keyframes{
+  0%{
+    transform: scale(1);
+  }
+  10%{
+    transform: scale(0.95);
+  }
+  50%{
+    transform: scale(1.1);
+  }
+  80%{
+    transform: scale(0.95);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+@keyframes Translate_Up{
+  0%{
+    transform: translateY(0px); 
+    filter: opacity(0);
+  }
+  100%{
+    transform: translateY(-70px);   
+    filter: opacity(1);  
+  }
+}
+
+
+/************************************************************************/
+/*RESPONSIVE ADJUSTMENTS WHEN MODERATELY SHRUNK WINDOW [850px,1024px]*/
+/************************************************************************/
+@media only screen and (min-width: 840px) and (max-width: 1024px){
+.Resistor_Preview{
+    background-image: url("");
+}
+
+#Result_Label{
+  font-size: 20px;
+  width: 50%;
+  margin-left: 25%;
+}
+}
+
+/************************************************************************/
+/*RESPONSIVE ADJUSTMENTS WHEN NARROWLY SHRUNK WINDOW [~,850px]*/
+/************************************************************************/
+@media only screen and (max-width: 840px) {
+  .Top{
+    grid-column: 1 / span 2;    
+  }
+  .Bottom{
+    grid-column: 1 / span 2; 
+    max-width: 850px; 
+    margin-top: -24px;
+    height: 285px;
+  }  
+  .Palette_Holders{
+    position: relative;
+    left: 5%;
+  }
+  .Labels{
+    position: relative;
+    left: 30%;
+  }
+  #Resistor{
+    position: relative;
+    width: 80px;
+    top: -28px; 
+    left: 50%;
+    margin-left: -40px;
+  }
+  .Resistor_Bands{
+    opacity: 0;
+  }
+  .Resistor_Bands_Vertical{
+    opacity: 1;
+  }
+  .Resistor_Preview{
+    background-position: 50% 38%;
+    background-image: url("./Assets/Labels.png");
+  }
+  .Panel_Wrapper > div:nth-child(1){
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: inset 0.5px 0.5px 1px 0.5px rgba(255,255,255,0.1);
+  }
+  .Panel_Wrapper > div:nth-child(2){
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: inset 0.5px -1px 1px 0.5px rgba(255,255,255,0.1);
+    box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
+  }
+  .Recents{
+    margin-top: 0px;
+  }
+
+}
+
+@media only screen and (max-width: 647px) {
+  .Palette_Holders{
+    position: relative;
+    left: 0%;
+  }
+  .Labels{
+    position: relative;
+    left: 0%;
+  }
+
+}
+
+@media only screen and (max-width: 470px) {
+
+.Resistor_Preview{
+    background-image: url("");
+}
+
+
+}
+/************************************************************************/
+/*RESPONSIVE ADJUSTMENTS WHEN NARROWLY SHRUNK WINDOW [~,560px] (MOBILE)*/
+/***********************************************************************/
+@media only screen and (max-width: 570px) {
+  .Title{
+    display: none;
+  }
+
+  .Bottom > .Labels{
+    display: none;
+  }
+  
+  .Bottom{
+    grid-template-rows: repeat(12,1fr);  
+    margin-bottom: -500px;  
+    padding-bottom: 500px;
+    height: 430px;
+  }
+
+.Band_1_Holder{
+  grid-row: 1;
+  grid-column: 1 / span 1;
+}
+
+.Band_2_Holder{
+  grid-row: 1;
+  grid-column: 2 / span 1;
+}
+  
+.Band_3_Holder{
+  grid-row: 1;
+  grid-column: 3 / span 1;
+}
+  
+.Band_Multiplier_Holder{
+  grid-row: 1;
+  grid-column: 4 / span 1;
+}  
+
+.Band_Tolerance_Holder{
+  grid-row: 1;
+  grid-column: 5 / span 1;
+}  
+
+.Palette_Holders{
+  grid-template-columns: ;
+  grid-template-rows: repeat(12,1fr);
+  grid-gap: 0px;
+}
+
+.Palette_Holders > button{
+  position: relative;
+  grid-column: 1 / span 1;
+  left: -12px;
+}
+  
+  .Bottom > .Palette_Holders{
+    left: 25%;
+    position: relative;
+    width: 10px;
+    border-radius: 50px;
+    height: 430px;
+    box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.5), -1px 2px 1px 0px rgba(255,255,255,0.2);
+    /* border: 1px solid white; */
+    margin-top: -10px;
+  }
+  .Recents{
+    display: none;
+  }  
+  .Top_Bar{
+    opacity: 0;
+  }
+  #Mobile_Menu{
+    display: block;
+  }
+  .Panel_Wrapper{
+    margin-top: 65px;
+  }
+  #Page_Footer{
+    margin-top: 450px;
+    text-align: center;
+    background-color: rgb(20,20,20);
+  }  
+}
+
+
+@media only screen and (max-width: 264px) {
+  .Bottom > .Palette_Holders{
+    margin-left: -10px;
+    width: 5px;
+  }
+  .Palette_Holders > button{
+    position: relative;
+    left: -14px;
+  }
+}
+
+
+

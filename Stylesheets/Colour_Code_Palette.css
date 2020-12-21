@@ -1,0 +1,118 @@
+.Labels{
+  background-color: rgb(35,35,35);
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 11px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 25px 0px 0px 25px;
+  color: rgb(170,170,170);
+  box-shadow: inset 4px 3px 5px 1px rgba(0, 0, 0, 0.45), inset 4px -1px 1px 1px rgba(255, 255, 255, 0.1);
+  min-width: 80px;
+  margin-left: 5%;
+}
+
+.Palette_Holders{
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-gap: 4px;
+  max-width: 399px;
+  border-radius: 0px 25px 25px 0px;
+  background-color: rgb(35,35,35);
+  padding-left: 15px;
+  padding-right: 11px;
+  box-shadow: inset -4px 3px 5px 1px rgba(0, 0, 0, 0.45), inset -4px -1px 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+.Palette_Holders > button{
+  margin-top: 1.5px;
+  border-radius: 20px;
+  height: 30px;
+  width: 30px;
+  border: none;
+  min-width: 20px;
+  box-shadow: inset 0px 2px 2px 0.8px rgba(0,0,0,0.32), 0px 2px 5px 1px rgba(0,0,0,0.5), inset 0px -0.5px 0.1px 0.8px rgba(255,255,255,0.25);
+  /* border: 1.5px solid rgba(220, 220, 220, 1); */
+  border: 1.5px solid rgba(0, 0, 0, 0.3);
+  color: rgba(255,255,255,1);
+  font-size: 8px;
+  filter: brightness(0.85);
+  text-align: center; 
+  transition: filter 0.2s linear, brightness 0.05s linear;
+}
+
+.Palette_Holders > button > label{
+  top: 0.4px;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
+  font-family: sans-serif;
+}
+
+.Band_1_Buttons:nth-child(1){
+  border: 1.5px solid white;
+}
+
+.Band_2_Buttons:nth-child(1){
+  border: 1.5px solid white;
+}
+
+.Band_3_Buttons:nth-child(1){
+  border: 1.5px solid white;
+}
+
+.Multiplier_Band_Buttons:nth-child(1){
+  border: 1.5px solid white;
+}
+
+.Tolerance_Band_Buttons:nth-child(2){
+  border: 1.5px solid white;
+}
+
+
+.Band_1_Holder > button:not(:nth-last-of-type(-n+2)):hover{
+  /* transform: scale(1.15); */
+  filter: brightness(1.1);
+}
+
+.Band_2_Holder > button:not(:nth-last-of-type(-n+2)):hover{
+  /* transform: scale(1.15); */
+  filter: brightness(1.1);
+}
+
+.Band_3_Holder > button:not(:nth-last-of-type(-n+2)):hover{
+  /* transform: scale(1.15); */
+  filter: brightness(1.1);
+}
+
+.Band_Multiplier_Holder > button:not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):hover{
+  /* transform: scale(1.15); */
+  filter: brightness(1.1);
+}
+
+.Band_Tolerance_Holder > button:not(:nth-child(1)):not(:nth-child(4)):not(:nth-child(5)):not(:nth-last-of-type(3)):hover{
+  /* transform: scale(1.15); */
+  filter: brightness(1.1);
+}
+
+.Jump_Animation{
+  animation: Jump_Keyframes 0.3s ease-out forwards;
+}
+
+@keyframes Jump_Keyframes{
+  0%{
+    transform: translateY(0px) scaleX(1);
+  }
+  10%{
+    transform: translateY(5px) scaleX(1.2);
+  }
+  40%{
+    transform: translateY(-7px) scaleX(0.8);    
+  }  
+  75%{
+    transform: translateY(2px) scaleX(1);    
+  } 
+  100%{
+    transform: translateY(0px) scaleX(1);;        
+  }
+}
+
+
