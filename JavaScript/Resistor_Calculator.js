@@ -208,12 +208,9 @@ function Slide_Menu_Button_Update(){
   var Slide_Menu_Button = document.getElementsByClassName('Slide_Menu_Button')[0];
   style = window.getComputedStyle(Slide_Menu_Button),
   Menu_Symbol_Text_Colour = String(style.getPropertyValue('color'));
-  Slide_Menu_Button.classList.remove('Slide_Menu_Button_Rotate');
-  Slide_Menu_Button.classList.remove('Slide_Menu_Button_Revert_Rotate');
-  void Slide_Menu_Button.offsetWidth;
+
 
   if(Menu_Symbol_Text_Colour == "rgb(170, 170, 170)"){
-    Slide_Menu_Button.classList.add('Slide_Menu_Button_Rotate');
     var Slide_Down_Menu = document.getElementsByClassName('Drop_Down_Content_Wrapper')[0];
     Slide_Down_Menu.classList.remove('Slide_Down_Animation');
     Slide_Down_Menu.classList.remove('Slide_Up_Animation');
@@ -222,7 +219,6 @@ function Slide_Menu_Button_Update(){
   }
   
   if(Menu_Symbol_Text_Colour != "rgb(170, 170, 170)"){
-    Slide_Menu_Button.classList.add('Slide_Menu_Button_Revert_Rotate');
     var Slide_Down_Menu = document.getElementsByClassName('Drop_Down_Content_Wrapper')[0];
     Slide_Down_Menu.classList.remove('Slide_Up_Animation');
     Slide_Down_Menu.classList.remove('Slide_Down_Animation');
