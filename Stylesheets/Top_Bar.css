@@ -92,10 +92,10 @@
 }
 
 
-.Slide_Menu_Button:hover{
+/* .Slide_Menu_Button:hover{
     transition: background-color;
     background-color: rgb(55,55,55);
-}
+} */
 
 .Slide_Menu_Button_Rotate{
   color: rgb(245,245,245);
