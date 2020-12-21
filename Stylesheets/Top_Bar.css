@@ -80,10 +80,6 @@
   background-color: rgb(25,25,25);
   height: 50px;
   width: 50px;
-  font-size: 50px;
-  color: rgb(170,170,170);
-  line-height: 1px;
-  padding-bottom: 10px;
   border: none;
   font-weight: normal;
   box-shadow: inset -1px 0px 2px rgba(0,0,0,0.5);
@@ -93,6 +89,15 @@
   transition: background-color 0.2s linear;
 }
 
+.Slide_Menu_Label{
+  position: relative;
+  top: 22%;
+  font-size: 50px;
+  color: rgb(170,170,170);
+  line-height: 1px;
+
+}
+
 .Slide_Menu_Button:hover{
     transition: background-color;
     background-color: rgb(55,55,55);
@@ -100,7 +105,7 @@
 
 .Slide_Menu_Button_Rotate{
   color: rgb(245,245,245);
-  animation: Rotate_Keyframes 0.1s linear forwards;
+  /* animation: Rotate_Keyframes 0.1s linear forwards; */
 }
 
 @keyframes Rotate_Keyframes{
@@ -116,7 +121,7 @@
   transform: rotate(0deg);
   background-color: rgb(26,26,26);
   color: rgb(170,170,170);
-  animation: Rotate_Keyframes 0.1s linear reverse forwards;
+  /* animation: Rotate_Keyframes 0.1s linear reverse forwards; */
 }
 
 .Scale_Up_Animation{
@@ -203,9 +208,6 @@
   from{
     top: -100vh;
   }
-  50%{
-    top: 70px;
-  }  
   to{
     top: 50px;
   }
