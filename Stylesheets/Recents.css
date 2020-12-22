@@ -28,6 +28,8 @@
   background-image: url('./Assets/Resistor_Backing.png');
   background-size: 100%;
   background-position: 50% 50%;
+  border-radius: 0px 25px 0px 25px;
+  border-radius: 10px;
 }
 
 .Recents_Label{
@@ -40,6 +42,32 @@
   margin-bottom: 5px;
 }
 
+.Resistor_Type_Label{
+  position: relative; 
+  top: 72%;
+  left: 25%;
+  height: 20%;
+  margin-left: -25%;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(25,25,25);
+  /* box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15); */
+  border-radius: 0px 0px 10px 10px;
+}
+
+.Resistor_Label{
+  position: absolute;
+  font-family: sans-serif;
+  font-weight: bold;
+  height: 100%;
+  width: 100%;
+  padding-top: 5%;
+  margin-left: -50%;
+  color: rgb(170,170,170);
+  font-size: 1vw;
+  background-color: none;
+}
+
 .Saved_Colour_Bands{
   position: relative;
   background-color: white;
@@ -49,7 +77,6 @@
   width: 38%;
   margin-left: -19%;
   margin-top: -7.5%;
-
 }
 
 
