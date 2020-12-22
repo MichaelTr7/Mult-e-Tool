@@ -1,0 +1,57 @@
+.Recents{
+  margin-top: -5px;
+  height: 21vw;
+  grid-column: 1 / span 2;
+  border-radius: 0px;
+  background-color: rgb(20,20,20);
+}
+
+.Recent_Resistors_Wrapper{
+  display: grid;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: 1fr 20fr;
+  grid-gap: 2%;
+}
+
+.Recent_Resistors_Wrapper > li{
+  grid-row: 2;
+  height: 100%;
+  width: 100%;
+  background-color: grey;
+  list-style-type: none;  
+  border-radius: 5%;
+  background-color: rgb(35,35,35);
+  box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
+  background-image: url('./Assets/Resistor_Backing.png');
+  background-size: 100%;
+  background-position: 50% 50%;
+}
+
+.Recents_Label{
+  grid-column: 1 / span 5;
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: rgba(255,255,255,0.6);
+  font-family: sans-serif;
+  margin-bottom: 5px;
+}
+
+.Saved_Colour_Bands{
+  position: relative;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  height: 15%;
+  width: 38%;
+  margin-left: -19%;
+  margin-top: -7.5%;
+
+}
+
+
+
+
