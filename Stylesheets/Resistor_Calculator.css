@@ -506,6 +506,11 @@ body {
   .Rotate_Notification{
     display: block;
   }  
+  .Multiplier_Band_Buttons > label{
+    position: relative;
+    margin-left: -1px;
+  }
+
 }
 
 
