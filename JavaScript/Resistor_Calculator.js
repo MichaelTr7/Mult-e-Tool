@@ -40,7 +40,9 @@ Top_Bar_Wrapper.addEventListener("mouseenter",Entered_Navigation_Bar);
 
 var Top_Bar_Wrapper = document.getElementsByClassName('Top_Bar')[0];
 Top_Bar_Wrapper.addEventListener("mouseleave",Left_Navigation_Bar);
-// Five_Band_Resistor_Configuration();
+
+var Add_To_Recents_Button = document.getElementsByClassName('Add_To_Recents_Button')[0];
+Add_To_Recents_Button.addEventListener("click",Save_To_Recents);
 
 }
 
@@ -386,6 +388,10 @@ function Left_Navigation_Bar(){
   Arrow_Indicator.style.borderBottom = "10px solid rgb(20,20,20)";
 }
 
+function Save_To_Recents(){
+  console.log("Saving to Recents");
+  
+}
 
 
 

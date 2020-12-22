@@ -94,6 +94,8 @@
 }
 
 
+
+
 /* .Slide_Menu_Button:hover{
     transition: background-color;
     background-color: rgb(55,55,55);
@@ -200,12 +202,15 @@
   animation: Slide_Down_Keyframes 0.3s ease-out forwards;
 }
 
+
 @keyframes Slide_Down_Keyframes{
   from{
     top: -100vh;
+    filter: opacity(0);
   }
   to{
     top: 50px;
+    filter: opacity(1);
   }
 
 }
@@ -213,9 +218,11 @@
 @keyframes Slide_Up_Keyframes{
   0%{
     top: 50px;
+    filter: opacity(1);
   }
   100%{
     top: -100vh;
+    filter: opacity(0);
   }
 }
 
