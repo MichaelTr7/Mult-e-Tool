@@ -43,6 +43,8 @@ Top_Bar_Wrapper.addEventListener("mouseleave",Left_Navigation_Bar);
 
 var Add_To_Recents_Button = document.getElementsByClassName('Add_To_Recents_Button')[0];
 Add_To_Recents_Button.addEventListener("click",Save_To_Recents);
+  
+  checkMobile();
 
 }
 
@@ -394,5 +396,16 @@ function Save_To_Recents(){
 }
 
 
+function checkMobile() {
+  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  if (isMobile) {
+    var Multiplier_Button_Labels = document.getElementsByClassName('Multiplier_Band_Buttons');
+    var Tolerance_Button_Labels = document.getElementsByClassName('Tolerance_Band_Buttons');
+    for(Button_Index = 1; Button_Index < Multiplier_Button_Labels.length; Button_Index++){
+    Multiplier_Button_Labels[Button_Index].classList.add('Multiplier_Band_Buttons_Active');
+    Tolerance_Button_Labels[Button_Index].classList.add('Tolerance_Band_Buttons_Active');
+    }
 
+  }
+}
 

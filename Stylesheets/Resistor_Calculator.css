@@ -333,6 +333,19 @@ body {
   top: 12px;
 }
 
+
+.Multiplier_Band_Buttons_Active > label{
+  position: relative;
+  margin-left: -1.5px;
+}
+
+.Tolerance_Band_Buttons_Active > label{
+  position: relative;
+  margin-left: -1.5px;
+}
+
+
+
 /************************************************************************/
 /*RESPONSIVE ADJUSTMENTS WHEN MODERATELY SHRUNK WINDOW [850px,1024px]*/
 /************************************************************************/
@@ -396,6 +409,14 @@ body {
   }
   .Recents{
     margin-top: 0px;
+  }
+  .Labels > label{
+    position: relative;
+    margin-left: -20px;
+    padding-left: 5px;
+  }
+  .Palette_Holders{
+    margin-left: -1px;
   }
 
 }
@@ -506,10 +527,7 @@ body {
   .Rotate_Notification{
     display: block;
   }  
-  .Multiplier_Band_Buttons > label{
-    position: relative;
-    margin-left: -1px;
-  }
+
 
 }
 
