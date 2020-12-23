@@ -30,6 +30,7 @@
   background-position: 50% 50%;
   border-radius: 0px 25px 0px 25px;
   border-radius: 10px;
+  opacity: 1;
 }
 
 .Recents_Label{
@@ -92,7 +93,7 @@
   left: 50%;
   margin-left: -50%;
   top: 30%;
-  font-size: 1.5vw;
+  font-size: 2vw;
 }
 
 .Resistance_Holder{
@@ -104,7 +105,7 @@
 }
 
 .Recent_Colour_Bands{
-  background-color: red;
+  background-color: rgba(0,0,0,0);
   border-radius: 1px;
 }
 
