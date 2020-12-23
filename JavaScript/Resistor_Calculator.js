@@ -391,8 +391,44 @@ function Left_Navigation_Bar(){
 }
 
 function Save_To_Recents(){
-  console.log("Saving to Recents");
+  var Number_Of_Bands = 5;
+  var Available_Bands = new Array(5);
+  var Tile_Positions = new Array(5);
+  for(Band_Index = 1; Band_Index <= Number_Of_Bands; Band_Index++){
+    var Band_Class_Name = 'Recents_' + String(Band_Index);
+    var Tile_Class_Name = 'Recents_Tiles_' + String(Band_Index);
+    Band_Style = window.getComputedStyle(document.getElementsByClassName(Band_Class_Name)[0]).getPropertyValue('background-color');
+    Tile_Style = window.getComputedStyle(document.getElementsByClassName(Tile_Class_Name)[0]).getPropertyValue('grid-column').split("/")[0];
+      if(Band_Style == "rgba(0, 0, 0, 0)"){
+        Available_Bands[Band_Index-1] = "Available_" + String(Band_Index);
+      }
+      if(Tile_Style == 5){
+          var Tile_To_Jump_Class_Name = Tile_Class_Name;
+      }
+      Tile_Positions[Band_Index-1] = Tile_Style;
+  }
   
+  /*Revolve Animation*/
+  // console.log(Tile_To_Jump_Class_Name);
+  // console.log(Tile_Positions);
+  // console.log(Available_Bands);
+  
+  Shift_Tiles(Tile_Positions);
+
+  
+}
+
+function Shift_Tiles(Tile_Positions){
+  var Number_Of_Tiles = 5;
+  var Tiles = document.getElementsByClassName('Tiles');
+  for(Tile_Index = 0; Tile_Index < Number_Of_Tiles; Tile_Index++){
+  var Position = parseInt(Tile_Positions[Tile_Index]) + 1;
+  Position = Position % 6;
+  if(Position == 0){
+    Position = 1;
+  }
+  Tiles[Tile_Index].style.gridColumn = Position;
+  }  
 }
 
 

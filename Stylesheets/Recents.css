@@ -81,6 +81,7 @@
   margin-top: -7.5%;
 }
 
+
 .Resistance_Values{
   position: absolute;
   font-family: sans-serif;
@@ -127,6 +128,45 @@
 
 .B5{
   grid-column: 10 / span 1;
+}
+
+.Recents_Tiles_1{
+  grid-column: 1;
+}
+
+.Recents_Tiles_2{
+  grid-column: 2;
+}
+
+.Recents_Tiles_3{
+  grid-column: 3;
+}
+
+.Recents_Tiles_4{
+  grid-column: 4;
+}
+
+.Recents_Tiles_5{
+  grid-column: 5;
+}
+
+.Recents_1{
+  background-color: red;
+}
+
+.Translate_Tiles_Animation{
+  
+  
+}
+
+
+@keyframes Translate_Tiles_Keyframes{
+  from{
+    transform: translateX(0fr);
+  }
+  to{
+    transform: translateX(1fr);
+  }
 }
 
 
