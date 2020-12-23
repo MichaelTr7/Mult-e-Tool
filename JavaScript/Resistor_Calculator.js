@@ -357,7 +357,9 @@ function Navigation_Button_Pressed(){
   var Button_Index = parseInt(this.id.split("_")[2]) - 1;
   console.log(Button_Index);
   var Pages = ["./index.html","","","",""];
-  window.location.href = Pages[Button_Index];
+  setTimeout(function () {
+    window.location.href = Pages[Button_Index];
+  }, 200);
 }
 
 function Add_To_Recents(){
