@@ -412,6 +412,9 @@ function Save_To_Recents(){
   // console.log(Tile_To_Jump_Class_Name);
   // console.log(Tile_Positions);
   // console.log(Available_Bands);
+
+
+
   
   Shift_Tiles(Tile_Positions);
 
@@ -421,13 +424,19 @@ function Save_To_Recents(){
 function Shift_Tiles(Tile_Positions){
   var Number_Of_Tiles = 5;
   var Tiles = document.getElementsByClassName('Tiles');
+  
+  
   for(Tile_Index = 0; Tile_Index < Number_Of_Tiles; Tile_Index++){
   var Position = parseInt(Tile_Positions[Tile_Index]) + 1;
   Position = Position % 6;
   if(Position == 0){
     Position = 1;
   }
-  Tiles[Tile_Index].style.gridColumn = Position;
+
+    Tiles[Tile_Index].classList.remove('Translate_Tiles_Animation');
+    void Tiles[Tile_Index].offsetWidth;
+    Tiles[Tile_Index].classList.add('Translate_Tiles_Animation');    
+    Tiles[Tile_Index].style.gridColumn = Position;
   }  
 }
 

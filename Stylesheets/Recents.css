@@ -155,17 +155,22 @@
 }
 
 .Translate_Tiles_Animation{
-  
-  
+  animation: Translate_Tiles_Keyframes 0.7s ease-out forwards;
 }
 
 
 @keyframes Translate_Tiles_Keyframes{
-  from{
-    transform: translateX(0fr);
+  0%{
+    transform: translateY(0vh);
   }
-  to{
-    transform: translateX(1fr);
+  20%{
+    transform: translateY(1vh) scaleX(1.05);
+  }
+  50%{
+    transform: translateY(-1vh);
+  }
+  100%{
+    transform: translateY(0vh);
   }
 }
 
