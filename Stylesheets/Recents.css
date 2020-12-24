@@ -150,10 +150,6 @@
   grid-column: 5;
 }
 
-.Recents_1{
-  background-color: red;
-}
-
 .Translate_Tiles_Animation{
   animation: Translate_Tiles_Keyframes 0.7s ease-out forwards;
 }

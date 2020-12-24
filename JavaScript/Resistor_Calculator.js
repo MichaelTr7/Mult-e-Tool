@@ -78,8 +78,6 @@ function Update_Resistor_Preview(){
   "rgb(150, 150, 150)": "Silver"
   };
 
-
-
   var Resistor_To_Change = Resistor_Bands_Preview[Band_Index];
   var Resistor_To_Change_2 = Resistor_Bands_Preview_2[Band_Index];
 
@@ -355,7 +353,7 @@ function Navigation_Button_Pressed(){
   void Menu_Button.offsetWidth;
   Menu_Button.classList.add("Jump_Animation_2");
   var Button_Index = parseInt(this.id.split("_")[2]) - 1;
-  console.log(Button_Index);
+  // console.log(Button_Index);
   var Pages = ["./index.html","","","",""];
   setTimeout(function () {
     window.location.href = Pages[Button_Index];
@@ -393,6 +391,37 @@ function Left_Navigation_Bar(){
 }
 
 function Save_To_Recents(){
+  var Resistor_Preview_Bands = document.getElementsByClassName('Resistor_Bands');
+  var Band_Colours = new Array(5);
+  for(Band_Index = 0; Band_Index < Resistor_Preview_Bands.length; Band_Index++){
+    Focus_Band_Style = window.getComputedStyle(Resistor_Preview_Bands[Band_Index]);
+    Band_Colours[Band_Index] = String(Focus_Band_Style.getPropertyValue('background-color'));  
+  }
+  
+  var Four_Band_LED_State = window.getComputedStyle(document.getElementsByClassName('LED_Light_Bar_1')[0]).getPropertyValue('background-color');
+  if(Four_Band_LED_State == "rgba(255, 255, 255, 0.95)"){  
+    var Container = Band_Colours[2];
+    Band_Colours[2] = Band_Colours[3];
+    Band_Colours[3] = Container;
+  }
+  
+  var Number_Of_Matching_Resistors = 0;
+  var Number_Of_Band_Groups = 5;
+  var Kernel_Of_Colour_Bands = new Array(5);
+  for(Band_Group_Index = 0; Band_Group_Index < Number_Of_Band_Groups; Band_Group_Index++){
+  var Band_Group = document.getElementsByClassName('Recents_' + String(Band_Group_Index+1));
+  for(Resistor_Band_Number = 0; Resistor_Band_Number < Band_Group.length; Resistor_Band_Number++){
+    Focus_Band_Style = window.getComputedStyle(Band_Group[Resistor_Band_Number]);
+    Kernel_Of_Colour_Bands[Resistor_Band_Number] = String(Focus_Band_Style.getPropertyValue('background-color'));  
+  }
+
+var Is_Matching = Do_Arrays_Match(Band_Colours,Kernel_Of_Colour_Bands);
+if(Is_Matching == true){
+  Number_Of_Matching_Resistors = Number_Of_Matching_Resistors + 1;
+}
+}
+
+if(Number_Of_Matching_Resistors == 0){
   var Number_Of_Bands = 5;
   var Available_Bands = new Array(5);
   var Tile_Positions = new Array(5);
@@ -409,19 +438,32 @@ function Save_To_Recents(){
       }
       Tile_Positions[Band_Index-1] = Tile_Style;
   }
-  
-  /*Revolve Animation*/
-  // console.log(Tile_To_Jump_Class_Name);
-  // console.log(Tile_Positions);
-  // console.log(Available_Bands);
-
-
-
-  
   Shift_Tiles(Tile_Positions);
 
-  
+  var Current_Arrays = document.getElementsByClassName('Tiles');
+  var Number_Of_Tiles = 5;
+  var Current_Tile_Positions = new Array(5);
+for(Tile_Index = 0; Tile_Index < Number_Of_Tiles; Tile_Index++){
+  Current_Tile_Positions[Tile_Index] = parseInt(window.getComputedStyle(Current_Arrays[Tile_Index]).getPropertyValue('grid-column').split("/")[0]);
 }
+
+var Tile_Index_To_Change = Current_Tile_Positions.indexOf(1) + 1;
+var Resistors_To_Change = document.getElementsByClassName('Recents_' + String(Tile_Index_To_Change));
+
+for(Change_Index = 0; Change_Index < Resistors_To_Change.length; Change_Index++){
+  Resistors_To_Change[Change_Index].style.backgroundColor = String(Band_Colours[Change_Index]);
+}
+
+}
+}
+
+function Do_Arrays_Match(Array_1,Array_2){
+  var Is_A_Match = Array_1.every(function(element, index) {
+      return element === Array_2[index]; 
+  });
+  return Is_A_Match;
+}
+
 
 function Shift_Tiles(Tile_Positions){
   var Number_Of_Tiles = 5;
