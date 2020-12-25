@@ -1,12 +1,12 @@
 # [E-Toolbox](https://michaeltr7.github.io/E-Toolbox/index.html)
 
-•  <br/>
-•  <br/>
-• 
-<br/>
+<h3>Functionalities/Capabilities</h3>
+• Resistor Colour Code Calculator <br>
+• Capacitor Code Calculator<br>
+• Resistor List Maker<br>
 
-<h3>Preview Image</h3>
+<h3>Preview Images</h3>
 
-[<img src="./Images/Preview Image.png" width = "1000">](https://michaeltr7.github.io/Simple-Connect4/)
+[<img src="./Preview Images/Resistor_Calculator_Preview_Page.png" width = "1000">](https://michaeltr7.github.io/E-Toolbox/index.html)
 
 
