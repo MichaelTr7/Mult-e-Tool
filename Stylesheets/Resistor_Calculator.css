@@ -519,10 +519,7 @@ body {
   .Expand_Button{
     display: none;
   }
-
-
 }
-
 
 @media only screen and (max-width: 264px) {
   .Bottom > .Palette_Holders{
