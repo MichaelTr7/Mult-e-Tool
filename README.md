@@ -1,10 +1,9 @@
 # [E-Toolbox](https://michaeltr7.github.io/E-Toolbox/index.html)
 
-<h3>Functionality</h3> <br>
-•  <br>
-•  <br>
-• 
-<br>
+<h3>Functionality</h3>
+• Resistor Colour Code Calculator <br>
+• Capacitor Code Calculator<br>
+• Resistor List Maker<br>
 
 <h3>Preview Images</h3>
 
