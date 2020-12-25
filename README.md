@@ -1,9 +1,10 @@
 # [E-Toolbox](https://michaeltr7.github.io/E-Toolbox/index.html)
 
-•  <br/>
-•  <br/>
+<h3>Functionality</h3> <br>
+•  <br>
+•  <br>
 • 
-<br/>
+<br>
 
 <h3>Preview Images</h3>
 
