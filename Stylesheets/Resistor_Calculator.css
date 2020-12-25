@@ -303,6 +303,36 @@ body {
   margin-left: -2px;
 }
 
+.Expand_Button{
+  position: relative;
+  grid-row: 6 / span 1;
+  grid-column: 1 / span 2;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(170,170,170);
+  transform: rotateZ(0deg) rotateX(180deg);
+  width: 35px;
+  height: 40px;
+  border-radius: 50px;
+  left: 50%;
+  margin-left: -17.5px;
+  transition: background-color 0.2s linear, transform 0.7s ease-out, color 0.2s;
+}
+
+.Expand_Button_5_Band_State{
+  grid-row: 7 / span 1;
+  transform: rotateZ(180deg) rotateX(180deg);  
+}
+
+.Expand_Button:hover{
+  background-color: rgb(55,55,55);
+}
+
+#Expand_Label{
+  position: relative;
+  top: -18%;
+}
 
 /************************************************************************/
 /*RESPONSIVE ADJUSTMENTS WHEN MODERATELY SHRUNK WINDOW [850px,1024px]*/

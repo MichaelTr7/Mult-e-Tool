@@ -43,7 +43,10 @@ Top_Bar_Wrapper.addEventListener("mouseleave",Left_Navigation_Bar);
 
 var Add_To_Recents_Button = document.getElementsByClassName('Add_To_Recents_Button')[0];
 Add_To_Recents_Button.addEventListener("click",Save_To_Recents);
-  
+
+var Expand_Button = document.getElementsByClassName('Expand_Button')[0];
+Expand_Button.addEventListener("click",Expand_Colour_Palette);  
+
   checkMobile();
 
 }
@@ -101,6 +104,10 @@ function Update_Resistor_Preview(){
 
 
 function Four_Band_Resistor_Configuration(){
+  var Expand_Button = document.getElementsByClassName('Expand_Button')[0];
+  void Expand_Button.offsetWidth;
+  Expand_Button.classList.remove('Expand_Button_5_Band_State');
+  
   var Status = document.getElementById('Four_Band_Label');
   Status_Style = window.getComputedStyle(Status);
   Status_Colour = String(Status_Style.getPropertyValue('color'));
@@ -154,6 +161,10 @@ function Four_Band_Resistor_Configuration(){
 }
 
 function Five_Band_Resistor_Configuration(){
+  var Expand_Button = document.getElementsByClassName('Expand_Button')[0];
+  void Expand_Button.offsetWidth;
+  Expand_Button.classList.add('Expand_Button_5_Band_State');
+
   var Status = document.getElementById('Five_Band_Label');
   Status_Style = window.getComputedStyle(Status);
   Status_Colour = String(Status_Style.getPropertyValue('color'));
@@ -323,6 +334,7 @@ function Calculate_Resistance(){
 
 
 function Is_Four_Band_On(){
+  
   var Four_Band_LED = document.getElementsByClassName('LED_Light_Bar_1')[0];
   style = window.getComputedStyle(Four_Band_LED),
   Four_Band_LED_Colour = String(style.getPropertyValue('color'));
@@ -398,11 +410,13 @@ function Save_To_Recents(){
     Band_Colours[Band_Index] = String(Focus_Band_Style.getPropertyValue('background-color'));  
   }
   
+  var Band_Type = "Five Band Resistor";
   var Four_Band_LED_State = window.getComputedStyle(document.getElementsByClassName('LED_Light_Bar_1')[0]).getPropertyValue('background-color');
   if(Four_Band_LED_State == "rgba(255, 255, 255, 0.95)"){  
     var Container = Band_Colours[2];
     Band_Colours[2] = Band_Colours[3];
     Band_Colours[3] = Container;
+    Band_Type = "Four Band Resistor";
   }
   
   var Number_Of_Matching_Resistors = 0;
@@ -452,7 +466,21 @@ var Resistors_To_Change = document.getElementsByClassName('Recents_' + String(Ti
 
 for(Change_Index = 0; Change_Index < Resistors_To_Change.length; Change_Index++){
   Resistors_To_Change[Change_Index].style.backgroundColor = String(Band_Colours[Change_Index]);
+  Resistors_To_Change[Change_Index].classList.remove('Colour_Band_Shadow_Active');
+  void Resistors_To_Change[Change_Index].offsetWidth;
+  if(String(Band_Colours[Change_Index]) != "rgba(0, 0, 0, 0)"){
+    Resistors_To_Change[Change_Index].classList.add('Colour_Band_Shadow_Active');
+  }
 }
+var Resistance_Value = document.getElementById('Result_Label').innerHTML;
+console.log(Resistance_Value);
+console.log(Band_Type);
+var Resistance_Label_To_Change = document.getElementsByClassName('Resistance_Values')[parseInt(Tile_Index_To_Change-1)];
+var Resistor_Type_Label_To_Change = document.getElementsByClassName('Resistor_Label')[parseInt(Tile_Index_To_Change-1)];
+Resistance_Label_To_Change.innerHTML = Resistance_Value;
+Resistor_Type_Label_To_Change.innerHTML = Band_Type;
+
+
 
 }
 }
@@ -469,7 +497,6 @@ function Shift_Tiles(Tile_Positions){
   var Number_Of_Tiles = 5;
   var Tiles = document.getElementsByClassName('Tiles');
   
-  
   for(Tile_Index = 0; Tile_Index < Number_Of_Tiles; Tile_Index++){
   var Position = parseInt(Tile_Positions[Tile_Index]) + 1;
   Position = Position % 6;
@@ -484,6 +511,16 @@ function Shift_Tiles(Tile_Positions){
   }  
 }
 
+function Expand_Colour_Palette(){
+  var Four_Band_LED_State = window.getComputedStyle(document.getElementsByClassName('LED_Light_Bar_1')[0]).getPropertyValue('background-color');
+  if(Four_Band_LED_State == "rgba(255, 255, 255, 0.95)"){ 
+    Five_Band_Resistor_Configuration();
+  }
+  else{
+    Four_Band_Resistor_Configuration();
+  }
+  
+}
 
 function checkMobile() {
   var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
