@@ -5,7 +5,7 @@
 • 
 <br/>
 
-<h3>Preview Image</h3>
+<h3>Preview Images</h3>
 
 [<img src="./Preview Images/Resistor_Calculator_Preview_Page.png" width = "1000">]()
 
