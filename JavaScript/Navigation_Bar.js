@@ -6,6 +6,12 @@ window.onload = function(){
       Top_Bar_Buttons[Navigation_Button_Index].addEventListener("click",Navigation_Button_Pressed);
       Top_Bar_Buttons[Navigation_Button_Index].addEventListener("mouseenter",Move_Pointer);
   }
+  
+  var Top_Bar_Wrapper = document.getElementsByClassName('Top_Bar')[0];
+  Top_Bar_Wrapper.addEventListener("mouseenter",Entered_Navigation_Bar);
+
+  var Top_Bar_Wrapper = document.getElementsByClassName('Top_Bar')[0];
+  Top_Bar_Wrapper.addEventListener("mouseleave",Left_Navigation_Bar);
 
 }
 
@@ -29,3 +35,20 @@ function Navigation_Button_Pressed(){
     window.location.href = Pages[Button_Index];
   }, 200);
 }
+
+function Entered_Navigation_Bar(){
+  var Slide_Bar = document.getElementsByClassName('Bottom_Bar')[0];
+  Slide_Bar.style.backgroundColor = "rgb(55,55,55)";
+  var Arrow_Indicator = document.getElementsByClassName('Arrow')[0];
+  Arrow_Indicator.style.backgroundColor = "rgb(55,55,55)";
+  Arrow_Indicator.style.borderBottom = "10px solid rgb(55,55,55)";
+}
+
+function Left_Navigation_Bar(){
+  var Slide_Bar = document.getElementsByClassName('Bottom_Bar')[0];
+  Slide_Bar.style.backgroundColor = "rgb(20,20,20)";
+  var Arrow_Indicator = document.getElementsByClassName('Arrow')[0];
+  Arrow_Indicator.style.borderBottom = "10px solid rgb(20,20,20)";
+}
+
+
