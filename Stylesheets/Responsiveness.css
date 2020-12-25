@@ -1,0 +1,208 @@
+
+body {
+  margin: 0px 20px 0px 20px;
+  background-color: rgb(20,20,20);
+  font-size: 100%;
+}
+
+
+/************************************************************************/
+/*RESPONSIVE ADJUSTMENTS WHEN MODERATELY SHRUNK WINDOW [850px,1024px]*/
+/************************************************************************/
+@media only screen and (min-width: 840px) and (max-width: 1024px){
+.Resistor_Preview{
+    background-image: url("");
+}
+
+#Result_Label{
+  font-size: 20px;
+  width: 50%;
+  margin-left: 25%;
+}
+
+}
+
+/************************************************************************/
+/*RESPONSIVE ADJUSTMENTS WHEN NARROWLY SHRUNK WINDOW [~,850px]*/
+/************************************************************************/
+@media only screen and (max-width: 840px) {
+  .Top{
+    grid-column: 1 / span 2;    
+  }
+  .Bottom{
+    grid-column: 1 / span 2; 
+    max-width: 850px; 
+    margin-top: -24px;
+    height: 285px;
+  }  
+  .Palette_Holders{
+    position: relative;
+    left: 5%;
+  }
+  .Labels{
+    position: relative;
+    left: 30%;
+  }
+  #Resistor{
+    position: relative;
+    width: 80px;
+    top: -28px; 
+    left: 50%;
+    margin-left: -40px;
+  }
+  .Resistor_Bands{
+    opacity: 0;
+  }
+  .Resistor_Bands_Vertical{
+    opacity: 1;
+  }
+  .Resistor_Preview{
+    background-position: 50% 38%;
+    background-image: url("./Assets/Labels.png");
+  }
+  .Panel_Wrapper > div:nth-child(1){
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: inset 0.5px 0.5px 1px 0.5px rgba(255,255,255,0.1);
+  }
+  .Panel_Wrapper > div:nth-child(2){
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: inset 0.5px -1px 1px 0.5px rgba(255,255,255,0.1);
+  }
+  .Recents{
+    margin-top: 0px;
+  }
+  .Labels > label{
+    position: relative;
+    margin-left: -20px;
+    padding-left: 5px;
+  }
+  .Palette_Holders{
+    margin-left: -1px;
+  }
+
+}
+
+@media only screen and (max-width: 647px) {
+  .Palette_Holders{
+    position: relative;
+    left: 0%;
+  }
+  .Labels{
+    position: relative;
+    left: 0%;
+  }
+
+}
+
+@media only screen and (max-width: 470px) {
+
+.Resistor_Preview{
+    background-image: url("");
+}
+
+
+}
+/************************************************************************/
+/*RESPONSIVE ADJUSTMENTS WHEN NARROWLY SHRUNK WINDOW [~,560px] (MOBILE)*/
+/***********************************************************************/
+@media only screen and (max-width: 570px) {
+  .Title{
+    display: none;
+  }
+
+  .Bottom > .Labels{
+    display: none;
+  }
+  
+  .Bottom{
+    grid-template-rows: repeat(12,1fr);  
+    margin-bottom: -500px;  
+    padding-bottom: 500px;
+    height: 430px;
+  }
+
+.Band_1_Holder{
+  grid-row: 1;
+  grid-column: 1 / span 1;
+}
+
+.Band_2_Holder{
+  grid-row: 1;
+  grid-column: 2 / span 1;
+}
+  
+.Band_3_Holder{
+  grid-row: 1;
+  grid-column: 3 / span 1;
+}
+  
+.Band_Multiplier_Holder{
+  grid-row: 1;
+  grid-column: 4 / span 1;
+}  
+
+.Band_Tolerance_Holder{
+  grid-row: 1;
+  grid-column: 5 / span 1;
+}  
+
+.Palette_Holders{
+  grid-template-columns: ;
+  grid-template-rows: repeat(12,1fr);
+  grid-gap: 0px;
+}
+
+.Palette_Holders > button{
+  position: relative;
+  grid-column: 1 / span 1;
+  left: -12px;
+}
+  
+  .Bottom > .Palette_Holders{
+    left: 25%;
+    position: relative;
+    width: 10px;
+    border-radius: 50px;
+    height: 430px;
+    box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.5), -1px 2px 1px 0px rgba(255,255,255,0.2);
+    /* border: 1px solid white; */
+    margin-top: -10px;
+  }
+  .Recents{
+    display: none;
+  }  
+  .Top_Bar{
+    opacity: 0;
+  }
+  #Mobile_Menu{
+    display: block;
+  }
+  .Panel_Wrapper{
+    margin-top: 130px;
+  }
+  #Page_Footer{
+    margin-top: 450px;
+    text-align: center;
+    background-color: rgb(20,20,20);
+  }  
+  .Rotate_Notification{
+    display: block;
+  }  
+  .Expand_Button{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 264px) {
+  .Bottom > .Palette_Holders{
+    margin-left: -10px;
+    width: 5px;
+  }
+  .Palette_Holders > button{
+    position: relative;
+    left: -14px;
+  }
+}
+
+
+
