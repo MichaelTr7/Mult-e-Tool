@@ -516,6 +516,9 @@ body {
   .Rotate_Notification{
     display: block;
   }  
+  .Expand_Button{
+    display: none;
+  }
 
 
 }

@@ -34,7 +34,7 @@
 }
 
 .Recents_Label{
-  grid-column: 1 / span 5;
+  grid-column: 1 / span 2;
   font-size: 20px;
   font-family: sans-serif;
   font-weight: bold;
