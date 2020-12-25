@@ -365,8 +365,8 @@ function Navigation_Button_Pressed(){
   void Menu_Button.offsetWidth;
   Menu_Button.classList.add("Jump_Animation_2");
   var Button_Index = parseInt(this.id.split("_")[2]) - 1;
-  // console.log(Button_Index);
-  var Pages = ["./index.html","","","",""];
+  console.log(Button_Index);
+  var Pages = ["./Resistor_Calculator.html","","./index.html","",""];
   setTimeout(function () {
     window.location.href = Pages[Button_Index];
   }, 200);
