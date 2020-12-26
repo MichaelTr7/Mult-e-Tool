@@ -317,7 +317,7 @@ body {
   border-radius: 50px;
   left: 50%;
   margin-left: -17.5px;
-  transition: background-color 0.2s linear, transform 0.7s ease-out, color 0.2s;
+  transition: background-color 0.2s linear, color 0.2s;
 }
 
 .Expand_Button_5_Band_State{
