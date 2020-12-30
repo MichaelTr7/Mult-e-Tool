@@ -171,16 +171,16 @@
   font-size: 2vw;
   font-family: sans-serif;
   font-weight: bold;
-  color: rgb(240,240,240);
+  color: rgb(0,0,0,0.5);
   height: 2vw;
   width: 2vw;
   top: 50%;
   left: 50%;
   text-align: center;
   margin-left: -1vw;
-  margin-top: -1.05vw;
+  margin-top: -1.1vw;
+  text-shadow: 2.5px 2.5px 0px rgba(0,0,0,0.1);
 }
-
 
 .Right_Panel{
   height: 100%;
