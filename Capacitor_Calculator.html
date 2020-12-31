@@ -46,9 +46,9 @@
       <div class="Preview_Capacitor">
       <div id="Capacitor_Value">104K</div>
       </div>
-      <div class="Digit_Buttons" contenteditable="true">1</div>
-      <div class="Digit_Buttons" contenteditable="true">0</div>
-      <div class="Digit_Buttons" contenteditable="true">4</div>
+      <input id="Digit_Button_1" class="Digit_Buttons" contenteditable="true" maxlength="1" value="1">
+      <input id="Digit_Button_2" class="Digit_Buttons" contenteditable="true" maxlength="1" value="0">
+      <input id="Digit_Button_3" class="Digit_Buttons" contenteditable="true" maxlength="1" value="4">
       
       
       <div class="Tolerance_Slider_Container">
@@ -63,17 +63,12 @@
   <div class="Swap_Button">
     <label class="Swap_Label">Swap</label>
   </div>
+  
   <div class="Right_Panel">
     <div class="Right_Panel_Inner_Wrapper">
-      <div class="Result_Inset">
-        
-      </div>
-      <div class="Unit_Square">
-      
-      </div>
-      <div class="Unit_Slider">
-      
-      </div>
+    <input class="Result_Inset">
+      <input class="Unit_Square">
+      <input class="Unit_Slider">
     </div>
   </div>  
 </div>
