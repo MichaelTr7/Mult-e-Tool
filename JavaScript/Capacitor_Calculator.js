@@ -14,11 +14,30 @@ window.onload = function(){
   var Slider = document.getElementById('Tolerance_Slider');
   Slider.addEventListener("input",Update_Tolerance); 
   
+  var Code_Buttons = document.getElementsByClassName('Digit_Buttons');
+  for(Button_Index = 0; Button_Index < Code_Buttons.length; Button_Index++){
+    Code_Buttons[Button_Index].addEventListener("input",Update_Capacitor_Preview)
+  }
 }
 
 function Update_Tolerance(){
   var Slider = document.getElementById('Tolerance_Slider');
+  var Capacitor_Value_Label = document.getElementById('Capacitor_Value');
+  var Current_Value = Capacitor_Value_Label.innerHTML;
+  Current_Value = Current_Value.substring(0,Current_Value.length - 1);
   var Tolerance_Code = ["B","C","D","F","G","J","K","M","Z"];
   document.getElementById('Selected_Label').innerHTML = String(Tolerance_Code[parseInt(Slider.value)]);
+  var Updated_Capacitor_Code = Current_Value + String(Tolerance_Code[parseInt(Slider.value)]);
+  Capacitor_Value_Label.innerHTML = Updated_Capacitor_Code;  
+}
+
+function Update_Capacitor_Preview(){
+  console.log("Update Capacitor Value");
+
+
+
+
+
   
 }
+

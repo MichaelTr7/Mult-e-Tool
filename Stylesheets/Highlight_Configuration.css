@@ -16,3 +16,7 @@ button{
   -webkit-user-drag: none;
   cursor: default;
 }
+
+.Digit_Buttons{
+  -webkit-user-select: text;
+}
