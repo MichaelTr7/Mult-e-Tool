@@ -84,6 +84,7 @@
   grid-column: 2 / span 6;
   padding: -20px;
   border: 2px dashed rgb(20,20,20);
+  box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
   border-radius: 12px;
   background-image: url('./Assets/Capacitor_Symbol_2.png');
   background-size: 38%;
@@ -106,8 +107,12 @@
   font-size: 5vw;
   text-align: center;
   line-height: 7vw;
+  cursor: text;
 }
 
+input { 
+  caret-color: rgb(0,197,185);
+}
 
 .Left_Panel_Inner_Wrapper > input:nth-child(2){
   grid-row: 5 / span 2;
@@ -136,7 +141,6 @@
   top: 25%;
   left: 50%;
   margin-left: -60%;
-  background-color: red;
   border-radius: 100px;
   background-color: rgb(35,35,35);
   box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
@@ -239,6 +243,9 @@
 .Right_Panel_Inner_Wrapper{
   display: grid; 
   grid-gap: 2%;
+  border: 2px dashed rgb(20,20,20);
+  box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
+  border-radius: 12px;
   grid-template-columns: repeat(8,1fr);
   grid-template-rows: repeat(9,1fr);
   margin-left: 10%;
@@ -247,35 +254,52 @@
 }
 
 .Result_Inset{
-  grid-row: 2 / span 2;
-  grid-column: 2 / span 6;
+  font-family: sans-serif;
+  color: rgb(170,170,170);
+  font-size: 3vw;
+  font-weight: bold;
+  text-align: center;
+  grid-row: 3 / span 2;
+  grid-column: 2 / span 4;
+  border: none;
   border-radius: 8px;
   background-color: rgb(20,20,20);
   box-shadow: inset 2px 2px 3px 1px rgba(0,0,0,0.5), inset -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
 }
 
 .Unit_Square{
-  grid-row: 4 / span 2;
+  font-family: sans-serif;
+  color: rgb(170,170,170);
+  font-size: 3vw;
+  font-weight: bold;
+  text-align: center;
+  grid-row: 3 / span 2;
   grid-column: 6 / span 2;
+  border: none;
   border-radius: 8px;
   background-color: rgb(20,20,20);
   box-shadow: inset 2px 2px 3px 1px rgba(0,0,0,0.5), inset -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
 }
 
-.Unit_Slider{
-  grid-row: 6 / span 2;
+.Tolerance_Value{
+  font-family: sans-serif;
+  color: rgb(170,170,170);
+  font-size: 1.5vw;
+  font-weight: bold;
+  text-align: center;
+  grid-row: 5 / span 2;
   grid-column: 2 / span 6;
+  border: none;
   border-radius: 8px;
   background-color: rgb(20,20,20);
   box-shadow: inset 2px 2px 3px 1px rgba(0,0,0,0.5), inset -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
 }
-
 
 .Swap_Button{
   position: relative;
   height: 118%;
   width: 90%;
-  left: 50%;
+  left: 40%;
   margin-left: -50%;
   grid-column: 4 / span 1;
   grid-row: 4 / span 1;
@@ -309,7 +333,6 @@
   text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
   line-height: 21px;
 }
-
 
 @keyframes Translate_Up{
   0%{
