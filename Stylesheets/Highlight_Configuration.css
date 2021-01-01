@@ -21,6 +21,6 @@ button{
   -webkit-user-select: text;
 }
 
-.Right_Panel_Inner_Wrapper > input{
+.Right_Panel_Inner_Wrapper > input:nth-child(1){
   -webkit-user-select: text;
 }
