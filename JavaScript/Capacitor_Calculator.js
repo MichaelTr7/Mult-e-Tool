@@ -18,6 +18,9 @@ window.onload = function(){
   for(Button_Index = 0; Button_Index < Code_Buttons.length; Button_Index++){
     Code_Buttons[Button_Index].addEventListener("input",Update_Capacitor_Preview);
   }
+  
+  var Switch_Button = document.getElementsByClassName('Swap_Button')[0];
+  Switch_Button.addEventListener("click",Switch_Inputs);
     
 }
 
@@ -61,10 +64,12 @@ function Update_Capacitor_Preview(){
     var Capacitor_Value_Label = document.getElementById('Capacitor_Value');
     var Tolerance_Code = String(document.getElementById('Selected_Label').innerHTML);
     Capacitor_Value_Label.innerHTML = Capacitor_Code + Tolerance_Code;
+    Capacitor_Code = String(parseInt(Capacitor_Code));
     Calculate_Capacitance(Capacitor_Code)
 }
 
 function Calculate_Capacitance(Capacitor_Code){
+    
   var Significant_Digits = Capacitor_Code.substring(0,2);
   if(Capacitor_Code.length <= 2){
     var Trailing_Zeroes_Factor = 0;
@@ -77,31 +82,39 @@ function Calculate_Capacitance(Capacitor_Code){
   }
   
   var Capacitance_In_Picofarads = Significant_Digits + Trailing_Zeroes_String;
-  console.log(Capacitance_In_Picofarads);
+  // console.log(Capacitance_In_Picofarads);
   
-  /*Three maximum digits*/
-  // if(){
-  // 
-  //   var Unit_String = "";
-  // }
-  // 
-  // if(){
-  // 
-  //   var Unit_String = "";
-  // }
-  // 
-  // if(){
-  // 
-  //   var Unit_String = "";
-  // }
-  // 
-  // if(){
-  // 
-  //   var Unit_String = "";
-  // 
-  // }
-  // 
+  /*
+  pF -> 10^-12 
+  nF -> 10^-9 (1000 conversion factor)
+  µF -> 10^-6 (1000*1000 conversion factor)
+  mF -> 10^-3 (1000*1000*1000 conversion factor)
+  */
   
+  if(Capacitance_In_Picofarads <= 990){
+    var Capacitance = Capacitance_In_Picofarads;
+    var Unit_String = "pF";
+  }
+  
+  if(990 < Capacitance_In_Picofarads && Capacitance_In_Picofarads <= 990000){
+    var Capacitance = Capacitance_In_Picofarads/1000;
+    var Unit_String = "nF";
+  }
+  
+  if(990000 < Capacitance_In_Picofarads && Capacitance_In_Picofarads <= 990000000){
+    var Capacitance = Capacitance_In_Picofarads/(1000*1000);
+    var Unit_String = "µF";
+  }
+  
+  if(990000000 < Capacitance_In_Picofarads){
+    var Capacitance = Capacitance_In_Picofarads/(1000*1000*1000);
+    var Unit_String = "mF";
+  }
+  
+  var Result_Display = document.getElementsByClassName('Result_Inset')[0];
+  Result_Display.value = Capacitance;
+  var Unit_Display = document.getElementsByClassName('Unit_Square')[0];
+  Unit_Display.value = Unit_String;
   
 }
 
@@ -120,8 +133,12 @@ function Calculate_Tolerance(Tolerance_Letter){
   document.getElementsByClassName('Tolerance_Value')[0].value = Tolerance_Value;  
 }
 
-
-
+function Switch_Inputs(){
+  console.log("Switch Inputs");
+  
+  
+  
+}
 
 
 
