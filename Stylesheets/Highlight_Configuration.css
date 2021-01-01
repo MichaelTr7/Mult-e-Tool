@@ -20,3 +20,7 @@ button{
 .Digit_Buttons{
   -webkit-user-select: text;
 }
+
+.Right_Panel_Inner_Wrapper > input{
+  -webkit-user-select: text;
+}

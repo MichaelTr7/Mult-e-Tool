@@ -134,7 +134,50 @@ function Calculate_Tolerance(Tolerance_Letter){
 }
 
 function Switch_Inputs(){
-  console.log("Switch Inputs");
+  var Left_Input_Panel = document.getElementsByClassName('Left_Panel')[0];
+  var Right_Input_Panel = document.getElementsByClassName('Right_Panel')[0];  
+  var Swap_Button = document.getElementsByClassName('Swap_Button')[0];
+  var Code_Buttons = document.getElementsByClassName('Digit_Buttons');
+  var Result_Inset = document.getElementsByClassName('Result_Inset')[0];
+  var Unit_Square = document.getElementsByClassName('Unit_Square')[0];
+  var Tolerance_Value = document.getElementsByClassName('Tolerance_Value')[0];
+
+  Preview_Grid_Column = parseInt((window.getComputedStyle(Left_Input_Panel).getPropertyValue('grid-column')).split("/")[0]);
+  
+  if(Preview_Grid_Column == 1){
+    Left_Input_Panel.classList.add('Left_Panel_Swapped');
+    Right_Input_Panel.classList.add('Right_Panel_Swapped');
+    Swap_Button.classList.add('Swap_Button_Swapped');
+    document.getElementById("Tolerance_Slider").disabled = true;
+    for(Index = 0; Index < Code_Buttons.length; Index++){
+      Code_Buttons[Index].disabled = true;
+      Code_Buttons[Index].classList.add('Colour_Swap_2');
+    }
+    Result_Inset.classList.add('Colour_Swap');
+    Unit_Square.classList.add('Colour_Swap');
+    Tolerance_Value.classList.add('Colour_Swap');
+    Result_Inset.disabled = false;
+    Unit_Square.disabled = false;
+    Tolerance_Value.disabled = false;
+  }
+
+  if(Preview_Grid_Column == 5){
+    Left_Input_Panel.classList.remove('Left_Panel_Swapped');
+    Right_Input_Panel.classList.remove('Right_Panel_Swapped'); 
+    Swap_Button.classList.remove('Swap_Button_Swapped');   
+    document.getElementById("Tolerance_Slider").disabled = false;
+    for(Index = 0; Index < Code_Buttons.length; Index++){
+      Code_Buttons[Index].disabled = false;
+      Code_Buttons[Index].classList.remove('Colour_Swap_2');
+    }
+    Result_Inset.classList.remove('Colour_Swap');
+    Unit_Square.classList.remove('Colour_Swap');
+    Tolerance_Value.classList.remove('Colour_Swap');
+    Result_Inset.disabled = true;
+    Unit_Square.disabled = true;
+    Tolerance_Value.disabled = true;
+  }
+  
   
   
   
