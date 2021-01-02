@@ -287,7 +287,7 @@ input {
   font-family: sans-serif;
   /* color: rgb(170,170,170); */
   color: rgb(250,250,250);
-  font-size: 1.5vw;
+  font-size: 1.6vw;
   font-weight: bold;
   text-align: center;
   grid-row: 5 / span 2;
@@ -351,11 +351,13 @@ input {
 .Left_Panel_Swapped{
   grid-column: 5 / span 3;
   grid-row: 2 / span 6;
+  border-radius: 0px 0px 12px 12px;
 }
 
 .Right_Panel_Swapped{
   grid-column: 1 / span 3;
   grid-row: 2 / span 6;
+  border-radius: 0px 0px 12px 12px;
 }
 
 .Swap_Button_Swapped{
@@ -368,5 +370,22 @@ input {
 
 .Colour_Swap_2{
   color: rgb(250,250,250);
+}
+
+.Right_Panel_Inner_Wrapper > input:hover{
+  transition: background-color;
+  background-color: rgb(55,55,55);
+  color: rgb(255,255,255);
+}
+
+.Result_Inset:hover{
+  cursor: text;
+}
+
+
+.Digit_Buttons:hover{
+  transition: background-color;
+  background-color: rgb(55,55,55);
+  color: rgb(255,255,255);
 }
 
