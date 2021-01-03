@@ -468,9 +468,9 @@ input {
   /* background-color: rgb(35,35,35); */
   /* box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15); */
   animation: Translate_Up 1s forwards;
-  background-image: url('./Assets/Capacitance_Value_Input_Tutorial_2.png');
+  background-image: url('./Assets/Help_Panel_2.png');
   background-size: 50%;
-  background-position: 5% 50%;
+  background-position: 15% 50%;
   background-repeat: no-repeat;
   opacity: 0.4;
 }
@@ -507,6 +507,33 @@ input {
   color: rgb(170,170,170);
 }
 
+.Explanation_Headers_2{
+  position: absolute;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.6vw;
+  color: rgb(32,194,182);
+  width: 45%;
+  text-align: left;
+  left: 59%;
+}
+
+.Explanation_Headers_2:nth-child(1){
+  top: 10%;
+}
+
+.Explanation_Headers_2:nth-child(2){
+  top: 43.2%;
+}
+
+.Explanation_Headers_2:nth-child(3){
+  top: 67.7%;
+}
+
+.Explanation_Headers_2 > li{
+  font-size: 1.3vw;
+  color: rgb(170,170,170);
+}
 
 
 @media only screen and (max-width: 560px){
@@ -514,7 +541,6 @@ input {
   .Capacitor_Calculator_Wrapper{
     margin-top: 60px;
   }
-
 
   .Digit_Buttons{
     height: 6vw;
