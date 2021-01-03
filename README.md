@@ -1,11 +1,12 @@
 # [E-Toolbox](https://michaeltr7.github.io/E-Toolbox/index.html)
 
-<h3>Functionalities/Capabilities</h3>
-• Resistor Colour Code Calculator <br>
-• Capacitor Code Calculator<br>
-• Resistor List Maker<br>
-
-<h3>Preview Images</h3>
+<h1>Functionality/Capabilities</h1>
+• Resistor Calculator <br>
+• Capacitor Calculator<br>
+• Resistor & Capacitor List Maker<br>
+• Digital Logic Gates Interactive Reference<br>
+<br>
+<h1>Preview Images</h1>
 
 ## [Resistor Calculator](https://michaeltr7.github.io/E-Toolbox/Resistor_Calculator.html)
 
