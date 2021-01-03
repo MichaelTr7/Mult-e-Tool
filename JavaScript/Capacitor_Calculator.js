@@ -30,6 +30,15 @@ window.onload = function(){
 
   var Tolerance_Selector = document.getElementsByClassName('Tolerance_Value')[0];
   Tolerance_Selector.addEventListener("click",Switch_Tolerance);
+  
+  var Value_Inputs = document.getElementsByClassName('Value_Inputs');
+  var Code_Inputs = document.getElementsByClassName('Code_Inputs');
+  for(Code_Index = 0; Code_Index < Code_Inputs.length; Code_Index++){
+    Code_Inputs[Code_Index].addEventListener("mouseenter",Highlight);
+    Code_Inputs[Code_Index].addEventListener("mouseleave",Unhighlight);
+    Value_Inputs[Code_Index].addEventListener("mouseenter",Highlight);
+    Value_Inputs[Code_Index].addEventListener("mouseleave",Unhighlight);
+  }  
 
 }
 
@@ -124,6 +133,7 @@ function Calculate_Capacitance(Capacitor_Code){
   Result_Display.value = Capacitance;
   var Unit_Display = document.getElementsByClassName('Unit_Square')[0];
   Unit_Display.value = Unit_String;
+  Unit_Display.innerHTML = Unit_String;
   
 }
 
@@ -140,6 +150,7 @@ function Calculate_Tolerance(Tolerance_Letter){
   "Z": "Tolerance: - 20% to + 80%"};
   var Tolerance_Value = Tolerance_Dictionary[Tolerance_Letter];
   document.getElementsByClassName('Tolerance_Value')[0].value = Tolerance_Value;  
+  document.getElementsByClassName('Tolerance_Value')[0].innerHTML = Tolerance_Value;  
 }
 
 function Switch_Inputs(){
@@ -210,7 +221,12 @@ function Switch_Units(){
   }
   
   var Current_Unit = Units_Dictionary[Next_Index];
-  document.getElementsByClassName('Unit_Square')[0].value = Current_Unit;
+  var Unit_Square_Element = document.getElementsByClassName('Unit_Square')[0];
+  Unit_Square_Element.value = Current_Unit;
+  Unit_Square_Element.innerHTML = Current_Unit;
+  Unit_Square_Element.classList.remove('Jump_Animation_2');
+  void Unit_Square_Element.offsetWidth;
+  Unit_Square_Element.classList.add('Jump_Animation_2');
   Change_Input_Capacitance();
   Calculate_Capacitor_Code();
 }
@@ -249,10 +265,14 @@ function Switch_Tolerance(){
   
   var Tolerance_Dictionary = ["Tolerance: ± 0.1%","Tolerance: ± 0.25%","Tolerance: ± 0.5%","Tolerance: ± 1%","Tolerance: ± 2%","Tolerance: ± 5%","Tolerance: ± 10%","Tolerance: ± 20%","Tolerance: - 20% to + 80%"];  
   var Tolerance_Field = document.getElementsByClassName('Tolerance_Value')[0];  
+  Tolerance_Field.classList.remove('Jump_Animation_2');
+  void Tolerance_Field.offsetWidth;
+  Tolerance_Field.classList.add('Jump_Animation_2');
   var Current_Tolerance = String(Tolerance_Field.value); 
   var Next_Tolerance_Index = Tolerance_Dictionary.indexOf(Current_Tolerance) + 1;
   Next_Tolerance_Index = Next_Tolerance_Index % Tolerance_Dictionary.length;
   Tolerance_Field.value = Tolerance_Dictionary[Next_Tolerance_Index];
+  Tolerance_Field.innerHTML = Tolerance_Dictionary[Next_Tolerance_Index];
   Tolerance_Slider.value = Next_Tolerance_Index  
   var Tolerance_Code = ["B","C","D","F","G","J","K","M","Z"];
   document.getElementById('Selected_Label').innerHTML = Tolerance_Code[Next_Tolerance_Index];
@@ -308,6 +328,22 @@ function Calculate_Capacitor_Code(){
   Capacitor_Preview.innerHTML = Capacitor_Display_Code + Tolerance_Letter;
 
 }
+
+
+function Highlight(){
+  var Highlight_Object = document.getElementById(this.id);
+  Highlight_Object.classList.add('Active_Input');  
+}
+
+function Unhighlight(){
+  var Highlight_Object = document.getElementById(this.id);
+  Highlight_Object.classList.remove('Active_Input');
+
+
+}
+
+
+
 
 
 
