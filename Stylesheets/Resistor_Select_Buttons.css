@@ -89,6 +89,14 @@
   margin-top: -5px;
 }
 
+.LED_Light_Bar_1{
+  margin-top: 3px;
+}
+
+.LED_Light_Bar_2{
+  margin-top: 3px;
+}
+
 @keyframes Squeeze_Keyframes{
   0%{
     transform: scale(1);
