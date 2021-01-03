@@ -1,6 +1,6 @@
 # [E-Toolbox](https://michaeltr7.github.io/E-Toolbox/index.html)
 
-<h3>Functionalities/Capabilities</h3>
+<h1>Functionality/Capabilities</h1>
 • Resistor Calculator <br>
 • Capacitor Calculator<br>
 • Resistor & Capacitor List Maker<br>
