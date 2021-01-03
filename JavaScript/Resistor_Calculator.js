@@ -104,6 +104,13 @@ function Update_Resistor_Preview(){
 
 
 function Four_Band_Resistor_Configuration(){
+  
+  var Four_Band_LED_Strip = document.getElementById('Four_Band_LED_Strip');
+  Four_Band_LED_Strip.style.filter = "opacity(0.8)";
+  
+  var Five_Band_LED_Strip = document.getElementById('Five_Band_LED_Strip');
+  Five_Band_LED_Strip.style.filter = "opacity(0.1)";
+  
   var Expand_Button = document.getElementsByClassName('Expand_Button')[0];
   void Expand_Button.offsetWidth;
   Expand_Button.classList.remove('Expand_Button_5_Band_State');
@@ -161,6 +168,13 @@ function Four_Band_Resistor_Configuration(){
 }
 
 function Five_Band_Resistor_Configuration(){
+  
+  var Four_Band_LED_Strip = document.getElementById('Four_Band_LED_Strip');
+  Four_Band_LED_Strip.style.filter = "opacity(0.1)";
+  
+  var Five_Band_LED_Strip = document.getElementById('Five_Band_LED_Strip');
+  Five_Band_LED_Strip.style.filter = "opacity(0.8)";
+  
   var Expand_Button = document.getElementsByClassName('Expand_Button')[0];
   void Expand_Button.offsetWidth;
   Expand_Button.classList.add('Expand_Button_5_Band_State');
@@ -519,7 +533,6 @@ function Expand_Colour_Palette(){
   else{
     Four_Band_Resistor_Configuration();
   }
-  
 }
 
 function checkMobile() {

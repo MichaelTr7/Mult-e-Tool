@@ -78,6 +78,7 @@
   left: 50%;
   margin-left: -20%;
   filter: opacity(0.8);
+  transition: filter 0.5s;
 }
 
 #Five_Band_LED_Strip{
@@ -87,7 +88,8 @@
   left: 50%;
   margin-top: 10%;
   margin-left: -26%;
-  filter: opacity(0.8);
+  filter: opacity(0.1);
+  transition: filter 0.5s;
 }
 
 
