@@ -41,6 +41,16 @@
   transition: filter 0.2s linear, brightness 0.05s linear;
 }
 
+.Centred_Labels{
+  position:relative;
+  text-align:center;
+  width: 30px;
+  left: 50%;
+  margin-left: -15px;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+
 .Palette_Holders > button{
   box-shadow: inset 0px 2px 2px 1px rgba(0,0,0,0.32), 0px 2px 5px 1px rgba(0,0,0,0.5), inset 0px -0.5px 0.1px 1px rgba(255,255,255,0.25);
 }
