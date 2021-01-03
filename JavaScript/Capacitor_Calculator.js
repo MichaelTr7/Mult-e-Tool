@@ -163,6 +163,12 @@ function Switch_Inputs(){
   var Tolerance_Value = document.getElementsByClassName('Tolerance_Value')[0];
   var Left_Header = document.getElementById('Input_Header');
   var Right_Header = document.getElementById('Result_Header');
+  var Tutorial_Panel_1 = document.getElementsByClassName('Function_Panel_1')[0];
+  var Tutorial_Panel_2 = document.getElementsByClassName('Function_Panel_3')[0];
+
+  Swap_Button.classList.remove('Jump_Animation_2');
+  void Swap_Button.offsetWidth;
+  Swap_Button.classList.add('Jump_Animation_2');
 
   Preview_Grid_Column = parseInt((window.getComputedStyle(Left_Input_Panel).getPropertyValue('grid-column')).split("/")[0]);
   
@@ -183,6 +189,8 @@ function Switch_Inputs(){
     Tolerance_Value.disabled = false;
     Left_Header.innerHTML = "Inputs: Capacitance Value";
     Right_Header.innerHTML = "Result: Capacitor Code";
+    Tutorial_Panel_1.classList.add('Function_Panel_1_Swapped');
+    Tutorial_Panel_2.classList.add('Function_Panel_3_Swapped');  
   }
 
   if(Preview_Grid_Column == 5){
@@ -202,6 +210,8 @@ function Switch_Inputs(){
     Tolerance_Value.disabled = true;
     Left_Header.innerHTML = "Inputs: Capacitor Code";
     Right_Header.innerHTML = "Result: Capacitance Value";
+    Tutorial_Panel_1.classList.remove('Function_Panel_1_Swapped');
+    Tutorial_Panel_2.classList.remove('Function_Panel_3_Swapped');  
   }
 }
 

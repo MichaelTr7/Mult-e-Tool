@@ -419,6 +419,7 @@ input {
   background-size: 50%;
   background-position: 15% 50%;
   background-repeat: no-repeat;
+  transition: opacity 1s ease-out;
 }
 
 .Function_Panel_2{
@@ -472,7 +473,8 @@ input {
   background-size: 50%;
   background-position: 15% 50%;
   background-repeat: no-repeat;
-  opacity: 0.4;
+  opacity: 0.2;
+  transition: opacity 1s ease-out;
 }
 
 .Explanation_Headers{
@@ -535,17 +537,34 @@ input {
   color: rgb(170,170,170);
 }
 
+.Function_Panel_1_Swapped{
+  grid-column: 1 / span 4;
+  grid-row: 5 / span 4;
+  opacity: 0.2;
+}
+
+.Function_Panel_3_Swapped{
+  grid-column: 1 / span 4;
+  grid-row: 1 / span 4;
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 560px){
-
   .Capacitor_Calculator_Wrapper{
     margin-top: 60px;
   }
-
   .Digit_Buttons{
     height: 6vw;
     width: 6vw;
   }
-
 }
 
