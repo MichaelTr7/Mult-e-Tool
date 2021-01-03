@@ -267,7 +267,6 @@ function Change_Input_Capacitance(){
     Capacitance_Input_Field.value = "Max";
   }
 
-  
   Calculate_Capacitor_Code();
 }
 
@@ -329,13 +328,20 @@ function Calculate_Capacitor_Code(){
     }
     }
   }
+  
   if(Capacitor_Display_Code == "0"){
     Capacitor_Display_Code = "";
   }
+  
+  var Digit_1 = String(document.getElementsByClassName('Digit_Buttons')[0].value);
+  var Digit_2 = String(document.getElementsByClassName('Digit_Buttons')[1].value);
+  var Digit_3 = String(document.getElementsByClassName('Digit_Buttons')[2].value);
 
+  var Display_Code = Digit_1 + Digit_2 + Digit_3;
+  
   var Tolerance_Letter = document.getElementById('Selected_Label').innerHTML;  
   var Capacitor_Preview = document.getElementById('Capacitor_Value');
-  Capacitor_Preview.innerHTML = Capacitor_Display_Code + Tolerance_Letter;
+  Capacitor_Preview.innerHTML = Display_Code + Tolerance_Letter;
 
 }
 
