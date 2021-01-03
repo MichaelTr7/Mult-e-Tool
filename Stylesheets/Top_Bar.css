@@ -22,7 +22,7 @@
   color: rgb(170,170,170);
   margin: 4px;
   font-size: 0.7em;
-  box-shadow: inset 2px 2px 3px 1px rgba(0,0,0,0.5), inset -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
+  box-shadow: inset 2px 2px 3px 1px rgba(0,0,0,0.5), inset -0.2px -0.2px 0.4px 1px rgba(255,255,255,0.15);
   text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
   font-weight: bold;
   transition: background-color 0.2s linear, transform 0.7s ease-out, color 0.2s;
