@@ -27,6 +27,7 @@
   font-weight: bold;
   transition: background-color 0.2s linear, transform 0.7s ease-out, color 0.2s;
   font-family: sans-serif;
+  
 }
 
 .Top_Bar > button:nth-child(1){
