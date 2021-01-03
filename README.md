@@ -5,7 +5,7 @@
 • Capacitor Calculator<br>
 • Resistor & Capacitor List Maker<br>
 • Digital Logic Gates Interactive Reference<br>
-
+<br>
 <h1>Preview Images</h1>
 
 ## [Resistor Calculator](https://michaeltr7.github.io/E-Toolbox/Resistor_Calculator.html)
