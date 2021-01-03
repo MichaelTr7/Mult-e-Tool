@@ -37,6 +37,29 @@
   font-weight: bold;
 }
 
+.Button_Label_1{
+  position: relative;
+  /* background-color: red; */
+  height: 50%;
+  width: 100%;
+  top: 40%;
+  left: 50%;
+  margin-left: -50%;
+}
+
+.Button_Label_2{
+  position: relative;
+  /* background-color: red; */
+  height: 50%;
+  width: 100%;
+  top: 40%;
+  left: 50%;
+  margin-left: -50%;
+}
+
+
+
+
 .Select_4{
   position: relative;
   display: grid;
@@ -47,6 +70,7 @@
 #Four_Band_Label{
   position: relative;
   margin-top: 10%;
+  display: none;
 }
 
 .Select_5{
@@ -57,6 +81,7 @@
 #Five_Band_Label{
   position: relative;
   margin-top: 10%;
+  display: none;
 }
 
 .LED_Light_Bar_1,.LED_Light_Bar_2{
@@ -74,6 +99,7 @@
   box-shadow: inset 0px 0.5px 0.5px 1px rgb(0,0,0,0.3), inset 0px -0.4px 0.4px 0.5px rgba(255,255,255,0.2);                 
   transition: background-color 0.2s linear;
   filter: brightness(0.85);
+  display: none;
 }
 
 .LED_Light_Bar_Active{
