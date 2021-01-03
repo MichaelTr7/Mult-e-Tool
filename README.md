@@ -5,7 +5,7 @@
 • Capacitor Code Calculator<br>
 • Resistor List Maker<br>
 
-<h3>Preview Images</h3>
+<h1>Preview Images</h1>
 
 ## [Resistor Calculator](https://michaeltr7.github.io/E-Toolbox/Resistor_Calculator.html)
 
