@@ -307,7 +307,7 @@ input {
   background-color: rgb(20,20,20);
   border-radius: 100px;
   color: rgb(170,170,170);
-  box-shadow: inset 2px 2px 3px 1px rgba(0,0,0,0.5), inset -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
+  box-shadow: inset 2px 2px 1px 0px rgba(0,0,0,0.5), inset -0.5px -0.5px 1px 0px rgba(255,255,255,0.15);
   border: 0.8vw solid rgb(22,22,22);
   transition: background-color 0.2s linear, transform 0.7s ease-out, color 0.5s, border 0.5s;
 }
