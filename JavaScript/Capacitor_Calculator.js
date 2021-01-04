@@ -44,7 +44,8 @@ window.onload = function(){
     Value_Inputs[Code_Index].addEventListener("mouseleave",Unhighlight);
   }  
   
-  Adjust_Mobile_Menu();
+  Adjust_Mobile_Menu_2();
+    
   
 }
 
@@ -364,9 +365,12 @@ function Unhighlight(){
 }
 
 
-function Adjust_Mobile_Menu() {
+function Adjust_Mobile_Menu_2() {
   var Mobile_Flag = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   if(Mobile_Flag){
+      console.log("Checked")
+        var Mobile_Menu = document.getElementsByClassName('Slide_Menu_Button')[0];
+    Mobile_Menu.classList.add('Slide_Menu_Button_Mobile');
     var Digit_Buttons = document.getElementsByClassName('Digit_Buttons');
     for(Button_Index = 0; Button_Index < Digit_Buttons.length; Button_Index++){
       Digit_Buttons[Button_Index].classList.add('Digit_Buttons_Mobile_Configuration');    
@@ -383,3 +387,4 @@ function Field_Clicked(){
 
 
  
+
