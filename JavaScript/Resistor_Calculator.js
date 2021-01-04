@@ -48,6 +48,7 @@ var Expand_Button = document.getElementsByClassName('Expand_Button')[0];
 Expand_Button.addEventListener("click",Expand_Colour_Palette);  
 
   checkMobile();
+  Adjust_Mobile_Menu();
 
 }
 
@@ -537,7 +538,7 @@ function Expand_Colour_Palette(){
 
 function checkMobile() {
   var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  if (isMobile) {
+  if isMobile) {
     var Multiplier_Button_Labels = document.getElementsByClassName('Multiplier_Band_Buttons');
     var Tolerance_Button_Labels = document.getElementsByClassName('Tolerance_Band_Buttons');
     for(Button_Index = 1; Button_Index < Multiplier_Button_Labels.length; Button_Index++){
@@ -548,3 +549,13 @@ function checkMobile() {
   }
 }
 
+
+function Adjust_Mobile_Menu() {
+  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  if (isMobile) {
+  var Mobile_Menu = document.getElementsByClassName('Slide_Menu_Button')[0];
+  Mobile_Menu.classList.add('Slide_Menu_Button_Mobile');
+  console.log("Mobile");
+    }
+  }
+}
