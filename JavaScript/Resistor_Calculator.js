@@ -105,6 +105,10 @@ function Update_Resistor_Preview(){
 
 
 function Four_Band_Resistor_Configuration(){
+  var Band_3_Buttons = document.getElementsByClassName('Band_3_Buttons');
+  for(Button_Index = 0; Button_Index < Band_3_Buttons.length; Button_Index++){
+    Band_3_Buttons[Button_Index].disabled = true;    
+  }
   
   var Four_Band_LED_Strip = document.getElementById('Four_Band_LED_Strip');
   Four_Band_LED_Strip.style.filter = "opacity(0.8)";
@@ -169,6 +173,10 @@ function Four_Band_Resistor_Configuration(){
 }
 
 function Five_Band_Resistor_Configuration(){
+  var Band_3_Buttons = document.getElementsByClassName('Band_3_Buttons');
+  for(Button_Index = 0; Button_Index < Band_3_Buttons.length; Button_Index++){
+    Band_3_Buttons[Button_Index].disabled = false;    
+  }
   
   var Four_Band_LED_Strip = document.getElementById('Four_Band_LED_Strip');
   Four_Band_LED_Strip.style.filter = "opacity(0.1)";
