@@ -174,9 +174,9 @@ input {
 #Tolerance_Slider::-webkit-slider-thumb{
   appearance: none;
   -webkit-appearance: none;
-  width: 2vw;
-  height: 2vw;
-  border-radius: 1vw;
+  width: 2.4vw;
+  height: 2.4vw;
+  border: 2px solid rgba(255,255,255,0.2);
   background: rgb(170,170,170);
   transition: width 0.5s, height 0.5s, border-radius 0.5s;
   box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.2), inset 1px 1px 2px 0px rgba(255,255,255,0.15);
