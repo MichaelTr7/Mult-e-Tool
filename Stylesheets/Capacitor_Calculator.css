@@ -270,7 +270,7 @@ input {
   font-family: sans-serif;
   color: rgb(170,170,170);
   /* color: rgb(250,250,250); */
-  font-size: 3vw;
+  font-size: 2.5vw;
   font-weight: bold;
   text-align: center;
   grid-row: 3 / span 2;
