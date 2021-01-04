@@ -537,23 +537,21 @@ function Expand_Colour_Palette(){
 }
 
 function checkMobile() {
-  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  if isMobile) {
+  var Mobile_Flag = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  if(Mobile_Flag){
     var Multiplier_Button_Labels = document.getElementsByClassName('Multiplier_Band_Buttons');
     var Tolerance_Button_Labels = document.getElementsByClassName('Tolerance_Band_Buttons');
     for(Button_Index = 1; Button_Index < Multiplier_Button_Labels.length; Button_Index++){
     Multiplier_Button_Labels[Button_Index].classList.add('Multiplier_Band_Buttons_Active');
     Tolerance_Button_Labels[Button_Index].classList.add('Tolerance_Band_Buttons_Active');
     }
-
   }
 }
 
-
 function Adjust_Mobile_Menu() {
   console.log("Checking");
-  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  if (isMobile) {
+  var Mobile_Flag = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  if(Mobile_Flag){
   var Mobile_Menu = document.getElementsByClassName('Slide_Menu_Button')[0];
   Mobile_Menu.classList.add('Slide_Menu_Button_Mobile');
   console.log("Mobile");
