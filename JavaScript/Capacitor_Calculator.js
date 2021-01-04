@@ -362,7 +362,6 @@ function Unhighlight(){
 }
 
 
-
 function Adjust_Mobile_Menu() {
   var Mobile_Flag = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   if(Mobile_Flag){
