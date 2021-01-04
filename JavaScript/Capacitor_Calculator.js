@@ -374,8 +374,6 @@ function Adjust_Mobile_Menu() {
     }
   }
 
-
-
 function Field_Clicked(){
   var Text_Field = document.getElementById(this.id);
   Text_Field.focus();
