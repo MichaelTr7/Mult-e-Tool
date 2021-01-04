@@ -1,11 +1,16 @@
-
 .Digit_Buttons[disabled] {
     background-color: rgb(35,35,35);
+    color: rgb(255,255,255);
+    opacity: 1;
+    -webkit-appearance: none;
 }
 
 
 .Result_Inset[disabled] {
     background-color: rgb(20,20,20);
+    color: rgb(255,255,255);
+    opacity: 1;
+    -webkit-appearance: none;
 }
 
 
