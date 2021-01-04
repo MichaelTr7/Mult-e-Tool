@@ -388,7 +388,6 @@ function Navigation_Button_Pressed(){
   void Menu_Button.offsetWidth;
   Menu_Button.classList.add("Jump_Animation_2");
   var Button_Index = parseInt(this.id.split("_")[2]) - 1;
-  console.log(Button_Index);
   var Pages = ["./Resistor_Calculator.html","./Resistor_List_Maker.html","./index.html","./Capacitor_Calculator.html","./Digital_Logic_Gates.html"];
   setTimeout(function () {
     window.location.href = Pages[Button_Index];
@@ -496,8 +495,6 @@ for(Change_Index = 0; Change_Index < Resistors_To_Change.length; Change_Index++)
   }
 }
 var Resistance_Value = document.getElementById('Result_Label').innerHTML;
-console.log(Resistance_Value);
-console.log(Band_Type);
 var Resistance_Label_To_Change = document.getElementsByClassName('Resistance_Values')[parseInt(Tile_Index_To_Change-1)];
 var Resistor_Type_Label_To_Change = document.getElementsByClassName('Resistor_Label')[parseInt(Tile_Index_To_Change-1)];
 Resistance_Label_To_Change.innerHTML = Resistance_Value;
