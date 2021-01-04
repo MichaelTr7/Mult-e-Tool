@@ -20,6 +20,7 @@ window.onload = function(){
   var Code_Buttons = document.getElementsByClassName('Digit_Buttons');
   for(Button_Index = 0; Button_Index < Code_Buttons.length; Button_Index++){
     Code_Buttons[Button_Index].addEventListener("input",Update_Capacitor_Preview);
+    Code_Buttons[Button_Index].addEventListener("click",Field_Clicked);
   }
   
   var Switch_Button = document.getElementsByClassName('Swap_Button')[0];
@@ -68,6 +69,7 @@ function Update_Tolerance(){
   }
 
 function Update_Capacitor_Preview(){
+  
     var Key_Pressed = event.which;
     var Key_Code =  event.keyCode;
     var Valid_Keys = [48,49,50,51,52,53,54,55,56,57];
@@ -374,7 +376,12 @@ function Adjust_Mobile_Menu() {
 
 
 
-
+function Field_Clicked(){
+  var Text_Field = document.getElementById(this.id);
+  Text_Field.focus();
+  Text_Field.selectionStart = Text_Field.selectionEnd = 1;
+  
+}
 
 
  
