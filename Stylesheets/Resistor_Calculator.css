@@ -331,7 +331,13 @@ body {
 
 #Expand_Label{
   position: relative;
-  top: -18%;
+  height: 100%;
+  width: 100%;
+  border-radius: 50px;
+  background-image: url('./Assets/Expand_Button.png');
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: 48% 40%;
 }
 
 /************************************************************************/
