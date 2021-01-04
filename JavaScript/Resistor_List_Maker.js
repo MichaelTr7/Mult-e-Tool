@@ -15,4 +15,5 @@ window.onload = function(){
   var Top_Bar_Wrapper = document.getElementsByClassName('Top_Bar')[0];
   Top_Bar_Wrapper.addEventListener("mouseleave",Left_Navigation_Bar);
 
+  Adjust_Mobile_Menu();
 }

@@ -42,7 +42,9 @@ window.onload = function(){
     Value_Inputs[Code_Index].addEventListener("mouseenter",Highlight);
     Value_Inputs[Code_Index].addEventListener("mouseleave",Unhighlight);
   }  
-
+  
+  Adjust_Mobile_Menu();
+  
 }
 
 function Update_Tolerance(){
@@ -361,6 +363,15 @@ function Unhighlight(){
 
 
 
+function Adjust_Mobile_Menu() {
+  var Mobile_Flag = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  if(Mobile_Flag){
+    var Digit_Buttons = document.getElementsByClassName('Digit_Buttons');
+    for(Button_Index = 0; Button_Index < Digit_Buttons.length; Button_Index++){
+      Digit_Buttons[Button_Index].classList.add('Digit_Buttons_Mobile_Configuration');    
+    }
+    }
+  }
 
 
 

@@ -126,6 +126,10 @@
   -webkit-appearance: none;
 }
 
+.Digit_Buttons_Mobile_Configuration{
+  width: 2.5vw;
+  height: 5vw;
+}
 
 input { 
   caret-color: rgb(0,197,185);

@@ -549,11 +549,9 @@ function checkMobile() {
 }
 
 function Adjust_Mobile_Menu() {
-  console.log("Checking");
   var Mobile_Flag = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   if(Mobile_Flag){
   var Mobile_Menu = document.getElementsByClassName('Slide_Menu_Button')[0];
   Mobile_Menu.classList.add('Slide_Menu_Button_Mobile');
-  console.log("Mobile");
     }
   }
