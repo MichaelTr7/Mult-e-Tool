@@ -587,13 +587,5 @@ input {
   opacity: 1;
 }
 
-@media only screen and (max-width: 560px){
-  .Capacitor_Calculator_Wrapper{
-    margin-top: 60px;
-  }
-  .Digit_Buttons{
-    height: 6vw;
-    width: 6vw;
-  }
-}
+
 
