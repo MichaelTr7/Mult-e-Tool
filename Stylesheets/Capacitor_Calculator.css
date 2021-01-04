@@ -1,4 +1,15 @@
 
+.Digit_Buttons[disabled] {
+    background-color: rgb(35,35,35);
+}
+
+
+.Result_Inset[disabled] {
+    background-color: rgb(20,20,20);
+}
+
+
+
 .Capacitor_Calculator_Wrapper{
   display: grid;
   margin-top: 100px;
@@ -106,7 +117,9 @@
   text-align: center;
   line-height: 7vw;
   cursor: text;
+  -webkit-appearance: none;
 }
+
 
 input { 
   caret-color: rgb(0,197,185);
