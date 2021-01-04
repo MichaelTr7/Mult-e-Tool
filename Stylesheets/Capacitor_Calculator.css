@@ -176,6 +176,7 @@ input {
   -webkit-appearance: none;
   width: 2.4vw;
   height: 2.4vw;
+  border-radius: 1.2vw;
   border: 2px solid rgba(255,255,255,0.2);
   background: rgb(170,170,170);
   transition: width 0.5s, height 0.5s, border-radius 0.5s;
