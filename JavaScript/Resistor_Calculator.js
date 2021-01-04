@@ -551,6 +551,7 @@ function checkMobile() {
 
 
 function Adjust_Mobile_Menu() {
+  console.log("Checking");
   var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   if (isMobile) {
   var Mobile_Menu = document.getElementsByClassName('Slide_Menu_Button')[0];
