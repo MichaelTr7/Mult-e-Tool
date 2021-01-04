@@ -6,7 +6,6 @@
     
 }
 
-
 .Result_Inset[disabled] {
     background-color: rgb(20,20,20);
     color: rgb(255,255,255);
@@ -14,7 +13,16 @@
     -webkit-appearance: none;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 .Capacitor_Calculator_Wrapper{
   display: grid;
