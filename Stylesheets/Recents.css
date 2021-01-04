@@ -79,12 +79,11 @@
   grid-template-columns: repeat(10,1fr);
   top: 50%;
   left: 50%;
-  height: 15%;
+  height: 14%;
   width: 38%;
   margin-left: -19%;
   margin-top: -7.5%;
 }
-
 
 .Resistance_Values{
   position: absolute;
