@@ -559,4 +559,3 @@ function Adjust_Mobile_Menu() {
   console.log("Mobile");
     }
   }
-}
