@@ -366,7 +366,7 @@ function Unhighlight(){
 
 
 function Adjust_Mobile_Menu_2() {
-  var Mobile_Flag = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  var Mobile_Flag = /iPhone|iPad|iPod/i.test(navigator.userAgent);
   if(Mobile_Flag){
       console.log("Checked")
         var Mobile_Menu = document.getElementsByClassName('Slide_Menu_Button')[0];
