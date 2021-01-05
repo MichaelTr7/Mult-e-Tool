@@ -16,4 +16,6 @@ window.onload = function(){
   Top_Bar_Wrapper.addEventListener("mouseleave",Left_Navigation_Bar);
 
   Adjust_Mobile_Menu();
+  
+  $('.carousel').carousel({interval: false});
 }

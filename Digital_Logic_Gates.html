@@ -3,12 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>Digital Logic Gates</title>
+    <!--Bootstrap references--> 
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+       <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src = "./JavaScript/Navigation_Bar.js"></script>
     <script src = "./JavaScript/Digital_Logic_Gates.js"></script>
     <link rel="stylesheet" href="./Stylesheets/Resistor_Calculator.css">
     <link rel="stylesheet" href="./Stylesheets/Highlight_Configuration.css">
     <link rel="stylesheet" href="./Stylesheets/Top_Bar.css">
+    <link rel="stylesheet" href="./Stylesheets/Digital_Logic_Gates.css">
+
+
   </head>
   <body>
     
@@ -26,7 +35,7 @@
       </div>
     </div>
 
-  <div class="Top_Bar">
+  <div id="Top_Bar_Carousel" class="Top_Bar">
     <button id = "Menu_Button_1" class = "Menu_Buttons">Resistor<br>Calculator</button>
     <button id = "Menu_Button_2" class = "Menu_Buttons">Resistor<br>List Maker</button>
     <button id = "Menu_Button_3" class = "Menu_Buttons">E-Toolbox</button>
@@ -38,6 +47,84 @@
 
     
     
+<div id="demo" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active Not_Active"></li>
+    <li data-target="#demo" data-slide-to="1" class="Not_Active"></li>
+    <li data-target="#demo" data-slide-to="2" class="Not_Active"></li>
+    <li data-target="#demo" data-slide-to="3" class="Not_Active"></li>
+    <li data-target="#demo" data-slide-to="4" class="Not_Active"></li>
+    <li data-target="#demo" data-slide-to="5" class="Not_Active"></li>
+    <li data-target="#demo" data-slide-to="6" class="Not_Active"></li>
+    <li data-target="#demo" data-slide-to="7" class="Not_Active"></li>
+
+  </ul>
+
+  <!--Carousel items-->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="Carousel_Item_Containers">
+      <div class="Inner_Container"></div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="Carousel_Item_Containers">
+      <div class="Inner_Container"></div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="Carousel_Item_Containers">
+      <div class="Inner_Container"></div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="Carousel_Item_Containers">
+      <div class="Inner_Container"></div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="Carousel_Item_Containers">
+      <div class="Inner_Container"></div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="Carousel_Item_Containers">
+      <div class="Inner_Container"></div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="Carousel_Item_Containers">
+      <div class="Inner_Container"></div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="Carousel_Item_Containers">
+      <div class="Inner_Container"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--Carousel navigation controls-->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+
+<div class="Logic_Gate_Label">
+  NOT
+</div>
     
   </body>
 </html>
+
+
+
+
+
+
