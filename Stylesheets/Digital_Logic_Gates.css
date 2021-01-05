@@ -1,6 +1,4 @@
 
-
-
 body {
   margin: 0px 20px -50px 20px;
   background-color: rgb(20,20,20);
@@ -137,8 +135,20 @@ body {
   text-align: center;
   font-size: 5vh;
   font-weight: bold;
-  color: rgb(170,170,170);
-  /* background-color: red; */
+  color: rgba(170,170,170,0.8);
+  opacity: 0;
+  transition: opacity 0.8s linear;
 }
+
+.Logic_Gate_Label_Active{
+  transition: opacity;
+  opacity: 1;
+}
+
+
+
+
+
+
 
 
