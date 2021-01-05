@@ -587,3 +587,8 @@ input {
   opacity: 1;
 }
 
+@media only screen and (max-width: 570px) {
+  #Selected_Label{
+    margin-top: -1.6vw;
+  }
+}
