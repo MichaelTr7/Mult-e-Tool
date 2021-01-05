@@ -6,6 +6,8 @@ body {
   background-color: rgb(20,20,20);
   font-size: 100%;
   /* overflow: hidden; */
+   overflow-y: scroll; 
+   overflow-x: hidden;
 }
 
 .Slide_Menu_Button{
@@ -14,7 +16,7 @@ body {
 
 .carousel{
   margin-left: -20px;
-  position: fixed;
+  /* position: fixed; */
   margin-top: 0px;
   background-color: rgb(20,20,20);
   height: 100vh;
@@ -113,6 +115,12 @@ body {
 
 .carousel-control-prev{
   transition: transform 2s ease-out;
+  margin-left: -20px;
+}
+
+.carousel-control-next{
+  transition: transform 2s ease-out;
+  margin-right: -38px;
 }
 
 .carousel-control-prev,.carousel-control-next:hover{
