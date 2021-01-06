@@ -3,20 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>Digital Logic Gates</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!--Bootstrap references--> 
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Stylesheets/Highlight_Configuration.css">
+    <link rel="stylesheet" href="./Stylesheets/Resistor_Calculator.css">
+    <link rel="stylesheet" href="./Stylesheets/Capacitor_Calculator.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">  
+    <link rel="stylesheet" href="./Stylesheets/Top_Bar.css">  
     <script src = "./JavaScript/Navigation_Bar.js"></script>
     <script src = "./JavaScript/Digital_Logic_Gates.js"></script>
-    <link rel="stylesheet" href="./Stylesheets/Resistor_Calculator.css">
-    <link rel="stylesheet" href="./Stylesheets/Highlight_Configuration.css">
-    <link rel="stylesheet" href="./Stylesheets/Top_Bar.css">
     <link rel="stylesheet" href="./Stylesheets/Digital_Logic_Gates.css">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-
   </head>
   <body>
     
@@ -64,42 +63,114 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <div class="Carousel_Item_Containers">
-      <div class="Inner_Container"></div>
+      <div class="Inner_Container">
+        <div class="Gate_Containers">
+        <div id="AND_Symbol" class="Logic_Gate_Symbols">
+        <div class="LED"></div>
+        <div class="LED"></div>
+        <div class="LED"></div>
+      </div>
+        </div>
+        <div class="Truth_Tables"></div>
+      </div>
       </div>
     </div>
     <div class="carousel-item">
       <div class="Carousel_Item_Containers">
-      <div class="Inner_Container"></div>
+      <div class="Inner_Container">
+        <div class="Gate_Containers">
+        <div id="NAND_Symbol" class="Logic_Gate_Symbols">
+        <div id="NAND_Gate_Input_1" class="LED"></div>
+        <div id="NAND_Gate_Input_2" class="LED"></div>
+        <div id="NAND_Gate_Output" class="LED"></div>
+      </div>
+        </div>
+        <div class="Truth_Tables"></div>
+      </div>
       </div>
     </div>
     <div class="carousel-item">
       <div class="Carousel_Item_Containers">
-      <div class="Inner_Container"></div>
+      <div class="Inner_Container">
+        <div class="Gate_Containers">
+        <div id="OR_Symbol" class="Logic_Gate_Symbols">
+        <div id="OR_Gate_Input_1" class="LED"></div>
+        <div id="OR_Gate_Input_2" class="LED"></div>
+        <div id="OR_Gate_Output" class="LED"></div>
+      </div>
+        </div>
+        <div class="Truth_Tables"></div>
+      </div>
       </div>
     </div>
     <div class="carousel-item">
       <div class="Carousel_Item_Containers">
-      <div class="Inner_Container"></div>
+      <div class="Inner_Container">
+        <div class="Gate_Containers">
+        <div id="NOR_Symbol" class="Logic_Gate_Symbols">
+        <div id="NOR_Gate_Input_1" class="LED"></div>
+        <div id="NOR_Gate_Input_2" class="LED"></div>
+        <div id="NOR_Gate_Output" class="LED"></div>
+      </div>
+        </div>
+        <div class="Truth_Tables"></div>
+      </div>
       </div>
     </div>
     <div class="carousel-item">
       <div class="Carousel_Item_Containers">
-      <div class="Inner_Container"></div>
+      <div class="Inner_Container">
+        <div class="Gate_Containers">
+          <div id="XOR_Symbol" class="Logic_Gate_Symbols">
+          <div id="XOR_Gate_Input_1" class="LED"></div>
+          <div id="XOR_Gate_Input_2" class="LED"></div>
+          <div id="XOR_Gate_Output" class="LED"></div>
+        </div>
+        </div>
+        <div class="Truth_Tables"></div>
+      </div>
       </div>
     </div>
     <div class="carousel-item">
       <div class="Carousel_Item_Containers">
-      <div class="Inner_Container"></div>
+      <div class="Inner_Container">
+        <div class="Gate_Containers">
+        <div id="XNOR_Symbol" class="Logic_Gate_Symbols">
+        <div id="XNOR_Gate_Input_1" class="LED"></div>
+        <div id="XNOR_Gate_Input_2" class="LED"></div>
+        <div id="XNOR_Gate_Output" class="LED"></div>
+      </div>
+        </div>
+        <div class="Truth_Tables"></div>
+      </div>
       </div>
     </div>
     <div class="carousel-item">
       <div class="Carousel_Item_Containers">
-      <div class="Inner_Container"></div>
+      <div class="Inner_Container">
+        <div class="Gate_Containers">
+        <div id="NOT_Symbol" class="Logic_Gate_Symbols">
+        <div id="NOT_Gate_Input_1" class="LED"></div>
+        <div id="NOT_Gate_Disabled_Input" class="LED" style="display:none;"></div>
+        <div id="NOT_Gate_Output" class="LED"></div>
+      </div>
+        </div>
+        <div class="Truth_Tables"></div>
+      </div>
       </div>
     </div>
     <div class="carousel-item">
       <div class="Carousel_Item_Containers">
-      <div class="Inner_Container"></div>
+      <div class="Inner_Container">
+        <div class="Gate_Containers">
+        <div id="BUFFER_Symbol" class="Logic_Gate_Symbols">
+        <div id="BUFFER_Gate_Input_1" class="LED"></div>
+        <div id="BUFFER_Gate_Disabled_Input" class="LED" style="display:none;"></div>
+        <div id="BUFFER_Gate_Output" class="LED"></div>
+      </div>
+        </div>
+        <div class="Truth_Tables"></div>
+      </div>
       </div>
     </div>
   </div>
