@@ -24,6 +24,7 @@ body {
   text-align: center;
   font-size: 20vw;
   height: 70vw;
+  transform: scale(1);
 }
 
 .carousel-indicators .Not_Active{
@@ -126,6 +127,7 @@ body {
   height: 55vw;
   border-radius: 2vw;
   box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
+  background-color: rgb(35,35,35);
 }
 
 .Gate_Containers{
@@ -137,11 +139,18 @@ body {
 }
 
 .Truth_Tables{
+  position: absolute;
   grid-row: 1 / span 2;
   grid-column: 2 / span 1;
-  background-color: rgb(35,35,35);
-  border-radius: 0 2vw 2vw 0;
-  border: 2px solid white;
+  background-color: rgb(25,25,25);
+  border-radius: 2vw;
+  height: 90%;
+  width: 105%;
+  top: 50%;
+  left: 50%;
+  margin-left: -62%;
+  margin-top: -62%;
+  
 }
 
 .Logic_Gate_Symbols{
@@ -149,7 +158,7 @@ body {
   width: 100%;
   background-repeat: no-repeat;
   background-size: 80%;
-  background-position: 50% 28%;
+  background-position: 20% 28%;
 }
 
 #AND_Symbol{
@@ -196,31 +205,31 @@ body {
 .LED:nth-of-type(1){
   position: absolute;
   top: 85%;
-  left: 15%;
+  left: 12%;
 }
 
 .LED:nth-of-type(2){
   position: absolute;
   top: 85%;
-  left: 27.4%;
+  left: 24.4%;
 }
 
 .LED:nth-of-type(3){
   position: absolute;
   top: 3%;
-  left: 21.2%;
+  left: 18.2%;
 }
 
 #NOT_Gate_Input_1{
   position: absolute;
   top: 85%;
-  left: 21.2%;
+  left: 18.2%;
 }
 
 #BUFFER_Gate_Input_1{
   position: absolute;
   top: 85%;
-  left: 21.2%;
+  left: 18.2%;
 }
 
 .LED_ON{
@@ -233,21 +242,10 @@ body {
     margin-left: -20px;
     margin-top: -40px;
   }
-  
-  
-  
-   
-  /* .Gate_Containers{
-    grid-row: 1 / span 1;
-    grid-column: 1 / span 2;
-    border-radius: 2vw 2vw 0 0;
+  .Carousel_Item_Containers{
+    transform: scale(1);
   }
-
-  .Truth_Tables{
-    grid-row: 2 / span 1;
-    grid-column: 1 / span 2;
-    border-radius: 0 0 2vw 2vw;
-  } */
+  
 }
 
 

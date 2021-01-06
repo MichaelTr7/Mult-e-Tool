@@ -21,9 +21,11 @@ window.onload = function(){
     Indicator_Buttons[Index].addEventListener("mouseleave",Hide_Gate_Name);
   }
 
+  window.addEventListener('resize',Resize_Carousel);
 
   Adjust_Mobile_Menu();
   $('.carousel').carousel({interval: false});
+  Resize_Carousel();
 }
 
 function Display_Gate_Name(){
@@ -40,8 +42,25 @@ function Hide_Gate_Name(){
   Gate_Label.classList.remove('Logic_Gate_Label_Active');
 }
   
-  
-  
+function Resize_Carousel(){
+  var Carousel = document.getElementsByClassName('Carousel_Item_Containers');    
+  Carousel_Style = window.getComputedStyle(Carousel[0]);
+  var Carousel_Height = parseInt(String(Carousel_Style.getPropertyValue('height')));    
+  var Carousel_Top_Margin = parseInt(String(Carousel_Style.getPropertyValue('margin-top')));    
+  var Window_Height = parseInt(window.innerHeight);
+  var Carousel_Scaling_Factor = Window_Height/Carousel_Height;
+  // var Size_Difference = (Carousel_Height - Carousel_Height*Carousel_Scaling_Factor)/2;
+  // var New_Margin = Carousel_Top_Margin - Size_Difference;
+
+    if(Carousel_Scaling_Factor < 1){
+      for(Index = 0; Index < Carousel.length; Index++){
+        Carousel[Index].style.transform = "scale(" + String(Carousel_Scaling_Factor) + ")";
+      //   if(Size_Difference > 0){
+      //   Carousel[Index].style.marginTop = String(New_Margin) + "px";
+      // }
+      }
+    }
+}
   
   
   
