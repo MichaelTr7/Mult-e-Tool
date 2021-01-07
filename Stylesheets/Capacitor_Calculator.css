@@ -199,6 +199,19 @@ input {
   filter: brightness(1);
 }
 
+#Tolerance_Slider::-moz-range-thumb{
+  appearance: none;
+  width: 2vw;
+  height: 2vw;
+  border-radius: 1.2vw;
+  border: 2px solid rgba(255,255,255,0.2);
+  background: rgb(170,170,170);
+  transition: width 0.5s, height 0.5s, border-radius 0.5s;
+  box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.2), inset 1px 1px 2px 0px rgba(255,255,255,0.15);
+  transition: transform 0.25s, filter 0.25s;
+  filter: brightness(1);
+}
+
 #Tolerance_Slider::-webkit-slider-thumb:hover{
   transform: scale(1.1);
   filter: brightness(1.2);
