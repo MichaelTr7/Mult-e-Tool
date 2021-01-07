@@ -1,3 +1,4 @@
+
 .Digit_Buttons[disabled] {
     background-color: rgb(35,35,35);
     color: rgb(245,245,245);
@@ -609,5 +610,14 @@ input {
   }
 }
   
+}
+
+@-moz-document url-prefix(){
+  #Selected_Label{
+    margin-top: -0.8vw;
+  }
+  #Capacitor_Value{
+    top: 41%;
+  }
 }
 
