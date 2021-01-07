@@ -179,10 +179,11 @@ function Switch_Inputs(){
   Swap_Button.classList.add('Jump_Animation_2');
 
   Preview_Grid_Column = parseInt((window.getComputedStyle(Left_Input_Panel).getPropertyValue('grid-column')).split("/")[0]);
+  Left_Input_Panel.classList.toggle('Left_Panel_Swapped');
+  Right_Input_Panel.classList.toggle('Right_Panel_Swapped');
+  
   
   if(Preview_Grid_Column == 1){
-    Left_Input_Panel.classList.add('Left_Panel_Swapped');
-    Right_Input_Panel.classList.add('Right_Panel_Swapped');
     Swap_Button.classList.add('Swap_Button_Swapped');
     document.getElementById("Tolerance_Slider").disabled = true;
     for(Index = 0; Index < Code_Buttons.length; Index++){
@@ -202,8 +203,6 @@ function Switch_Inputs(){
   }
 
   if(Preview_Grid_Column == 5){
-    Left_Input_Panel.classList.remove('Left_Panel_Swapped');
-    Right_Input_Panel.classList.remove('Right_Panel_Swapped'); 
     Swap_Button.classList.remove('Swap_Button_Swapped');   
     document.getElementById("Tolerance_Slider").disabled = false;
     for(Index = 0; Index < Code_Buttons.length; Index++){
