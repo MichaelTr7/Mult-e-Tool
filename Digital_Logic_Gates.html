@@ -3,19 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Digital Logic Gates</title>
-    <!--Bootstrap references--> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Stylesheets/Highlight_Configuration.css">
     <link rel="stylesheet" href="./Stylesheets/Resistor_Calculator.css">
     <link rel="stylesheet" href="./Stylesheets/Capacitor_Calculator.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">  
     <link rel="stylesheet" href="./Stylesheets/Top_Bar.css">  
+    <link rel="stylesheet" href="./Stylesheets/Digital_Logic_Gates.css">
     <script src = "./JavaScript/Navigation_Bar.js"></script>
     <script src = "./JavaScript/Digital_Logic_Gates.js"></script>
-    <link rel="stylesheet" href="./Stylesheets/Digital_Logic_Gates.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
   </head>
   <body>
     
@@ -34,164 +30,277 @@
     </div>
 
   <div id="Top_Bar_Carousel" class="Top_Bar">
-    <button id = "Menu_Button_1" class = "Menu_Buttons">Resistor<br>Calculator</button>
-    <button id = "Menu_Button_2" class = "Menu_Buttons">Resistor<br>List Maker</button>
-    <button id = "Menu_Button_3" class = "Menu_Buttons">E-Toolbox</button>
-    <button id = "Menu_Button_4" class = "Menu_Buttons">Capacitor<br>Calculator</button>
-    <button id = "Menu_Button_5" class = "Menu_Buttons">Digital<br>Logic Gates</button>
+    <button id="Menu_Button_1" class = "Menu_Buttons">Resistor<br>Calculator</button>
+    <button id="Menu_Button_2" class = "Menu_Buttons">Resistor<br>List Maker</button>
+    <button id="Menu_Button_3" class = "Menu_Buttons">E-Toolbox</button>
+    <button id="Menu_Button_4" class = "Menu_Buttons">Capacitor<br>Calculator</button>
+    <button id="Menu_Button_5" class = "Menu_Buttons">Digital<br>Logic Gates</button>
     <div class="Arrow"></div>
     <div class="Bottom_Bar"></div>
   </div>
 
-    
-    
-<div id="demo" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ul class="carousel-indicators">
-    <li id="Indicator_1" data-target="#demo" data-slide-to="0" class="active Not_Active"></li>
-    <li id="Indicator_2" data-target="#demo" data-slide-to="1" class="Not_Active"></li>
-    <li id="Indicator_3" data-target="#demo" data-slide-to="2" class="Not_Active"></li>
-    <li id="Indicator_4" data-target="#demo" data-slide-to="3" class="Not_Active"></li>
-    <li id="Indicator_5" data-target="#demo" data-slide-to="4" class="Not_Active"></li>
-    <li id="Indicator_6" data-target="#demo" data-slide-to="5" class="Not_Active"></li>
-    <li id="Indicator_7" data-target="#demo" data-slide-to="6" class="Not_Active"></li>
-    <li id="Indicator_8" data-target="#demo" data-slide-to="7" class="Not_Active"></li>
 
-  </ul>
-
-  <!--Carousel items-->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="Carousel_Item_Containers">
-      <div class="Inner_Container">
-        <div class="Gate_Containers">
-        <div id="AND_Symbol" class="Logic_Gate_Symbols">
-        <div class="LED"></div>
-        <div class="LED"></div>
-        <div class="LED"></div>
-      </div>
-        </div>
-        <div class="Truth_Tables"></div>
-      </div>
-      </div>
+<div class="Digital_Logic_Gates_Wrapper">
+  <div class="Digital_Logic_Gates_Containers Container_1">
+  <div class="Logic_Gates_Cards">
+    <div class="Logic_Gate_Diagrams AND_Gate">
+      <div id="AND_Input_1" class="LED"></div>
+      <div id="AND_Input_2" class="LED"></div>
+      <div id="AND_Output" class="LED"></div>
     </div>
-    <div class="carousel-item">
-      <div class="Carousel_Item_Containers">
-      <div class="Inner_Container">
-        <div class="Gate_Containers">
-        <div id="NAND_Symbol" class="Logic_Gate_Symbols">
-        <div id="NAND_Gate_Input_1" class="LED"></div>
-        <div id="NAND_Gate_Input_2" class="LED"></div>
-        <div id="NAND_Gate_Output" class="LED"></div>
-      </div>
+    <div class="Truth_Table_Container">
+        <div class="Truth_Table">
+            <div class="Truth_Table_Value"><br>Inputs</div>
+            <div class="Truth_Table_Value"><br>Outputs</div>
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">0</div>
+            
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">0</div>
+            
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">0</div>
+            
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">1</div>
+            
         </div>
-        <div class="Truth_Tables"></div>
-      </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="Carousel_Item_Containers">
-      <div class="Inner_Container">
-        <div class="Gate_Containers">
-        <div id="OR_Symbol" class="Logic_Gate_Symbols">
-        <div id="OR_Gate_Input_1" class="LED"></div>
-        <div id="OR_Gate_Input_2" class="LED"></div>
-        <div id="OR_Gate_Output" class="LED"></div>
-      </div>
-        </div>
-        <div class="Truth_Tables"></div>
-      </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="Carousel_Item_Containers">
-      <div class="Inner_Container">
-        <div class="Gate_Containers">
-        <div id="NOR_Symbol" class="Logic_Gate_Symbols">
-        <div id="NOR_Gate_Input_1" class="LED"></div>
-        <div id="NOR_Gate_Input_2" class="LED"></div>
-        <div id="NOR_Gate_Output" class="LED"></div>
-      </div>
-        </div>
-        <div class="Truth_Tables"></div>
-      </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="Carousel_Item_Containers">
-      <div class="Inner_Container">
-        <div class="Gate_Containers">
-          <div id="XOR_Symbol" class="Logic_Gate_Symbols">
-          <div id="XOR_Gate_Input_1" class="LED"></div>
-          <div id="XOR_Gate_Input_2" class="LED"></div>
-          <div id="XOR_Gate_Output" class="LED"></div>
-        </div>
-        </div>
-        <div class="Truth_Tables"></div>
-      </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="Carousel_Item_Containers">
-      <div class="Inner_Container">
-        <div class="Gate_Containers">
-        <div id="XNOR_Symbol" class="Logic_Gate_Symbols">
-        <div id="XNOR_Gate_Input_1" class="LED"></div>
-        <div id="XNOR_Gate_Input_2" class="LED"></div>
-        <div id="XNOR_Gate_Output" class="LED"></div>
-      </div>
-        </div>
-        <div class="Truth_Tables"></div>
-      </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="Carousel_Item_Containers">
-      <div class="Inner_Container">
-        <div class="Gate_Containers">
-        <div id="NOT_Symbol" class="Logic_Gate_Symbols">
-        <div id="NOT_Gate_Input_1" class="LED"></div>
-        <div id="NOT_Gate_Disabled_Input" class="LED" style="display:none;"></div>
-        <div id="NOT_Gate_Output" class="LED"></div>
-      </div>
-        </div>
-        <div class="Truth_Tables"></div>
-      </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="Carousel_Item_Containers">
-      <div class="Inner_Container">
-        <div class="Gate_Containers">
-        <div id="BUFFER_Symbol" class="Logic_Gate_Symbols">
-        <div id="BUFFER_Gate_Input_1" class="LED"></div>
-        <div id="BUFFER_Gate_Disabled_Input" class="LED" style="display:none;"></div>
-        <div id="BUFFER_Gate_Output" class="LED"></div>
-      </div>
-        </div>
-        <div class="Truth_Tables"></div>
-      </div>
-      </div>
     </div>
   </div>
-
-
-  <!--Carousel navigation controls-->
-  <a class="carousel-control-prev" href="#demo" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#demo" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
+  </div>  
+  <div class="Digital_Logic_Gates_Containers Container_2">
+  <div class="Logic_Gates_Cards">
+    <div class="Logic_Gate_Diagrams NAND_Gate">
+      <div id="NAND_Input_1" class="LED"></div>
+      <div id="NAND_Input_2" class="LED"></div>
+      <div id="NAND_Output" class="LED"></div>
+    </div>
+    <div class="Truth_Table_Container">
+        <div class="Truth_Table">
+            <div class="Truth_Table_Value"><br>Inputs</div>
+            <div class="Truth_Table_Value"><br>Outputs</div>
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">1</div>
+            
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">1</div>
+            
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">1</div>
+            
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">0</div>
+            
+        </div>
+    </div>
+  </div>
+  </div>  
+  <div class="Digital_Logic_Gates_Containers Container_3">
+  <div class="Logic_Gates_Cards">
+    <div class="Logic_Gate_Diagrams OR_Gate">
+      <div id="OR_Input_1" class="LED"></div>
+      <div id="OR_Input_2" class="LED"></div>
+      <div id="OR_Output" class="LED"></div>
+    </div>
+    <div class="Truth_Table_Container">
+        <div class="Truth_Table">
+            <div class="Truth_Table_Value"><br>Inputs</div>
+            <div class="Truth_Table_Value"><br>Outputs</div>
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">0</div>
+            
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">1</div>
+            
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">1</div>
+            
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">1</div>
+            
+        </div>
+    </div>
+  </div>
+  </div>  
+  
+  <div class="Digital_Logic_Gates_Containers Container_4">
+  <div class="Logic_Gates_Cards">
+    <div class="Logic_Gate_Diagrams NOR_Gate">
+      <div id="NOR_Input_1" class="LED"></div>
+      <div id="NOR_Input_2" class="LED"></div>
+      <div id="NOR_Output" class="LED"></div>
+    </div>
+    <div class="Truth_Table_Container">
+        <div class="Truth_Table">
+            <div class="Truth_Table_Value"><br>Inputs</div>
+            <div class="Truth_Table_Value"><br>Outputs</div>
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">1</div>
+            
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">0</div>
+            
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">0</div>
+            
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">0</div>
+            
+        </div>
+    </div>
+  </div>
+  </div>  
+  
+  <div class="Digital_Logic_Gates_Containers Container_5">
+  <div class="Logic_Gates_Cards">
+    <div class="Logic_Gate_Diagrams XOR_Gate">
+      <div id="XOR_Input_1" class="LED"></div>
+      <div id="XOR_Input_2" class="LED"></div>
+      <div id="XOR_Output" class="LED"></div>
+    </div>
+    <div class="Truth_Table_Container">
+        <div class="Truth_Table">
+            <div class="Truth_Table_Value"><br>Inputs</div>
+            <div class="Truth_Table_Value"><br>Outputs</div>
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">0</div>
+            
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">1</div>
+            
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">1</div>
+            
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">0</div>
+            
+        </div>
+    </div>
+  </div>
+  </div>  
+  
+  <div class="Digital_Logic_Gates_Containers Container_6">
+  <div class="Logic_Gates_Cards">
+    <div class="Logic_Gate_Diagrams XNOR_Gate">
+      <div id="XNOR_Input_1" class="LED"></div>
+      <div id="XNOR_Input_2" class="LED"></div>
+      <div id="XNOR_Output" class="LED"></div>
+    </div>
+    <div class="Truth_Table_Container">
+        <div class="Truth_Table">
+            <div class="Truth_Table_Value"><br>Inputs</div>
+            <div class="Truth_Table_Value"><br>Outputs</div>
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">1</div>
+            
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">0</div>
+            
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">0</div>
+            
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">1</div>
+            
+        </div>
+    </div>
+  </div>
+  </div>  
+  
+  <div class="Digital_Logic_Gates_Containers Container_8">
+  <div class="Logic_Gates_Cards">
+    <div class="Logic_Gate_Diagrams BUFFER_Gate">
+      <div id="BUFFER_Input_1" class="LED"></div>
+      <div id="BUFFER_Input_2" class="LED"></div>
+      <div id="BUFFER_Output" class="LED"></div>
+    </div>
+    <div class="Truth_Table_Container">
+        <div class="Truth_Table">
+            <div class="Truth_Table_Value"><br>Inputs</div>
+            <div class="Truth_Table_Value"><br>Outputs</div>
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">0</div>
+            
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">0</div>
+            
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">1</div>
+            
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">1</div>
+            
+        </div>
+    </div>
+  </div>
+  </div>  
+  
+  <div class="Digital_Logic_Gates_Containers Container_7">
+  <div class="Logic_Gates_Cards">
+    <div class="Logic_Gate_Diagrams NOT_Gate">
+      <div id="NOT_Input_1" class="LED"></div>
+      <div id="NOT_Input_2" class="LED"></div>
+      <div id="NOT_Output" class="LED"></div>
+    </div>
+    <div class="Truth_Table_Container">
+        <div class="Truth_Table">
+            <div class="Truth_Table_Value"><br>Inputs</div>
+            <div class="Truth_Table_Value"><br>Outputs</div>
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value"></div>
+            
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value"></div>
+            
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">0</div>
+            <div class="Truth_Table_Value"></div>
+            
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value">1</div>
+            <div class="Truth_Table_Value"></div>
+            
+        </div>
+    </div>
+  </div>
+  </div>  
+  
 </div>
-
-
-<div class="Logic_Gate_Label">
-  NOT
-</div>
-    
+  
+  
   </body>
 </html>
+
 
 
 

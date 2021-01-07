@@ -125,7 +125,7 @@
     transform: translateY(2px) scaleX(1);    
   } 
   100%{
-    transform: translateY(0px) scaleX(1);;        
+    transform: translateY(0px) scaleX(1);        
   }
 }
 
