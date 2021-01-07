@@ -163,7 +163,6 @@ body{
   left: 50%;
   margin-top: -44%;
   margin-left: -41.5%;
-  background-color: rgb(30,30,30);
   border: 5px solid rgb(35,35,35);
 }
 
@@ -180,7 +179,6 @@ body{
   text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
 }
 
-
 .Truth_Table_Value:not(:nth-child(1)):not(:nth-child(2)){
   font-size: 1.5em;
   line-height: 1.6em;
@@ -190,7 +188,36 @@ body{
   grid-column: 1 / span 2;
 }
 
+.BUFFER_Gate_Inputs > div:nth-child(3){
+  grid-column: 1 / span 2;
+}
 
+.BUFFER_Gate_Inputs > div:nth-child(5){
+  grid-column: 1 / span 2;
+}
+
+.NOT_Gate_Inputs > div:nth-child(3){
+  grid-column: 1 / span 2;
+}
+
+.NOT_Gate_Inputs > div:nth-child(5){
+  grid-column: 1 / span 2;
+}
+
+@media only screen and (max-width: 446px) {
+  
+  .Digital_Logic_Gates_Containers{
+    height: 300px;
+    width: 460px;
+    margin-top: -150px;
+    min-width: 460px;
+    transform: scale(0.5);
+  }
+
+  .Digital_Logic_Gates_Wrapper{
+    top: 140px;
+  }
+}
 
 
 
