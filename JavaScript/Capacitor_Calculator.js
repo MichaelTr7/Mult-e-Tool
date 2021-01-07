@@ -181,9 +181,13 @@ function Switch_Inputs(){
   Preview_Grid_Column = parseInt((window.getComputedStyle(Left_Input_Panel).getPropertyValue('grid-column')).split("/")[0]);
   Left_Input_Panel.classList.toggle('Left_Panel_Swapped');
   Right_Input_Panel.classList.toggle('Right_Panel_Swapped');
+  var Input_String = document.getElementById('Input_Header').innerHTML;
+  console.log(Input_String);
   
   
-  if(Preview_Grid_Column == 1){
+  
+  
+  if(Input_String == "Inputs: Capacitor Code"){
     Swap_Button.classList.add('Swap_Button_Swapped');
     document.getElementById("Tolerance_Slider").disabled = true;
     for(Index = 0; Index < Code_Buttons.length; Index++){
@@ -201,8 +205,7 @@ function Switch_Inputs(){
     Tutorial_Panel_1.classList.add('Function_Panel_1_Swapped');
     Tutorial_Panel_2.classList.add('Function_Panel_3_Swapped');  
   }
-
-  if(Preview_Grid_Column == 5){
+  else{
     Swap_Button.classList.remove('Swap_Button_Swapped');   
     document.getElementById("Tolerance_Slider").disabled = false;
     for(Index = 0; Index < Code_Buttons.length; Index++){
