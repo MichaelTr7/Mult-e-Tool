@@ -89,20 +89,20 @@ body{
 
 .LED:nth-of-type(1){
   position: absolute;
-  top: 82%;
-  left: 10.9%;
+  top: 245px;
+  left: 49px;
 }
 
 .LED:nth-of-type(2){
   position: absolute;
-  top: 82%;
-  left: 22.2%;
+  top: 245px;
+  left: 102px;
 }
 
 .LED:nth-of-type(3){
   position: absolute;
-  top: 4%;
-  left: 16.55%;
+  top: 15px;
+  left: 75.5px;
 }
 
 .BUFFER_Gate > div:nth-child(2){
@@ -111,8 +111,8 @@ body{
 
 .BUFFER_Gate > div:nth-child(1), .NOT_Gate > div:nth-child(1){
   position: absolute;
-  top: 82%;
-  left: 16.55%;
+  top: 245px;
+  left: 75.5px;
 }
 
 .NOT_Gate > div:nth-child(2){
