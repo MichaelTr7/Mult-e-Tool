@@ -251,17 +251,6 @@ body{
   z-index: 3;
 }
 
-/* .Logic_Gate_Faces{
-  position: absolute;
-  height: 100px;
-  width: 90px;
-  top: 110px;
-  left: 49px;
-  border-radius: 45px 45px 0px 0px;
-  background-color: red;
-  z-index: 3;
-} */
-
 #BUFFER_Input_Label, #NOT_Input_Label{
   top: 256px;
   left: 115px;
@@ -276,6 +265,7 @@ body{
   z-index: 3;
   padding: 30px 10px 2px 10px;
   border-radius: 20px 20px 0px 0px;
+  /* background-color: red; */
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -288,9 +278,22 @@ body{
   opacity: 1;
 }
 
-
-#AND_Gate_Face:hover{
+.Gate_Faces:hover{
   cursor: pointer;
+}
+
+.Left_Eyes,.Right_Eyes,.Mouth:hover{
+  cursor: pointer;
+}
+
+#OR_Gate_Face,#NOR_Gate_Face,#XOR_Gate_Face,#XNOR_Gate_Face{
+  top: 98px;
+  left: 50px;
+}
+
+#BUFFER_Gate_Face,#NOT_Gate_Face{
+  top: 110px;
+  left: 50px;
 }
 
 

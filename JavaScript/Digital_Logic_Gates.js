@@ -124,6 +124,17 @@ function Update_OR_Gate(){
   if(Output_State){document.getElementById('OR_Output').classList.add('LED_ON');}
   else{document.getElementById('OR_Output').classList.remove('LED_ON');}
   Update_Truth_Table(Input_1_State,Input_2_State,LED_Gate_Class);
+  var Eye_To_Toggle = parseInt(String(this.id).split("_")[2]);
+  var Left_Eyes = document.getElementsByClassName('OR_Left_Eyes');
+  var Right_Eyes = document.getElementsByClassName('OR_Right_Eyes');
+  if(Eye_To_Toggle == 1){
+    Left_Eyes[0].classList.toggle('Open_Eyes');
+    Left_Eyes[1].classList.toggle('Open_Eyes');
+  }
+  if(Eye_To_Toggle == 2){
+    Right_Eyes[0].classList.toggle('Open_Eyes');
+    Right_Eyes[1].classList.toggle('Open_Eyes');
+  }  
 }
 
 function Update_NOR_Gate(){
@@ -136,6 +147,17 @@ function Update_NOR_Gate(){
   if(Output_State){document.getElementById('NOR_Output').classList.add('LED_ON');}
   else{document.getElementById('NOR_Output').classList.remove('LED_ON');}
   Update_Truth_Table(Input_1_State,Input_2_State,LED_Gate_Class);
+  var Eye_To_Toggle = parseInt(String(this.id).split("_")[2]);
+  var Left_Eyes = document.getElementsByClassName('NOR_Left_Eyes');
+  var Right_Eyes = document.getElementsByClassName('NOR_Right_Eyes');
+  if(Eye_To_Toggle == 1){
+    Left_Eyes[0].classList.toggle('Open_Eyes');
+    Left_Eyes[1].classList.toggle('Open_Eyes');
+  }
+  if(Eye_To_Toggle == 2){
+    Right_Eyes[0].classList.toggle('Open_Eyes');
+    Right_Eyes[1].classList.toggle('Open_Eyes');
+  }
 }
 
 function Update_XOR_Gate(){
@@ -149,6 +171,17 @@ function Update_XOR_Gate(){
   if(Output_State){document.getElementById('XOR_Output').classList.add('LED_ON');}
   else{document.getElementById('XOR_Output').classList.remove('LED_ON');}
   Update_Truth_Table(Input_1_State,Input_2_State,LED_Gate_Class);
+  var Eye_To_Toggle = parseInt(String(this.id).split("_")[2]);
+  var Left_Eyes = document.getElementsByClassName('XOR_Left_Eyes');
+  var Right_Eyes = document.getElementsByClassName('XOR_Right_Eyes');
+  if(Eye_To_Toggle == 1){
+    Left_Eyes[0].classList.toggle('Open_Eyes');
+    Left_Eyes[1].classList.toggle('Open_Eyes');
+  }
+  if(Eye_To_Toggle == 2){
+    Right_Eyes[0].classList.toggle('Open_Eyes');
+    Right_Eyes[1].classList.toggle('Open_Eyes');
+  }
 }
 
 function Update_XNOR_Gate(){
@@ -162,6 +195,17 @@ function Update_XNOR_Gate(){
   if(!Output_State){document.getElementById('XNOR_Output').classList.add('LED_ON');}
   else{document.getElementById('XNOR_Output').classList.remove('LED_ON');}
   Update_Truth_Table(Input_1_State,Input_2_State,LED_Gate_Class);
+  var Eye_To_Toggle = parseInt(String(this.id).split("_")[2]);
+  var Left_Eyes = document.getElementsByClassName('XNOR_Left_Eyes');
+  var Right_Eyes = document.getElementsByClassName('XNOR_Right_Eyes');
+  if(Eye_To_Toggle == 1){
+    Left_Eyes[0].classList.toggle('Open_Eyes');
+    Left_Eyes[1].classList.toggle('Open_Eyes');
+  }
+  if(Eye_To_Toggle == 2){
+    Right_Eyes[0].classList.toggle('Open_Eyes');
+    Right_Eyes[1].classList.toggle('Open_Eyes');
+  }
 }
 
 function Update_BUFFER_Gate(){
@@ -173,6 +217,13 @@ function Update_BUFFER_Gate(){
   else{document.getElementById('BUFFER_Output').classList.remove('LED_ON');}
   var Input_2_State = NaN;
   Update_Truth_Table(Input_1_State,Input_2_State,LED_Gate_Class);
+  var Eye_To_Toggle = parseInt(String(this.id).split("_")[2]);
+  var Left_Eyes = document.getElementsByClassName('BUFFER_Left_Eyes');
+  var Right_Eyes = document.getElementsByClassName('BUFFER_Right_Eyes');
+    Left_Eyes[0].classList.toggle('Open_Eyes');
+    Left_Eyes[1].classList.toggle('Open_Eyes');
+    Right_Eyes[0].classList.toggle('Open_Eyes');
+    Right_Eyes[1].classList.toggle('Open_Eyes');
 }
 
 function Update_NOT_Gate(){
@@ -184,6 +235,13 @@ function Update_NOT_Gate(){
   else{document.getElementById('NOT_Output').classList.remove('LED_ON');}
   var Input_2_State = NaN;
   Update_Truth_Table(Input_1_State,Input_2_State,LED_Gate_Class);
+  var Eye_To_Toggle = parseInt(String(this.id).split("_")[2]);
+  var Left_Eyes = document.getElementsByClassName('NOT_Left_Eyes');
+  var Right_Eyes = document.getElementsByClassName('NOT_Right_Eyes');
+  Left_Eyes[0].classList.toggle('Open_Eyes');
+  Left_Eyes[1].classList.toggle('Open_Eyes');
+  Right_Eyes[0].classList.toggle('Open_Eyes');
+  Right_Eyes[1].classList.toggle('Open_Eyes');
 }
 
 function Toggle_LED(Target_LED){
@@ -228,11 +286,13 @@ if(Left_Input == true & String(Right_Input) == "NaN"){
 }
 
 function Face_Pressed(){
-  var Face_Object = document.getElementById(this.id);
-  Face_Object.classList.toggle('Jump_Animation');
-  var Opacity = parseInt(window.getComputedStyle(Face_Object).getPropertyValue('opacity'));  
+  var Face_Objects = document.getElementsByClassName('Gate_Faces');
+  var Opacity = parseInt(window.getComputedStyle(Face_Objects[0]).getPropertyValue('opacity'));  
   Opacity ^= 1;
-  Face_Object.style.opacity = Opacity;
+  for(Face_Index = 0; Face_Index < Face_Objects.length; Face_Index++){
+    Face_Objects[Face_Index].classList.toggle('Jump_Animation');
+    Face_Objects[Face_Index].style.opacity = Opacity;
+  }
 }
 
 
