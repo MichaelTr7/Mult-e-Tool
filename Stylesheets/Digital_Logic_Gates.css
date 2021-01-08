@@ -229,6 +229,71 @@ body{
   text-shadow: 0 0 5px rgb(255,255,255,0.2), 0 0 10px rgb(255,255,255,0.2), 0 0 5px rgb(255,255,255,0.2), 0 0 10px rgba(0,194,159,1), 0 0 25px rgba(0,194,159,1);
 }
 
+.Input_Labels{
+  position: absolute;
+  color: rgb(10,10,10);
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 0.9em;
+  top: 256px;
+  left: 140px;
+  z-index: 3;
+}
+
+.Output_Labels{
+  position: absolute;
+  color: rgb(10,10,10);
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 0.9em;
+  top: 24px;
+  left: 115px;
+  z-index: 3;
+}
+
+/* .Logic_Gate_Faces{
+  position: absolute;
+  height: 100px;
+  width: 90px;
+  top: 110px;
+  left: 49px;
+  border-radius: 45px 45px 0px 0px;
+  background-color: red;
+  z-index: 3;
+} */
+
+#BUFFER_Input_Label, #NOT_Input_Label{
+  top: 256px;
+  left: 115px;
+}
+
+.Gate_Faces{
+  position: absolute;
+  height: 65px;
+  width: 65px;
+  top: 105px;
+  left: 50px;
+  z-index: 3;
+  padding: 30px 10px 2px 10px;
+  border-radius: 20px 20px 0px 0px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.Left_Eyes,.Right_Eyes{
+  opacity: 0;
+}
+
+.Open_Eyes{
+  opacity: 1;
+}
+
+
+#AND_Gate_Face:hover{
+  cursor: pointer;
+}
+
+
 
 @media only screen and (max-width: 446px) {
   
@@ -241,7 +306,7 @@ body{
   }
 
   .Digital_Logic_Gates_Wrapper{
-    top: 120px;
+    top: 118px;
   }
 }
 
@@ -262,3 +327,16 @@ body{
     filter: opacity(1);  
   }
 }
+
+.Jump_Animation{
+  animation: Jump_Keyframes 0.5s ease-out forwards;
+}
+
+@keyframes Jump_Keyframes{
+  0%{transform: translateY(0px) scaleX(1);}
+  10%{transform: translateY(5px) scaleX(1.2);}
+  40%{transform: translateY(-7px) scaleX(0.8);}  
+  75%{transform: translateY(2px) scaleX(1);} 
+  100%{transform: translateY(0px) scaleX(1);}
+}
+

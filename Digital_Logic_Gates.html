@@ -43,10 +43,24 @@
 <div class="Digital_Logic_Gates_Wrapper">
   <div class="Digital_Logic_Gates_Containers Container_1">
   <div class="Logic_Gates_Cards">
+    <label class="Input_Labels">←Inputs</label>
+    <label class="Output_Labels">←Outputs</label>
+      <svg class="Gate_Faces" id="AND_Gate_Face" width="379" height="384" viewBox="0 0 379 384" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M93.9756 290.837C93.9756 291.008 94.0073 291.155 94.0934 291.302C96.1431 294.814 125.06 342.317 189.585 342.317C254.111 342.317 283.028 294.814 285.077 291.302C285.163 291.155 285.195 291.008 285.195 290.837V278.874C285.195 277.787 283.471 277.349 282.911 278.28C275.778 290.137 250.638 322.683 189.585 322.683C128.533 322.683 103.393 290.137 96.2599 278.28C95.6998 277.349 93.9756 277.787 93.9756 278.874V290.837Z" fill="black"/>
+      <path d="M93.9756 290.837C93.9756 291.008 94.0073 291.155 94.0934 291.302C96.1431 294.814 125.06 342.317 189.585 342.317C254.111 342.317 283.028 294.814 285.077 291.302C285.163 291.155 285.195 291.008 285.195 290.837V278.874C285.195 277.787 283.471 277.349 282.911 278.28C275.778 290.137 250.638 322.683 189.585 322.683C128.533 322.683 103.393 290.137 96.2599 278.28C95.6998 277.349 93.9756 277.787 93.9756 278.874V290.837Z" stroke="black"/>
+      <path d="M131 130.395C131 130.299 130.989 130.212 130.96 130.12C130.219 127.726 119.035 93 94 93C68.965 93 57.7811 127.726 57.0396 130.12C57.0111 130.212 57 130.299 57 130.395L57 134.208C57 135.331 59.0584 135.82 59.6615 134.873C63.9411 128.153 73.9825 117.212 94 117.212C114.018 117.213 124.059 128.153 128.338 134.873C128.942 135.82 131 135.331 131 134.208L131 130.395Z" fill="black"/>
+      <path d="M131 130.395C131 130.299 130.989 130.212 130.96 130.12C130.219 127.726 119.035 93 94 93C68.965 93 57.7811 127.726 57.0396 130.12C57.0111 130.212 57 130.299 57 130.395L57 134.208C57 135.331 59.0584 135.82 59.6615 134.873C63.9411 128.153 73.9825 117.212 94 117.212C114.018 117.213 124.059 128.153 128.338 134.873C128.942 135.82 131 135.331 131 134.208L131 130.395Z" stroke="black"/>
+      <path d="M329 130.395C329 130.299 328.989 130.212 328.96 130.12C328.219 127.726 317.035 93 292 93C266.965 93 255.781 127.726 255.04 130.12C255.011 130.212 255 130.299 255 130.395L255 134.208C255 135.331 257.058 135.82 257.662 134.873C261.941 128.153 271.982 117.212 292 117.212C312.018 117.213 322.059 128.153 326.338 134.873C326.942 135.82 329 135.331 329 134.208L329 130.395Z" fill="black"/>
+      <path d="M329 130.395C329 130.299 328.989 130.212 328.96 130.12C328.219 127.726 317.035 93 292 93C266.965 93 255.781 127.726 255.04 130.12C255.011 130.212 255 130.299 255 130.395L255 134.208C255 135.331 257.058 135.82 257.662 134.873C261.941 128.153 271.982 117.212 292 117.212C312.018 117.213 322.059 128.153 326.338 134.873C326.942 135.82 329 135.331 329 134.208L329 130.395Z" stroke="black"/>
+      <ellipse class="AND_Left_Eyes Left_Eyes" cx="93.9756" cy="116.951" rx="40.9756" ry="81.9512" fill="black"/>
+      <ellipse class="AND_Left_Eyes Left_Eyes" cx="76.9026" cy="89.6342" rx="10.2439" ry="20.4878" fill="white"/>
+      <ellipse class="AND_Right_Eyes Right_Eyes" cx="292.024" cy="116.951" rx="40.9756" ry="81.9512" fill="black"/>
+      <ellipse class="AND_Right_Eyes Right_Eyes" cx="274.951" cy="89.6342" rx="10.2439" ry="20.4878" fill="white"/>
+      </svg>
     <div class="Logic_Gate_Diagrams AND_Gate">
       <div id="AND_Input_1" class="LED"></div>
       <div id="AND_Input_2" class="LED"></div>
-      <div id="AND_Output" class="LED"></div>
+      <div id="AND_Output" class="LED" onclick="Face_Pressed"></div>
     </div>
     <div class="Truth_Table_Container">
       <div class="Gate_Labels">AND</div>
@@ -73,8 +87,26 @@
     </div>
   </div>
   </div>  
+  
   <div class="Digital_Logic_Gates_Containers Container_2">
   <div class="Logic_Gates_Cards">
+    <label class="Input_Labels">←Inputs</label>
+    <label class="Output_Labels">←Outputs</label>
+    <svg class="Gate_Faces" id="OR_Gate_Face" width="379" height="384" viewBox="0 0 379 384" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M92.7473 309.173C92.7915 309.338 92.8602 309.472 92.9815 309.592C95.8703 312.454 136.097 350.854 198.423 334.154C260.75 317.453 276.387 264.085 277.458 260.162C277.503 259.997 277.495 259.847 277.451 259.682L274.355 248.126C274.074 247.077 272.295 247.1 271.995 248.144C268.173 261.444 252.313 299.387 193.342 315.188C134.37 330.99 101.663 306.06 91.7038 296.453C90.9218 295.699 89.3698 296.568 89.651 297.618L92.7473 309.173Z" fill="black"/>
+      <path d="M92.7473 309.173C92.7915 309.338 92.8602 309.472 92.9815 309.592C95.8703 312.454 136.097 350.854 198.423 334.154C260.75 317.453 276.387 264.085 277.458 260.162C277.503 259.997 277.495 259.847 277.451 259.682L274.355 248.126C274.074 247.077 272.295 247.1 271.995 248.144C268.173 261.444 252.313 299.387 193.342 315.188C134.37 330.99 101.663 306.06 91.7038 296.453C90.9218 295.699 89.3698 296.568 89.651 297.618L92.7473 309.173Z" stroke="black"/>
+      <path d="M303.736 290.31C303.794 290.181 303.825 290.06 303.822 289.918C303.768 287.342 302.61 260.024 277.875 248.807C253.14 237.59 231.826 254.717 229.853 256.373C229.744 256.465 229.673 256.567 229.614 256.697L228.436 259.294C227.971 260.32 229.636 261.596 230.566 260.96C237.779 256.017 253.126 248.907 273.616 258.199C294.105 267.49 298.868 283.72 299.902 292.403C300.035 293.522 302.093 293.934 302.558 292.908L303.736 290.31Z" fill="black"/>
+      <path d="M303.736 290.31C303.794 290.181 303.825 290.06 303.822 289.918C303.768 287.342 302.61 260.024 277.875 248.807C253.14 237.59 231.826 254.717 229.853 256.373C229.744 256.465 229.673 256.567 229.614 256.697L228.436 259.294C227.971 260.32 229.636 261.596 230.566 260.96C237.779 256.017 253.126 248.907 273.616 258.199C294.105 267.49 298.868 283.72 299.902 292.403C300.035 293.522 302.093 293.934 302.558 292.908L303.736 290.31Z" stroke="black"/>
+      <path d="M131 123.395C131 123.299 130.989 123.212 130.96 123.12C130.219 120.726 119.035 86 94 86C68.965 86 57.7811 120.726 57.0396 123.12C57.0111 123.212 57 123.299 57 123.395L57 127.208C57 128.331 59.0584 128.82 59.6615 127.873C63.9411 121.153 73.9825 110.213 94 110.213C114.018 110.213 124.059 121.153 128.338 127.873C128.942 128.82 131 128.331 131 127.208L131 123.395Z" fill="black"/>
+      <path d="M131 123.395C131 123.299 130.989 123.212 130.96 123.12C130.219 120.726 119.035 86 94 86C68.965 86 57.7811 120.726 57.0396 123.12C57.0111 123.212 57 123.299 57 123.395L57 127.208C57 128.331 59.0584 128.82 59.6615 127.873C63.9411 121.153 73.9825 110.213 94 110.213C114.018 110.213 124.059 121.153 128.338 127.873C128.942 128.82 131 128.331 131 127.208L131 123.395Z" stroke="black"/>
+      <path d="M329 123.395C329 123.299 328.989 123.212 328.96 123.12C328.219 120.726 317.035 86 292 86C266.965 86 255.781 120.726 255.04 123.12C255.011 123.212 255 123.299 255 123.395L255 127.208C255 128.331 257.058 128.82 257.662 127.873C261.941 121.153 271.982 110.213 292 110.213C312.018 110.213 322.059 121.153 326.338 127.873C326.942 128.82 329 128.331 329 127.208L329 123.395Z" fill="black"/>
+      <path d="M329 123.395C329 123.299 328.989 123.212 328.96 123.12C328.219 120.726 317.035 86 292 86C266.965 86 255.781 120.726 255.04 123.12C255.011 123.212 255 123.299 255 123.395L255 127.208C255 128.331 257.058 128.82 257.662 127.873C261.941 121.153 271.982 110.213 292 110.213C312.018 110.213 322.059 121.153 326.338 127.873C326.942 128.82 329 128.331 329 127.208L329 123.395Z" stroke="black"/>
+      <ellipse class="NAND_Left_Eyes Left_Eyes" cx="93.9756" cy="116.951" rx="40.9756" ry="81.9512" fill="black"/>
+      <ellipse class="NAND_Left_Eyes Left_Eyes" cx="76.9026" cy="89.6342" rx="10.2439" ry="20.4878" fill="white"/>
+      <ellipse class="NAND_Right_Eyes Right_Eyes" cx="292.024" cy="116.951" rx="40.9756" ry="81.9512" fill="black"/>
+      <ellipse class="NAND_Right_Eyes Right_Eyes" cx="274.951" cy="89.6342" rx="10.2439" ry="20.4878" fill="white"/>
+      </svg>
+    <div id="NAND_Gate_Face" class="Logic_Gate_Faces"></div>
     <div class="Logic_Gate_Diagrams NAND_Gate">
       <div id="NAND_Input_1" class="LED"></div>
       <div id="NAND_Input_2" class="LED"></div>
@@ -107,6 +139,9 @@
   </div>  
   <div class="Digital_Logic_Gates_Containers Container_3">
   <div class="Logic_Gates_Cards">
+    <label class="Input_Labels">←Inputs</label>
+    <label class="Output_Labels">←Outputs</label>
+    <div id="OR_Gate_Face" class="Logic_Gate_Faces"></div>
     <div class="Logic_Gate_Diagrams OR_Gate">
       <div id="OR_Input_1" class="LED"></div>
       <div id="OR_Input_2" class="LED"></div>
@@ -140,6 +175,9 @@
   
   <div class="Digital_Logic_Gates_Containers Container_4">
   <div class="Logic_Gates_Cards">
+    <label class="Input_Labels">←Inputs</label>
+    <label class="Output_Labels">←Outputs</label>
+    <div id="NOR_Gate_Face" class="Logic_Gate_Faces"></div>
     <div class="Logic_Gate_Diagrams NOR_Gate">
       <div id="NOR_Input_1" class="LED"></div>
       <div id="NOR_Input_2" class="LED"></div>
@@ -173,6 +211,9 @@
   
   <div class="Digital_Logic_Gates_Containers Container_5">
   <div class="Logic_Gates_Cards">
+    <label class="Input_Labels">←Inputs</label>
+    <label class="Output_Labels">←Outputs</label>
+    <div id="XOR_Gate_Face" class="Logic_Gate_Faces"></div>
     <div class="Logic_Gate_Diagrams XOR_Gate">
       <div id="XOR_Input_1" class="LED"></div>
       <div id="XOR_Input_2" class="LED"></div>
@@ -206,6 +247,9 @@
   
   <div class="Digital_Logic_Gates_Containers Container_6">
   <div class="Logic_Gates_Cards">
+    <label class="Input_Labels">←Inputs</label>
+    <label class="Output_Labels">←Outputs</label>
+    <div id="XNOR_Gate_Face" class="Logic_Gate_Faces"></div>
     <div class="Logic_Gate_Diagrams XNOR_Gate">
       <div id="XNOR_Input_1" class="LED"></div>
       <div id="XNOR_Input_2" class="LED"></div>
@@ -239,6 +283,9 @@
   
   <div class="Digital_Logic_Gates_Containers Container_8">
   <div class="Logic_Gates_Cards">
+    <label id="BUFFER_Input_Label" class="Input_Labels">←Inputs</label>
+    <label class="Output_Labels">←Outputs</label>
+    <div id="BUFFER_Gate_Face" class="Logic_Gate_Faces"></div>
     <div class="Logic_Gate_Diagrams BUFFER_Gate">
       <div id="BUFFER_Input_1" class="LED"></div>
       <div id="BUFFER_Input_2" class="LED"></div>
@@ -262,7 +309,10 @@
   </div>  
   
   <div class="Digital_Logic_Gates_Containers Container_7">
-  <div class="Logic_Gates_Cards">
+  <div id="NOT_Gate_Face" class="Logic_Gates_Cards">
+    <label id="NOT_Input_Label" class="Input_Labels">←Inputs</label>
+    <label class="Output_Labels">←Outputs</label>
+    <div class="Logic_Gate_Faces"></div>
     <div class="Logic_Gate_Diagrams NOT_Gate">
       <div id="NOT_Input_1" class="LED"></div>
       <div id="NOT_Input_2" class="LED"></div>

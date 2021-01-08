@@ -15,6 +15,11 @@ window.onload = function(){
   var Top_Bar_Wrapper = document.getElementsByClassName('Top_Bar')[0];
   Top_Bar_Wrapper.addEventListener("mouseleave",Left_Navigation_Bar);
 
+  var Face_Elements = document.getElementsByClassName('Gate_Faces');
+  for(Index = 0; Index < Face_Elements.length; Index++){
+    Face_Elements[Index].addEventListener("click",Face_Pressed);
+  }
+
   var Indicator_Buttons = document.getElementsByClassName('Not_Active');
   for(Index = 0; Index < Indicator_Buttons.length; Index++){
     Indicator_Buttons[Index].addEventListener("mouseenter",Display_Gate_Name);
@@ -63,12 +68,9 @@ for(Gate_Index = 0; Gate_Index < Gate_Types.length; Gate_Index++){
 }
 
 
-
-
 function Update_AND_Gate(){
   var LED_Object = document.getElementById(this.id);
   var LED_Gate_Class = String(this.id).split("_")[0];
-  console.log(LED_Gate_Class);
   Toggle_LED(LED_Object);  
   var Input_1_State = document.getElementById('AND_Input_1').classList.contains('LED_ON');
   var Input_2_State = document.getElementById('AND_Input_2').classList.contains('LED_ON');
@@ -76,12 +78,22 @@ function Update_AND_Gate(){
   if(Output_State){document.getElementById('AND_Output').classList.add('LED_ON');}
   else{document.getElementById('AND_Output').classList.remove('LED_ON');}
   Update_Truth_Table(Input_1_State,Input_2_State,LED_Gate_Class);
+  var Eye_To_Toggle = parseInt(String(this.id).split("_")[2]);
+  var Left_Eyes = document.getElementsByClassName('AND_Left_Eyes');
+  var Right_Eyes = document.getElementsByClassName('AND_Right_Eyes');
+  if(Eye_To_Toggle == 1){
+    Left_Eyes[0].classList.toggle('Open_Eyes');
+    Left_Eyes[1].classList.toggle('Open_Eyes');
+  }
+  if(Eye_To_Toggle == 2){
+    Right_Eyes[0].classList.toggle('Open_Eyes');
+    Right_Eyes[1].classList.toggle('Open_Eyes');
+  }  
 }
 
 function Update_NAND_Gate(){
   var LED_Object = document.getElementById(this.id);
   var LED_Gate_Class = String(this.id).split("_")[0];
-  console.log(LED_Gate_Class);
   Toggle_LED(LED_Object);
   var Input_1_State = document.getElementById('NAND_Input_1').classList.contains('LED_ON');
   var Input_2_State = document.getElementById('NAND_Input_2').classList.contains('LED_ON');
@@ -89,12 +101,22 @@ function Update_NAND_Gate(){
   if(Output_State){document.getElementById('NAND_Output').classList.add('LED_ON');}
   else{document.getElementById('NAND_Output').classList.remove('LED_ON');}
   Update_Truth_Table(Input_1_State,Input_2_State,LED_Gate_Class);
+  var Eye_To_Toggle = parseInt(String(this.id).split("_")[2]);
+  var Left_Eyes = document.getElementsByClassName('NAND_Left_Eyes');
+  var Right_Eyes = document.getElementsByClassName('NAND_Right_Eyes');
+  if(Eye_To_Toggle == 1){
+    Left_Eyes[0].classList.toggle('Open_Eyes');
+    Left_Eyes[1].classList.toggle('Open_Eyes');
+  }
+  if(Eye_To_Toggle == 2){
+    Right_Eyes[0].classList.toggle('Open_Eyes');
+    Right_Eyes[1].classList.toggle('Open_Eyes');
+  }  
 }
 
 function Update_OR_Gate(){
   var LED_Object = document.getElementById(this.id);
   var LED_Gate_Class = String(this.id).split("_")[0];
-  console.log(LED_Gate_Class);
   Toggle_LED(LED_Object);
   var Input_1_State = document.getElementById('OR_Input_1').classList.contains('LED_ON');
   var Input_2_State = document.getElementById('OR_Input_2').classList.contains('LED_ON');
@@ -107,7 +129,6 @@ function Update_OR_Gate(){
 function Update_NOR_Gate(){
   var LED_Object = document.getElementById(this.id);
   var LED_Gate_Class = String(this.id).split("_")[0];
-  console.log(LED_Gate_Class);
   Toggle_LED(LED_Object);
   var Input_1_State = document.getElementById('NOR_Input_1').classList.contains('LED_ON');
   var Input_2_State = document.getElementById('NOR_Input_2').classList.contains('LED_ON');
@@ -120,7 +141,6 @@ function Update_NOR_Gate(){
 function Update_XOR_Gate(){
   var LED_Object = document.getElementById(this.id);
   var LED_Gate_Class = String(this.id).split("_")[0];
-  console.log(LED_Gate_Class);
   Toggle_LED(LED_Object);
   var Input_1_State = document.getElementById('XOR_Input_1').classList.contains('LED_ON');
   var Input_2_State = document.getElementById('XOR_Input_2').classList.contains('LED_ON');
@@ -134,7 +154,6 @@ function Update_XOR_Gate(){
 function Update_XNOR_Gate(){
   var LED_Object = document.getElementById(this.id);
   var LED_Gate_Class = String(this.id).split("_")[0];
-  console.log(LED_Gate_Class);
   Toggle_LED(LED_Object);
   var Input_1_State = document.getElementById('XNOR_Input_1').classList.contains('LED_ON');
   var Input_2_State = document.getElementById('XNOR_Input_2').classList.contains('LED_ON');
@@ -148,7 +167,6 @@ function Update_XNOR_Gate(){
 function Update_BUFFER_Gate(){
   var LED_Object = document.getElementById(this.id);
   var LED_Gate_Class = String(this.id).split("_")[0];
-  console.log(LED_Gate_Class);
   Toggle_LED(LED_Object);
   var Input_1_State = document.getElementById('BUFFER_Input_1').classList.contains('LED_ON');
   if(Input_1_State){document.getElementById('BUFFER_Output').classList.add('LED_ON');}
@@ -160,7 +178,6 @@ function Update_BUFFER_Gate(){
 function Update_NOT_Gate(){
   var LED_Object = document.getElementById(this.id);
   var LED_Gate_Class = String(this.id).split("_")[0];
-  console.log(LED_Gate_Class);
   Toggle_LED(LED_Object);
   var Input_1_State = document.getElementById('NOT_Input_1').classList.contains('LED_ON');
   if(!Input_1_State){document.getElementById('NOT_Output').classList.add('LED_ON');}
@@ -177,49 +194,46 @@ function Toggle_LED(Target_LED){
 
 function Update_Truth_Table(Left_Input,Right_Input,Gate_Class){
 var Binary_Values = document.getElementsByClassName(Gate_Class+"_Binary");
-console.log(Gate_Class);
 for(Binary_Value = 0; Binary_Value < Binary_Values.length; Binary_Value++){
   Binary_Values[Binary_Value].classList.remove('Light_Up_Value');
 }
-
 if(Left_Input == false & Right_Input == false){
   Binary_Values[2].classList.add('Light_Up_Value');
   Binary_Values[3].classList.add('Light_Up_Value');
   Binary_Values[4].classList.add('Light_Up_Value');
 }
-
 if(Left_Input == false & Right_Input == true){
   Binary_Values[5].classList.add('Light_Up_Value');
   Binary_Values[6].classList.add('Light_Up_Value');
   Binary_Values[7].classList.add('Light_Up_Value');
 }
-
 if(Left_Input == true & Right_Input == false){
   Binary_Values[8].classList.add('Light_Up_Value');
   Binary_Values[9].classList.add('Light_Up_Value');
   Binary_Values[10].classList.add('Light_Up_Value');
 }
-
 if(Left_Input == true & Right_Input == true){
   Binary_Values[11].classList.add('Light_Up_Value');
   Binary_Values[12].classList.add('Light_Up_Value');
   Binary_Values[13].classList.add('Light_Up_Value');
 }
-
 if(Left_Input == false & String(Right_Input) == "NaN"){
   Binary_Values[2].classList.add('Light_Up_Value');
   Binary_Values[3].classList.add('Light_Up_Value');
 }
-
 if(Left_Input == true & String(Right_Input) == "NaN"){
   Binary_Values[4].classList.add('Light_Up_Value');
   Binary_Values[5].classList.add('Light_Up_Value');
 }
-
 }
 
-
-
+function Face_Pressed(){
+  var Face_Object = document.getElementById(this.id);
+  Face_Object.classList.toggle('Jump_Animation');
+  var Opacity = parseInt(window.getComputedStyle(Face_Object).getPropertyValue('opacity'));  
+  Opacity ^= 1;
+  Face_Object.style.opacity = Opacity;
+}
 
 
 
