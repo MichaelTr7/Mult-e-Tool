@@ -352,6 +352,7 @@ body{
 .Style_Toggle:hover{
   box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);  
   transition: box-shadow 0.2s;
+  cursor: pointer;
 }
 
 .AND_Style_Toggle{
