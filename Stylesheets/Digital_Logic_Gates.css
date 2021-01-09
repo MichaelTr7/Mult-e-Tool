@@ -354,39 +354,70 @@ body{
   transition: box-shadow 0.2s;
 }
 
-#AND_Style_Toggle{
+.AND_Style_Toggle{
   background-image: url('./Assets/AND Gate Simple Rotate.png');
 }
 
-#NAND_Style_Toggle{
+.NAND_Style_Toggle{
   background-image: url('./Assets/NAND Gate Simple Rotate.png');
 }
 
-#OR_Style_Toggle{
+.OR_Style_Toggle{
   background-image: url('./Assets/OR Gate Simple Rotate.png');
 }
 
-#NOR_Style_Toggle{
+.NOR_Style_Toggle{
   background-image: url('./Assets/NOR Gate Simple Rotate.png');
 }
 
-#XOR_Style_Toggle{
+.XOR_Style_Toggle{
   background-image: url('./Assets/XOR Gate Simple Rotate.png');
 }
 
-#XNOR_Style_Toggle{
+.XNOR_Style_Toggle{
   background-image: url('./Assets/XNOR Gate Simple Rotate.png');
 }
 
-#BUFFER_Style_Toggle{
+.BUFFER_Style_Toggle{
   background-image: url('./Assets/BUFFER Gate Simple Rotate.png');
 }
 
-#NOT_Style_Toggle{
+.NOT_Style_Toggle{
   background-image: url('./Assets/NOT Gate Simple Rotate.png');
 }
 
 
+.AND_Style_Toggle_Detailed{
+  background-image: url('./Assets/AND Gate Rotated.png');
+}
+
+.NAND_Style_Toggle_Detailed{
+  background-image: url('./Assets/NAND Gate Rotated.png');
+}
+
+.OR_Style_Toggle_Detailed{
+  background-image: url('./Assets/OR Gate Rotated.png');
+}
+
+.NOR_Style_Toggle_Detailed{
+  background-image: url('./Assets/NOR Gate Rotated.png');
+}
+
+.XOR_Style_Toggle_Detailed{
+  background-image: url('./Assets/XOR Gate Rotated.png');
+}
+
+.XNOR_Style_Toggle_Detailed{
+  background-image: url('./Assets/XNOR Gate Rotated.png');
+}
+
+.BUFFER_Style_Toggle_Detailed{
+  background-image: url('./Assets/BUFFER Gate Rotated.png');
+}
+
+.NOT_Style_Toggle_Detailed{
+  background-image: url('./Assets/NOT Gate Rotated.png');
+}
 
 
 

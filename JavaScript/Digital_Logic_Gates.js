@@ -70,9 +70,7 @@ for(Gate_Index = 0; Gate_Index < Gate_Types.length; Gate_Index++){
   Initial_States[4].classList.add('Light_Up_Value');
   }
 }
-Face_Pressed();
 }
-
 
 function Update_AND_Gate(){
   var LED_Object = document.getElementById(this.id);
@@ -305,14 +303,20 @@ function Face_Pressed(){
 }
 
 function Toggle_Style(){
-  console.log("Toggle Style");
   var Styling = document.getElementsByClassName('Style_Toggle')[0].value;  
-  var Pressed_Button = document.getElementById(this.id);
+  var Pressed_Button = document.getElementsByClassName(String(this.className).split(" ")[0])[0];
   Pressed_Button.classList.remove('Jump_Animation');
   void Pressed_Button.offsetWidth;
   Pressed_Button.classList.add('Jump_Animation');
   var Logic_Gate_Diagram = document.getElementsByClassName('Logic_Gate_Diagrams');
   var Style_Toggle_Buttons = document.getElementsByClassName('Style_Toggle');
+  
+  for(Toggle_Index = 0; Toggle_Index < Style_Toggle_Buttons.length; Toggle_Index++){
+    var Target_Toggle_Button = Style_Toggle_Buttons[Toggle_Index];
+    var Image_Class = String(String(Style_Toggle_Buttons[Toggle_Index].className).split(" ")[0] + "_Detailed");
+    Target_Toggle_Button.classList.toggle(Image_Class);
+  }
+  
 
   for(Diagram_Index = 0; Diagram_Index < Logic_Gate_Diagram.length; Diagram_Index++){
     var Target_Class = String(Logic_Gate_Diagram[Diagram_Index].className).split(" ")[1];
