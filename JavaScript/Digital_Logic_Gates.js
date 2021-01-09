@@ -46,6 +46,12 @@ window.onload = function(){
     NOT_LEDs[LED_Index].addEventListener("click",Update_NOT_Gate);
   }
   
+  var Style_Toggle_Buttons = document.getElementsByClassName('Style_Toggle');
+  for(Button_Index = 0; Button_Index < Style_Toggle_Buttons.length; Button_Index++){
+    Style_Toggle_Buttons[Button_Index].addEventListener("click",Toggle_Style);
+  }
+  
+  
   Adjust_Mobile_Menu();  
   
   // Logic gates initial states
@@ -286,13 +292,48 @@ if(Left_Input == true & String(Right_Input) == "NaN"){
 }
 
 function Face_Pressed(){
-  var Face_Objects = document.getElementsByClassName('Gate_Faces');
-  var Opacity = parseInt(window.getComputedStyle(Face_Objects[0]).getPropertyValue('opacity'));  
-  Opacity ^= 1;
-  for(Face_Index = 0; Face_Index < Face_Objects.length; Face_Index++){
-    Face_Objects[Face_Index].classList.toggle('Jump_Animation');
-    Face_Objects[Face_Index].style.opacity = Opacity;
+  var Styling = document.getElementsByClassName('Style_Toggle')[0].value;  
+  if(Styling == "Detailed"){
+    var Face_Objects = document.getElementsByClassName('Gate_Faces');
+    var Opacity = parseInt(window.getComputedStyle(Face_Objects[0]).getPropertyValue('opacity'));  
+    Opacity ^= 1;
+    for(Face_Index = 0; Face_Index < Face_Objects.length; Face_Index++){
+      Face_Objects[Face_Index].classList.toggle('Jump_Animation');
+      Face_Objects[Face_Index].style.opacity = Opacity;
+    }
   }
+}
+
+function Toggle_Style(){
+  console.log("Toggle Style");
+  var Styling = document.getElementsByClassName('Style_Toggle')[0].value;  
+  var Pressed_Button = document.getElementById(this.id);
+  Pressed_Button.classList.remove('Jump_Animation');
+  void Pressed_Button.offsetWidth;
+  Pressed_Button.classList.add('Jump_Animation');
+  var Logic_Gate_Diagram = document.getElementsByClassName('Logic_Gate_Diagrams');
+  var Style_Toggle_Buttons = document.getElementsByClassName('Style_Toggle');
+
+  for(Diagram_Index = 0; Diagram_Index < Logic_Gate_Diagram.length; Diagram_Index++){
+    var Target_Class = String(Logic_Gate_Diagram[Diagram_Index].className).split(" ")[1];
+    var Target_Object = document.getElementsByClassName(Target_Class)[0];
+    Target_Object.classList.toggle(Target_Class + "_Simple_Style");
+    if(Styling == "Detailed"){
+      Style_Toggle_Buttons[Diagram_Index].value = "Simple";
+      var Face_Objects = document.getElementsByClassName('Gate_Faces');
+      for(Face_Index = 0; Face_Index < Face_Objects.length; Face_Index++){
+        if(Face_Objects[Face_Index].style.opacity == 1){
+          Face_Objects[Face_Index].classList.toggle('Jump_Animation');
+          Face_Objects[Face_Index].style.opacity = 0;
+        }
+      }
+    }
+    else{
+      Style_Toggle_Buttons[Diagram_Index].value = "Detailed";
+    }
+    
+  }
+
 }
 
 

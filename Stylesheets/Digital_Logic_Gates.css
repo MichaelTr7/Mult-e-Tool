@@ -90,6 +90,40 @@ body{
   background-image: url('./Assets/BUFFER Gate.png');
 }
 
+
+.AND_Gate_Simple_Style{
+  background-image: url('./Assets/AND Gate Simple.png');
+}
+
+.NAND_Gate_Simple_Style{
+  background-image: url('./Assets/NAND Gate Simple.png');
+}
+
+.OR_Gate_Simple_Style{
+  background-image: url('./Assets/OR Gate Simple.png');
+}
+
+.NOR_Gate_Simple_Style{
+  background-image: url('./Assets/NOR Gate Simple.png');
+}
+
+.XOR_Gate_Simple_Style{
+  background-image: url('./Assets/XOR Gate Simple.png');
+}
+
+.XNOR_Gate_Simple_Style{
+  background-image: url('./Assets/XNOR Gate Simple.png');
+}
+
+.NOT_Gate_Simple_Style{
+  background-image: url('./Assets/NOT Gate Simple.png');
+}
+
+.BUFFER_Gate_Simple_Style{
+  background-image: url('./Assets/BUFFER Gate Simple.png');
+}
+
+
 .LED:nth-of-type(1){
   position: absolute;
   top: 245px;
@@ -296,10 +330,67 @@ body{
   left: 50px;
 }
 
+.Style_Toggle{
+  position: absolute;
+  top: -20px;
+  left: 200px;
+  height: 38px;
+  width: 60px;
+  background-color: rgba(35,35,35,1);
+  border: none;
+  border-radius: 5px;
+  z-index: 2;
+  filter: opacity(0.5);
+  background-image: url('./Assets/AND Gate Simple Rotate.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  box-shadow: 4px 4px 7px 1px rgba(0,0,0,0), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0);
+  transition: box-shadow 1s;
+}
+
+.Style_Toggle:hover{
+  box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);  
+  transition: box-shadow 0.2s;
+}
+
+#AND_Style_Toggle{
+  background-image: url('./Assets/AND Gate Simple Rotate.png');
+}
+
+#NAND_Style_Toggle{
+  background-image: url('./Assets/NAND Gate Simple Rotate.png');
+}
+
+#OR_Style_Toggle{
+  background-image: url('./Assets/OR Gate Simple Rotate.png');
+}
+
+#NOR_Style_Toggle{
+  background-image: url('./Assets/NOR Gate Simple Rotate.png');
+}
+
+#XOR_Style_Toggle{
+  background-image: url('./Assets/XOR Gate Simple Rotate.png');
+}
+
+#XNOR_Style_Toggle{
+  background-image: url('./Assets/XNOR Gate Simple Rotate.png');
+}
+
+#BUFFER_Style_Toggle{
+  background-image: url('./Assets/BUFFER Gate Simple Rotate.png');
+}
+
+#NOT_Style_Toggle{
+  background-image: url('./Assets/NOT Gate Simple Rotate.png');
+}
 
 
-@media only screen and (max-width: 446px) {
-  
+
+
+
+@media only screen and (max-width: 446px) {  
   .Digital_Logic_Gates_Containers{
     height: 300px;
     width: 460px;
