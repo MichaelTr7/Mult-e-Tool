@@ -466,6 +466,10 @@ if(Number_Of_Matching_Resistors == 0){
     var Tile_Class_Name = 'Recents_Tiles_' + String(Band_Index);
     Band_Style = window.getComputedStyle(document.getElementsByClassName(Band_Class_Name)[0]).getPropertyValue('background-color');
     Tile_Style = window.getComputedStyle(document.getElementsByClassName(Tile_Class_Name)[0]).getPropertyValue('grid-column').split("/")[0];
+    Target_Tile = document.getElementsByClassName(Tile_Class_Name)[0];
+    Tile_Style = Target_Tile.value;
+    Target_Tile.value = (Tile_Style+1)%5;
+    
       if(Band_Style == "rgba(0, 0, 0, 0)"){
         Available_Bands[Band_Index-1] = "Available_" + String(Band_Index);
       }
@@ -480,7 +484,7 @@ if(Number_Of_Matching_Resistors == 0){
   var Number_Of_Tiles = 5;
   var Current_Tile_Positions = new Array(5);
 for(Tile_Index = 0; Tile_Index < Number_Of_Tiles; Tile_Index++){
-  Current_Tile_Positions[Tile_Index] = parseInt(window.getComputedStyle(Current_Arrays[Tile_Index]).getPropertyValue('grid-column').split("/")[0]);
+  Current_Tile_Positions[Tile_Index] = Current_Arrays[Tile_Index].value;
 }
 
 var Tile_Index_To_Change = Current_Tile_Positions.indexOf(1) + 1;
