@@ -70,7 +70,7 @@ for(Gate_Index = 0; Gate_Index < Gate_Types.length; Gate_Index++){
   Initial_States[4].classList.add('Light_Up_Value');
   }
 }
-
+Face_Pressed();
 }
 
 

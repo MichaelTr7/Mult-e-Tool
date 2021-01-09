@@ -434,3 +434,16 @@ body{
   100%{transform: translateY(0px) scaleX(1);}
 }
 
+@keyframes Fade_In{
+  from{opacity: 0}
+  to{opacity: 1}
+}
+
+
+
+
+
+
+
+
+
