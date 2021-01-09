@@ -551,7 +551,8 @@ body {
 
 @keyframes Fade_In_And_Out {
   0%{opacity: 0; display: block;}
-  50%{opacity: 1; display: block;}
+  30%{opacity: 1; display: block;}
+  70%{opacity: 1; display: block;}
   100%{opacity: 0; display: none;}  
 }
 
