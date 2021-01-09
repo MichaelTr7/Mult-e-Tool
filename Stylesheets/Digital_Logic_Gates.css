@@ -265,7 +265,7 @@ body{
 
 .Input_Labels{
   position: absolute;
-  color: rgb(10,10,10);
+  color: rgb(170,170,170);
   font-family: sans-serif;
   font-weight: bold;
   font-size: 0.9em;
@@ -418,6 +418,25 @@ body{
 
 .NOT_Style_Toggle_Detailed{
   background-image: url('./Assets/NOT Gate Rotated.png');
+}
+
+.Info_Container{
+  border: 2vw solid rgb(20,20,20,0);
+  height: 300px;
+  width: 460px;
+  min-width: 965px;
+}
+
+.Explanation_Card{
+  position: relative;
+  background-color: red;
+  border-radius: 12px;
+  height: 100%;
+  width: 80vw;
+  left: 50%;
+  margin-left: -40vw;
+  background-color: rgb(35,35,35);
+  box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
 }
 
 
