@@ -17,6 +17,6 @@
 [<img src="./Preview Images/Capacitor_Calculator_Preview_Page.png" width = "1000">](https://michaeltr7.github.io/E-Toolbox/Capacitor_Calculator.html)
 
 
-## [Digital Logic Gates](https://michaeltr7.github.io/E-Toolbox/Capacitor_Calculator.html)
+## [Digital Logic Gates](https://michaeltr7.github.io/E-Toolbox/Digital_Logic_Gates.html)
 
-[<img src="./Preview Images/Digital_Logic_Gates_Preview_Page.png" width = "1000">](https://michaeltr7.github.io/E-Toolbox/Capacitor_Calculator.html)
+[<img src="./Preview Images/Digital_Logic_Gates_Preview_Page.png" width = "1000">](https://michaeltr7.github.io/E-Toolbox/Digital_Logic_Gates.html)
