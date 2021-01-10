@@ -336,7 +336,6 @@ function Calculate_Resistance(){
       var Resistance_In_Ohms = parseFloat(Digits*Multiplier);
     }
     
-
     if(Resistance_In_Ohms < 1000){
       Resistance_In_Ohms = (Math.round(Resistance_In_Ohms*100))/100;
       var Resistance_String = Resistance_In_Ohms + "Ω";
@@ -505,8 +504,6 @@ var Resistance_Label_To_Change = document.getElementsByClassName('Resistance_Val
 var Resistor_Type_Label_To_Change = document.getElementsByClassName('Resistor_Label')[parseInt(Tile_Index_To_Change-1)];
 Resistance_Label_To_Change.innerHTML = Resistance_Value;
 Resistor_Type_Label_To_Change.innerHTML = Band_Type;
-
-
 
 }
 }

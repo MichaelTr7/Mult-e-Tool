@@ -1,0 +1,57 @@
+
+body{
+  margin: 0px 0px 0px 0px;
+}
+
+.Top_Bar{
+  margin-left: 0px;
+}
+
+.Scrolling_Container {
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.Scrolling_Container,.Snap_Containers {
+  height: 100vh;
+  width: 100vw;
+  font-size: 60px;
+}
+
+.Snap_Containers{  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  background-color: white;
+  background-color: rgb(20,20,20);
+  /* border-bottom: 2px solid white; */
+}
+
+.Snap_Containers:nth-child(1){
+  background-image: url('./Assets/Resistor Calculator Stack.png');
+  background-size: 65% auto;
+  background-position: -10% 80%;
+  background-repeat: no-repeat;
+}
+
+.Snap_Containers:nth-child(2){
+  background-image: url('./Assets/Capacitor Calculator Stack.png');
+  background-size: 65% auto;
+  background-position: 110% 80%;
+  background-repeat: no-repeat;
+}
+
+.Snap_Containers:nth-child(3){
+  background-image: url('./Assets/Digital Logic Gates Stack.png');
+  background-size: 65% auto;
+  background-position: -10% 80%;
+  background-repeat: no-repeat;
+}
+
+
+@media only screen and (max-width: 840px) {
+
+}
+
+
