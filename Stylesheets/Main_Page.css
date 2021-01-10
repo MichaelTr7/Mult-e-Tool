@@ -25,33 +25,47 @@ body{
   scroll-snap-align: start;
   background-color: white;
   background-color: rgb(20,20,20);
-  /* border-bottom: 2px solid white; */
+  border-bottom: 2px solid white;
 }
 
 .Snap_Containers:nth-child(1){
   background-image: url('./Assets/Resistor Calculator Stack.png');
   background-size: 65% auto;
-  background-position: -10% 80%;
+  background-position: -10% 50%;
   background-repeat: no-repeat;
 }
 
 .Snap_Containers:nth-child(2){
   background-image: url('./Assets/Capacitor Calculator Stack.png');
   background-size: 65% auto;
-  background-position: 110% 80%;
+  background-position: 110% 50%;
   background-repeat: no-repeat;
 }
 
 .Snap_Containers:nth-child(3){
   background-image: url('./Assets/Digital Logic Gates Stack.png');
   background-size: 65% auto;
-  background-position: -10% 80%;
+  background-position: -10% 50%;
   background-repeat: no-repeat;
 }
 
 
 @media only screen and (max-width: 840px) {
-
+  .Snap_Containers:nth-child(1){
+    background-size: auto 100%;
+    background-position: 50% 50%;
+  }
+  .Snap_Containers:nth-child(2){
+    background-size: auto 100%;
+    background-position: 50% 50%;
+  }
+  .Snap_Containers:nth-child(3){
+    background-size: auto 100%;
+    background-position: 50% 50%;
+  }
 }
+
+
+
 
 
