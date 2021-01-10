@@ -25,7 +25,7 @@ body{
   scroll-snap-align: start;
   background-color: white;
   background-color: rgb(20,20,20);
-  border-bottom: 2px solid white;
+  /* border-bottom: 2px solid white; */
 }
 
 .Snap_Containers:nth-child(1){
@@ -49,6 +49,106 @@ body{
   background-repeat: no-repeat;
 }
 
+.Launch_Buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: gray;
+  height: 5vw;
+  width: 22vw;
+  border-radius: 3vw;
+  border: none;
+  top: 25vh;
+  left: 66.75vw;
+  font-size: 2vw;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: rgb(240,240,240);
+  background: linear-gradient(90deg, #06CCB4 0%, #00C6D2 100%);
+  transition: box-shadow 0.5s;
+}
+
+#Resistor_Calculator_Launch_Button{
+  background: linear-gradient(270deg, #FF5B5B 0%, #F73279 100%);
+}
+#Resistor_Calculator_Launch_Button:hover{
+  box-shadow: 2vw 2vw 0px 0px rgba(255,91,91,0.2);
+  cursor: pointer;
+}
+
+#Capacitor_Calculator_Launch_Button{
+  background: linear-gradient(90deg, #F77733 0%, #F75400 100%);
+  left: 11.75vw;
+}
+
+#Capacitor_Calculator_Launch_Button:hover{
+  box-shadow: 2vw 2vw 0px 0px rgba(247,119,51,0.2);
+  cursor: pointer;
+}
+
+#Digital_Logic_Gates_Launch_Button{
+  
+}
+
+#Digital_Logic_Gates_Launch_Button:hover{
+  box-shadow: 2vw 2vw 0px 0px rgba(0,198,210,0.2);
+  cursor: pointer;
+}
+
+.Launch_Titles{
+  position: relative;
+  top: 20vh;
+  left: 58vw;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 4vw;
+  color: rgb(240,240,240);
+  text-align: center;
+  height: 5vw;
+  width: 40vw;
+}
+
+#Capacitor_Calculator_Launch_Title{
+  position: relative;
+  top: 20vh;
+  left: 4vw;
+}
+
+.Control_Wrappers{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  /* background-color: rgba(255,255,255,0.2); */
+}
+
+.Summaries{
+  color: rgb(240,240,240);
+  font-family: sans-serif;
+  font-size: 1.8vw;
+  /* text-align: right; */
+}
+
+#Resistor_Calculator_Summary,#Digital_Logic_Gates_Summary{
+  position: relative;
+  /* background-color: rgba(255,255,255,0.1); */
+  width: 36vw;
+  height: 40%;
+  top: 35%;
+  left: 60%;
+  font-weight: lighter;
+}
+#Capacitor_Calculator_Summary{
+  position: relative;
+  /* background-color: rgba(255,255,255,0.1); */
+  width: 36vw;
+  height: 40%;
+  top: 35%;
+  left: 60%;
+  font-weight: lighter;
+}
+
 
 @media only screen and (max-width: 840px) {
   .Snap_Containers:nth-child(1){
@@ -62,6 +162,15 @@ body{
   .Snap_Containers:nth-child(3){
     background-size: auto 100%;
     background-position: 50% 50%;
+  }
+  .Launch_Titles{
+    top: 80vh;
+  }  
+  .Launch_Buttons{
+    top: 82vh;
+  }
+  #Capacitor_Calculator_Launch_Title{
+    top: 80vh;
   }
 }
 
