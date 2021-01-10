@@ -15,5 +15,23 @@ window.onload = function(){
   var Top_Bar_Wrapper = document.getElementsByClassName('Top_Bar')[0];
   Top_Bar_Wrapper.addEventListener("mouseleave",Left_Navigation_Bar);
 
+  var Launch_Buttons = document.getElementsByClassName('Launch_Buttons');
+  for(Index = 0; Index < Launch_Buttons.length; Index++){
+  Launch_Buttons[Index].addEventListener("click",Launch_Webapp);
+  }
+  
   Adjust_Mobile_Menu();
+}
+
+function Launch_Webapp(){
+  var Webapp_Index = parseInt(document.getElementById(this.id).value) - 1;
+  var Webapp_Pages = ["./Resistor_Calculator.html","./Capacitor_Calculator.html","./Digital_Logic_Gates.html"];
+  var Webapp_Link = Webapp_Pages[Webapp_Index];
+  console.log(Webapp_Link);
+  
+  window.location.href = Webapp_Link;
+
+  // setTimeout(function () {
+  //   window.location.href = Webapp_Pages[];
+  // }, 200);
 }
