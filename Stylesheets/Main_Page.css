@@ -49,6 +49,14 @@ body{
   background-repeat: no-repeat;
 }
 
+.Snap_Containers:nth-child(4){
+  /* background-image: url('./Assets/Digital Logic Gates Stack.png'); */
+  background-size: 65% auto;
+  background-position: -10% 50%;
+  background-repeat: no-repeat;
+}
+
+
 .Launch_Buttons{
   display: flex;
   align-items: center;
@@ -155,6 +163,60 @@ body{
   font-weight: lighter;
 }
 
+.Scroll_Indicator{
+  position: fixed;
+  top: 95%;
+  left: 50%;
+  height: 5vw;
+  width: 22vw;
+  color: rgb(170,170,170);
+  /* background: white; */
+  margin-top: -2.5vw;
+  margin-left: -11vw;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 2vw;
+  animation: Highlight_Keyframes 3s infinite;
+}
+
+.Mobile_Views{
+  position: relative;
+  top: 5%;
+  left: 0%;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 40vw;
+}
+
+.Mobile_Support_Label{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 4vw;
+  left: -2%;
+  top: 0%;
+  color: rgb(240,240,240);
+  text-align: center;
+}
+
+
+
+.Spring_Animation{
+  animation: Spring_Keyframes 0.35s forwards;
+}
+
+@keyframes Spring_Keyframes{
+  0%{transform: translateY(50px); opacity: 0;}
+  100%{transform: translateY(0vh); opacity: 1;}
+}
+
+@keyframes Highlight_Keyframes{
+  0%{color:rgb(170,170,170); transform: scale(1);}
+  12.5%{color:rgb(200,200,200); transform: scale(1.05);}
+  25%{color:rgb(170,170,170); transform: scale(1);}
+  100%{color:rgb(170,170,170);}
+}
+
 
 @media only screen and (max-width: 840px) {
   .Snap_Containers:nth-child(1){
@@ -183,40 +245,17 @@ body{
   }  
 }
 
-.Scroll_Indicator{
-  position: fixed;
-  top: 95%;
-  left: 50%;
-  height: 5vw;
-  width: 22vw;
-  color: rgb(170,170,170);
-  /* background: white; */
-  margin-top: -2.5vw;
-  margin-left: -11vw;
-  text-align: center;
-  font-family: sans-serif;
-  font-size: 2vw;
+@media only screen and (max-height: 520px){
+  .Launch_Titles{
+    top: 60vh;
+  }  
+  #Capacitor_Calculator_Launch_Title{
+    top: 60vh;
+  }
+  .Launch_Buttons{
+    top: 62vh;
+  }
 }
-
-.Spring_Animation{
-  animation: Spring_Keyframes 0.35s forwards;
-}
-
-@keyframes Spring_Keyframes{
-  0%{transform: translateY(50px); opacity: 0;}
-  100%{transform: translateY(0vh); opacity: 1;}
-}
-
-.Fade_In_Animation{
-  animation: Fade_In 0.3s forwards;
-}
-
-@keyframes Fade_In{
-  from{opacity: 0;}
-  to{opacity: 1;}
-}
-
-
 
 
 
