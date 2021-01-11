@@ -243,6 +243,23 @@ body{
   #Resistor_Calculator_Summary,#Digital_Logic_Gates_Summary,#Capacitor_Calculator_Summary{
     display: none;
   }  
+  #Mobile_2{
+    opacity: 0;
+  }
+  #Mobile_3{
+    opacity: 0;
+  }
+  #Mobile_1{
+    top: 5%;
+    left: 15%;
+    margin-left: 0px;
+    margin-right: 0px;
+    height: 75vh;
+  }
+  .Mobile_Support_Label{
+    opacity: 0;
+  }
+  
 }
 
 @media only screen and (max-height: 520px){

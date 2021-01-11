@@ -48,7 +48,6 @@ var Run = 0;
 function Scroll_Check(entries){
   entries.forEach(entry => {
     var Target_Row = entry.target.id;
-    var Focussed_Row = document.getElementById(Target_Row);
     if(Focussed_Page != Target_Row){
       Focussed_Page = Target_Row;
       if(Run > Number_Of_Sections){
@@ -60,13 +59,12 @@ function Scroll_Check(entries){
 }
 
 function Animate_Row(){
-  console.log("Target: " + Focussed_Page);
   if(Focussed_Page != "Resistor_Calulator_Launch_Rows"){
     Focussed_Page = Focussed_Page.replace("_Launch_Rows","")
+    if(Focussed_Page != "Mobile"){
     var Target_Row = document.getElementById(Focussed_Page + "_Launch_Button");
-    // Target_Row.classList.remove('Spring_Animation');
-    // void Target_Row.offsetWidth;
     Target_Row.classList.add('Spring_Animation');
+  }
   }
 }
 
