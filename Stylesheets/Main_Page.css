@@ -70,7 +70,7 @@ body{
   top: 25vh;
   left: 66.75vw;
   font-size: 2vw;
-  opacity: 0;
+  /* opacity: 0; */
   font-weight: bold;
   font-family: sans-serif;
   color: rgb(240,240,240);
@@ -199,7 +199,6 @@ body{
   color: rgb(240,240,240);
   text-align: center;
 }
-
 
 
 .Spring_Animation{

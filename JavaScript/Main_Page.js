@@ -61,15 +61,15 @@ function Scroll_Check(entries){
 function Animate_Row(){
   if(Focussed_Page != "Resistor_Calulator_Launch_Rows"){
     Focussed_Page = Focussed_Page.replace("_Launch_Rows","")
+    console.log(Focussed_Page);
+
     if(Focussed_Page != "Mobile"){
       var Scroll_Label = document.getElementsByClassName('Scroll_Indicator')[0];
       Scroll_Label.style.opacity = 1;
-    var Target_Row = document.getElementById(Focussed_Page + "_Launch_Button");
-    Target_Row.classList.add('Spring_Animation');
+      var Target_Row = document.getElementById(Focussed_Page + "_Launch_Button");
+      Target_Row.classList.add('Spring_Animation');
   }
-  console.log(Focussed_Page);
   if(Focussed_Page == "Mobile"){
-    
     var Scroll_Label = document.getElementsByClassName('Scroll_Indicator')[0];
     Scroll_Label.style.opacity = 0;
   }
