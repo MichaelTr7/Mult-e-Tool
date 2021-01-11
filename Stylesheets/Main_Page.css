@@ -177,7 +177,6 @@ body{
   font-family: sans-serif;
   font-size: 2vw;
   animation: Highlight_Keyframes 3s infinite;
-  transition: opacity 0.5s;
 }
 
 .Mobile_Views{
@@ -243,10 +242,22 @@ body{
   #Resistor_Calculator_Summary,#Digital_Logic_Gates_Summary,#Capacitor_Calculator_Summary{
     display: none;
   }  
-#Mobile_Launch_Rows{
-  display: none;
-}
-
+  #Mobile_2{
+    opacity: 0;
+  }
+  #Mobile_3{
+    opacity: 0;
+  }
+  #Mobile_1{
+    top: 5%;
+    left: 15%;
+    margin-left: 0px;
+    margin-right: 0px;
+    height: 75vh;
+  }
+  .Mobile_Support_Label{
+    opacity: 0;
+  }
   
 }
 
