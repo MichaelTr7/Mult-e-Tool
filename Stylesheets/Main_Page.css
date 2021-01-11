@@ -1,14 +1,16 @@
- Smaller
 body{
   margin: 0px 0px 0px 0px;
+  overflow-x: hidden;
 }
 
 .Top_Bar{
   margin-left: 0px;
+  overflow-x: hidden;
 }
 
 .Scrolling_Container {
-  overflow: auto;
+  overflow: scroll;
+  overflow-x: hidden;
   scroll-snap-type: y mandatory;
 }
 
@@ -16,6 +18,7 @@ body{
   height: 100vh;
   width: 100vw;
   font-size: 60px;
+  overflow-x: hidden;
 }
 
 .Snap_Containers{  
@@ -26,6 +29,7 @@ body{
   background-color: white;
   background-color: rgb(20,20,20);
   /* border-bottom: 2px solid white; */
+  overflow-x: hidden;
 }
 
 .Snap_Containers:nth-child(1){
@@ -70,7 +74,7 @@ body{
   top: 25vh;
   left: 66.75vw;
   font-size: 2vw;
-  /* opacity: 0; */
+  opacity: 0;
   font-weight: bold;
   font-family: sans-serif;
   color: rgb(240,240,240);
