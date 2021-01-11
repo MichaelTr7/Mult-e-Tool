@@ -22,7 +22,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   background-color: white;
   background-color: rgb(20,20,20);
   /* border-bottom: 2px solid white; */

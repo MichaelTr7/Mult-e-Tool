@@ -64,7 +64,6 @@ function Animate_Row(){
     console.log(Focussed_Page);
 
     if(Focussed_Page != "Mobile"){
-<<<<<<< HEAD
       var Scroll_Label = document.getElementsByClassName('Scroll_Indicator')[0];
       Scroll_Label.style.opacity = 1;
       var Target_Row = document.getElementById(Focussed_Page + "_Launch_Button");
@@ -74,11 +73,7 @@ function Animate_Row(){
     var Scroll_Label = document.getElementsByClassName('Scroll_Indicator')[0];
     Scroll_Label.style.opacity = 0;
   }
-=======
-    var Target_Row = document.getElementById(Focussed_Page + "_Launch_Button");
-    Target_Row.classList.add('Spring_Animation');
-  }
->>>>>>> parent of adeede5... Completed Homepage
+
   }
 }
 
