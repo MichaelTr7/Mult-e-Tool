@@ -1,4 +1,4 @@
-
+ Smaller
 body{
   margin: 0px 0px 0px 0px;
 }
@@ -29,21 +29,21 @@ body{
 }
 
 .Snap_Containers:nth-child(1){
-  background-image: url('./Assets/Resistor Calculator Stack.png');
+  background-image: url('./Assets/Resistor Calculator Stack Smaller.png');
   background-size: 65% auto;
   background-position: -10% 50%;
   background-repeat: no-repeat;
 }
 
 .Snap_Containers:nth-child(2){
-  background-image: url('./Assets/Capacitor Calculator Stack.png');
+  background-image: url('./Assets/Capacitor Calculator Stack Smaller.png');
   background-size: 65% auto;
   background-position: 110% 50%;
   background-repeat: no-repeat;
 }
 
 .Snap_Containers:nth-child(3){
-  background-image: url('./Assets/Digital Logic Gates Stack.png');
+  background-image: url('./Assets/Digital Logic Gates Stack Smaller.png');
   background-size: 65% auto;
   background-position: -10% 50%;
   background-repeat: no-repeat;
