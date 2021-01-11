@@ -22,7 +22,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   background-color: white;
   background-color: rgb(20,20,20);
   /* border-bottom: 2px solid white; */
@@ -62,17 +62,21 @@ body{
   top: 25vh;
   left: 66.75vw;
   font-size: 2vw;
+  opacity: 0;
   font-weight: bold;
   font-family: sans-serif;
   color: rgb(240,240,240);
-  background: linear-gradient(90deg, #06CCB4 0%, #00C6D2 100%);
-  transition: box-shadow 0.5s;
+  border: 2px solid rgba(20,20,20,1);
+  transition: box-shadow 0.5s, border 0.5s;
 }
 
 #Resistor_Calculator_Launch_Button{
   background: linear-gradient(270deg, #FF5B5B 0%, #F73279 100%);
+  animation: Spring_Keyframes 0.4s forwards;
 }
+
 #Resistor_Calculator_Launch_Button:hover{
+  border: 2px solid rgba(240,240,240,1);
   box-shadow: 2vw 2vw 0px 0px rgba(255,91,91,0.2);
   cursor: pointer;
 }
@@ -83,15 +87,17 @@ body{
 }
 
 #Capacitor_Calculator_Launch_Button:hover{
+  border: 2px solid rgba(240,240,240,1);
   box-shadow: 2vw 2vw 0px 0px rgba(247,119,51,0.2);
   cursor: pointer;
 }
 
 #Digital_Logic_Gates_Launch_Button{
-  
+  background: linear-gradient(90deg, #06CCB4 0%, #00C6D2 100%);
 }
 
 #Digital_Logic_Gates_Launch_Button:hover{
+  border: 2px solid rgba(240,240,240,1);
   box-shadow: 2vw 2vw 0px 0px rgba(0,198,210,0.2);
   cursor: pointer;
 }
@@ -175,6 +181,39 @@ body{
   #Resistor_Calculator_Summary,#Digital_Logic_Gates_Summary,#Capacitor_Calculator_Summary{
     display: none;
   }  
+}
+
+.Scroll_Indicator{
+  position: fixed;
+  top: 95%;
+  left: 50%;
+  height: 5vw;
+  width: 22vw;
+  color: rgb(170,170,170);
+  /* background: white; */
+  margin-top: -2.5vw;
+  margin-left: -11vw;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 2vw;
+}
+
+.Spring_Animation{
+  animation: Spring_Keyframes 0.35s forwards;
+}
+
+@keyframes Spring_Keyframes{
+  0%{transform: translateY(50px); opacity: 0;}
+  100%{transform: translateY(0vh); opacity: 1;}
+}
+
+.Fade_In_Animation{
+  animation: Fade_In 0.3s forwards;
+}
+
+@keyframes Fade_In{
+  from{opacity: 0;}
+  to{opacity: 1;}
 }
 
 

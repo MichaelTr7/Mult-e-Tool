@@ -1,3 +1,4 @@
+
 window.onload = function(){
 
   var Top_Bar_Buttons = document.getElementsByClassName('Menu_Buttons');
@@ -21,6 +22,15 @@ window.onload = function(){
   }
   
   Adjust_Mobile_Menu();
+
+  const Launch_Rows = document.querySelectorAll("section");
+  const options = {threshold: 1};
+  let Scroll_Observer = new IntersectionObserver(Scroll_Check,options);
+  Launch_Rows.forEach(Row => {
+    Scroll_Observer.observe(Row);
+  });
+
+
 }
 
 function Launch_Webapp(){
@@ -28,10 +38,40 @@ function Launch_Webapp(){
   var Webapp_Pages = ["./Resistor_Calculator.html","./Capacitor_Calculator.html","./Digital_Logic_Gates.html"];
   var Webapp_Link = Webapp_Pages[Webapp_Index];
   console.log(Webapp_Link);
-  
   window.location.href = Webapp_Link;
-
-  // setTimeout(function () {
-  //   window.location.href = Webapp_Pages[];
-  // }, 200);
 }
+
+var Focussed_Page = "";
+var Number_Of_Sections = 3;
+var Run = 0;
+
+function Scroll_Check(entries){
+  entries.forEach(entry => {
+    var Target_Row = entry.target.id;
+    var Focussed_Row = document.getElementById(Target_Row);
+    if(Focussed_Page != Target_Row){
+      Focussed_Page = Target_Row;
+      if(Run > Number_Of_Sections){
+        Animate_Row();
+      }
+      Run = Run + 1;
+    }
+  });  
+}
+
+function Animate_Row(){
+  console.log("Target: " + Focussed_Page);
+  if(Focussed_Page != "Resistor_Calulator_Launch_Rows"){
+    Focussed_Page = Focussed_Page.replace("_Launch_Rows","")
+    var Target_Row = document.getElementById(Focussed_Page + "_Launch_Button");
+    // Target_Row.classList.remove('Spring_Animation');
+    // void Target_Row.offsetWidth;
+    Target_Row.classList.add('Spring_Animation');
+  }
+}
+
+
+
+
+
+
