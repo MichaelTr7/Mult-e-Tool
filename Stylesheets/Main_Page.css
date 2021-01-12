@@ -174,6 +174,7 @@ body{
   font-family: sans-serif;
   font-size: 2vw;
   animation: Highlight_Keyframes 3s infinite;
+  transition: opacity 0.5s;
 }
 
 .Spring_Animation{
@@ -203,7 +204,6 @@ body{
   display: in-block;
   position: absolute;
   top: 102px;
-  height: 70%;
   height:100%;
   /* min-height: 350px; */
   margin-bottom: 0px;
@@ -211,12 +211,13 @@ body{
   background-size: 80% auto;
   background-repeat: no-repeat;
   background-position: 50% 0%;
+  transform: translateY(100vh);
 }
 
 #Mobile_1{
   left: 0;
   /* background-color: blue; */
-  background-image: url('./Assets/Mobile Support 1.png')
+  background-image: url('./Assets/Mobile Support 1.png');
 }
 
 #Mobile_2{
@@ -280,6 +281,46 @@ body{
   .Summaries{opacity: 0;
   }
 }
+
+@media only screen and (max-width: 1024px){
+  #Mobile_1{
+    width: 100vw;
+    background-size: auto 80%;
+    background-position: 50% 0%;
+  }
+  #Mobile_2{
+    display: none;
+  }
+  #Mobile_3{
+    display: none;
+  }
+
+}
+
+
+.Pop_Animation_1{
+  animation: Pop_Keyframes 0.7s forwards;
+}
+
+.Pop_Animation_2{
+  animation: Pop_Keyframes 0.7s forwards;
+  animation-delay: 0.5s;
+}
+
+.Pop_Animation_3{
+  animation: Pop_Keyframes 0.7s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes Pop_Keyframes{
+  0%{transform: translateY(100vh) scale(1.5); filter: opacity(0);}
+  70%{transform: translateY(-0.8vh);}
+  80%{transform: translateY(0.5vh);}
+  90%{transform: translateY(-0.2vh);}
+  100%{transform: translateY(0vh);}
+}
+
+
 
 
 
