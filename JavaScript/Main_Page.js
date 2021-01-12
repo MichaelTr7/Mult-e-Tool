@@ -33,7 +33,6 @@ function Launch_Webapp(){
   var Webapp_Index = parseInt(document.getElementById(this.id).value) - 1;
   var Webapp_Pages = ["./Resistor_Calculator.html","./Capacitor_Calculator.html","./Digital_Logic_Gates.html"];
   var Webapp_Link = Webapp_Pages[Webapp_Index];
-  console.log(Webapp_Link);
   window.location.href = Webapp_Link;
 }
 
@@ -65,6 +64,10 @@ function Animate_Row(){
   void Summary_Texts[0].offsetWidth;
   Summary_Texts[1].classList.remove('Text_Pop_Animation_From_Left');
   Summary_Texts[2].classList.remove('Text_Pop_Animation_From_Right');
+  var Launch_Buttons = document.getElementsByClassName('Launch_Buttons');
+  Launch_Buttons[0].classList.remove('Spring_Animation');
+  Launch_Buttons[1].classList.remove('Spring_Animation');
+  Launch_Buttons[2].classList.remove('Spring_Animation');
   
   if(Focussed_Page == "Resistor_Calulator_Launch_Rows"){
     var Scroll_Label = document.getElementsByClassName('Scroll_Indicator')[0];
@@ -76,8 +79,6 @@ function Animate_Row(){
     if(Focussed_Page != "Mobile"){
       var Scroll_Label = document.getElementsByClassName('Scroll_Indicator')[0];
       Scroll_Label.style.opacity = 1;
-      var Target_Row = document.getElementById(Focussed_Page + "_Launch_Button");
-      Target_Row.classList.add('Spring_Animation');
     }
     if(Focussed_Page == "Mobile"){
       var Scroll_Label = document.getElementsByClassName('Scroll_Indicator')[0];
@@ -90,6 +91,8 @@ function Animate_Row(){
   }
   if(Focussed_Page == "Resistor_Calculator"|Focussed_Page == "Capacitor_Calculator"|Focussed_Page == "Digital_Logic_Gates"){
     Animate_Text_Summaries(Focussed_Page);
+    var Target_Row = document.getElementById(Focussed_Page + "_Launch_Button");
+    Target_Row.classList.add('Spring_Animation');
   }
 
 }
