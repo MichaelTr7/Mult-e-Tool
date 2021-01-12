@@ -55,17 +55,24 @@ function Scroll_Check(entries){
 }
 
 function Animate_Row(){
+
   var Phones = document.getElementsByClassName('Mobile_Views');
-  Phones[0].classList.remove('Pop_Animation_1');
-  Phones[1].classList.remove('Pop_Animation_2');
-  Phones[2].classList.remove('Pop_Animation_3');  
-  console.log(Focussed_Page);
+  // Phones[0].classList.remove('Pop_Animation_1');
+  // Phones[1].classList.remove('Pop_Animation_2');
+  // Phones[2].classList.remove('Pop_Animation_3');  
+  var Summary_Texts = document.getElementsByClassName('Summaries');
+  Summary_Texts[0].classList.remove('Text_Pop_Animation_From_Right');
+  void Summary_Texts[0].offsetWidth;
+  Summary_Texts[1].classList.remove('Text_Pop_Animation_From_Left');
+  Summary_Texts[2].classList.remove('Text_Pop_Animation_From_Right');
+  
   if(Focussed_Page == "Resistor_Calulator_Launch_Rows"){
     var Scroll_Label = document.getElementsByClassName('Scroll_Indicator')[0];
     Scroll_Label.style.opacity = 1;
   }
-  if(Focussed_Page != "Resistor_Calulator_Launch_Rows"){
-    Focussed_Page = Focussed_Page.replace("_Launch_Rows","")    
+  
+  Focussed_Page = Focussed_Page.replace("_Launch_Rows","")    
+  if(Focussed_Page != "Resistor_Calculator" & Focussed_Page != ""){
     if(Focussed_Page != "Mobile"){
       var Scroll_Label = document.getElementsByClassName('Scroll_Indicator')[0];
       Scroll_Label.style.opacity = 1;
@@ -81,9 +88,22 @@ function Animate_Row(){
       Phones[2].classList.add('Pop_Animation_3');  
     }
   }
+  if(Focussed_Page == "Resistor_Calculator"|Focussed_Page == "Capacitor_Calculator"|Focussed_Page == "Digital_Logic_Gates"){
+    Animate_Text_Summaries(Focussed_Page);
+  }
+
 }
 
-
+function Animate_Text_Summaries(Target_Banner){
+  Target_Summary = (Target_Banner + "_Summary").toString();
+  var Summary_Text = document.getElementById(Target_Summary);
+  if(Target_Summary == "Capacitor_Calculator_Summary"){
+    Summary_Text.classList.add('Text_Pop_Animation_From_Left');
+  }
+  if(Target_Summary == "Resistor_Calculator_Summary"|Target_Summary == "Digital_Logic_Gates_Summary"){
+    Summary_Text.classList.add('Text_Pop_Animation_From_Right');
+  }
+}
 
 
 
