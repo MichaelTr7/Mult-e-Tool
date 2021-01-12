@@ -1,6 +1,6 @@
-# [Mult-E-Kit: An Electronics Tool](https://michaeltr7.github.io/Mult-E-Kit/index.html)
+# [Mult-E-Kit](https://michaeltr7.github.io/Mult-E-Kit/index.html)
 
-<h1>Functionality/Capabilities</h1>
+<h1>Calculators and Tools</h1>
 • Resistor Calculator <br>
 • Capacitor Calculator<br>
 • Resistor & Capacitor List Maker<br>
