@@ -37,7 +37,7 @@ function Launch_Webapp(){
 }
 
 var Focussed_Page = "";
-var Number_Of_Sections = 3;
+var Number_Of_Sections = 4;
 var Run = 0;
 
 function Scroll_Check(entries){
@@ -75,20 +75,20 @@ function Animate_Row(){
   }
   
   Focussed_Page = Focussed_Page.replace("_Launch_Rows","")    
-  if(Focussed_Page != "Resistor_Calculator" & Focussed_Page != ""){
-    if(Focussed_Page != "Mobile"){
+    if(Focussed_Page != "Supported_Browsers"){
       var Scroll_Label = document.getElementsByClassName('Scroll_Indicator')[0];
       Scroll_Label.style.opacity = 1;
     }
-    if(Focussed_Page == "Mobile"){
+    if(Focussed_Page == "Supported_Browsers"){
       var Scroll_Label = document.getElementsByClassName('Scroll_Indicator')[0];
       Scroll_Label.style.opacity = 0;
+    }
+    if(Focussed_Page == "Mobile"){
       var Phones = document.getElementsByClassName('Mobile_Views');
       Phones[0].classList.add('Pop_Animation_1');
       Phones[1].classList.add('Pop_Animation_2');
       Phones[2].classList.add('Pop_Animation_3');  
     }
-  }
   if(Focussed_Page == "Resistor_Calculator"|Focussed_Page == "Capacitor_Calculator"|Focussed_Page == "Digital_Logic_Gates"){
     Animate_Text_Summaries(Focussed_Page);
     var Target_Row = document.getElementById(Focussed_Page + "_Launch_Button");

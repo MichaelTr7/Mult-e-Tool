@@ -169,13 +169,14 @@ body{
   top: 95%;
   left: 50%;
   height: 5vw;
-  width: 22vw;
+  width: 20vw;
   color: rgb(170,170,170);
   margin-top: -2.5vw;
-  margin-left: -11vw;
+  margin-left: -10vw;
   text-align: center;
   font-family: sans-serif;
   font-size: 2vw;
+  opacity: 1;
   animation: Highlight_Keyframes 3s infinite;
   transition: opacity 0.5s;
 }
@@ -235,28 +236,59 @@ body{
   background-image: url('./Assets/Mobile Support 3.png'); 
 }
 
-@keyframes Spring_Keyframes{
-  0%{transform: translateY(50px); opacity: 0;}
-  100%{transform: translateY(0vh); opacity: 1;}
+#Supported_Browsers_Launch_Rows{
+  background-color: red;
 }
 
-@keyframes Highlight_Keyframes{
-  0%{color:rgb(170,170,170); transform: scale(1);}
-  12.5%{color:rgb(200,200,200); transform: scale(1.05);}
-  25%{color:rgb(170,170,170); transform: scale(1);}
-  100%{color:rgb(170,170,170);}
+#Browser_Title{
+  
+}
+
+.Browser_Icons{
+  display: in-block;
+  position: absolute;
+  top: 180px;
+  height: calc(100vw/3);;
+  /* min-height: 350px; */
+  margin-bottom: 0px;
+  width: calc(100vw/3);
+  background-size: 75% auto;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+}
+
+#Browser_Containers{
+  background-color: rgb(20,20,20);
+}
+
+#Chrome_Icon{
+  left: 0;
+  background-color: blue;
+  /* background-image: url('./Assets/Mobile Support 1.png'); */
+}
+
+#Safari_Icon{
+  left: calc(100vw/3);
+  background-color: white;
+  /* background-image: url('./Assets/Mobile Support 2.png'); */
+}
+
+#Firefox_Icon{
+  left: calc(2*(100vw/3));
+  background-color: blue; 
+  /* background-image: url('./Assets/Mobile Support 3.png');  */
 }
 
 @media only screen and (max-width: 840px) {
-  .Snap_Containers:nth-child(1){
-    background-size: auto 100%;
-    background-position: 50% 50%;
-  }
   .Snap_Containers:nth-child(2){
     background-size: auto 100%;
     background-position: 50% 50%;
   }
   .Snap_Containers:nth-child(3){
+    background-size: auto 100%;
+    background-position: 50% 50%;
+  }
+  .Snap_Containers:nth-child(4){
     background-size: auto 100%;
     background-position: 50% 50%;
   }
@@ -297,9 +329,7 @@ body{
   #Mobile_3{
     display: none;
   }
-
 }
-
 
 .Pop_Animation_1{
   animation: Pop_Keyframes 0.7s forwards;
@@ -323,7 +353,6 @@ body{
   100%{transform: translateY(0vh);}
 }
 
-
 .Text_Pop_Animation_From_Right{
   animation: Text_Pop_Keyframes_From_Right 1s forwards;
 }
@@ -342,6 +371,17 @@ body{
   100%{transform: translateX(0vh); filter: opacity(1);}
 }
 
+@keyframes Spring_Keyframes{
+  0%{transform: translateY(50px); opacity: 0;}
+  100%{transform: translateY(0vh); opacity: 1;}
+}
+
+@keyframes Highlight_Keyframes{
+  0%{color:rgb(170,170,170); transform: scale(1);}
+  12.5%{color:rgb(200,200,200); transform: scale(1.05);}
+  25%{color:rgb(170,170,170); transform: scale(1);}
+  100%{color:rgb(170,170,170);}
+}
 
 
 
