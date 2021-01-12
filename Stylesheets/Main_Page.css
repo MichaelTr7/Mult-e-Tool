@@ -9,6 +9,7 @@ body{
 }
 
 .Scrolling_Container {
+  top: 200px;
   overflow: scroll;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
@@ -25,10 +26,9 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   background-color: white;
   background-color: rgb(20,20,20);
-  /* border-bottom: 2px solid white; */
   overflow-x: hidden;
 }
 
@@ -54,12 +54,10 @@ body{
 }
 
 .Snap_Containers:nth-child(4){
-  /* background-image: url('./Assets/Digital Logic Gates Stack.png'); */
   background-size: 65% auto;
   background-position: -10% 50%;
   background-repeat: no-repeat;
 }
-
 
 .Launch_Buttons{
   display: flex;
@@ -138,7 +136,6 @@ body{
   height: 100%;
   width: 100%;
   overflow: hidden;
-  /* background-color: rgba(255,255,255,0.2); */
 }
 
 .Summaries{
@@ -146,12 +143,10 @@ body{
   font-family: sans-serif;
   font-size: 1.8vw;
   top: 35%;
-  /* text-align: right; */
 }
 
 #Resistor_Calculator_Summary,#Digital_Logic_Gates_Summary{
   position: relative;
-  /* background-color: rgba(255,255,255,0.1); */
   width: 36vw;
   height: 40%;
   left: 60%;
@@ -160,7 +155,6 @@ body{
 
 #Capacitor_Calculator_Summary{
   position: relative;
-  /* background-color: rgba(255,255,255,0.1); */
   width: 36vw;
   height: 40%;
   left: 4.8%;
@@ -174,7 +168,6 @@ body{
   height: 5vw;
   width: 22vw;
   color: rgb(170,170,170);
-  /* background: white; */
   margin-top: -2.5vw;
   margin-left: -11vw;
   text-align: center;
@@ -183,29 +176,59 @@ body{
   animation: Highlight_Keyframes 3s infinite;
 }
 
-.Mobile_Views{
-  position: relative;
-  top: 5%;
-  left: 0%;
-  margin-left: 10px;
-  margin-right: 10px;
-  height: 40vw;
+.Spring_Animation{
+  animation: Spring_Keyframes 0.35s forwards;
+}
+
+#Mobile_Showcase{
+  background-color: rgb(20,20,20);
 }
 
 .Mobile_Support_Label{
-  position: relative;
+  position: absolute;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 4vw;
-  left: -2%;
-  top: 0%;
-  color: rgb(240,240,240);
+  font-size: 5vw;
   text-align: center;
+  height: 4vw;
+  width: 50vw;
+  left: 50%;
+  margin-left: calc(-25vw + -2px);
+  top: 50vh;
+  color: rgb(240,240,240);
+  z-index: 2;
 }
 
+.Mobile_Views{
+  display: in-block;
+  position: absolute;
+  top: 102px;
+  height: 70%;
+  height:100%;
+  /* min-height: 350px; */
+  margin-bottom: 0px;
+  width: calc(100vw/3);
+  background-size: 80% auto;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+}
 
-.Spring_Animation{
-  animation: Spring_Keyframes 0.35s forwards;
+#Mobile_1{
+  left: 0;
+  /* background-color: blue; */
+  background-image: url('./Assets/Mobile Support 1.png')
+}
+
+#Mobile_2{
+  left: calc(100vw/3);
+  /* background-color: white; */
+  background-image: url('./Assets/Mobile Support 2.png');
+}
+
+#Mobile_3{
+  left: calc(2*(100vw/3));
+  /* background-color: blue;  */
+  background-image: url('./Assets/Mobile Support 3.png'); 
 }
 
 @keyframes Spring_Keyframes{
@@ -219,7 +242,6 @@ body{
   25%{color:rgb(170,170,170); transform: scale(1);}
   100%{color:rgb(170,170,170);}
 }
-
 
 @media only screen and (max-width: 840px) {
   .Snap_Containers:nth-child(1){
@@ -245,35 +267,17 @@ body{
   }
   #Resistor_Calculator_Summary,#Digital_Logic_Gates_Summary,#Capacitor_Calculator_Summary{
     display: none;
-  }  
-  #Mobile_2{
-    opacity: 0;
-  }
-  #Mobile_3{
-    opacity: 0;
-  }
-  #Mobile_1{
-    top: 5%;
-    left: 15%;
-    margin-left: 0px;
-    margin-right: 0px;
-    height: 75vh;
-  }
-  .Mobile_Support_Label{
-    opacity: 0;
-  }
-  
+  } 
 }
 
 @media only screen and (max-height: 520px){
-  .Launch_Titles{
-    top: 60vh;
+  .Launch_Titles{top: 60vh;
   }  
-  #Capacitor_Calculator_Launch_Title{
-    top: 60vh;
+  #Capacitor_Calculator_Launch_Title{top: 60vh;
   }
-  .Launch_Buttons{
-    top: 62vh;
+  .Launch_Buttons{top: 62vh;
+  }
+  .Summaries{opacity: 0;
   }
 }
 
