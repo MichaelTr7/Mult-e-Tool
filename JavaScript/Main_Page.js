@@ -24,7 +24,7 @@ window.onload = function(){
   Adjust_Mobile_Menu();
 
   const Launch_Rows = document.querySelectorAll("section");
-  const options = {threshold: 1};
+  const options = {threshold: 0.7};
   let Scroll_Observer = new IntersectionObserver(Scroll_Check,options);
   Launch_Rows.forEach(Row => {Scroll_Observer.observe(Row);});
 }
@@ -55,9 +55,17 @@ function Scroll_Check(entries){
 }
 
 function Animate_Row(){
+  var Phones = document.getElementsByClassName('Mobile_Views');
+  Phones[0].classList.remove('Pop_Animation_1');
+  Phones[1].classList.remove('Pop_Animation_2');
+  Phones[2].classList.remove('Pop_Animation_3');  
+  console.log(Focussed_Page);
+  if(Focussed_Page == "Resistor_Calulator_Launch_Rows"){
+    var Scroll_Label = document.getElementsByClassName('Scroll_Indicator')[0];
+    Scroll_Label.style.opacity = 1;
+  }
   if(Focussed_Page != "Resistor_Calulator_Launch_Rows"){
-    Focussed_Page = Focussed_Page.replace("_Launch_Rows","")
-    console.log(Focussed_Page);
+    Focussed_Page = Focussed_Page.replace("_Launch_Rows","")    
     if(Focussed_Page != "Mobile"){
       var Scroll_Label = document.getElementsByClassName('Scroll_Indicator')[0];
       Scroll_Label.style.opacity = 1;
@@ -70,9 +78,7 @@ function Animate_Row(){
       var Phones = document.getElementsByClassName('Mobile_Views');
       Phones[0].classList.add('Pop_Animation_1');
       Phones[1].classList.add('Pop_Animation_2');
-      Phones[2].classList.add('Pop_Animation_3');
-      
-      
+      Phones[2].classList.add('Pop_Animation_3');  
     }
   }
 }

@@ -26,7 +26,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   background-color: white;
   background-color: rgb(20,20,20);
   overflow-x: hidden;
@@ -82,7 +82,7 @@ body{
 
 #Resistor_Calculator_Launch_Button{
   background: linear-gradient(270deg, #FF5B5B 0%, #F73279 100%);
-  animation: Spring_Keyframes 0.4s forwards;
+  animation: Spring_Keyframes 0.6s forwards;
 }
 
 #Resistor_Calculator_Launch_Button:hover{
@@ -178,14 +178,14 @@ body{
 }
 
 .Spring_Animation{
-  animation: Spring_Keyframes 0.35s forwards;
+  animation: Spring_Keyframes 0.6s forwards;
 }
 
 #Mobile_Showcase{
   background-color: rgb(20,20,20);
 }
 
-.Mobile_Support_Label{
+.Large_Support_Labels{
   position: absolute;
   font-family: sans-serif;
   font-weight: bold;
@@ -208,7 +208,7 @@ body{
   /* min-height: 350px; */
   margin-bottom: 0px;
   width: calc(100vw/3);
-  background-size: 80% auto;
+  background-size: 75% auto;
   background-repeat: no-repeat;
   background-position: 50% 0%;
   transform: translateY(100vh);
@@ -319,6 +319,10 @@ body{
   90%{transform: translateY(-0.2vh);}
   100%{transform: translateY(0vh);}
 }
+
+
+
+
 
 
 
