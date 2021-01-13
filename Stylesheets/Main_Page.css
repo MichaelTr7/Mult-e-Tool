@@ -198,7 +198,7 @@ body{
   height: 4vw;
   width: 50vw;
   left: 50%;
-  margin-left: calc(-25vw + -2px);
+  margin-left: calc(-25vw);
   top: 50vh;
   color: rgb(240,240,240);
   z-index: 2;
@@ -241,20 +241,20 @@ body{
 }
 
 #Browser_Title{
-  
+  top: calc(35% - 2vw);
 }
 
 .Browser_Icons{
-  display: in-block;
+  display: inline-block;
   position: absolute;
-  top: 180px;
-  height: calc(100vw/3);;
+  top: calc(60% - 10vw);
+  height: calc(20vw);;
   /* min-height: 350px; */
   margin-bottom: 0px;
-  width: calc(100vw/3);
-  background-size: 75% auto;
+  width: calc(20vw);
+  background-size: 65% auto;
   background-repeat: no-repeat;
-  background-position: 50% 0%;
+  background-position: 50% 50%;
 }
 
 #Browser_Containers{
@@ -262,21 +262,22 @@ body{
 }
 
 #Chrome_Icon{
-  left: 0;
-  background-color: blue;
-  /* background-image: url('./Assets/Mobile Support 1.png'); */
+  left: calc(20vw);
+  /* background-color: white; */
+  background-image: url('./Assets/Chrome Icon.png');
 }
 
 #Safari_Icon{
-  left: calc(100vw/3);
-  background-color: white;
-  /* background-image: url('./Assets/Mobile Support 2.png'); */
+  left: calc(20vw + 20vw);
+  /* background-color: red; */
+  background-image: url('./Assets/Safari Icon.png');
 }
 
 #Firefox_Icon{
-  left: calc(2*(100vw/3));
-  background-color: blue; 
-  /* background-image: url('./Assets/Mobile Support 3.png');  */
+  left: calc(20vw + 20vw + 20vw);
+  background-size: 75% auto;
+  /* background-color: blue;  */
+  background-image: url('./Assets/Firefox Icon.png'); 
 }
 
 @media only screen and (max-width: 840px) {
@@ -329,6 +330,46 @@ body{
   #Mobile_3{
     display: none;
   }
+}
+
+@media only screen and (max-width: 565px) {
+  #Browser_Title{
+    height: 6vh;
+    top: 15vh;
+    font-size: 7vw;
+    left: calc(25vw);
+    width: 100vw;
+  }
+
+  .Browser_Icons{
+    top: calc(60% - 25vw/2);
+    height: calc(25vh);;
+    /* min-height: 350px; */
+    width: calc(25vh);
+    background-size: 70% auto;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  #Chrome_Icon{
+    top: 22vh;
+    left: calc(50vw - 25vh/2);
+    background-image: url('./Assets/Chrome Icon.png');
+  }
+
+  #Safari_Icon{
+    top: 47vh;
+    left: calc(50vw - 25vh/2);
+    background-image: url('./Assets/Safari Icon.png');
+  }
+
+  #Firefox_Icon{
+    top: 72vh;
+    left: calc(50vw - 25vh/2);
+    background-size: 79%;
+    background-image: url('./Assets/Firefox Icon.png'); 
+  }
+
 }
 
 .Pop_Animation_1{
