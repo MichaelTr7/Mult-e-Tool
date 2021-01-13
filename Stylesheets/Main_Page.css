@@ -59,6 +59,17 @@ body{
   background-repeat: no-repeat;
 }
 
+#Hero_Page_Label{
+  top: 60vh;
+  height: 100%;
+}
+
+#Hero_Page_Label > div{
+ background: linear-gradient(20deg, rgba(100,204,180,1) 0%, rgba(70,198,220,1) 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
 .Launch_Buttons{
   display: flex;
   align-items: center;
