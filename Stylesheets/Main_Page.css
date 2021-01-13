@@ -251,6 +251,19 @@ body{
   top: calc(35% - 2vw);
 }
 
+#Icon_Image{
+  position: absolute;
+  height: 80vw;
+  width: 80vw;
+  top: calc(60vh - 40vw - 165px);
+  background-image: url('./Assets/Mult_E_Tool.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  left: calc(50vw - 40vw);
+  transform: scale(0.25);
+}
+
+
 .Browser_Icons{
   display: inline-block;
   position: absolute;
