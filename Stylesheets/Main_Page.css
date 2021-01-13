@@ -236,10 +236,6 @@ body{
   background-image: url('./Assets/Mobile Support 3.png'); 
 }
 
-#Supported_Browsers_Launch_Rows{
-  background-color: red;
-}
-
 #Browser_Title{
   top: calc(35% - 2vw);
 }
@@ -255,6 +251,7 @@ body{
   background-size: 65% auto;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  transform: translateY(-100vh);
 }
 
 #Browser_Containers{
@@ -368,6 +365,12 @@ body{
     left: calc(50vw - 25vh/2);
     background-size: 79%;
     background-image: url('./Assets/Firefox Icon.png'); 
+  }
+}
+
+@media only screen and (min-height: 736px) {
+  .Mobile_Views{
+    top: 18vh;
   }
 
 }

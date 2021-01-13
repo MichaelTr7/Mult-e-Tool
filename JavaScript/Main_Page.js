@@ -56,9 +56,13 @@ function Scroll_Check(entries){
 function Animate_Row(){
 
   var Phones = document.getElementsByClassName('Mobile_Views');
-  // Phones[0].classList.remove('Pop_Animation_1');
-  // Phones[1].classList.remove('Pop_Animation_2');
-  // Phones[2].classList.remove('Pop_Animation_3');  
+  Phones[0].classList.remove('Pop_Animation_1');
+  Phones[1].classList.remove('Pop_Animation_2');
+  Phones[2].classList.remove('Pop_Animation_3');  
+  var Browser_Icons = document.getElementsByClassName('Browser_Icons');
+  Browser_Icons[0].classList.remove('Pop_Animation_1');
+  Browser_Icons[1].classList.remove('Pop_Animation_2');
+  Browser_Icons[2].classList.remove('Pop_Animation_3');
   var Summary_Texts = document.getElementsByClassName('Summaries');
   Summary_Texts[0].classList.remove('Text_Pop_Animation_From_Right');
   void Summary_Texts[0].offsetWidth;
@@ -68,13 +72,13 @@ function Animate_Row(){
   Launch_Buttons[0].classList.remove('Spring_Animation');
   Launch_Buttons[1].classList.remove('Spring_Animation');
   Launch_Buttons[2].classList.remove('Spring_Animation');
-  
-  if(Focussed_Page == "Resistor_Calulator_Launch_Rows"){
+  Focussed_Page = Focussed_Page.replace("_Launch_Rows","");   
+
+  if(Focussed_Page == "Resistor_Calulator"){
     var Scroll_Label = document.getElementsByClassName('Scroll_Indicator')[0];
     Scroll_Label.style.opacity = 1;
   }
   
-  Focussed_Page = Focussed_Page.replace("_Launch_Rows","")    
     if(Focussed_Page != "Supported_Browsers"){
       var Scroll_Label = document.getElementsByClassName('Scroll_Indicator')[0];
       Scroll_Label.style.opacity = 1;
@@ -94,7 +98,12 @@ function Animate_Row(){
     var Target_Row = document.getElementById(Focussed_Page + "_Launch_Button");
     Target_Row.classList.add('Spring_Animation');
   }
-
+  if(Focussed_Page == "Supported_Browsers"){
+    var Browser_Icons = document.getElementsByClassName('Browser_Icons');
+    Browser_Icons[0].classList.add('Pop_Animation_1');
+    Browser_Icons[1].classList.add('Pop_Animation_2');
+    Browser_Icons[2].classList.add('Pop_Animation_3');
+  }
 }
 
 function Animate_Text_Summaries(Target_Banner){
