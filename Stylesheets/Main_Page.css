@@ -59,25 +59,20 @@ body{
   background-repeat: no-repeat;
 }
 
-#Icon_Image{
-  position: absolute;
-  height: 80vw;
-  width: 80vw;
-  top: calc(60vh - 40vw - 165px);
-  background-image: url('./Assets/Mult_E_Tool.svg');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  left: calc(50vw - 40vw);
-  transform: scale(0.25);
-}
+
 
 #Icon_Image{
-  /* background-color: white; */
-  background-position: 50%;
+  position: relative;
+  background-position: 52% 50%;
+  background-repeat: no-repeat;
+  background-size: 95%;
+  background-image: url('./Assets/Mult_E_Tool.svg');
   height: 180vh;
-  width: 180vh;
   top: calc(45% - 90vh);
-  left: calc(50.1vw - 90vh);    
+  width: 180vh;
+  left: calc(50.1vw - 90vh);
+  transform: scale(0.25);
+  animation: Pulse_Keyframes 2s ease-out infinite; 
 }
 
 #Hero_Page_Label{
@@ -434,10 +429,6 @@ body{
   }
 }
 
-
-
-
-
 .Pop_Animation_1{
   animation: Pop_Keyframes 0.7s forwards;
 }
@@ -490,6 +481,20 @@ body{
   100%{color:rgb(170,170,170);}
 }
 
+@keyframes Pulse_Keyframes{
+  0%{transform: translateY(-0.2vh) scale(0.25); filter: brightness(0.9);}
+  50%{transform: translateY(-0.2vh) scale(0.255); filter: brightness(1);}
+  100%{transform: translateY(-0.2vh) scale(0.25); filter: brightness(0.9);}
+}
 
+.Pulse_Keyframes_Animation{
+  animation: Pop_Up_Icon 2s ease-out;
+  animation-delay: 2s;
+}
 
+@keyframes Pop_Up_Icon{
+  0%{transform: translateY(100vh) scale(0.25) scaleX(1.5); filter: opacity(0);}
+  70%{transform: translateY(-0.8vh) scale(0.25);}
+  100%{transform: translateY(0vh) scale(0.25);}
+}
 
