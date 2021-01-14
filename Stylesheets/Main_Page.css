@@ -13,6 +13,7 @@ body{
   overflow: scroll;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
+  animation: Fade_In_Keyframes 0.5s forwards;
 }
 
 .Scrolling_Container,.Snap_Containers {
@@ -59,7 +60,12 @@ body{
   background-repeat: no-repeat;
 }
 
-
+#Hero_Page{
+  background-image: url('./Assets/Waveform.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0% 45%;
+}
 
 #Icon_Image{
   position: relative;
@@ -491,19 +497,24 @@ body{
   100%{color:rgb(170,170,170);}
 }
 
+.Pulse_Keyframes_Animation{
+  animation: Pop_Up_Icon 2s ease-out;
+  animation-delay: 2s;
+}
+
 @keyframes Pulse_Keyframes{
   0%{transform: translateY(-0.2vh) scale(0.25); filter: brightness(0.9);}
   50%{transform: translateY(-0.2vh) scale(0.255); filter: brightness(1);}
   100%{transform: translateY(-0.2vh) scale(0.25); filter: brightness(0.9);}
 }
 
-.Pulse_Keyframes_Animation{
-  animation: Pop_Up_Icon 2s ease-out;
-  animation-delay: 2s;
-}
-
 @keyframes Pop_Up_Icon{
   0%{transform: translateY(100vh) scale(0.25) scaleX(1.5); filter: opacity(0);}
   70%{transform: translateY(-0.8vh) scale(0.25);}
   100%{transform: translateY(0vh) scale(0.25);}
+}
+
+@keyframes Fade_In_Keyframes {
+  from{opacity: 0; transform: scale(1.2);}
+  to{opacity: 1;  transform: scale(1);}
 }
