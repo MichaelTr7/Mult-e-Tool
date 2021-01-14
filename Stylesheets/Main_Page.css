@@ -356,6 +356,16 @@ body{
 }
 
 @media only screen and (max-width: 1024px){
+  .Large_Support_Labels{
+    font-size: 8vw;
+    width: 100vw;
+  }
+  #Mobile_Support_Label{
+    left: 25vw;
+  }
+  #Browser_Title{
+    left: 25vw;
+  }
   #Mobile_1{
     width: 100vw;
     background-size: auto 80%;
