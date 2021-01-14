@@ -7,7 +7,7 @@
 
 • [Resistor Calculator](https://michaeltr7.github.io/Mult-E-Kit/Resistor_Calculator.html)<br>
 • [Capacitor Calculator](https://michaeltr7.github.io/Mult-E-Kit/Capacitor_Calculator.html)<br>
-• [Digital Logic Gates](https://michaeltr7.github.io/Mult-E-Kit/Digital_Logic_Gates.html)<br>
+• [Interactive Digital Logic Gates Tool](https://michaeltr7.github.io/Mult-E-Kit/Digital_Logic_Gates.html)<br>
 <br>
 <h1>Preview Images</h1>
 
