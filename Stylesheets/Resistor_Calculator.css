@@ -1,11 +1,11 @@
 
-body {
+body{
   margin: 0px 20px 20px 20px;
   background-color: rgb(20,20,20);
   font-size: 100%;
 }
 
-.Panel_Wrapper {
+.Panel_Wrapper{
   margin-top: 165px;
   display: grid;
   background: red;

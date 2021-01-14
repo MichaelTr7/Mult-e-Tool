@@ -59,13 +59,47 @@ body{
   background-repeat: no-repeat;
 }
 
+#Icon_Image{
+  position: absolute;
+  height: 80vw;
+  width: 80vw;
+  top: calc(60vh - 40vw - 165px);
+  background-image: url('./Assets/Mult_E_Tool.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  left: calc(50vw - 40vw);
+  transform: scale(0.25);
+}
+
+#Icon_Image{
+  /* background-color: white; */
+  background-position: 50%;
+  height: 180vh;
+  width: 180vh;
+  top: calc(45% - 90vh);
+  left: calc(50.1vw - 90vh);    
+}
+
 #Hero_Page_Label{
-  top: 60vh;
+  display: block;
+  position: absolute;
+  top: 70vh;
   height: 100%;
+  width: 100vw;
+  margin-left: -50vw;
+  font-size: 5vh;
+  text-align: center;
 }
 
 #Hero_Page_Label > div{
- background: linear-gradient(20deg, rgba(100,204,180,1) 0%, rgba(70,198,220,1) 100%);
+ display: block;
+ position: absolute;
+ height: 100vh;
+ width: 80vw;
+ left: 50vw;
+ margin-left: -40vw;
+ text-align: center;
+ background: linear-gradient(90deg, rgba(100,204,180,1) 30%, rgba(70,198,220,1) 70%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 }
@@ -178,7 +212,7 @@ body{
 .Scroll_Indicator{
   position: fixed;
   top: 95%;
-  left: 50%;
+  left: 50vw;
   height: 5vw;
   width: 20vw;
   color: rgb(170,170,170);
@@ -250,19 +284,6 @@ body{
 #Browser_Title{
   top: calc(35% - 2vw);
 }
-
-#Icon_Image{
-  position: absolute;
-  height: 80vw;
-  width: 80vw;
-  top: calc(60vh - 40vw - 165px);
-  background-image: url('./Assets/Mult_E_Tool.svg');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  left: calc(50vw - 40vw);
-  transform: scale(0.25);
-}
-
 
 .Browser_Icons{
   display: inline-block;
@@ -392,12 +413,30 @@ body{
   }
 }
 
-@media only screen and (min-height: 736px) {
+@media only screen and (min-height: 736px){
   .Mobile_Views{
     top: 18vh;
   }
-
 }
+
+@media only screen and (max-width: 560px){
+  #Hero_Page_Label{
+    font-size: 3.5vh;
+  }
+}
+
+@media only screen and (max-width: 320px){
+  #Icon_Image{
+    height: 150vh;
+    width: 150vh;
+    top: calc(45% - 75vh);
+    left: calc(50.1vw - 75vh);    
+  }
+}
+
+
+
+
 
 .Pop_Animation_1{
   animation: Pop_Keyframes 0.7s forwards;
