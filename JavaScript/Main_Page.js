@@ -117,6 +117,17 @@ function Animate_Text_Summaries(Target_Banner){
   }
 }
 
-
+function Navigation_Button_Pressed(){
+  var Menu_Button = document.getElementById(this.id);
+  Menu_Button.classList.remove("Jump_Animation_2");
+  void Menu_Button.offsetWidth;
+  Menu_Button.classList.add("Jump_Animation_2");
+  var Button_Index = parseInt(this.id.split("_")[2]) - 1;
+  console.log(Button_Index);
+  var Pages = ["./Pages/Resistor_Calculator.html","./Pages/Resistor_List_Maker.html","./index.html","./Pages/Capacitor_Calculator.html","./Pages/Digital_Logic_Gates.html"];
+  setTimeout(function () {
+    window.location.href = Pages[Button_Index];
+  }, 200);
+}
 
 
