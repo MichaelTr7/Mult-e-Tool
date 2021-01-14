@@ -2,7 +2,7 @@
  
  # [Mult-e-Tool](https://michaeltr7.github.io/Mult-e-Kit/index.html)
 
-[<img src="./Preview Images/Main Page Devices.png" width = "1000">](https://michaeltr7.github.io/Mult-e-Kit/index.html)
+[<img src="./Preview Images/Launch Page.png" width = "1000">](https://michaeltr7.github.io/Mult-e-Kit/index.html)
  
 <h1>Calculators and Tools</h1>
 
