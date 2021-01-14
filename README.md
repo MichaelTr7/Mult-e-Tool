@@ -14,13 +14,13 @@
 
 ## [Resistor Calculator](https://michaeltr7.github.io/Mult-e-Kit/Resistor_Calculator.html)
 
-[<img src="./Preview Images/Resistor Calculator Showcase.png" width = "1000">](https://michaeltr7.github.io/Mult-e-Kit/Resistor_Calculator.html)
+[<img src="./Preview Images/Resistor Calculator Devices.png" width = "1000">](https://michaeltr7.github.io/Mult-e-Kit/Resistor_Calculator.html)
 
 ## [Capacitor Calculator](https://michaeltr7.github.io/Mult-e-Kit/Capacitor_Calculator.html)
 
-[<img src="./Preview Images/Capacitor_Calculator_Preview_Page.png" width = "1000">](https://michaeltr7.github.io/Mult-e-Kit/Capacitor_Calculator.html)
+[<img src="./Preview Images/Capacitor Calculator Devices.png" width = "1000">](https://michaeltr7.github.io/Mult-e-Kit/Capacitor_Calculator.html)
 
 
 ## [Digital Logic Gates](https://michaeltr7.github.io/Mult-e-Kit/Digital_Logic_Gates.html)
 
-[<img src="./Preview Images/Digital_Logic_Gates_Preview_Page.png" width = "1000">](https://michaeltr7.github.io/Mult-e-Kit/Digital_Logic_Gates.html)
+[<img src="./Preview Images/Digital Logic Gates Devices.png" width = "1000">](https://michaeltr7.github.io/Mult-e-Kit/Digital_Logic_Gates.html)
