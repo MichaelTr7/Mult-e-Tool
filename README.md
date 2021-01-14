@@ -1,4 +1,4 @@
- [<img src="./Preview Images/Mult_E_Tool_Favicon.png" width = "50">](https://michaeltr7.github.io/Mult-E-Kit/index.html)
+ [<img src="./Preview Images/Mult_E_Tool_Favicon.png" width = "50">](https://michaeltr7.github.io/Mult-E-Kit/index.html) <h1>Mult-E-Tool</h1>
  <hr>
  
 # [Mult-E-Kit](https://michaeltr7.github.io/Mult-E-Kit/index.html)
