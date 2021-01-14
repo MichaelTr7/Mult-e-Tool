@@ -1,0 +1,500 @@
+
+body{
+  /* margin: 0px 20px 50px 0px */
+}
+
+.Top_Bar{
+  padding-left: 0px;
+}
+
+.Digital_Logic_Gates_Wrapper{
+  position: absolute;
+  display: flex;
+  top: 90px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100vw;
+  margin-left: -22px;
+  align-items: stretch;
+  padding-bottom: 40px;
+  animation: Translate_Up 1s forwards;
+  /* -webkit-animation-timing-function: ease; 
+  animation-timing-function: ease; */
+}
+
+.Digital_Logic_Gates_Containers{
+  border: 2vw solid rgb(20,20,20,0);
+  height: 300px;
+  width: 460px;
+  min-width: 460px;
+}
+
+.Logic_Gates_Cards{
+  position: relative;
+  background-color: red;
+  border-radius: 12px;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(35,35,35);
+  box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
+}
+
+.Truth_Table_Container{
+  position: absolute;
+  height: 90%;
+  width: 56%;
+  right: 3.6%;
+  bottom: 0%;
+  background-color: rgb(35,35,35);
+  border-radius: 12px;
+}
+
+.Logic_Gate_Diagrams{
+  height: 100%;
+  width: 40%;
+  background-size: 90%;
+  background-position: 60% 32%;
+  background-repeat: no-repeat;
+  filter: saturate(0.90) opacity(0.9);
+}
+
+.AND_Gate{
+  background-image: url('./Assets/AND Gate.png');
+}
+
+.NAND_Gate{
+  background-image: url('./Assets/NAND Gate.png');
+}
+
+.OR_Gate{
+  background-image: url('./Assets/OR Gate.png');
+}
+
+.NOR_Gate{
+  background-image: url('./Assets/NOR Gate.png');
+}
+
+.XOR_Gate{
+  background-image: url('./Assets/XOR Gate.png');
+}
+
+.XNOR_Gate{
+  background-image: url('./Assets/XNOR Gate.png');
+}
+
+.NOT_Gate{
+  background-image: url('./Assets/NOT Gate.png');
+}
+
+.BUFFER_Gate{
+  background-image: url('./Assets/BUFFER Gate.png');
+}
+
+
+.AND_Gate_Simple_Style{
+  background-image: url('./Assets/AND Gate Simple.png');
+}
+
+.NAND_Gate_Simple_Style{
+  background-image: url('./Assets/NAND Gate Simple.png');
+}
+
+.OR_Gate_Simple_Style{
+  background-image: url('./Assets/OR Gate Simple.png');
+}
+
+.NOR_Gate_Simple_Style{
+  background-image: url('./Assets/NOR Gate Simple.png');
+}
+
+.XOR_Gate_Simple_Style{
+  background-image: url('./Assets/XOR Gate Simple.png');
+}
+
+.XNOR_Gate_Simple_Style{
+  background-image: url('./Assets/XNOR Gate Simple.png');
+}
+
+.NOT_Gate_Simple_Style{
+  background-image: url('./Assets/NOT Gate Simple.png');
+}
+
+.BUFFER_Gate_Simple_Style{
+  background-image: url('./Assets/BUFFER Gate Simple.png');
+}
+
+
+.LED:nth-of-type(1){
+  position: absolute;
+  top: 245px;
+  left: 49px;
+}
+
+.LED:nth-of-type(2){
+  position: absolute;
+  top: 245px;
+  left: 102px;
+}
+
+.LED:nth-of-type(3){
+  position: absolute;
+  top: 15px;
+  left: 75.5px;
+}
+
+.BUFFER_Gate > div:nth-child(2){
+  display: none;
+}
+
+.BUFFER_Gate > div:nth-child(1), .NOT_Gate > div:nth-child(1){
+  position: absolute;
+  top: 245px;
+  left: 75.5px;
+}
+
+.NOT_Gate > div:nth-child(2){
+  display: none;
+}
+
+.LED{
+  height: 30px;
+  width: 30px;
+  background: rgba(170,170,170,0.5);
+  border-radius: 30px;
+  border: solid rgba(150,150,150,1);
+  box-shadow: inset 0 -2px 0 2px rgba(0,0,0,0.2), inset 0 0.05px 0.2px 1px rgba(255,255,255,0.5);
+  transition: transform 0.2s;
+}
+
+.LED:not(:last-child):hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.LED_ON{
+  background: rgba(235,250,255,1);
+  box-shadow: inset 0 -2.5px 0 1px rgba(120,120,120,0.5), inset 0 2px 1px 2px rgba(255,255,255,0.5), 0 0px 45px 2px rgba(0,194,159,1);
+}
+
+
+.Jump_Animation{
+  animation: Jump_Keyframes 0.3s ease-out forwards;
+}
+
+@keyframes Jump_Keyframes{
+  0%{transform: translateY(0px) scaleX(1.1) scaleY(1.1);}
+  10%{transform: translateY(5px) scaleX(1.2);}
+  40%{transform: translateY(-7px) scaleX(0.8);}  
+  75%{transform: translateY(2px) scaleX(1);} 
+  100%{transform: translateY(0px) scaleX(1);}
+}
+
+.Truth_Table{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(5,1fr);
+  height: 80%;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  margin-top: -44%;
+  margin-left: -41.5%;
+  border: 5px solid rgb(35,35,35);
+}
+
+.Truth_Table_Value{
+  font-family: sans-serif;
+  text-align: center;
+  color: rgb(170,170,170);
+  background-color: rgb(50,50,50);
+  font-weight: bold;
+  border: 2px solid rgb(35,35,35);
+  box-shadow: inset 5px 5px 2px 0px rgba(0,0,0,0.1);
+  font-size: 0.8em;
+  line-height: 1.1em;
+  text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+}
+
+.Truth_Table_Value:not(:nth-child(1)):not(:nth-child(2)){
+  font-size: 1.5em;
+  line-height: 1.6em;
+}
+
+.Truth_Table_Value:nth-child(1){
+  grid-column: 1 / span 2;
+}
+
+.BUFFER_Gate_Inputs > div:nth-child(3){
+  grid-column: 1 / span 2;
+}
+
+.BUFFER_Gate_Inputs > div:nth-child(5){
+  grid-column: 1 / span 2;
+}
+
+.NOT_Gate_Inputs > div:nth-child(3){
+  grid-column: 1 / span 2;
+}
+
+.NOT_Gate_Inputs > div:nth-child(5){
+  grid-column: 1 / span 2;
+}
+
+.Gate_Labels{
+  position: absolute;
+  top: -7%;
+  left: 50%;
+  height: 45px;
+  width: 200px;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  margin-left: -100px;
+  color: rgb(0,197,185);
+  text-shadow: 6px 6px 2px rgba(0,0,0,0.2);
+  /* background-color: white; */
+  z-index: 2;
+}
+
+.Light_Up_Value{
+  color: rgba(255,255,255,1);
+  text-shadow: 0 0 5px rgb(255,255,255,0.2), 0 0 10px rgb(255,255,255,0.2), 0 0 5px rgb(255,255,255,0.2), 0 0 10px rgba(0,194,159,1), 0 0 25px rgba(0,194,159,1);
+}
+
+.Input_Labels{
+  position: absolute;
+  color: rgb(170,170,170);
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 0.9em;
+  top: 256px;
+  left: 140px;
+  z-index: 3;
+}
+
+.Output_Labels{
+  position: absolute;
+  color: rgb(10,10,10);
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 0.9em;
+  top: 24px;
+  left: 115px;
+  z-index: 3;
+}
+
+#BUFFER_Input_Label, #NOT_Input_Label{
+  top: 256px;
+  left: 115px;
+}
+
+.Gate_Faces{
+  position: absolute;
+  height: 65px;
+  width: 65px;
+  top: 105px;
+  left: 50px;
+  z-index: 3;
+  padding: 30px 10px 2px 10px;
+  border-radius: 20px 20px 0px 0px;
+  /* background-color: red; */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.Left_Eyes,.Right_Eyes{
+  opacity: 0;
+}
+
+.Open_Eyes{
+  opacity: 1;
+}
+
+.Gate_Faces:hover{
+  cursor: pointer;
+}
+
+.Left_Eyes,.Right_Eyes,.Mouth:hover{
+  cursor: pointer;
+}
+
+#OR_Gate_Face,#NOR_Gate_Face,#XOR_Gate_Face,#XNOR_Gate_Face{
+  top: 98px;
+  left: 50px;
+}
+
+#BUFFER_Gate_Face,#NOT_Gate_Face{
+  top: 110px;
+  left: 50px;
+}
+
+.Style_Toggle{
+  position: absolute;
+  top: -20px;
+  left: 200px;
+  height: 38px;
+  width: 60px;
+  background-color: rgba(35,35,35,1);
+  border: none;
+  border-radius: 5px;
+  z-index: 2;
+  filter: opacity(0.5);
+  background-image: url('./Assets/AND Gate Simple Rotate.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  box-shadow: 4px 4px 7px 1px rgba(0,0,0,0), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0);
+  transition: box-shadow 1s;
+}
+
+.Style_Toggle:hover{
+  box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);  
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.AND_Style_Toggle{
+  background-image: url('./Assets/AND Gate Simple Rotate.png');
+}
+
+.NAND_Style_Toggle{
+  background-image: url('./Assets/NAND Gate Simple Rotate.png');
+}
+
+.OR_Style_Toggle{
+  background-image: url('./Assets/OR Gate Simple Rotate.png');
+}
+
+.NOR_Style_Toggle{
+  background-image: url('./Assets/NOR Gate Simple Rotate.png');
+}
+
+.XOR_Style_Toggle{
+  background-image: url('./Assets/XOR Gate Simple Rotate.png');
+}
+
+.XNOR_Style_Toggle{
+  background-image: url('./Assets/XNOR Gate Simple Rotate.png');
+}
+
+.BUFFER_Style_Toggle{
+  background-image: url('./Assets/BUFFER Gate Simple Rotate.png');
+}
+
+.NOT_Style_Toggle{
+  background-image: url('./Assets/NOT Gate Simple Rotate.png');
+}
+
+
+.AND_Style_Toggle_Detailed{
+  background-image: url('./Assets/AND Gate Rotated.png');
+}
+
+.NAND_Style_Toggle_Detailed{
+  background-image: url('./Assets/NAND Gate Rotated.png');
+}
+
+.OR_Style_Toggle_Detailed{
+  background-image: url('./Assets/OR Gate Rotated.png');
+}
+
+.NOR_Style_Toggle_Detailed{
+  background-image: url('./Assets/NOR Gate Rotated.png');
+}
+
+.XOR_Style_Toggle_Detailed{
+  background-image: url('./Assets/XOR Gate Rotated.png');
+}
+
+.XNOR_Style_Toggle_Detailed{
+  background-image: url('./Assets/XNOR Gate Rotated.png');
+}
+
+.BUFFER_Style_Toggle_Detailed{
+  background-image: url('./Assets/BUFFER Gate Rotated.png');
+}
+
+.NOT_Style_Toggle_Detailed{
+  background-image: url('./Assets/NOT Gate Rotated.png');
+}
+
+.Info_Container{
+  border: 2vw solid rgb(20,20,20,0);
+  height: 300px;
+  width: 460px;
+  min-width: 965px;
+}
+
+.Explanation_Card{
+  position: relative;
+  background-color: red;
+  border-radius: 12px;
+  height: 100%;
+  width: 80vw;
+  left: 50%;
+  margin-left: -40vw;
+  background-color: rgb(35,35,35);
+  box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
+}
+
+
+
+@media only screen and (max-width: 446px) {  
+  .Digital_Logic_Gates_Containers{
+    height: 300px;
+    width: 460px;
+    margin-top: -120px;
+    min-width: 460px;
+    transform: scale(0.6);
+  }
+
+  .Digital_Logic_Gates_Wrapper{
+    top: 118px;
+  }
+}
+
+@-moz-document url-prefix() {
+  .Gate_Labels{
+    top: -5%;
+  }
+  
+}
+
+@keyframes Translate_Up{
+  0%{
+    transform: translateY(70px); 
+    filter: opacity(0);
+  }
+  100%{
+    transform: translateY(0px);   
+    filter: opacity(1);  
+  }
+}
+
+.Jump_Animation{
+  animation: Jump_Keyframes 0.5s ease-out forwards;
+}
+
+@keyframes Jump_Keyframes{
+  0%{transform: translateY(0px) scaleX(1);}
+  10%{transform: translateY(5px) scaleX(1.2);}
+  40%{transform: translateY(-7px) scaleX(0.8);}  
+  75%{transform: translateY(2px) scaleX(1);} 
+  100%{transform: translateY(0px) scaleX(1);}
+}
+
+@keyframes Fade_In{
+  from{opacity: 0}
+  to{opacity: 1}
+}
+
+
+
+
+
+
+
+
+
