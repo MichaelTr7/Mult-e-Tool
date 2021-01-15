@@ -37,21 +37,13 @@ window.onload = function(){
 
   for(LED_Index = 0; LED_Index < AND_LEDs.length-1; LED_Index++){
     AND_LEDs[LED_Index].addEventListener("click",Update_AND_Gate);
-    // AND_LEDs[LED_Index].addEventListener("click",LED_Pressed);
     NAND_LEDs[LED_Index].addEventListener("click",Update_NAND_Gate);
-    // NAND_LEDs[LED_Index].addEventListener("click",LED_Pressed);
     OR_LEDs[LED_Index].addEventListener("click",Update_OR_Gate);
-    // OR_LEDs[LED_Index].addEventListener("click",LED_Pressed);
     NOR_LEDs[LED_Index].addEventListener("click",Update_NOR_Gate);
-    // NOR_LEDs[LED_Index].addEventListener("click",LED_Pressed);
     XOR_LEDs[LED_Index].addEventListener("click",Update_XOR_Gate);
-    // XOR_LEDs[LED_Index].addEventListener("click",LED_Pressed);
     XNOR_LEDs[LED_Index].addEventListener("click",Update_XNOR_Gate);
-    // XNOR_LEDs[LED_Index].addEventListener("click",LED_Pressed);
     BUFFER_LEDs[LED_Index].addEventListener("click",Update_BUFFER_Gate);
-    // BUFFER_LEDs[LED_Index].addEventListener("click",LED_Pressed);
     NOT_LEDs[LED_Index].addEventListener("click",Update_NOT_Gate);
-    // NOT_LEDs[LED_Index].addEventListener("click",LED_Pressed);
   }
   
   var Style_Toggle_Buttons = document.getElementsByClassName('Style_Toggle');
@@ -347,36 +339,6 @@ function Toggle_Style(){
   }
 
 }
-
-
-// function LED_Pressed(){
-//   var LED_State = document.getElementById(this.id).style.backgroundColor;
-//   console.log(LED_State);
-//   var Snap_Sound = document.getElementById('Snap_Audio');
-//   Snap_Sound.currentTime = 0;
-//   Snap_Sound.volume = 1;
-//   Snap_Sound.play();
-// }
-
-// function LED_Pressed(){
-//   duration = 0.015;
-//   frequency = 1000;
-//   var context = new(window.AudioContext || window.webkitAudioContext)();
-//   var osc = context.createOscillator(); 
-//   osc.type = 'triangle'; 
-//   osc.frequency.value = frequency; 
-//   osc.connect(context.destination); 
-//   osc.start(context.currentTime);
-//   osc.stop(context.currentTime + duration);
-// }
-
-
-
-
-
-
-
-
 
 
 
