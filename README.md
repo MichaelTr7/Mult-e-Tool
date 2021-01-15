@@ -11,7 +11,6 @@
 • [Capacitor Calculator](https://michaeltr7.github.io/Mult-e-Kit/Pages/Capacitor_Calculator.html)<br>
 • [Interactive Digital Logic Gates Tool](https://michaeltr7.github.io/Mult-e-Kit/Pages/Digital_Logic_Gates.html)<br>
 <br>
-<h1>Preview Images</h1>
 
 ## [Resistor Calculator](https://michaeltr7.github.io/Mult-e-Kit/Pages/Resistor_Calculator.html)
 Decode any four or five band resistor colour code to obtain the corresponding resistor value.
