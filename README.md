@@ -10,6 +10,8 @@
 • [Resistor List Maker (under construction)](https://michaeltr7.github.io/Mult-e-Kit/Pages/Resistor_List_Maker.html)<br>
 • [Capacitor Calculator](https://michaeltr7.github.io/Mult-e-Kit/Pages/Capacitor_Calculator.html)<br>
 • [Interactive Digital Logic Gates Tool](https://michaeltr7.github.io/Mult-e-Kit/Pages/Digital_Logic_Gates.html)<br>
+
+Press any image to directly launch the web-app.
 <br>
 
 ## [Resistor Calculator](https://michaeltr7.github.io/Mult-e-Kit/Pages/Resistor_Calculator.html)
