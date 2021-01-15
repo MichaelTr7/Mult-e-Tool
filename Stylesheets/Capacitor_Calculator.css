@@ -118,7 +118,7 @@ input[type=number] {
   border: 2px dashed rgb(20,20,20);
   box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
   border-radius: 1.5vw;
-  background-image: url('./Assets/Capacitor_Symbol_2.png');
+  background-image: url('./Assets/Capacitor_Symbol_Asset.png');
   background-size: 38%;
   background-position: 50%;
   background-repeat: no-repeat;
