@@ -105,6 +105,9 @@ function Update_Resistor_Preview(){
 
 
 function Four_Band_Resistor_Configuration(){
+  document.getElementsByClassName('Select_4')[0].value = "true";
+  document.getElementsByClassName('Select_5')[0].value = "false";
+
   var Band_3_Buttons = document.getElementsByClassName('Band_3_Buttons');
   for(Button_Index = 0; Button_Index < Band_3_Buttons.length; Button_Index++){
     Band_3_Buttons[Button_Index].disabled = true;    
@@ -173,6 +176,9 @@ function Four_Band_Resistor_Configuration(){
 }
 
 function Five_Band_Resistor_Configuration(){
+  document.getElementsByClassName('Select_4')[0].value = "false";
+  document.getElementsByClassName('Select_5')[0].value = "true";
+
   var Band_3_Buttons = document.getElementsByClassName('Band_3_Buttons');
   for(Button_Index = 0; Button_Index < Band_3_Buttons.length; Button_Index++){
     Band_3_Buttons[Button_Index].disabled = false;    
@@ -316,6 +322,9 @@ function Calculate_Resistance(){
         "Gold":"± 5%",
         "Silver":"± 10%",    
       }     
+      
+      // console.log(Is_Four_Band_On());
+      
     if(Is_Four_Band_On()){
       var Colour_Array = [Band_1_Colour_Name,Band_2_Colour_Name,Multiplier_Band_Colour_Name,Tolerance_Band_Colour_Name];  
       var Digit_1 = Colour_To_Digit_Dictionary[Colour_Array[0]];
@@ -356,16 +365,19 @@ function Calculate_Resistance(){
 
 
 function Is_Four_Band_On(){
-  
-  var Four_Band_LED = document.getElementsByClassName('LED_Light_Bar_1')[0];
-  style = window.getComputedStyle(Four_Band_LED),
-  Four_Band_LED_Colour = String(style.getPropertyValue('color'));
-  if(Four_Band_LED_Colour == "rgb(200, 200, 200)"){
-    return true;
-  }
-  if(Four_Band_LED_Colour != "rgb(200, 200, 200)"){
-    return false;
-  }  
+
+var Four_Band_Value = String(document.getElementsByClassName('Select_4')[0].value);
+// console.log(Four_Band_Value);
+if(Four_Band_Value == "true"){
+  console.log("Calculating Four Band");
+  return true;
+}
+if(Four_Band_Value == "false"){
+  console.log("Calculating Five Band");
+  return false;
+}
+
+
 }
 
 function Colour_Button_Selected(Object){
