@@ -13,7 +13,7 @@
   width: 100%;
   top: 0px;
   margin-left: -20px;
-  animation: Fade_Keyframes 1s ease forwards;
+  animation: Fade_Keyframes 1s ease;
 }
 
 .Top_Bar > button{
