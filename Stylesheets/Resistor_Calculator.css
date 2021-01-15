@@ -450,6 +450,13 @@ body{
 /************************************************************************/
 /*RESPONSIVE ADJUSTMENTS WHEN NARROWLY SHRUNK WINDOW [~,560px] (MOBILE)*/
 /***********************************************************************/
+
+@media only screen and (min-width: 570px) {
+  .Top_Bar{
+    animation: Fade_Keyframes 1s ease;
+  }
+}
+
 @media only screen and (max-width: 570px) {
   .Title{
     display: none;
