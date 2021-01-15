@@ -14,7 +14,7 @@ body{
   overflow: scroll;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
-  animation: Fade_In_Keyframes 0.5s forwards;
+  animation: Fade_In_Keyframes 1s forwards;
 }
 
 .Scrolling_Container,.Snap_Containers {
