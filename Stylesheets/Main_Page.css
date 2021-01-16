@@ -338,13 +338,13 @@ body{
     background-position: 50% 50%;
   }
   .Launch_Titles{
-    top: 80vh;
+    top: 70vh;
   }  
   .Launch_Buttons{
-    top: 82vh;
+    top: 72vh;
   }
   #Capacitor_Calculator_Launch_Title{
-    top: 80vh;
+    top: 70vh;
   }
   #Resistor_Calculator_Summary,#Digital_Logic_Gates_Summary,#Capacitor_Calculator_Summary{
     display: none;
@@ -375,7 +375,7 @@ body{
   }
   #Mobile_1{
     width: 100vw;
-    background-size: auto 80%;
+    background-size: auto 70%;
     background-position: 50% 0%;
   }
   #Mobile_2{
