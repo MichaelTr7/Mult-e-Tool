@@ -1,20 +1,4 @@
 
-// window.onload = function(){
-// 
-//   var Top_Bar_Buttons = document.getElementsByClassName('Menu_Buttons');
-//   for(Navigation_Button_Index = 0; Navigation_Button_Index < Top_Bar_Buttons.length; Navigation_Button_Index++){
-//       Top_Bar_Buttons[Navigation_Button_Index].addEventListener("click",Navigation_Button_Pressed);
-//       Top_Bar_Buttons[Navigation_Button_Index].addEventListener("mouseenter",Move_Pointer);
-//   }
-// 
-//   var Top_Bar_Wrapper = document.getElementsByClassName('Top_Bar')[0];
-//   Top_Bar_Wrapper.addEventListener("mouseenter",Entered_Navigation_Bar);
-// 
-//   var Top_Bar_Wrapper = document.getElementsByClassName('Top_Bar')[0];
-//   Top_Bar_Wrapper.addEventListener("mouseleave",Left_Navigation_Bar);
-// 
-// }
-
 function Move_Pointer(){
     var Button_Index = parseInt(this.id.split("_")[2])-1;
     var Positions = ["9.2%","28.8%","48.9%","69%","88.3%"];

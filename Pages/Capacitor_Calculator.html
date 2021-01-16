@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <!-- Chrome and Firefox Favicon -->
     <link rel="icon" type="image/ico" href="afavicon.ico">
     <meta charset="utf-8">
     <title>Mult-e-Tool: Capacitor Calculator</title>
@@ -15,54 +14,56 @@
   </head>
   <body>
     
-    <div id = "Mobile_Menu">
-      <div class="Drop_Down_Menu">
-        <button class = "Slide_Menu_Button" type="button">≡
-        </button>
-          <div class="Drop_Down_Content_Wrapper">
-            <a href="../index.html">About</a>
-            <a href="./Resistor_Calculator.html">Resistor Calculator</a>
-            <a href="./Resistor_List_Maker.html">Resistor List Maker</a>
-            <a href="./Capacitor_Calculator.html">Capacitor Calculator</a>
-            <a href="./Digital_Logic_Gates.html">Digital Logic Gates</a>
-          </div>
+<div id = "Mobile_Menu">
+  <div class="Drop_Down_Menu">
+    <button class = "Slide_Menu_Button" type="button">≡
+    </button>
+      <div class="Drop_Down_Content_Wrapper">
+        <a href="../index.html">About</a>
+        <a href="./Resistor_Calculator.html">Resistor Calculator</a>
+        <a href="./Resistor_List_Maker.html">Resistor List Maker</a>
+        <a href="./Capacitor_Calculator.html">Capacitor Calculator</a>
+        <a href="./Digital_Logic_Gates.html">Digital Logic Gates</a>
       </div>
-    </div>
-
-  <div class="Top_Bar">
-    <button id = "Menu_Button_1" class = "Menu_Buttons">Resistor<br>Calculator</button>
-    <button id = "Menu_Button_2" class = "Menu_Buttons">Resistor<br>List Maker</button>
-    <button id = "Menu_Button_3" class = "Menu_Buttons">Mult-e-Tool</button>
-    <button id = "Menu_Button_4" class = "Menu_Buttons">Capacitor<br>Calculator</button>
-    <button id = "Menu_Button_5" class = "Menu_Buttons">Digital<br>Logic Gates</button>
-    <div class="Arrow"></div>
-    <div class="Bottom_Bar"></div>
   </div>
+</div>
+
+<div class="Top_Bar">
+  <button id = "Menu_Button_1" class = "Menu_Buttons">Resistor<br>Calculator</button>
+  <button id = "Menu_Button_2" class = "Menu_Buttons">Resistor<br>List Maker</button>
+  <button id = "Menu_Button_3" class = "Menu_Buttons">Mult-e-Tool</button>
+  <button id = "Menu_Button_4" class = "Menu_Buttons">Capacitor<br>Calculator</button>
+  <button id = "Menu_Button_5" class = "Menu_Buttons">Digital<br>Logic Gates</button>
+  <div class="Arrow"></div>
+  <div class="Bottom_Bar"></div>
+</div>
     
 <div class="Capacitor_Calculator_Wrapper">
   
-  <div class="Input_Label"><label id = "Input_Header" class="Headers">Inputs: Capacitor Code</label></div>
-  <div class="Result_Label"><label id = "Result_Header" class="Headers">Result: Capacitance Value</label></div>
-  
-  <div class="Left_Panel">
-    <div class="Left_Panel_Inner_Wrapper">
-      <div class="Preview_Capacitor">
-      <div id="Capacitor_Value">104G</div>
-      </div>
-      <input type="tel" id="Digit_Button_1" class="Digit_Buttons Code_Inputs" contenteditable="true" maxlength="1" value="1">
-      <input type="tel" id="Digit_Button_2" class="Digit_Buttons Code_Inputs" contenteditable="true" maxlength="1" value="0">
-      <input type="tel" id="Digit_Button_3" class="Digit_Buttons Code_Inputs" contenteditable="true" maxlength="1" value="4">
-      
-      
-      <div class="Tolerance_Slider_Container">
-        <div class="Scale_Marker"></div>
-        <input id = "Tolerance_Slider" type="range" min="0" max="8" value="4">
-        <div id="Slider_Selection_Label">
-        <div id="Selected_Label">G</div>
-        </div>
+<div class="Input_Label"><label id = "Input_Header" class="Headers">Inputs: Capacitor Code</label></div>
+<div class="Result_Label"><label id = "Result_Header" class="Headers">Result: Capacitance Value</label></div>
+
+<div class="Left_Panel">
+  <div class="Left_Panel_Inner_Wrapper">      
+    <div class="Preview_Capacitor">
+    <div id="Capacitor_Value">104G</div>
+    </div>
+    
+    <input type="tel" id="Digit_Button_1" class="Digit_Buttons Code_Inputs" contenteditable="true" maxlength="1" value="1">
+    <input type="tel" id="Digit_Button_2" class="Digit_Buttons Code_Inputs" contenteditable="true" maxlength="1" value="0">
+    <input type="tel" id="Digit_Button_3" class="Digit_Buttons Code_Inputs" contenteditable="true" maxlength="1" value="4">
+    
+    <div class="Tolerance_Slider_Container">
+      <div class="Scale_Marker"></div>
+      <input id = "Tolerance_Slider" type="range" min="0" max="8" value="4">
+      <div id="Slider_Selection_Label">
+      <div id="Selected_Label">G</div>
       </div>
     </div>
+    
   </div>
+</div>
+  
   <div class="Swap_Button">
     <label class="Swap_Label">Swap</label>
   </div>
