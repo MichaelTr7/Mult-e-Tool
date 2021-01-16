@@ -279,7 +279,6 @@ body{
 
 #Mobile_3{
   left: calc(2*(100vw/3));
-  /* background-color: blue;  */
   background-image: url('./Assets/Mobile Support 3.png'); 
 }
 
@@ -292,7 +291,6 @@ body{
   position: absolute;
   top: calc(60% - 10vw);
   height: calc(20vw);;
-  /* min-height: 350px; */
   margin-bottom: 0px;
   width: calc(20vw);
   background-size: 65% auto;
@@ -307,20 +305,17 @@ body{
 
 #Chrome_Icon{
   left: calc(20vw);
-  /* background-color: white; */
   background-image: url('./Assets/Chrome Icon.png');
 }
 
 #Safari_Icon{
   left: calc(20vw + 20vw);
-  /* background-color: red; */
   background-image: url('./Assets/Safari Icon.png');
 }
 
 #Firefox_Icon{
   left: calc(20vw + 20vw + 20vw);
   background-size: 75% auto;
-  /* background-color: blue;  */
   background-image: url('./Assets/Firefox Icon.png'); 
 }
 

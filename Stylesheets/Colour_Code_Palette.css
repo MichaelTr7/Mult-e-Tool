@@ -32,7 +32,6 @@
   border: none;
   min-width: 20px;
   box-shadow: inset 0px 2px 2px 0.8px rgba(0,0,0,0.32), 0px 2px 5px 1px rgba(0,0,0,0.5), inset 0px -0.5px 0.1px 0.8px rgba(255,255,255,0.25);
-  /* border: 1.5px solid rgba(220, 220, 220, 1); */
   border: 1.5px solid rgba(0, 0, 0, 0.3);
   color: rgba(255,255,255,1);
   font-size: 8px;
@@ -83,27 +82,22 @@
 
 
 .Band_1_Holder > button:not(:nth-last-of-type(-n+2)):hover{
-  /* transform: scale(1.15); */
   filter: brightness(1.1);
 }
 
 .Band_2_Holder > button:not(:nth-last-of-type(-n+2)):hover{
-  /* transform: scale(1.15); */
   filter: brightness(1.1);
 }
 
 .Band_3_Holder > button:not(:nth-last-of-type(-n+2)):hover{
-  /* transform: scale(1.15); */
   filter: brightness(1.1);
 }
 
 .Band_Multiplier_Holder > button:not(:nth-last-of-type(3)):not(:nth-last-of-type(4)):hover{
-  /* transform: scale(1.15); */
   filter: brightness(1.1);
 }
 
 .Band_Tolerance_Holder > button:not(:nth-child(1)):not(:nth-child(4)):not(:nth-child(5)):not(:nth-last-of-type(3)):hover{
-  /* transform: scale(1.15); */
   filter: brightness(1.1);
 }
 

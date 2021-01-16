@@ -1,8 +1,4 @@
 
-body{
-  /* margin: 0px 20px 50px 0px */
-}
-
 .Top_Bar{
   padding-left: 6px;
 }
@@ -18,8 +14,6 @@ body{
   align-items: stretch;
   padding-bottom: 40px;
   animation: Translate_Up 1s forwards;
-  /* -webkit-animation-timing-function: ease; 
-  animation-timing-function: ease; */
 }
 
 .Digital_Logic_Gates_Containers{
@@ -253,9 +247,10 @@ body{
   font-size: 2em;
   margin-left: -100px;
   color: rgb(0,197,185);
-  text-shadow: 6px 6px 2px rgba(0,0,0,0.2);
-  /* background-color: white; */
-  z-index: 2;
+  background: linear-gradient(45deg, rgba(20,204,180,1) 30%, rgba(20,198,220,1) 100%);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ z-index: 2;
 }
 
 .Light_Up_Value{
@@ -299,7 +294,6 @@ body{
   z-index: 3;
   padding: 30px 10px 2px 10px;
   border-radius: 20px 20px 0px 0px;
-  /* background-color: red; */
   opacity: 0;
   transition: opacity 0.3s;
 }

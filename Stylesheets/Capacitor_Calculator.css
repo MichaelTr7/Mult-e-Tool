@@ -4,7 +4,6 @@
     color: rgb(245,245,245);
     opacity: 1;
     -webkit-appearance: none;
-    
 }
 
 .Result_Inset[disabled] {
@@ -19,7 +18,6 @@
   background-color: rgb(0,197,185);
   opacity: 1;
 }
-
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -71,8 +69,6 @@ input[type=number] {
   margin-top: -1vw;
   z-index: 4;
   border-radius: 0px;
-  /* color: rgb(0,197,185);
-  text-shadow: 6px 6px 2px rgba(0,0,0,0.2); */
 }
 
 #Input_Header{
@@ -380,6 +376,7 @@ input {
   width: 100%;
   top: 50%;
   left: 50%;
+  height: 100%;
   margin-top: -10px;
   margin-left: -50%;
   text-align: center;
@@ -427,18 +424,6 @@ input {
   color: rgb(250,250,250);
 }
 
-/* .Right_Panel_Inner_Wrapper > input:hover{
-  transition: background-color;
-  background-color: rgb(55,55,55);
-  color: rgb(255,255,255);
-}
-
-.Right_Panel_Inner_Wrapper > button:hover{
-  transition: background-color;
-  background-color: rgb(55,55,55);
-  color: rgb(255,255,255);
-} */
-
 .Active_Input{
   transition: background-color;
   background-color: rgb(55,55,55);
@@ -448,12 +433,6 @@ input {
 .Result_Inset:hover{
   cursor: text;
 }
-
-/* .Digit_Buttons:hover{
-  transition: background-color;
-  background-color: rgb(55,55,55);
-  color: rgb(255,255,255);
-} */
 
 .Explanation_Panels{
   display: grid;
@@ -480,8 +459,6 @@ input {
 .Function_Panel_2{
   grid-column: 5 / span 3;
   grid-row: 1 / span 4;
-  /* background-color: rgb(35,35,35); */
-  /* box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15); */
   animation: Translate_Up 1s forwards;
   background-image: url('./Assets/Equivalent_Capacitors.png');
   background-repeat: no-repeat;
@@ -521,8 +498,6 @@ input {
 .Function_Panel_3{
   grid-column: 1 / span 4;
   grid-row: 5 / span 4;
-  /* background-color: rgb(35,35,35); */
-  /* box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15); */
   animation: Translate_Up 1s forwards;
   background-image: url('./Assets/Help_Panel_2.png');
   background-size: 50%;
@@ -605,7 +580,7 @@ input {
 }
 
 @supports (-webkit-touch-callout: none) {
-  /* CSS specific to iOS devices */ 
+/*iOS specific CSS*/
 @media only screen and (max-width: 570px) {
   #Selected_Label{
     margin-top: -1.6vw;
