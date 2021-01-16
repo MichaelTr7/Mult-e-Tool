@@ -139,7 +139,7 @@ body{
 
 #Capacitor_Calculator_Launch_Button{
   background: linear-gradient(90deg, #F77733 0%, #F75400 100%);
-  left: 11.75vw;
+  left: 10vw;
 }
 
 #Capacitor_Calculator_Launch_Button:hover{
@@ -319,6 +319,8 @@ body{
   background-image: url('./Assets/Firefox Icon.png'); 
 }
 
+
+
 @media only screen and (max-width: 840px) {
   .Snap_Containers:nth-child(2){
     background-size: auto 100%;
@@ -337,6 +339,9 @@ body{
   }  
   .Launch_Buttons{
     top: 72vh;
+    height: 8vw;
+    width: 25vw;
+    border-radius: 4vw;
   }
   #Capacitor_Calculator_Launch_Title{
     top: 70vh;

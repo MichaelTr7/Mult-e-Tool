@@ -1,0 +1,23 @@
+body{
+  margin: 0px 0px 0px 0px;
+}
+
+.Top_Bar{
+  margin-left: 0px;
+}
+
+.Under_Construction_Label{
+  position: absolute;
+  display: block;
+  top: 40%;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  width: 100%;
+  margin-left: -50%;
+  text-align: center;
+  color: rgb(170,170,170);
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 5vw;
+}
