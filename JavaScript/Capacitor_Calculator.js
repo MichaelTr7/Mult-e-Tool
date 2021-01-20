@@ -384,7 +384,6 @@ function Field_Clicked(){
   var Text_Field = document.getElementById(this.id);
   Text_Field.focus();
   Text_Field.selectionStart = Text_Field.selectionEnd = 1;
-  
 }
 
 
