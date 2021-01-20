@@ -74,10 +74,10 @@ body{
   background-repeat: no-repeat;
   background-size: 95%;
   background-image: url('./Assets/Mult_E_Tool.svg');
-  height: 180vh;
-  top: calc(45% - 90vh);
-  width: 180vh;
-  left: calc(50.1vw - 90vh);
+  height: min(180vh,180vw);
+  top: calc(45% - min(90vh,90vw));
+  width: min(180vh,180vw);
+  left: calc(50.1vw - min(90vh,90vw));
   transform: scale(0.25);
   animation: Pulse_Keyframes 2s ease-out infinite; 
 }

@@ -247,9 +247,9 @@
   font-size: 2em;
   margin-left: -100px;
   color: rgb(0,197,185);
-  background: linear-gradient(45deg, rgba(20,204,180,1) 30%, rgba(20,198,220,1) 100%);
- -webkit-background-clip: text;
- -webkit-text-fill-color: transparent;
+  /* background: linear-gradient(45deg, rgba(20,204,180,1) 30%, rgba(20,198,220,1) 100%); */
+ /* -webkit-background-clip: text; */
+ /* -webkit-text-fill-color: transparent; */
  z-index: 2;
 }
 
