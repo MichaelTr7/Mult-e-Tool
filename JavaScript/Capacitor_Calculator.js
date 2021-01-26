@@ -70,12 +70,12 @@ function Update_Tolerance(){
   }
 
 function Update_Capacitor_Preview(){
-  
     var Key_Pressed = event.which;
     var Key_Code =  event.keyCode;
+
     var Valid_Keys = [48,49,50,51,52,53,54,55,56,57];
     var Current_Text_Element = parseInt(document.getElementById(this.id).value);
-    
+
     if(isNaN(Current_Text_Element)){
       document.getElementById(this.id).value = "";
       // event.preventDefault();
@@ -95,7 +95,6 @@ function Update_Capacitor_Preview(){
 }
 
 function Calculate_Capacitance(Capacitor_Code){
-    
   var Significant_Digits = Capacitor_Code.substring(0,2);
   if(Capacitor_Code.length <= 2){
     var Trailing_Zeroes_Factor = 0;
@@ -252,6 +251,7 @@ function Switch_Units(){
 }
 
 function Change_Input_Capacitance(){
+  console.log("Test");
   var Current_Unit = String(document.getElementsByClassName('Unit_Square')[0].value);
   if(Current_Unit == "pF"){
     var Maximum = 99000000000;
@@ -267,7 +267,10 @@ function Change_Input_Capacitance(){
   }
   
   var Capacitance_Input_Field = document.getElementsByClassName('Result_Inset')[0];
-  var Input_Value = parseInt(Capacitance_Input_Field.value);
+  var Input_Value = String(Capacitance_Input_Field.value);
+  Capacitance_Input_Field.dataset.cap = Input_Value;
+  
+  console.log(Input_Value);
   Capacitance_Input_Field.value = Input_Value;
   
   if(isNaN(Input_Value)){
@@ -276,7 +279,7 @@ function Change_Input_Capacitance(){
   if(Input_Value > Maximum){
     Capacitance_Input_Field.value = "Max";
   }
-
+  
   Calculate_Capacitor_Code();
 }
 
