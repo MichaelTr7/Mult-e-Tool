@@ -21,3 +21,157 @@ body{
   font-weight: bold;
   font-size: 5vw;
 }
+
+#Login_Wrapper{
+    position: absolute;
+    height: 450px;
+    width: 400px;
+    margin-top: 100px;
+    left: max(20px,calc(20% - 150px));  
+    /* border: 0.5px solid white; */
+}
+
+#Sign_In_Button{
+  position: absolute;
+  height: 60px;
+  top: calc(52% - 30px);
+  width: 320px;
+  left: calc(50% - 160px);
+  border: none;
+  border-radius: 30px;  
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgb(0,197,185);
+  color: white;
+}
+
+#Sign_In_Button:hover{
+  filter: brightness(1.1);
+  cursor: pointer;
+}
+
+#Create_Account_Button{
+  position: absolute;
+  height: 60px;
+  top: calc(77% - 30px);
+  width: 320px;
+  left: calc(50% - 160px);
+  border: none;
+  border-radius: 30px;  
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(170,170,170);
+}
+
+#Create_Account_Button:hover{
+  filter: brightness(1.1);
+  cursor: pointer;
+}
+
+.Horizontal_Rules{
+  position: absolute;
+  background-color: gray;
+  height: 2px;
+  width: 35%;
+  border-radius: 1px;
+  top: calc(65%  - 2.5px);
+  background-color: rgb(170,170,170);
+}
+
+.Left_Horizontal_Rule{
+  left: calc(28% - 17.5%);
+}
+
+.Right_Horizontal_Rule{
+  left: calc(72% - 17.5%);
+}
+
+#Or_Label{
+  position: absolute;
+  color: rgb(170,170,170);
+  font-family: sans-serif;
+  font-size: 15px;
+  height: 20px;
+  width: 20px;
+  top: calc(64.5%  - 10px);
+  left: calc(50% - 10px);
+  text-align: center;
+  justify-content: center;
+}
+
+#Email_Field{
+  position: absolute;
+  height: 45px;
+  width: 320px;
+  top: calc(20% - 25px);
+  left: calc(50% - 160px);
+  border-radius: 8px;  
+  border: 1px solid black;
+  background: rgb(250,250,250);
+}
+
+#Password_Field{
+  position: absolute;
+  height: 45px;
+  width: 320px;
+  top: calc(35% - 25px);
+  left: calc(50% - 160px);
+  border-radius: 8px;  
+  border: 1px solid black;
+  background: rgb(250,250,250);
+}
+
+#Login_Panel_Title{
+  position: absolute;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+  width: 100%;
+  top: 5%;
+  text-align: center;  
+}
+
+#Forgot_Password_Button{
+  position: absolute;
+  height: 20px;
+  width: 180px;
+  top: calc(90% - 10px);
+  left: calc(50% - 90px);
+  border-radius: 8px;  
+  border: 1px solid black;
+  background: none;
+  border: none;
+  color: rgb(0,197,185);
+  font-weight: bold;
+  text-align: center;
+}
+
+#Forgot_Password_Button:hover{
+  filter: brightness(1.1);
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
