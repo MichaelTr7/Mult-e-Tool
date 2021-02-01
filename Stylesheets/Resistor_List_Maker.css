@@ -228,6 +228,10 @@ body{
   background-color: rgba(35,35,35);
   border-radius: 25px;
   box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
+  background-image: url('./Assets/Components 2.png');
+  background-repeat: no-repeat;
+  background-size: auto 80%;
+  background-position: 50% 40%;
 }
 
 #Preview_Image{
@@ -235,6 +239,14 @@ body{
   font-size: 5vw;
   text-align: center;
   color: cyan;
+}
+
+#Carbon_Fiber_Background{
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #232323 0%, rgba(35, 35, 35, 0) 20%, rgba(35, 35, 35, 0) 50%, rgba(35, 35, 35, 0) 80%, #232323 100%);
+  border-radius: 25px;
+
 }
 
 @media only screen and (max-width: 780px) {
