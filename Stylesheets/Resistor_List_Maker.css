@@ -229,6 +229,7 @@ body{
     top: 560px;
     width: 80%;
     left: calc(50% - 40%);
+    font-size: 35px;
   }
 }
 
