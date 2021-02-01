@@ -16,8 +16,11 @@ window.onload = function(){
   Top_Bar_Wrapper.addEventListener("mouseleave",Left_Navigation_Bar);
 
   document.getElementById('Cancel_Button').addEventListener("click",Back_To_Login_Page);
-
   Adjust_Mobile_Menu();
+  
+  
+  
+  
 }
 
 function Back_To_Login_Page(){

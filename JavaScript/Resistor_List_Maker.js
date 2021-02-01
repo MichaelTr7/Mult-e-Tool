@@ -15,6 +15,9 @@ window.onload = function(){
   var Top_Bar_Wrapper = document.getElementsByClassName('Top_Bar')[0];
   Top_Bar_Wrapper.addEventListener("mouseleave",Left_Navigation_Bar);
 
+  document.getElementById('Sign_In_Button').addEventListener("click",Sign_In);
+
+
   document.getElementById('Create_Account_Button').addEventListener("click",Direct_To_Create_Account_Page);
   Adjust_Mobile_Menu();
 }
@@ -23,3 +26,27 @@ window.onload = function(){
 function Direct_To_Create_Account_Page(){
   window.location.href = "./Sign_Up.html";
 }
+
+function Sign_In(){
+  console.log("Sign In");
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
