@@ -133,9 +133,16 @@ body{
   left: calc(50% - 35%);
 }
 
+@media only screen and (max-width: 570px) {
+  #Create_Account_Box{
+    position: relative;
+    height: 90vw;
+    width: 90vw;  
+    top: 125px;
+    left: calc(50% - 45vw);
+  }
 
-
-
+}
 
 
 
