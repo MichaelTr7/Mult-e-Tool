@@ -52,14 +52,14 @@ body{
 }
 
 #Login_Wrapper{
-    position: absolute;
-    height: 420px;
-    width: 400px;
-    top: max(105px,14vh);
-    left: max(25px,calc(20% - 150px));  
-    background-color: rgba(35,35,35);
-    border-radius: 25px;
-    box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
+  position: absolute;
+  height: 420px;
+  width: 400px;
+  top: max(105px,14vh);
+  left: max(50px,calc(20% - 150px));  
+  background-color: rgba(35,35,35);
+  border-radius: 25px;
+  box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
 }
 
 #Sign_In_Button{
@@ -217,6 +217,18 @@ body{
   color: rgb(200,200,200);
 }
 
+#Preview_Image{
+  float: right;
+  position: relative;
+  top: max(105px,14vh);
+  --Left_Margin: max(50px,calc(20% - 150px));
+  margin-right: var(--Left_Margin);
+  height: 420px;
+  width: calc(100vw - 450px - 2*var(--Left_Margin));
+  background-color: rgba(35,35,35);
+  border-radius: 25px;
+  box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
+}
 
 @media only screen and (max-width: 780px) {
   #Login_Wrapper{
@@ -230,6 +242,9 @@ body{
     width: 80%;
     left: calc(50% - 40%);
     font-size: 35px;
+  }
+  #Preview_Image{
+    display: none;
   }
 }
 
