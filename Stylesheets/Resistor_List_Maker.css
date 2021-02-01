@@ -1,4 +1,3 @@
-
 /*Disabling highlighting on tap throughout application*/
 *{
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
@@ -21,6 +20,11 @@ button{
 input{
   -webkit-user-select: text;
   user-select: text;
+}
+
+@font-face{
+  font-family: Montserrat;
+  src: url('../Fonts/Montserrat/Montserrat-ExtraLight.ttf');
 }
 
 body{
@@ -51,7 +55,7 @@ body{
     position: absolute;
     height: 420px;
     width: 400px;
-    margin-top: 105px;
+    top: max(105px,14vh);
     left: max(25px,calc(20% - 150px));  
     background-color: rgba(35,35,35);
     border-radius: 25px;
@@ -199,14 +203,14 @@ body{
   color: rgb(100,100,100);
 }
 
-
 #Explanation_Panel{
   position: absolute;
-  top: 560px;
+  top: max(560px,75vh);
   width: 90%;
   left: calc(50% - 45%);  
   padding-bottom: 50px;
   font-family: sans-serif;
+  font-family: Montserrat;
   font-size: 55px;
   font-weight: 100;
   text-align: center;
@@ -218,7 +222,6 @@ body{
   #Login_Wrapper{
       height: 420px;
       width: 80%;
-      margin-top: 105px;
       left: calc(50% - 40%);  
       border-radius: 25px;
   }
