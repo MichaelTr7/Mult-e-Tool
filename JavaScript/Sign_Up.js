@@ -15,5 +15,11 @@ window.onload = function(){
   var Top_Bar_Wrapper = document.getElementsByClassName('Top_Bar')[0];
   Top_Bar_Wrapper.addEventListener("mouseleave",Left_Navigation_Bar);
 
+  document.getElementById('Cancel_Button').addEventListener("click",Back_To_Login_Page);
+
   Adjust_Mobile_Menu();
+}
+
+function Back_To_Login_Page(){
+  window.location.href = "./Resistor_List_Maker.html";  
 }

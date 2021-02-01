@@ -21,6 +21,5 @@ window.onload = function(){
 
 
 function Direct_To_Create_Account_Page(){
-  console.log("Create Account Page");
   window.location.href = "./Sign_Up.html";
 }
