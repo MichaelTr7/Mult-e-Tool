@@ -143,23 +143,23 @@ body{
 
 #Email_Field{
   position: absolute;
-  height: 11%;
+  height: 10%;
   width: 75%;
-  top: calc(20% - 5.5%);
-  left: calc(50% - 37.5% - 2.5%);
+  top: calc(20% - 5%);
+  left: calc(50% - 37.5% - 2.5% - 0.14em);
   border-radius: 8px;  
-  border: 1px solid black;
+  border: 0.14em solid rgb(170,170,170);
   background: rgb(250,250,250);
 }
 
 #Password_Field{
   position: absolute;
-  height: 11%;
+  height: 10%;
   width: 75%;
-  top: calc(35% - 5.5%);
-  left: calc(50% - 37.5% - 2.5%);
+  top: calc(35% - 5%);
+  left: calc(50% - 37.5% - 2.5% - 0.14em);
   border-radius: 8px;  
-  border: 1px solid black;
+  border: 0.14em solid rgb(170,170,170);
   background: rgb(250,250,250);
 }
 
