@@ -200,6 +200,18 @@ body{
 }
 
 
+#Explanation_Panel{
+  position: absolute;
+  top: 560px;
+  width: 90%;
+  left: calc(50% - 45%);  
+  font-family: sans-serif;
+  font-size: 55px;
+  font-weight: 100;
+  text-align: center;
+  color: rgb(200,200,200);
+}
+
 
 @media only screen and (max-width: 780px) {
   #Login_Wrapper{
@@ -209,7 +221,11 @@ body{
       left: calc(50% - 40%);  
       border-radius: 25px;
   }
-
+  #Explanation_Panel{
+    top: 560px;
+    width: 80%;
+    left: calc(50% - 40%);
+  }
 }
 
 @media only screen and (max-width: 505px) {
