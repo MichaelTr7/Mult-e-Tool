@@ -230,6 +230,13 @@ body{
   box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
 }
 
+#Preview_Image{
+  font-family: sans-serif;
+  font-size: 5vw;
+  text-align: center;
+  color: cyan;
+}
+
 @media only screen and (max-width: 780px) {
   #Login_Wrapper{
       height: 420px;
