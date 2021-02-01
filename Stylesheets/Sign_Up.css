@@ -1,0 +1,151 @@
+/*Disabling highlighting on tap throughout application*/
+*{
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+  -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+  outline: none !important;
+}
+
+/*Disabling drag on all buttons*/
+button{
+  -webkit-app-region: no-drag;
+}
+
+/*Disabling highlighting/copying across panel*/
+*, *::after, *::before{
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  cursor: default;
+}
+
+input{
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+@font-face{
+  font-family: Montserrat;
+  src: url('../Fonts/Montserrat/Montserrat-ExtraLight.ttf');
+}
+
+body{
+  margin: 0;
+}
+
+.Top_Bar{
+  margin-left: 0;
+}
+
+#Create_Account_Box{
+  position: relative;
+  height: 380px;
+  width: 520px;  
+  top: 125px;
+  left: calc(50% - 260px);
+  border-radius: 12px;
+  padding-top: 5px;
+  background-color: rgb(35,35,35);
+  box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
+}
+
+#Sign_Up_Page_Title{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  top: 105px;
+  font-size: 40px;
+  color: rgb(200,200,200);
+  font-family: sans-serif;}
+
+#Sign_Up_Page_Slogan{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  font-family: Montserrat;
+  top: 105px;
+  color: rgb(200,200,200);
+}
+
+#Password_Label > span{
+  font-weight: lighter;
+  font-size: 0.7em;
+  font-family: Montserrat;
+}
+
+.User_Labels{
+  display: block;
+  position: relative;
+  width: 85%;
+  margin-top: 8%;
+  margin-bottom: 1%;
+  left: calc((100% - 85%)/2);
+  font-family: sans-serif;
+  color: rgb(170,170,170);
+}
+
+.User_Fields{
+  display: block;
+  position: relative;
+  border-radius: 0.5em;
+  height: 8%;
+  width: 83%;
+  border: 0.2em solid rgb(170,170,170);
+  padding-left: 2%;
+  left: calc(50% - 85%/2);
+  font-family: sans-serif;
+  font-size: 0.8em;
+  color: rgb(170,170,170);
+}
+
+.Complete_Buttons{
+  display: inline-block;
+  width: 48%;
+  height: 100%;
+  border-radius: 1000em;
+  font-family: sans-serif;
+  border: none;
+  font-size: 1em;
+  color: white;
+  filter: brightness(1);
+  box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.2), -0.5px -0.5px 0.4px 0.2px rgba(255,255,255,1);
+  transition: filter 0.2s linear;
+}
+
+.Complete_Buttons:hover{
+  filter: brightness(1.1);
+  transition: filter;
+  cursor: pointer;
+}
+
+.Complete_Buttons:nth-of-type(1){
+  float: left;
+}
+
+.Complete_Buttons:nth-of-type(2){
+  float: right;
+  background-color: rgb(0,197,185);
+}
+
+#Buttons_Wrapper{
+  position: relative;
+  width: 70%;
+  height: 14%;
+  margin-top: 10%;
+  left: calc(50% - 35%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

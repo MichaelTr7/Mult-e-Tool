@@ -15,12 +15,5 @@ window.onload = function(){
   var Top_Bar_Wrapper = document.getElementsByClassName('Top_Bar')[0];
   Top_Bar_Wrapper.addEventListener("mouseleave",Left_Navigation_Bar);
 
-  document.getElementById('Create_Account_Button').addEventListener("click",Direct_To_Create_Account_Page);
   Adjust_Mobile_Menu();
-}
-
-
-function Direct_To_Create_Account_Page(){
-  console.log("Create Account Page");
-  window.location.href = "./Sign_Up.html";
 }
