@@ -31,7 +31,7 @@ window.onload = function(){
 
 function Launch_Webapp(){
   var Webapp_Index = parseInt(document.getElementById(this.id).value) - 1;
-  var Webapp_Pages = ["./Pages/Resistor_Calculator.html","./Pages/Capacitor_Calculator.html","./Pages/Digital_Logic_Gates.html"];
+  var Webapp_Pages = ["./Resistor_Calculator.html","./Digital_Logic_Gates.html","../index.html","./Capacitor_Calculator.html","./Resistor_List_Maker.html"];
   var Webapp_Link = Webapp_Pages[Webapp_Index];
   window.location.href = Webapp_Link;
 }
@@ -124,10 +124,8 @@ function Navigation_Button_Pressed(){
   Menu_Button.classList.add("Jump_Animation_2");
   var Button_Index = parseInt(this.id.split("_")[2]) - 1;
   console.log(Button_Index);
-  var Pages = ["./Pages/Resistor_Calculator.html","./Pages/Resistor_List_Maker.html","./index.html","./Pages/Capacitor_Calculator.html","./Pages/Digital_Logic_Gates.html"];
-  setTimeout(function () {
+  var Pages = ["./Pages/Resistor_Calculator.html","./Pages/Digital_Logic_Gates.html","./index.html","./Pages/Capacitor_Calculator.html","./Pages/Resistor_List_Maker.html"];
     window.location.href = Pages[Button_Index];
-  }, 200);
 }
 
 

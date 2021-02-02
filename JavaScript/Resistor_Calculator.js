@@ -399,10 +399,8 @@ function Navigation_Button_Pressed(){
   void Menu_Button.offsetWidth;
   Menu_Button.classList.add("Jump_Animation_2");
   var Button_Index = parseInt(this.id.split("_")[2]) - 1;
-  var Pages = ["./Resistor_Calculator.html","./Resistor_List_Maker.html","../index.html","./Capacitor_Calculator.html","./Digital_Logic_Gates.html"];
-  setTimeout(function () {
+  var Pages = ["./Resistor_Calculator.html","./Digital_Logic_Gates.html","../index.html","./Capacitor_Calculator.html","./Resistor_List_Maker.html"];
     window.location.href = Pages[Button_Index];
-  }, 200);
 }
 
 function Add_To_Recents(){
