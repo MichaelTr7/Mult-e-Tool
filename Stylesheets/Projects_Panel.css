@@ -1,0 +1,104 @@
+body{
+  margin: 0px 20px 20px 20px;
+  background-color: rgb(20,20,20);
+  font-size: 100%;
+  overflow-x: hidden;
+}
+
+#Top_Panel{
+  display: grid;
+  margin-top: 165px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 20px;
+  animation: Translate_Up 1s forwards;
+}
+
+.Panels{
+  display: relative;
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 10px;
+  height: calc(350px - 150px/2 - 20px/2);
+  background-color: rgb(35,35,35);
+  box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
+}
+
+#Project_List_Panel{
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 2;
+  height: calc(700px - 150px);
+  overflow-y: scroll;
+}
+
+#Number_Of_Projects_Label{
+  display: flex;
+  float: right;
+  margin-right: 10px;
+  position: relative;
+  font-family: sans-serif;
+  color: rgb(170,170,170);
+  font-weight: bold;
+  font-size: 20px;
+  background-color: rgb(20,20,20);
+  border-radius: 0.5em;
+  top: 10px;
+  width: 140px;
+  padding: 7px;
+  padding-left: 14px;
+  padding-right: 14px;
+  box-shadow: inset 2px 2px 3px 1px rgba(0,0,0,0.5), inset -0.2px -0.2px 0.4px 1px rgba(255,255,255,0.15);
+}
+
+.Account_Button_Containers {
+  position: absolute;
+  top: 0%;
+  height: calc(100% - 20px);
+  width: 45%;
+  border-radius: 0.5em;
+  background-color: rgb(35,35,35);
+  box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
+  transition: background-color 0.2s linear;
+}
+
+.Account_Button_Containers:nth-of-type(1){
+  display: inline-block;
+  left: calc(25% - 45%/2);
+  margin-left: 2.5px;
+}
+
+.Account_Button_Containers:nth-of-type(2){
+  display: inline-block;
+  left: calc(75% - 45%/2);
+  margin-left: -2.5px;
+}
+
+
+#Buttons_Wrapper{
+  position: relative;
+  top: 32%;
+  height: 70%;
+  width: 100%;
+  /* background-color: white; */
+}
+
+.Account_Button_Containers > button{
+  position: relative;
+  height: 15vw;
+  width: 15vw;
+  top: calc(50% - min(7.5vw,75px));
+  left: calc(50% - min(7.5vw,75px));
+  border-radius: 1vw;
+  max-height: 150px;
+  max-width: 150px;
+  border: none;
+}
+
+
+
+
+
+
+
+
+
+
