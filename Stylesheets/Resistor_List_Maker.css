@@ -60,6 +60,7 @@ body{
   background-color: rgba(35,35,35);
   border-radius: 25px;
   box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
+  animation: Translate_Up 1s forwards;
 }
 
 #Sign_In_Button{
@@ -215,6 +216,7 @@ body{
   font-weight: 100;
   text-align: center;
   color: rgb(200,200,200);
+  animation: Translate_Up 1s forwards;
 }
 
 #Preview_Image{
@@ -239,6 +241,7 @@ body{
   font-size: 5vw;
   text-align: center;
   color: cyan;
+  animation: Card_Animation 1s forwards;
 }
 
 #Carbon_Fiber_Background{
@@ -246,7 +249,6 @@ body{
   width: 100%;
   background: linear-gradient(90deg, #232323 0%, rgba(35, 35, 35, 0) 20%, rgba(35, 35, 35, 0) 50%, rgba(35, 35, 35, 0) 80%, #232323 100%);
   border-radius: 25px;
-
 }
 
 
@@ -274,7 +276,32 @@ body{
   }
 }
 
+@keyframes Translate_Up{
+  0%{
+    transform: translateY(70px); 
+    filter: opacity(0);
+  }
+  100%{
+    transform: translateY(0px);   
+    filter: opacity(1);  
+  }
+}
 
+@keyframes Card_Animation {
+  0%{
+    transform: translateY(70px); 
+    filter: opacity(0);
+    background-position: 50% -400%; 
+  }
+  20%{
+    background-position: 50% -400%; 
+  }
+  100%{
+    transform: translateY(0px);   
+    filter: opacity(1);  
+    background-position: 50% 40%;
+  }
+}
 
 
 
