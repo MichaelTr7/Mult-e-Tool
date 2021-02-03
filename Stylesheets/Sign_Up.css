@@ -54,7 +54,8 @@ body{
   top: 105px;
   font-size: 40px;
   color: rgb(200,200,200);
-  font-family: sans-serif;}
+  font-family: sans-serif;
+}
 
 #Sign_Up_Page_Slogan{
   display: flex;

@@ -30,71 +30,97 @@ body{
   overflow-y: scroll;
 }
 
-#Number_Of_Projects_Label{
-  display: flex;
-  float: right;
-  margin-right: 10px;
+#Add_Projects_Container{
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 5fr;
   position: relative;
-  font-family: sans-serif;
-  color: rgb(170,170,170);
-  font-weight: bold;
-  font-size: 20px;
-  background-color: rgb(20,20,20);
-  border-radius: 0.5em;
-  top: 10px;
-  width: 140px;
-  padding: 7px;
-  padding-left: 14px;
-  padding-right: 14px;
-  box-shadow: inset 2px 2px 3px 1px rgba(0,0,0,0.5), inset -0.2px -0.2px 0.4px 1px rgba(255,255,255,0.15);
+  height: calc(100% - 2*20px);
+  width: calc(100% - 2*20px);
+  --Container_Size: calc(100% - 2*20px); 
+  top: calc(50% - var(--Container_Size)/2);
+  left: calc(50% - var(--Container_Size)/2);
 }
 
-.Account_Button_Containers {
-  position: absolute;
-  top: 0%;
-  height: calc(100% - 20px);
-  width: 45%;
+#Add_Projects_Container > button{
   border-radius: 0.5em;
   background-color: rgb(35,35,35);
   box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
   transition: background-color 0.2s linear;
-}
-
-.Account_Button_Containers:nth-of-type(1){
-  display: inline-block;
-  left: calc(25% - 45%/2);
-  margin-left: 2.5px;
-}
-
-.Account_Button_Containers:nth-of-type(2){
-  display: inline-block;
-  left: calc(75% - 45%/2);
-  margin-left: -2.5px;
-}
-
-
-#Buttons_Wrapper{
-  position: relative;
-  top: 32%;
-  height: 70%;
-  width: 100%;
-  /* background-color: white; */
-}
-
-.Account_Button_Containers > button{
-  position: relative;
-  height: 15vw;
-  width: 15vw;
-  top: calc(50% - min(7.5vw,75px));
-  left: calc(50% - min(7.5vw,75px));
-  border-radius: 1vw;
-  max-height: 150px;
-  max-width: 150px;
   border: none;
 }
 
 
+#Add_Projects_Container > button:hover{
+  transition: background-color;
+  background-color: rgb(55,55,55);
+}
 
+#Add_Projects_Container > button:nth-of-type(1){
+  grid-row: 2 / span 1;
+  
+}
+
+#Add_Projects_Container > button:nth-of-type(2){
+  grid-row: 2 / span 1;
+  
+}
+
+.Control_Panel_Label{
+  display: flex;
+  vertical-align: middle;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(170,170,170);
+  background: rgb(20,20,20);
+  height: 100%;
+  width: calc(200% + 20px);
+  padding-top: 15px;
+  border-radius: 0.5em;
+  box-shadow: inset 2px 2px 3px 1px rgba(0,0,0,0.5), inset -0.2px -0.2px 0.4px 1px rgba(255,255,255,0.15);
+}
+
+.Control_Button_Labels{
+  position: relative;
+  color: rgb(170,170,170);
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  width: 100%;
+  top: 50px;
+}
+
+#List_Wrapper{
+  height: calc(100% - 2*20px);
+  width: calc(100% - 2*20px);
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: rgba(20,20,20); 
+  border-radius: 0.5em;
+  box-shadow: inset 2px 2px 3px 1px rgba(0,0,0,0.5), inset -0.2px -0.2px 0.4px 1px rgba(255,255,255,0.15);
+}
+
+@media only screen and (max-width: 560px){
+  #Project_List_Panel{
+    grid-row: 3;
+    grid-column: 1 / span 2;  
+  }
+  
+  #Summary_Panel{
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 2;
+  }
+ 
+  #Control_Panel{
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 2;
+  }
+}
 
 
 

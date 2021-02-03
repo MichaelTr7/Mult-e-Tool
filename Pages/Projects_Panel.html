@@ -8,7 +8,7 @@
     <script src = "../JavaScript/Navigation_Bar.js"></script>
     <script src = "../JavaScript/Projects_Panel.js"></script>
     <link rel="stylesheet" href="../Stylesheets/Resistor_Calculator.css">
-    <!-- <link rel="stylesheet" href="../Stylesheets/Highlight_Configuration.css"> -->
+    <link rel="stylesheet" href="../Stylesheets/Highlight_Configuration.css">
     <link rel="stylesheet" href="../Stylesheets/Top_Bar.css">
     <link rel="stylesheet" href="../Stylesheets/Projects_Panel.css">
   </head>
@@ -39,19 +39,28 @@
   </div>
 
 <div id="Top_Panel">
-  <div id="Project_List_Panel" class="Panels"></div>
+  <div id="Project_List_Panel" class="Panels">
+    <div id="List_Wrapper"></div>
+  </div>
+  
   <div id="Summary_Panel" class="Panels">
-    <div id="Number_Of_Projects_Label">Number of<br>Projects: </div>
-    <div id="Buttons_Wrapper">
-      <div class="Account_Button_Containers">
-        <label for="Settings_Button">Account Settings</label>
-      </div>
-      <div class="Account_Button_Containers">
-        <label for="Logout_Button"></label>
+    <div id="Control_Panel" class="Panels">
+      <div id="Add_Projects_Container">
+        <div class="Control_Panel_Label">Control Panel</div>
+        <button type="button" name="button"><label class="Control_Button_Labels">Account<br>Settings</label></button>
+        <button type="button" name="button"><label class="Control_Button_Labels">Logout</label></button>
       </div>
     </div>
   </div>
-  <div id="Control_Panel" class="Panels"></div>
+  
+  <div id="Control_Panel" class="Panels">
+      <div id="Add_Projects_Container">
+        <div class="Control_Panel_Label">Project Count:</div>
+        <button type="button" name="button"><label class="Control_Button_Labels">New Project</label></button>
+        <button type="button" name="button"><label class="Control_Button_Labels">Trash</label></button>
+      </div>
+  </div>
+  
 </div>
 
     
