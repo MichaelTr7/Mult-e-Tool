@@ -1,6 +1,9 @@
 
 
 window.onload = function(){
+  checkMobile();
+  Adjust_Mobile_Menu();
+  
 var Band_1_Button_Set = document.getElementsByClassName('Band_1_Buttons');
 var Band_2_Button_Set = document.getElementsByClassName('Band_2_Buttons');
 var Band_3_Button_Set = document.getElementsByClassName('Band_3_Buttons');
@@ -46,9 +49,6 @@ Add_To_Recents_Button.addEventListener("click",Save_To_Recents);
 
 var Expand_Button = document.getElementsByClassName('Expand_Button')[0];
 Expand_Button.addEventListener("click",Expand_Colour_Palette);  
-
-  checkMobile();
-  Adjust_Mobile_Menu();
 
 }
 
