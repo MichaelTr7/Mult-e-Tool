@@ -95,14 +95,32 @@ body{
   top: 50px;
 }
 
-#List_Wrapper{
-  height: calc(100% - 2*20px);
-  width: calc(100% - 2*20px);
-  margin-top: 20px;
-  margin-left: 20px;
-  background-color: rgba(20,20,20); 
-  border-radius: 0.5em;
-  box-shadow: inset 2px 2px 3px 1px rgba(0,0,0,0.5), inset -0.2px -0.2px 0.4px 1px rgba(255,255,255,0.15);
+#Account_Settings_Button{
+  background-image: url('./Assets/Account Settings Icon.png');
+  background-size: 60px auto;
+  background-repeat: no-repeat;
+  background-position: 50% 40%;
+}
+
+#Logout_Button{
+  background-image: url('./Assets/Logout Icon 2.png');
+  background-size: 60px auto;
+  background-repeat: no-repeat;
+  background-position: 52% 40%;
+}
+
+#New_Project_Button{
+  background-image: url('./Assets/New Project Icon.png');
+  background-size: 82px auto;
+  background-repeat: no-repeat;
+  background-position: 50% 38%;
+}
+
+#Trash_Button{
+  background-image: url('./Assets/Trash Icon.png');
+  background-size: 60px auto;
+  background-repeat: no-repeat;
+  background-position: 50% 45%;
 }
 
 @media only screen and (max-width: 560px){

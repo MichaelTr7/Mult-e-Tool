@@ -15,5 +15,17 @@ window.onload = function(){
   var Top_Bar_Wrapper = document.getElementsByClassName('Top_Bar')[0];
   Top_Bar_Wrapper.addEventListener("mouseleave",Left_Navigation_Bar);
 
+  var Control_Buttons = document.getElementsByClassName('Control_Buttons');
+  for(Index = 0; Index < Control_Buttons.length; Index++){
+    Control_Buttons[Index].addEventListener("click",Animate_Buttons);
+  }
+
   Adjust_Mobile_Menu();
+}
+
+function Animate_Buttons(){
+  var Button = document.getElementById(this.id);
+  Button.classList.remove("Squeeze_Animation");
+  void Button.offsetWidth;
+  Button.classList.add("Squeeze_Animation");
 }

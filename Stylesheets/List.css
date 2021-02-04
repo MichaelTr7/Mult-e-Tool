@@ -1,0 +1,22 @@
+
+#List_Wrapper{
+  display: grid;
+  grid-template-columns: 1fr;
+  height: calc(100% - 2*20px);
+  width: calc(100% - 2*20px);
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: rgba(20,20,20); 
+  border-radius: 0.5em;
+  box-shadow: inset 2px 2px 3px 1px rgba(0,0,0,0.5), inset -0.2px -0.2px 0.4px 1px rgba(255,255,255,0.15);
+}
+
+.Squeeze_Animation{
+  animation: Squeeze_Keyframes 0.3s ease-out forwards;
+}
+
+@keyframes Squeeze_Keyframes{
+  0%{transform: scale(1);}
+  50%{transform: scale(0.95);}
+  100%{transform: scale(1);}
+}

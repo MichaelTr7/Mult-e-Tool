@@ -11,9 +11,10 @@
     <link rel="stylesheet" href="../Stylesheets/Highlight_Configuration.css">
     <link rel="stylesheet" href="../Stylesheets/Top_Bar.css">
     <link rel="stylesheet" href="../Stylesheets/Projects_Panel.css">
+    <link rel="stylesheet" href="../Stylesheets/List.css">
   </head>
+  
   <body>
-    
     <div id = "Mobile_Menu">
       <div class="Drop_Down_Menu">
         <button class = "Slide_Menu_Button" type="button">≡
@@ -47,8 +48,8 @@
     <div id="Control_Panel" class="Panels">
       <div id="Add_Projects_Container">
         <div class="Control_Panel_Label">Control Panel</div>
-        <button type="button" name="button"><label class="Control_Button_Labels">Account<br>Settings</label></button>
-        <button type="button" name="button"><label class="Control_Button_Labels">Logout</label></button>
+        <button class="Control_Buttons" id="Account_Settings_Button" type="button" name="button"><label class="Control_Button_Labels">Account<br>Settings</label></button>
+        <button class="Control_Buttons" id="Logout_Button" type="button" name="button"><label class="Control_Button_Labels">Logout</label></button>
       </div>
     </div>
   </div>
@@ -56,14 +57,12 @@
   <div id="Control_Panel" class="Panels">
       <div id="Add_Projects_Container">
         <div class="Control_Panel_Label">Project Count:</div>
-        <button type="button" name="button"><label class="Control_Button_Labels">New Project</label></button>
-        <button type="button" name="button"><label class="Control_Button_Labels">Trash</label></button>
+        <button class="Control_Buttons" id="New_Project_Button" type="button" name="button"><label class="Control_Button_Labels">New Project</label></button>
+        <button class="Control_Buttons" id="Trash_Button" type="button" name="button"><label class="Control_Button_Labels">Trash</label></button>
       </div>
   </div>
-  
 </div>
 
-    
   </body>
 </html>
 
