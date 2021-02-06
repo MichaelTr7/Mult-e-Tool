@@ -51,17 +51,15 @@
   font-family: sans-serif;
   font-size: 12px;
   font-weight: lighter;
-  border: 1.5px solid rgba(170,170,170,0);
+  border: 1.2px solid rgba(170,170,170,0);
   background-color: rgba(255,255,255,0.02);
   transition: border 0.2s linear;
 }
 
-.Project_Rows:hover{
-  cursor: pointer;
-}
+
 
 .Project_Selected{
-  border: 1.5px solid rgb(170,170,170);
+  border: 1.2px solid rgb(200,200,200);
 }
 
 .Squeeze_Animation{
@@ -74,10 +72,36 @@
   100%{transform: scale(1);}
 }
 
+.Open_Button{
+  display: flex;
+  position: absolute;
+  left: calc(100% - 70px);
+  height: 100%;
+  width: 70px;
+  border-radius: 0px 3px 3px 0px;
+  background-color: rgb(0,197,185);
+  color: rgba(0,0,0,0.5);
+  display: -webkit-flex;
+  font-weight: bold;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  z-index: 3;
+  border: 1.2px solid rgb(200,200,200);
+}
 
+.Open_Button:hover{
+  cursor: pointer;
+}
 
-
-
+.Project_Label_Containers{
+  width: calc(100% - 80px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 
 

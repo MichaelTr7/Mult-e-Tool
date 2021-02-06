@@ -56,18 +56,31 @@ function New_Project_Pressed(){
   }
 
   if(Number_Of_Projects <= 20){
+    //Creating new list element
     var Project_Placeholder_Name = String(Number_Of_Projects+1) + ".";
     var New_List_Element = document.createElement("li");
-    New_List_Element.classList.add("Project_Rows");
+    New_List_Element.classList.add('Project_Rows');
     New_List_Element.id = "Project_" + String(Number_Of_Projects+1);
-    New_List_Element.appendChild(document.createTextNode(Project_Placeholder_Name));
     Project_List.appendChild(New_List_Element);
     New_List_Element.addEventListener("click",Project_Selected);
+    New_List_Element.addEventListener("contextmenu",Reveal_Sub_Menu);
+    
+    //Creating new label for the newly created list element
+    var New_Label_Element = document.createElement("label");
+    New_Label_Element.classList.add('Project_Label_Containers');
+    New_List_Element.appendChild(New_Label_Element);
+    New_Label_Element.innerHTML = Project_Placeholder_Name;
+    
+    //Creating new div button element fo the newly created list element
+    var New_Button_Element = document.createElement("div");
+    New_Button_Element.classList.add('Open_Button');
+    New_List_Element.appendChild(New_Button_Element);
+    New_Button_Element.innerHTML = "Open";
+    New_Button_Element.addEventListener("click",Open_Project)
   }  
 }
 
 function Trash_Pressed(){
-  console.log("Trash selected project");
     var Project_List_Elements = document.getElementsByClassName('Project_Rows');
     var Elements_To_Delete = [];
     var Index = 0;
@@ -87,10 +100,10 @@ function Trash_Pressed(){
 function Rename_List(List_Elements){
   for(Element_Index = 0; Element_Index < List_Elements.length; Element_Index++){
   var Updated_Project_Prefix = String(Element_Index+1) + ".";
-  var Project_Suffix = List_Elements[Element_Index].innerHTML.split(".")[1];
-  List_Elements[Element_Index].innerHTML = Updated_Project_Prefix + Project_Suffix;
+  var Project_Suffix = List_Elements[Element_Index].children[0].innerHTML.split(".")[1];
   List_Elements[Element_Index].id = "Project_" + String(Element_Index+1);
-  console.log(Updated_Project_Prefix + Project_Suffix);
+  var Inner_Label = List_Elements[Element_Index].children[0];
+  Inner_Label.innerHTML = Updated_Project_Prefix + Project_Suffix;
   }
 }
 
@@ -99,7 +112,7 @@ function Display_Maximum_Project_Notification(){
 }
 
 function Project_Selected(){
-  console.log("Project Selected");
+  // console.log(this.id);
   var Selected_Index = parseInt(String(this.id).split("_")[1]) - 1;  
   var Project_List_Elements = document.getElementsByClassName('Project_Rows');
   
@@ -131,7 +144,14 @@ function Shift_Key_Released(e){
   }
 }
 
+function Reveal_Sub_Menu(){
+  console.log("Reveal sub menu");
+}
 
+function Open_Project(){
+  console.log("Open project");
+  
+}
 
 
 
