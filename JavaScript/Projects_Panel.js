@@ -25,7 +25,11 @@ window.onload = function(){
   document.getElementById('Logout_Button').addEventListener("click",Logout_Pressed);
   document.getElementById('New_Project_Button').addEventListener("click",New_Project_Pressed);
   document.getElementById('Trash_Button').addEventListener("click",Trash_Pressed);  
+  document.addEventListener("keydown",Shift_Key_Pressed);
+  document.addEventListener("keyup",Shift_Key_Released);
 }
+
+var Shift_Is_Pressed = false;
 
 function Animate_Buttons(){
   var Button = document.getElementById(this.id);
@@ -44,21 +48,88 @@ function Logout_Pressed(){
 }
 
 function New_Project_Pressed(){
-  console.log("Add project");
-  
+  var Project_List = document.getElementById("Project_List");
+  var Number_Of_Projects = Project_List.children.length;
+
+  if(Number_Of_Projects == 20){
+    Display_Maximum_Project_Notification();
+  }
+
+  if(Number_Of_Projects <= 20){
+    var Project_Placeholder_Name = String(Number_Of_Projects+1) + ".";
+    var New_List_Element = document.createElement("li");
+    New_List_Element.classList.add("Project_Rows");
+    New_List_Element.id = "Project_" + String(Number_Of_Projects+1);
+    New_List_Element.appendChild(document.createTextNode(Project_Placeholder_Name));
+    Project_List.appendChild(New_List_Element);
+    New_List_Element.addEventListener("click",Project_Selected);
+  }  
 }
 
 function Trash_Pressed(){
   console.log("Trash selected project");
-  
+    var Project_List_Elements = document.getElementsByClassName('Project_Rows');
+    var Elements_To_Delete = [];
+    var Index = 0;
+    for(Element_Index = 0; Element_Index < Project_List_Elements.length; Element_Index++){
+      var Selected = Project_List_Elements[Element_Index].classList.contains('Project_Selected');
+      if(Selected == true){
+        Elements_To_Delete[Index] = Project_List_Elements[Element_Index].id;
+        Index = Index + 1;
+      }
+    }   
+    for(Delete_Index = 0; Delete_Index < Elements_To_Delete.length; Delete_Index++){
+      document.getElementById(Elements_To_Delete[Delete_Index]).remove();
+    }    
+    Rename_List(Project_List_Elements);
 }
 
+function Rename_List(List_Elements){
+  for(Element_Index = 0; Element_Index < List_Elements.length; Element_Index++){
+  var Updated_Project_Prefix = String(Element_Index+1) + ".";
+  var Project_Suffix = List_Elements[Element_Index].innerHTML.split(".")[1];
+  List_Elements[Element_Index].innerHTML = Updated_Project_Prefix + Project_Suffix;
+  List_Elements[Element_Index].id = "Project_" + String(Element_Index+1);
+  console.log(Updated_Project_Prefix + Project_Suffix);
+  }
+}
 
+function Display_Maximum_Project_Notification(){
+  console.log("Reached maximum number of projects");
+}
 
+function Project_Selected(){
+  console.log("Project Selected");
+  var Selected_Index = parseInt(String(this.id).split("_")[1]) - 1;  
+  var Project_List_Elements = document.getElementsByClassName('Project_Rows');
+  
+  if(!Shift_Is_Pressed){
+    for(Element_Index = 0; Element_Index < Project_List_Elements.length; Element_Index++){
+      if(Element_Index != Selected_Index){
+      Project_List_Elements[Element_Index].classList.remove('Project_Selected');
+      }
+    }
+  }
+  
+  var Focussed_Project_Element = document.getElementById(this.id);
+  Focussed_Project_Element.classList.toggle('Project_Selected');
+}
 
+function Shift_Key_Pressed(e){
+  var Key_Name = String(e.key);
+  var Key_Code = String(e.code);
+  if(Key_Code == "ShiftLeft"|Key_Code == "ShiftRight"|Key_Code == "MetaLeft"|Key_Code == "MetaRight"){
+    Shift_Is_Pressed = true;
+  }
+}
 
-
-
+function Shift_Key_Released(e){
+  var Key_Name = String(e.key);
+  var Key_Code = String(e.code);
+  if(Key_Code == "ShiftLeft"|Key_Code == "ShiftRight"|Key_Code == "MetaLeft"|Key_Code == "MetaRight"){
+    Shift_Is_Pressed = false;
+  }
+}
 
 
 

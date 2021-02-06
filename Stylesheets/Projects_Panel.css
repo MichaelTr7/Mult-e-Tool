@@ -123,8 +123,6 @@ body{
   background-position: 50% 45%;
 }
 
-
-
 @media only screen and (max-width: 560px){
   #Top_Panel{
     margin-top: 135px;
@@ -132,7 +130,6 @@ body{
 }
 
 @media only screen and (max-width: 575px){
-
 #Project_List_Panel{
   grid-row: 3;
   grid-column: 1 / span 2;  
