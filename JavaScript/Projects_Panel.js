@@ -32,7 +32,8 @@ window.onload = function(){
 
 //Variables local to file
 var Shift_Is_Pressed = false;
-var Last_Clicked_Project_Element;
+var Last_Clicked_Project_Element = "";
+var Actively_Changing_Project_Name = false;
 
 function Animate_Buttons(){
   var Button = document.getElementById(this.id);
@@ -76,8 +77,9 @@ function New_Project_Pressed(){
     New_Label_Element.innerHTML = Project_Placeholder_Name;
     
     //Creating project name label for newly created list element
-    var New_Project_Label_Element = document.createElement("label");
+    var New_Project_Label_Element = document.createElement("div");
     New_Project_Label_Element.classList.add('Project_Name_Containers');
+    New_Project_Label_Element.innerHTML = "Test";
     New_List_Element.appendChild(New_Project_Label_Element);
     
     //Creating new div button element fo the newly created list element
@@ -167,15 +169,22 @@ function Save_Last_Clicked_Project(){
 
 function Delete_Key_Pressed(e){
     if(e.key == "Backspace"){
+      if(Last_Clicked_Project_Element != ""){
       var Target_List_Element = document.getElementById(Last_Clicked_Project_Element);
       var Focussed = Target_List_Element.classList.contains('Project_Selected');
     if(Focussed){
       var Name_Label = Target_List_Element.children[1];
+      console.log(Name_Label);
       Name_Label.contentEditable = "true";
+      Name_Label.setAttribute('contenteditable', 'true');
+      Name_Label.style.backgroundColor = "rgb(35,35,35)";
       
     }
     }
+    }
 }
+
+
 
 
 
