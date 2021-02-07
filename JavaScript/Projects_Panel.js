@@ -27,9 +27,12 @@ window.onload = function(){
   document.getElementById('Trash_Button').addEventListener("click",Trash_Pressed);  
   document.addEventListener("keydown",Shift_Key_Pressed);
   document.addEventListener("keyup",Shift_Key_Released);
+  document.addEventListener("keydown",Delete_Key_Pressed);
 }
 
+//Variables local to file
 var Shift_Is_Pressed = false;
+var Last_Clicked_Project_Element;
 
 function Animate_Buttons(){
   var Button = document.getElementById(this.id);
@@ -63,6 +66,7 @@ function New_Project_Pressed(){
     New_List_Element.id = "Project_" + String(Number_Of_Projects+1);
     Project_List.appendChild(New_List_Element);
     New_List_Element.addEventListener("click",Project_Selected);
+    New_List_Element.addEventListener("click",Save_Last_Clicked_Project);
     New_List_Element.addEventListener("contextmenu",Reveal_Sub_Menu);
     
     //Creating new label for the newly created list element
@@ -70,6 +74,11 @@ function New_Project_Pressed(){
     New_Label_Element.classList.add('Project_Label_Containers');
     New_List_Element.appendChild(New_Label_Element);
     New_Label_Element.innerHTML = Project_Placeholder_Name;
+    
+    //Creating project name label for newly created list element
+    var New_Project_Label_Element = document.createElement("label");
+    New_Project_Label_Element.classList.add('Project_Name_Containers');
+    New_List_Element.appendChild(New_Project_Label_Element);
     
     //Creating new div button element fo the newly created list element
     var New_Button_Element = document.createElement("div");
@@ -150,7 +159,22 @@ function Reveal_Sub_Menu(){
 
 function Open_Project(){
   console.log("Open project");
-  
+}
+
+function Save_Last_Clicked_Project(){
+  Last_Clicked_Project_Element = String(this.id);
+}
+
+function Delete_Key_Pressed(e){
+    if(e.key == "Backspace"){
+      var Target_List_Element = document.getElementById(Last_Clicked_Project_Element);
+      var Focussed = Target_List_Element.classList.contains('Project_Selected');
+    if(Focussed){
+      var Name_Label = Target_List_Element.children[1];
+      Name_Label.contentEditable = "true";
+      
+    }
+    }
 }
 
 

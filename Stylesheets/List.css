@@ -97,11 +97,21 @@
 }
 
 .Project_Label_Containers{
-  width: calc(100% - 80px);
+  width: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  /* background-color: red; */
 }
+
+.Project_Name_Containers{
+  width: calc(100% - 86px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* background-color: red; */
+}
+
 
 
 
