@@ -1,4 +1,4 @@
-[contenteditable] {
+[contenteditable]{
     -webkit-user-select: text;
     user-select: text;
 }
@@ -60,8 +60,6 @@
   transition: border 0.2s linear;
 }
 
-
-
 .Project_Selected{
   border: 1.2px solid rgb(200,200,200);
 }
@@ -79,9 +77,9 @@
 .Open_Button{
   display: flex;
   position: absolute;
-  left: calc(100% - 70px);
+  left: calc(100% - 48px);
   height: 100%;
-  width: 70px;
+  width: 40px;
   border-radius: 0px 3px 3px 0px;
   background-color: rgb(0,197,185);
   color: rgba(0,0,0,0.5);
@@ -93,7 +91,9 @@
   justify-content: center;
   font-family: sans-serif;
   z-index: 3;
+  padding-right: 8px;
   border: 1.2px solid rgb(200,200,200);
+  box-shadow: inset -8px 0px 0px 0px rgba(0,0,0,0.1);
 }
 
 .Open_Button:hover{
@@ -101,7 +101,7 @@
 }
 
 .Project_Label_Containers{
-  width: 15px;
+  /* width: 15px; */
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -115,6 +115,57 @@
   white-space: nowrap;
   /* background-color: red; */
 }
+
+.Edit_Button{
+  height: 100%;
+  left: calc(100% - 78px);
+  background-color: orange;
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 26px;
+  padding-left: 2px;
+  background-color: rgb(170,170,170);
+  color: rgba(0,0,0,0.5);
+  display: -webkit-flex;
+  font-weight: bold;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  text-align: center;
+  z-index: 3;
+  border-radius: 3px 0px 0px 3px;
+  border: 1.2px solid rgb(200,200,200);
+}
+
+.Edit_Button:hover{
+  cursor: pointer;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#Project_List::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#Project_List {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

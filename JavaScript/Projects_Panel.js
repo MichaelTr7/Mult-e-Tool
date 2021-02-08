@@ -59,7 +59,7 @@ function New_Project_Pressed(){
     Display_Maximum_Project_Notification();
   }
 
-  if(Number_Of_Projects <= 20){
+  if(Number_Of_Projects < 20){
     //Creating new list element
     var Project_Placeholder_Name = String(Number_Of_Projects+1) + ".";
     var New_List_Element = document.createElement("li");
@@ -82,12 +82,19 @@ function New_Project_Pressed(){
     New_Project_Label_Element.innerHTML = "Test";
     New_List_Element.appendChild(New_Project_Label_Element);
     
-    //Creating new div button element fo the newly created list element
-    var New_Button_Element = document.createElement("div");
-    New_Button_Element.classList.add('Open_Button');
-    New_List_Element.appendChild(New_Button_Element);
-    New_Button_Element.innerHTML = "Open";
-    New_Button_Element.addEventListener("click",Open_Project)
+    //Creating new div (edit) button element for the newly created list element
+    var New_Edit_Button_Element = document.createElement("div");
+    New_Edit_Button_Element.classList.add('Edit_Button');
+    New_List_Element.appendChild(New_Edit_Button_Element);
+    New_Edit_Button_Element.innerHTML = "✎";
+    New_Edit_Button_Element.addEventListener("click",Edit_Project_Name);
+    
+    //Creating new div (open) button element for the newly created list element
+    var New_Open_Button_Element = document.createElement("div");
+    New_Open_Button_Element.classList.add('Open_Button');
+    New_List_Element.appendChild(New_Open_Button_Element);
+    New_Open_Button_Element.innerHTML = "Open";
+    New_Open_Button_Element.addEventListener("click",Open_Project);
   }  
 }
 
@@ -184,7 +191,10 @@ function Delete_Key_Pressed(e){
     }
 }
 
-
+function Edit_Project_Name(){
+  console.log("Edit project name");
+  
+}
 
 
 
