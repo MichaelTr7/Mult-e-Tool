@@ -129,14 +129,14 @@ body{
   }
 }
 
-@media only screen and (max-width: 575px){
+@media only screen and (max-width: 700px){
 #Project_List_Panel{
-  grid-row: 3;
+  grid-row: 1;
   grid-column: 1 / span 2;  
 }
 
 #Summary_Panel{
-  grid-row: 1 / span 1;
+  grid-row: 3 / span 1;
   grid-column: 1 / span 2;
 }
 

@@ -101,7 +101,9 @@
 }
 
 .Project_Label_Containers{
-  /* width: 15px; */
+  position: absolute;
+  width: 20px;
+  left: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -109,21 +111,25 @@
 }
 
 .Project_Name_Containers{
-  width: calc(100% - 86px);
+  position: relative;
+  width: calc(100% - 100px);
+  --Label_Width: calc(100% - 100px);
+  left: calc(100% - var(--Label_Width) - 77px);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  /* background-color: red; */
+  /* background-color: cyan; */
 }
 
 .Edit_Button{
   height: 100%;
-  left: calc(100% - 78px);
+  left: calc(100% - 77px);
   background-color: orange;
   display: flex;
   position: absolute;
   height: 100%;
   width: 26px;
+  padding-right: 1px;
   padding-left: 2px;
   background-color: rgb(170,170,170);
   color: rgba(0,0,0,0.5);
