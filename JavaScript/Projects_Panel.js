@@ -79,7 +79,7 @@ function New_Project_Pressed(){
     //Creating project name label for newly created list element
     var New_Project_Label_Element = document.createElement("div");
     New_Project_Label_Element.classList.add('Project_Name_Containers');
-    New_Project_Label_Element.innerHTML = "Test";
+    // New_Project_Label_Element.innerHTML = "Test";
     New_List_Element.appendChild(New_Project_Label_Element);
     
     //Creating new div (edit) button element for the newly created list element
@@ -192,7 +192,9 @@ function Delete_Key_Pressed(e){
 }
 
 function Edit_Project_Name(){
-  console.log("Edit project name");
+  var Sibling_Label = this.previousSibling;
+  console.log(Sibling_Label);
+  
   
 }
 

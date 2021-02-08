@@ -1,6 +1,16 @@
+
 [contenteditable]{
     -webkit-user-select: text;
     user-select: text;
+}
+
+#Project_List::-webkit-scrollbar {
+  display: none;
+}
+
+#Project_List {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 #Projects_Label{
@@ -48,8 +58,8 @@
   margin-bottom: 5px;
   width: calc(100% - 5% - 2*1.5px);
   padding-left: 5%;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   border-radius: 5px;
   color: rgb(170,170,170);
   font-family: sans-serif;
@@ -110,10 +120,10 @@
 }
 
 .Project_Name_Containers{
-  position: relative;
+  position: absolute;
   width: calc(100% - 100px);
   --Label_Width: calc(100% - 100px);
-  left: calc(100% - var(--Label_Width) - 77px);
+  left: calc(100% - var(--Label_Width) - 70px);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -149,19 +159,79 @@
   cursor: pointer;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-#Project_List::-webkit-scrollbar {
-  display: none;
+#Modal_Backdrop{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 200vh;
+  width: 200vw;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 5;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-#Project_List {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+#Rename_Modal{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  --Scaling_Factor: 50vw;
+  --Modal_Height: calc(0.8 * var(--Scaling_Factor));
+  --Modal_Width: var(--Scaling_Factor);
+  height: var(--Modal_Height);
+  width: var(--Modal_Width);
+  border-radius: 1vw;
+  background-color: white;
+  left: calc(50% - var(--Modal_Width)/2);
+  top: calc(50% - var(--Modal_Height)/2);
+  background-color: rgb(245,245,245);
+  background-color: rgb(35,35,35);
+  box-shadow: 0px 0vw 5vw 1vw black;
+}
+
+#Project_Name_Field{
+  height: 10%;
+  width: 50%;
+}
+
+#Rename_Modal_Title{
+  width: 100%;
+  height: 15%;
+  text-align: center;
+  font-size: 3vw;
+  font-family: sans-serif;
+  color: rgb(170,170,170);
+  font-weight: bold;
+}
+
+#Project_Name_Field{
+  margin-top: 5%;
+  font-size: 1.5vw;
+  font-family: sans-serif;
+  background-color: rgba(255,255,255,0.1);
+  border: none;
+  text-align: center;
+  border-radius: 1vw;
+}
+
+#Project_Name_Field:hover{
+  cursor: text;
 }
 
 
-
+#OK_Button{
+  margin-top: 10%;
+  width: 40%;
+  height: 15%;
+  border-radius: 100px;
+  border: none;
+  font-size: 2vw;
+  font-family: sans-serif;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(0,197,185);
+  border: 0.1vw solid white;
+}
 
 
 
