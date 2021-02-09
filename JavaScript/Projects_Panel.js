@@ -36,6 +36,7 @@ window.onload = function(){
 var Shift_Is_Pressed = false;
 var Last_Clicked_Project_Element = "";
 var Actively_Changing_Project_Name = false;
+var Edit_Mode = "New Build";
 
 function Animate_Buttons(){
   var Button = document.getElementById(this.id);
@@ -54,6 +55,7 @@ function Logout_Pressed(){
 }
 
 function New_Project_Pressed(){
+  Edit_Mode = "New Build";
   var Project_List = document.getElementById("Project_List");
   var Number_Of_Projects = Project_List.children.length;
 
@@ -106,6 +108,10 @@ function New_Project_Pressed(){
     Field_Name.value = "";
     
     Update_Project_Count();
+    var Project_Elements = document.getElementsByClassName('Project_Rows');
+    for(Index = 0; Index < Project_Elements.length; Index++){
+      Project_Elements[Index].classList.remove('Project_Selected');
+    }
 }
 
 function Trash_Pressed(){
@@ -177,15 +183,12 @@ function Reveal_Sub_Menu(){
   console.log("Reveal sub menu");
 }
 
-function Open_Project(){
-  console.log("Open project");
-}
-
 function Save_Last_Clicked_Project(){
   Last_Clicked_Project_Element = String(this.id);
 }
 
 function Set_Project_Name(){
+  
   var Name_Exists_Label = document.getElementById('Error_Message_Label');
   Name_Exists_Label.classList.remove('Fade_In_Rename_Modal_Animation');
   
@@ -210,8 +213,18 @@ function Set_Project_Name(){
     var Animation_Duration = parseFloat(getComputedStyle(Modal).getPropertyValue('--Fade_Out_Duration'))*1000;
     setTimeout(function () {
       Modal.style.display = "none";
-    }, Animation_Duration);    
-    Newly_Added_Element.children[1].innerHTML = Name;
+    }, Animation_Duration);  
+    if(Edit_Mode == "New Build"){
+      Newly_Added_Element.children[1].innerHTML = Name;
+    }
+    else{
+      var List_Element = document.getElementById(Edit_Mode);
+      List_Element.children[1].innerHTML = Name;
+    }
+  }
+  var Project_Elements = document.getElementsByClassName('Project_Rows');
+  for(Index = 0; Index < Project_Elements.length; Index++){
+    Project_Elements[Index].classList.remove('Project_Selected');
   }
 }
 
@@ -224,7 +237,9 @@ function Close_Project_Naming_Modal(){
   }, Animation_Duration); 
   
   var Last_List_Element = document.getElementById('Project_List').lastElementChild;
+  if(Last_List_Element.children[1].innerHTML == ""){
   Last_List_Element.remove();   
+  }
   Update_Project_Count(); 
 }
 
@@ -243,18 +258,25 @@ function Update_Project_Count(){
   Project_Count_Label.innerHTML = "Project Count: " + Number_Of_List_Elements;
 }
 
-function Edit_Project_Name(){
+function Edit_Project_Name(){  
   var Sibling_Label = this.previousSibling;
-  console.log(Sibling_Label);
-  
+  var Naming_Modal = document.getElementById('Modal_Backdrop');
+  Naming_Modal.classList.remove('Fade_Out_Rename_Modal_Animation');
+  Naming_Modal.style.display = "block";
+  var Field_Name = document.getElementById('Project_Name_Field');
+  Field_Name.value = "";
+  Edit_Mode = String(Sibling_Label.parentElement.id);
 }
 
+function Open_Project(){
+  console.log("Open project");
+}
 
-
-
-
-
-
+function Add_Project_Identifier(){
+  console.log("Added Project");
+  
+  
+}
 
 
 
