@@ -45,15 +45,6 @@ function Animate_Buttons(){
   Button.classList.add("Squeeze_Animation");
 }
 
-function Account_Settings_Pressed(){
-  console.log("Go to account settings");
-}
-
-function Logout_Pressed(){
-  console.log("Logout of account");
-  
-}
-
 function New_Project_Pressed(){
   Edit_Mode = "New Build";
   var Project_List = document.getElementById("Project_List");
@@ -274,15 +265,19 @@ function Open_Project(){
 
 function Add_Project_Identifier(){
   console.log("Added Project");
-  
-  
+    
 }
 
+function Logout_Pressed(){
+  console.log("Logging Out");
+  window.location.href = "./Resistor_List_Maker.html"; 
 
+}
 
-
-
-
+function Account_Settings_Pressed(){
+  console.log("Go to account settings");
+  
+}
 
 
 
