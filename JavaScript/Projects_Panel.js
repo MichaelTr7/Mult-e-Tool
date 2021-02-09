@@ -29,7 +29,6 @@ window.onload = function(){
   document.getElementById('Close_Button').addEventListener("click",Close_Project_Naming_Modal);
   document.addEventListener("keydown",Shift_Key_Pressed);
   document.addEventListener("keyup",Shift_Key_Released);
-  document.addEventListener("keydown",Delete_Key_Pressed);
   document.addEventListener("keydown",Entered_Key_Pressed);
 }
 
@@ -105,6 +104,8 @@ function New_Project_Pressed(){
     Naming_Modal.style.display = "block";
     var Field_Name = document.getElementById('Project_Name_Field');
     Field_Name.value = "";
+    
+    Update_Project_Count();
 }
 
 function Trash_Pressed(){
@@ -122,6 +123,7 @@ function Trash_Pressed(){
       document.getElementById(Elements_To_Delete[Delete_Index]).remove();
     }    
     Rename_List(Project_List_Elements);
+    Update_Project_Count();
 }
 
 function Rename_List(List_Elements){
@@ -183,22 +185,6 @@ function Save_Last_Clicked_Project(){
   Last_Clicked_Project_Element = String(this.id);
 }
 
-function Delete_Key_Pressed(e){
-    if(e.key == "Backspace"){
-      if(Last_Clicked_Project_Element != ""){
-      var Target_List_Element = document.getElementById(Last_Clicked_Project_Element);
-      var Focussed = Target_List_Element.classList.contains('Project_Selected');
-    if(Focussed){
-      var Name_Label = Target_List_Element.children[1];
-      console.log(Name_Label);
-      Name_Label.contentEditable = "true";
-      Name_Label.setAttribute('contenteditable', 'true');
-      Name_Label.style.backgroundColor = "rgb(35,35,35)";  
-    }
-    }
-    }
-}
-
 function Set_Project_Name(){
   var Name_Exists_Label = document.getElementById('Error_Message_Label');
   Name_Exists_Label.classList.remove('Fade_In_Rename_Modal_Animation');
@@ -238,13 +224,8 @@ function Close_Project_Naming_Modal(){
   }, Animation_Duration); 
   
   var Last_List_Element = document.getElementById('Project_List').lastElementChild;
-  Last_List_Element.remove();    
-}
-
-function Edit_Project_Name(){
-  var Sibling_Label = this.previousSibling;
-  console.log(Sibling_Label);
-  
+  Last_List_Element.remove();   
+  Update_Project_Count(); 
 }
 
 function Entered_Key_Pressed(e){
@@ -256,6 +237,17 @@ function Entered_Key_Pressed(e){
   }  
 }
 
+function Update_Project_Count(){
+  var Number_Of_List_Elements = document.getElementById("Project_List").children.length;
+  var Project_Count_Label = document.getElementById("Project_Count_Label");
+  Project_Count_Label.innerHTML = "Project Count: " + Number_Of_List_Elements;
+}
+
+function Edit_Project_Name(){
+  var Sibling_Label = this.previousSibling;
+  console.log(Sibling_Label);
+  
+}
 
 
 

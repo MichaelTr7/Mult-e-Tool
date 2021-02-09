@@ -235,10 +235,13 @@
   border: none;
   text-align: center;
   border-radius: min(1vw,1vh);
+  border: min(0.2vw,0.2vw) solid rgba(255,255,255,0);
+  transition: border 0.1s linear;
 }
 
 #Project_Name_Field:hover{
   cursor: text;
+  border: min(0.2vw,0.2vw) solid white;
 }
 
 #Error_Message_Label{
