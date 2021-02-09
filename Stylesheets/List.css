@@ -180,13 +180,38 @@
   --Modal_Width: var(--Scaling_Factor);
   height: var(--Modal_Height);
   width: var(--Modal_Width);
-  border-radius: 1vw;
+  border-radius: min(2vw,2vh);
   background-color: white;
   left: calc(50% - var(--Modal_Width)/2);
   top: calc(50% - var(--Modal_Height)/2);
   background-color: rgb(245,245,245);
   background-color: rgb(35,35,35);
   box-shadow: 0px 0vw 5vw 1vw black;
+}
+
+#Close_Button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: rgb(20,20,20);
+  left: max(1%,1px);;
+  top: max(1%,1px);
+  width: max(min(5vw,5vh),10px);
+  height: max(min(5vw,5vh),10px);
+  color: rgb(170,170,170);
+  font-weight: bold;
+  border-radius: calc(max(min(5vw,5vh),10px)/2);
+  font-size: min(2.5vw,2.5vh);
+  box-shadow: inset 2px 2px 1px 0px rgba(0,0,0,0.5), inset -0.5px -0.5px 1px 0px rgba(255,255,255,0.15);
+  border: min(0.2vw,0.2vh) solid rgb(22,22,22);
+  transition: background-color 0.2s linear;
+}
+
+#Close_Button:hover{
+  transition: background-color;
+  background-color: rgb(55,55,55);  
+  cursor: pointer;
 }
 
 #Rename_Modal_Title{
@@ -196,7 +221,7 @@
   font-family: sans-serif;
   color: rgb(170,170,170);
   font-weight: bold;
-  font-size: 3vw;
+  font-size: 30px;
 }
 
 #Project_Name_Field{
@@ -221,6 +246,7 @@
   color: rgb(0,197,185);
   font-family: sans-serif;
   font-size: 1.5vw;
+  opacity: 0;
 }
 
 #OK_Button{
@@ -240,9 +266,9 @@
 }
 
 #OK_Button:hover{
-transition: filter;
-filter: brightness(1.1);
-cursor: pointer;
+  transition: filter;
+  filter: brightness(1.1);
+  cursor: pointer;
 }
 
 ::-webkit-input-placeholder {opacity: 1; -webkit-transition: opacity 0.5s; transition: opacity 0.5s;}  /* Chrome <=56, Safari < 10 */
@@ -257,12 +283,21 @@ cursor: pointer;
 *:focus:-ms-input-placeholder {opacity: 0;} /* IE 10+ */
 *:focus::placeholder {opacity: 0;} /* Modern Browsers */
 
-@media only screen and (max-height: 300px){
+@media only screen and (max-width: 300px){
   #Rename_Modal_Title{
-    font-size: 2vw;
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-height: 400px){
+  #Rename_Modal_Title{
+    font-size: 12px;
+  }
+  #Error_Message_Label{
+    font-size: 10px;
   }
   #OK_Button{
-    font-size: 1.5vw;
+    font-size: 10px;
   }
 }
 

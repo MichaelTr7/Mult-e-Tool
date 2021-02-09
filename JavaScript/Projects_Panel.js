@@ -25,11 +25,12 @@ window.onload = function(){
   document.getElementById('Logout_Button').addEventListener("click",Logout_Pressed);
   document.getElementById('New_Project_Button').addEventListener("click",New_Project_Pressed);
   document.getElementById('Trash_Button').addEventListener("click",Trash_Pressed);  
-  document.getElementById('Project_Name_Field').addEventListener("click",Project_Name_Field_Pressed);
   document.getElementById('OK_Button').addEventListener("click",Set_Project_Name);
+  document.getElementById('Close_Button').addEventListener("click",Close_Project_Naming_Modal);
   document.addEventListener("keydown",Shift_Key_Pressed);
   document.addEventListener("keyup",Shift_Key_Released);
   document.addEventListener("keydown",Delete_Key_Pressed);
+  document.addEventListener("keydown",Entered_Key_Pressed);
 }
 
 //Variables local to file
@@ -102,6 +103,8 @@ function New_Project_Pressed(){
     var Naming_Modal = document.getElementById('Modal_Backdrop');
     Naming_Modal.classList.remove('Fade_Out_Rename_Modal_Animation');
     Naming_Modal.style.display = "block";
+    var Field_Name = document.getElementById('Project_Name_Field');
+    Field_Name.value = "";
 }
 
 function Trash_Pressed(){
@@ -190,25 +193,30 @@ function Delete_Key_Pressed(e){
       console.log(Name_Label);
       Name_Label.contentEditable = "true";
       Name_Label.setAttribute('contenteditable', 'true');
-      Name_Label.style.backgroundColor = "rgb(35,35,35)";
-      
+      Name_Label.style.backgroundColor = "rgb(35,35,35)";  
     }
     }
     }
-}
-
-function Edit_Project_Name(){
-  var Sibling_Label = this.previousSibling;
-  console.log(Sibling_Label);
-}
-
-function Project_Name_Field_Pressed(){
-  
 }
 
 function Set_Project_Name(){
+  var Name_Exists_Label = document.getElementById('Error_Message_Label');
+  Name_Exists_Label.classList.remove('Fade_In_Rename_Modal_Animation');
+  
   var Name = String(document.getElementById('Project_Name_Field').value);
-  if(Name != ""){
+  var Project_Labels = document.getElementsByClassName('Project_Name_Containers');
+  var Project_Names = [];
+  for(Project_Index = 0; Project_Index < Project_Labels.length-1; Project_Index++){
+    Project_Names[Project_Index] = Project_Labels[Project_Index].innerHTML;
+  }
+  
+  var Name_Exists = Project_Names.includes(Name);   
+  if(Name_Exists){
+    var Name_Exists_Label = document.getElementById('Error_Message_Label');
+    Name_Exists_Label.classList.add('Fade_In_Rename_Modal_Animation');
+  }
+
+  if(Name != "" & !Name_Exists){
     var List_Elements = document.getElementsByClassName('Project_Rows');
     var Newly_Added_Element = List_Elements[parseInt(List_Elements.length)-1]
     var Modal = document.getElementById('Modal_Backdrop');
@@ -221,10 +229,32 @@ function Set_Project_Name(){
   }
 }
 
+function Close_Project_Naming_Modal(){
+  var Modal = document.getElementById('Modal_Backdrop');
+  Modal.classList.add('Fade_Out_Rename_Modal_Animation');
+  var Animation_Duration = parseFloat(getComputedStyle(Modal).getPropertyValue('--Fade_Out_Duration'))*1000;
+  setTimeout(function () {
+    Modal.style.display = "none";
+  }, Animation_Duration); 
+  
+  var Last_List_Element = document.getElementById('Project_List').lastElementChild;
+  Last_List_Element.remove();    
+}
 
+function Edit_Project_Name(){
+  var Sibling_Label = this.previousSibling;
+  console.log(Sibling_Label);
+  
+}
 
-
-
+function Entered_Key_Pressed(e){
+  if(String(e.key) == "Enter"){
+    var Modal_In_View = String(window.getComputedStyle(document.getElementById("Modal_Backdrop")).getPropertyValue('display'));
+    if(Modal_In_View == "block"){
+    document.getElementById('OK_Button').click();
+    }
+  }  
+}
 
 
 
