@@ -175,7 +175,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  --Scaling_Factor: 50vw;
+  --Scaling_Factor: min(80vh,50vw);
   --Modal_Height: calc(0.8 * var(--Scaling_Factor));
   --Modal_Width: var(--Scaling_Factor);
   height: var(--Modal_Height);
@@ -189,38 +189,42 @@
   box-shadow: 0px 0vw 5vw 1vw black;
 }
 
-#Project_Name_Field{
-  height: 10%;
-  width: 50%;
-}
-
 #Rename_Modal_Title{
   width: 100%;
   height: 15%;
   text-align: center;
-  font-size: 3vw;
   font-family: sans-serif;
   color: rgb(170,170,170);
   font-weight: bold;
+  font-size: 3vw;
 }
 
 #Project_Name_Field{
   margin-top: 5%;
-  font-size: 1.5vw;
+  height: 10%;
+  width: 50%;
+  color: rgb(170,170,170);
+  font-size: min(1.5vw,2.5vh);
   font-family: sans-serif;
   background-color: rgba(255,255,255,0.1);
   border: none;
   text-align: center;
-  border-radius: 1vw;
+  border-radius: min(1vw,1vh);
 }
 
 #Project_Name_Field:hover{
   cursor: text;
 }
 
+#Error_Message_Label{
+  margin-top: 2%;
+  color: rgb(0,197,185);
+  font-family: sans-serif;
+  font-size: 1.5vw;
+}
 
 #OK_Button{
-  margin-top: 10%;
+  margin-top: 8%;
   width: 40%;
   height: 15%;
   border-radius: 100px;
@@ -231,8 +235,73 @@
   font-weight: bold;
   background-color: rgb(0,197,185);
   border: 0.1vw solid white;
+  filter: brightness(1);
+  transition: filter 0.2s linear;
 }
 
+#OK_Button:hover{
+transition: filter;
+filter: brightness(1.1);
+cursor: pointer;
+}
+
+::-webkit-input-placeholder {opacity: 1; -webkit-transition: opacity 0.5s; transition: opacity 0.5s;}  /* Chrome <=56, Safari < 10 */
+:-moz-placeholder {opacity: 1; -moz-transition: opacity 0.5s; transition: opacity 0.5s;} /* FF 4-18 */
+::-moz-placeholder {opacity: 1; -moz-transition: opacity 0.5s; transition: opacity 0.5s;} /* FF 19-51 */
+:-ms-input-placeholder {opacity: 1; -ms-transition: opacity 0.5s; transition: opacity 0.5s;} /* IE 10+ */
+::placeholder {opacity: 1; transition: opacity 0.5s;} /* Modern Browsers */
+   
+*:focus::-webkit-input-placeholder {opacity: 0;} /* Chrome <=56, Safari < 10 */
+*:focus:-moz-placeholder {opacity: 0;} /* FF 4-18 */
+*:focus::-moz-placeholder {opacity: 0;} /* FF 19-50 */
+*:focus:-ms-input-placeholder {opacity: 0;} /* IE 10+ */
+*:focus::placeholder {opacity: 0;} /* Modern Browsers */
+
+@media only screen and (max-height: 300px){
+  #Rename_Modal_Title{
+    font-size: 2vw;
+  }
+  #OK_Button{
+    font-size: 1.5vw;
+  }
+}
+
+#Modal_Backdrop{
+  /* opacity: 0; */
+  display: none;
+}
+
+.Fade_Out_Rename_Modal_Animation{
+  --Fade_Out_Duration: 0.2s;
+  animation: Fade_Out_Rename_Modal var(--Fade_Out_Duration) forwards;
+}
+
+@keyframes Fade_Out_Rename_Modal{
+  0%{
+    opacity: 1;
+    pointer-events: all;
+  }
+  100%{
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.Fade_In_Rename_Modal_Animation{
+  --Fade_In_Duration: 0.2s;
+  animation: Fade_In_Rename_Modal var(--Fade_In_Duration) forwards;
+}
+
+@keyframes Fade_In_Rename_Modal{
+  0%{
+    opacity: 0;
+    pointer-events: none;
+  }
+  100%{
+    opacity: 1;
+    pointer-events: all;
+  }
+}
 
 
 
