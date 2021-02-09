@@ -276,7 +276,7 @@ function Logout_Pressed(){
 
 function Account_Settings_Pressed(){
   console.log("Go to account settings");
-  
+  window.location.href = "./Settings.html"; 
 }
 
 

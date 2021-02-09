@@ -1,0 +1,23 @@
+@font-face{
+  font-family: Montserrat;
+  src: url('../Fonts/Montserrat/Montserrat-ExtraLight.ttf');
+}
+
+#Settings_Title{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  top: 105px;
+  font-size: 40px;
+  color: rgb(200,200,200);
+  font-family: sans-serif;
+}
+
+#Settings_Sub_Heading{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  font-family: Montserrat;
+  top: 105px;
+  color: rgb(200,200,200);
+}
