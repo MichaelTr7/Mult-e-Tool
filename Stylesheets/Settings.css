@@ -3,6 +3,31 @@
   src: url('../Fonts/Montserrat/Montserrat-ExtraLight.ttf');
 }
 
+/*Disabling highlighting on tap throughout application*/
+*{
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+  -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+  outline: none !important;
+}
+
+/*Disabling drag on all buttons*/
+button{
+  -webkit-app-region: no-drag;
+}
+
+/*Disabling highlighting/copying across panel*/
+*, *::after, *::before{
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  cursor: default;
+}
+
+input{
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+
 #Settings_Title{
   display: flex;
   position: fixed;
@@ -29,21 +54,115 @@
 }
 
 #Settings_Panel_Wrapper{
+  display: block;
+  justify-content: center;
   position: absolute;
   top: 193px;
-  width: 90%;
-  height: 1000px;
-  left: calc(50% - 90%/2);
+  --Settings_Panel_Width: min(90%,500px);
+  width: var(--Settings_Panel_Width);
+  /* height: 1000px; */
+  left: calc(50% - var(--Settings_Panel_Width)/2);
   background-color: rgb(35,35,35);
   border-radius: 5vw;
   box-shadow: 0px -2px 5px 5px rgba(0,0,0,0.2);
+  z-index: 2;
 }
 
+.Input_Fields{
+  display: block;
+  position: relative;
+  align-self: center;
+  height: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  border: 2px solid rgb(20,20,20);
+  --Email_Field_Width: min(60%,450px);
+  width: calc(var(--Email_Field_Width));
+  left: calc(50% - 20px - var(--Email_Field_Width)/2);
+}
 
+.Input_Fields:hover{
+  cursor: text;  
+}
 
+#Delete_Account_Button{
+  display: block;
+  position: relative;
+  height: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  align-self: center;
+  border-radius: 5px;
+  font-size: 25px;
+  background-color: rgba(0,0,0,0);
+  border: none;
+  color: rgba(180,50,80,1);
+  --Email_Field_Width: min(60%,450px);
+  width: var(--Email_Field_Width);
+  left: calc(50% - var(--Email_Field_Width)/2);
+  font-family: Montserrat;
+}
 
+#Delete_Account_Button:hover{
+  cursor: pointer;  
+}
 
+#Delete_Account_Button:hover{
+  cursor: pointer;  
+}
 
+#Email_Field{
+  margin-top: 5px;
+}
 
+#Confirm_Email_Field{
+  margin-top: 5px;
+}
+
+.Input_Labels{
+  position: relative;
+  align-self: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  height: 30px;
+  margin-top: 10px;
+  padding-right: 40px;
+  border-radius: 5px;
+  /* border: 2px solid rgb(20,20,20); */
+  --Email_Field_Width: min(60%,450px);
+  width: calc(var(--Email_Field_Width));
+  left: calc(50% - 20px - var(--Email_Field_Width)/2);
+  color: rgb(170,170,170);
+  font-family: sans-serif;
+}
+
+.Input_Labels:nth-of-type(1),.Input_Labels:nth-of-type(3){
+  margin-top: 60px;
+}
+
+#Save_Account_Changes_Button{
+  position: relative;
+  margin-top: 50px;
+  width: 50%;
+  left: calc(50% - 50%/2);
+  border-radius: 100px;
+  padding: 11px;
+  border: none;
+  font-size: 20px;
+  font-family: sans-serif;
+  color: white;
+  background-color: rgb(0,197,185);
+  border: 0.1vw solid white;
+  filter: brightness(1);
+  transition: filter 0.2s linear;
+}
+
+#Save_Account_Changes_Button:hover{
+  transition: filter;
+  filter: brightness(1.1);
+  cursor: pointer;
+}
 
 
