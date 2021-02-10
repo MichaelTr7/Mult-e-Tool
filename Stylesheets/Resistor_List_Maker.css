@@ -1,3 +1,23 @@
+
+#UNDER_CONSTRUCTION_MODAL{
+  display: flex;
+align-items: center;
+justify-content: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+  font-family: sans-serif;
+  color: rgba(240,240,240,0.6);
+  font-size: 5vw;
+  font-weight: lighter;
+  text-align: center;
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
+}
+
+
 /*Disabling highlighting on tap throughout application*/
 *{
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
@@ -302,6 +322,7 @@ body{
     background-position: 50% 40%;
   }
 }
+
 
 
 
