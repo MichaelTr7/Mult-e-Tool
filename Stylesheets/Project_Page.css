@@ -31,7 +31,7 @@ input{
   --Row_Height: calc(var(--Generator_Panel_Height)/2 - var(--Gap_Size)/2);
   grid-gap: var(--Gap_Size);
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: var(--Generator_Panel_Height)  var(--Generator_Panel_Height) 20px;
+  grid-template-rows: var(--Generator_Panel_Height)  var(--Generator_Panel_Height) var(--Generator_Panel_Height);
   --Top_Margin: 100px;
   margin-top: var(--Top_Margin);
   height: var(--Generator_Panel_Height);
@@ -41,7 +41,7 @@ input{
   z-index: 2;
 }
 
-#Generator_Panel > div{
+#Generator_Panel > div:nth-of-type(1),#Generator_Panel > div:nth-of-type(2){
   display: flex;
   /* grid-row: 1 / span 1; */
   border-radius: 20px;
@@ -59,8 +59,6 @@ input{
   grid-column: 2 / span 1;
   grid-row: 1 / span 1;
 }
-
-
 
 #List_Panel_Wrapper{
   position: absolute;
@@ -123,27 +121,43 @@ input{
   text-shadow: 0 2px 2px rgba(0,0,0,0.5);
 }
 
+.Button_Wrappers{
+  /* background-color: cyan; */
+}
+
 .Add_Buttons{
-  display: flex;
-  position: absolute;
-  --Toggle_Height: 70px;
-  --Generator_Panel_Height: 100px;
-  --Gap: calc((var(--Generator_Panel_Height) - var(--Toggle_Height))/2);
-  --Button_Diameter: 25px;
-  height: var(--Button_Diameter);
-  width: calc(2*var(--Button_Diameter));
-  margin-top: 10px;
-  margin-left: calc(50% - var(--Toggle_Height) - 3*var(--Gap) - 20px);
-  border-radius: calc(var(--Button_Diameter)/2);
-  border: 1.5px solid rgb(170,170,170);
+  margin-top: -10px;
+  position: relative;
+  --Height: 40px;
+  --Width: 100px;
+  height: var(--Height);
+  width: var(--Width);  
+  border: none;
+  border-radius: 10px;
   font-size: 12px;
-  font-weight: bold;
-  color: rgb(170,170,170);
-  background-color: rgb(35,35,35);
+  background: rgb(35,35,35);
+  font-family: sans-serif;
+  color: white;
+  box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), inset 1px 1px 0.5px 0px rgba(255,255,255,0.2);
+  filter: brightness(0.9);
+}
+
+.Add_Buttons:hover{
+  cursor: pointer;
+}
+
+#Add_Resistor_Button{
+  float: right;
+  /* background: linear-gradient(270deg, #FF5B5B 0%, #F73279 100%); */
+  background: linear-gradient(90deg, #06CCB4 0%, #00C6D2 100%);
+}
+
+#Add_Capacitor_Button{
+  float: left;
+  background: linear-gradient(90deg, #F77733 0%, #F75400 100%);
 }
 
 @media only screen and (max-width: 640px){
-  
 #Left_Panel{
   grid-column: 1 / span 2;
   grid-row: 1 / span 1;
@@ -156,6 +170,19 @@ input{
 #Generator_Panel{
   grid-gap: 11px;
 }
+
+.Add_Buttons{
+margin-top: 0px;
+}
+
+#Add_Resistor_Button{
+  float: right;
+}
+
+#Add_Capacitor_Button{
+  float: left;
+}
+
 }
 
 @media only screen and (max-width: 570px) {
