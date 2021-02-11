@@ -1,0 +1,166 @@
+/*Disabling highlighting on tap throughout application*/
+*{
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+  -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+  outline: none !important;
+}
+
+/*Disabling drag on all buttons*/
+button{
+  -webkit-app-region: no-drag;
+}
+
+/*Disabling highlighting/copying across panel*/
+*, *::after, *::before{
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  cursor: default;
+}
+
+input{
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+#Generator_Panel{
+  position: fixed;
+  display: grid;
+  --Gap_Size: 20px;
+  --Generator_Panel_Width: calc(100% - 2*var(--Gap_Size));
+  --Generator_Panel_Height: 100px;
+  --Row_Height: calc(var(--Generator_Panel_Height)/2 - var(--Gap_Size)/2);
+  grid-gap: var(--Gap_Size);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: var(--Generator_Panel_Height)  var(--Generator_Panel_Height) 20px;
+  --Top_Margin: 100px;
+  margin-top: var(--Top_Margin);
+  height: var(--Generator_Panel_Height);
+  width: var(--Generator_Panel_Width);
+  /* background-color: white; */
+  left: calc(50% - var(--Generator_Panel_Width)/2);
+  z-index: 2;
+}
+
+#Generator_Panel > div{
+  display: flex;
+  /* grid-row: 1 / span 1; */
+  border-radius: 20px;
+  background-color: rgb(35,35,35);
+  border: none;
+  box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
+}
+
+#Left_Panel{
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+}
+
+#Right_Panel{
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+}
+
+
+
+#List_Panel_Wrapper{
+  position: absolute;
+  --Gap_Size: 20px;
+  --Top_Margin: 100px;
+  --Generator_Panel_Height: 100px;
+  --Generator_Panel_Width: calc(100% - 2*var(--Gap_Size));
+  --Top_Offset: calc(var(--Top_Margin) + var(--Generator_Panel_Height) + var(--Gap_Size));
+  margin-top: var(--Top_Offset);
+  height: 1000px;
+  width: var(--Generator_Panel_Width);
+  /* background: rgb(0,0,0);   */
+}
+
+.Input_Fields{
+  position: relative;
+  --Toggle_Height: 70px;
+  --Generator_Panel_Height: 100px;
+  --Gap: calc((var(--Generator_Panel_Height) - var(--Toggle_Height))/2);
+  height: 40px;
+  width: calc(100% - var(--Toggle_Height) - 4*var(--Gap));
+  margin-left: var(--Gap);
+  padding-right: var(--Gap);
+  top: calc(100% - 40px - var(--Gap));
+  border-radius: 10px;
+  border: none;
+  text-align: right;
+  font-size: 12px;
+  /* color: rgb(0,197,185); */
+  color: rgb(170,170,170);
+  border: none;
+  background-color: rgb(20,20,20);
+  box-shadow: inset 2px 2px 3px 1px rgba(0,0,0,0.5), inset -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
+}
+
+.Unit_Toggle_Buttons{
+  position: relative;
+  --Toggle_Height: 70px;
+  --Generator_Panel_Height: 100px;
+  height: var(--Toggle_Height);
+  width: var(--Toggle_Height);
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(20,20,20);
+  box-shadow: inset 2px 2px 3px 1px rgba(0,0,0,0.5), inset -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
+  margin-left: calc((var(--Generator_Panel_Height) - var(--Toggle_Height))/2);
+  top: calc(50% - var(--Toggle_Height)/2);
+}
+
+.Calculator_Labels{
+  position: absolute;
+  --Toggle_Height: 70px;
+  --Generator_Panel_Height: 100px;
+  --Gap: calc((var(--Generator_Panel_Height) - var(--Toggle_Height))/2);
+  font-family: sans-serif;
+  color: rgb(170,170,170);
+  margin-left: var(--Gap);
+  margin-top: var(--Gap);
+  font-size: 18px;
+  text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+}
+
+.Add_Buttons{
+  display: flex;
+  position: absolute;
+  --Toggle_Height: 70px;
+  --Generator_Panel_Height: 100px;
+  --Gap: calc((var(--Generator_Panel_Height) - var(--Toggle_Height))/2);
+  --Button_Diameter: 25px;
+  height: var(--Button_Diameter);
+  width: calc(2*var(--Button_Diameter));
+  margin-top: 10px;
+  margin-left: calc(50% - var(--Toggle_Height) - 3*var(--Gap) - 20px);
+  border-radius: calc(var(--Button_Diameter)/2);
+  border: 1.5px solid rgb(170,170,170);
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(170,170,170);
+  background-color: rgb(35,35,35);
+}
+
+@media only screen and (max-width: 640px){
+  
+#Left_Panel{
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 1;
+}
+
+#Right_Panel{
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 1;
+}
+#Generator_Panel{
+  grid-gap: 11px;
+}
+}
+
+@media only screen and (max-width: 570px) {
+#Generator_Panel{
+  margin-top: 60px;
+}
+}
+
