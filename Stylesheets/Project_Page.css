@@ -94,7 +94,6 @@ input{
   border: none;
   text-align: right;
   font-size: 12px;
-  /* color: rgb(0,197,185); */
   color: rgb(170,170,170);
   background-color: rgb(20,20,20);
   border: none;
@@ -161,7 +160,6 @@ input{
 
 #Add_Resistor_Button{
   float: right;
-  /* background: linear-gradient(270deg, #FF5B5B 0%, #F73279 100%); */
   background: linear-gradient(90deg, #06CCB4 0%, #00C6D2 100%);
 }
 
@@ -212,9 +210,6 @@ input{
 .Alternative_Labels{
   font-size: 20px;
 }
-
-
-
 
 ::-webkit-input-placeholder {opacity: 1; -webkit-transition: opacity 0.5s; transition: opacity 0.5s;}  /* Chrome <=56, Safari < 10 */
 :-moz-placeholder {opacity: 1; -moz-transition: opacity 0.5s; transition: opacity 0.5s;} /* FF 4-18 */
@@ -284,7 +279,6 @@ input{
 }
 
 .Tile_Labels{
-  /* font-weight: lighter; */
   font-size: 15px;
   font-family: sans-serif;
   color: rgb(170,170,170);
@@ -307,47 +301,42 @@ input{
   width: calc(100% - var(--Right_Padding));
   padding-top: var(--Top_Padding);
   padding-left: var(--Right_Padding);
-  /* border: 1px solid white; */
 }
-
 
 @media only screen and (max-width: 640px){
-#Left_Panel{
-  grid-column: 1 / span 2;
-  grid-row: 1 / span 1;
-}
+  #Left_Panel{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+  }
 
-#Right_Panel{
-  grid-column: 1 / span 2;
-  grid-row: 2 / span 1;
-}
-#Generator_Panel{
-  grid-gap: 11px;
-}
+  #Right_Panel{
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+  }
+  #Generator_Panel{
+    grid-gap: 11px;
+  }
 
-.Add_Buttons{
-margin-top: 0px;
+  .Add_Buttons{
+  margin-top: 0px;
+  }
+  #List_Panel_Wrapper{
+    --Top_Margin: 60px;
+  }
 }
-#List_Panel_Wrapper{
-  --Top_Margin: 60px;
-}
-
-}
-
 
 @media only screen and (max-width: 570px) {
-#Generator_Panel{
-  margin-top: 60px;
-}
+  #Generator_Panel{
+    margin-top: 60px;
+  }
 
-.Input_Fields{
-  font-size: 9px;
-}
+  .Input_Fields{
+    font-size: 9px;
+  }
 
-.Tile_Labels{
-  font-size: 10px;
-}
-
+  .Tile_Labels{
+    font-size: 10px;
+  }
 }
 
 
