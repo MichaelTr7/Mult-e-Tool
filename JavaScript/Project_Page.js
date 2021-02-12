@@ -97,12 +97,14 @@ function Add_Capacitor_To_List(){
 
 function Create_Resistor_Tile(Resistance_In_Ohms){
   console.log(Resistance_In_Ohms);
+  // Evaluating resistor colour bands (4 band and 5 band)
 
 }
 
 
 function Create_Capacitor_Tile(Capacitance_In_Farads){
   console.log(Capacitance_In_Farads);
+  // Evaluating capacitor code
 
 }
 

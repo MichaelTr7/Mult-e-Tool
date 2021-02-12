@@ -23,7 +23,7 @@ input{
 }
 
 #Generator_Panel{
-  position: fixed;
+  position: relative;
   display: grid;
   --Gap_Size: 20px;
   --Generator_Panel_Width: calc(100% - 2*var(--Gap_Size));
@@ -61,16 +61,24 @@ input{
 }
 
 #List_Panel_Wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   position: absolute;
   --Gap_Size: 20px;
-  --Top_Margin: 100px;
+  --Top_Margin: -50px;
   --Generator_Panel_Height: 100px;
   --Generator_Panel_Width: calc(100% - 2*var(--Gap_Size));
   --Top_Offset: calc(var(--Top_Margin) + var(--Generator_Panel_Height) + var(--Gap_Size));
   margin-top: var(--Top_Offset);
   height: 1000px;
   width: var(--Generator_Panel_Width);
-  /* background: rgb(0,0,0);   */
+  background: rgb(20,20,20);  
+  border: 1px solid white;
+}
+
+#List_Panel_Wrapper > div{
+  border: 2px solid orange;
+  
 }
 
 .Input_Fields{
@@ -224,7 +232,17 @@ input{
 .Add_Buttons{
 margin-top: 0px;
 }
+#List_Panel_Wrapper{
+  --Top_Margin: 60px;
+}
 
+/* #Add_Resistor_Button{
+  float: left;
+}
+
+#Add_Capacitor_Button{
+  float: right;
+} */
 }
 
 @media only screen and (max-width: 570px) {
@@ -244,4 +262,9 @@ margin-top: 0px;
 *:focus::-moz-placeholder {opacity: 0;} /* FF 19-50 */
 *:focus:-ms-input-placeholder {opacity: 0;} /* IE 10+ */
 *:focus::placeholder {opacity: 0;} /* Modern Browsers */
+
+
+
+
+
 
