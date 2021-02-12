@@ -70,14 +70,13 @@ input{
   --Generator_Panel_Width: calc(100% - 2*var(--Gap_Size));
   --Top_Offset: calc(var(--Top_Margin) + var(--Generator_Panel_Height) + var(--Gap_Size));
   margin-top: var(--Top_Offset);
-  height: 1000px;
+  /* height: 1000px; */
   width: var(--Generator_Panel_Width);
   background: rgb(20,20,20);  
-  border: 1px solid white;
 }
 
 #List_Panel_Wrapper > div{
-  border: 2px solid orange;
+  /* border: 2px solid orange; */
   
 }
 
@@ -236,19 +235,17 @@ margin-top: 0px;
   --Top_Margin: 60px;
 }
 
-/* #Add_Resistor_Button{
-  float: left;
-}
-
-#Add_Capacitor_Button{
-  float: right;
-} */
 }
 
 @media only screen and (max-width: 570px) {
 #Generator_Panel{
   margin-top: 60px;
 }
+
+.Input_Fields{
+  font-size: 10px;
+}
+
 }
 
 ::-webkit-input-placeholder {opacity: 1; -webkit-transition: opacity 0.5s; transition: opacity 0.5s;}  /* Chrome <=56, Safari < 10 */
@@ -262,6 +259,39 @@ margin-top: 0px;
 *:focus::-moz-placeholder {opacity: 0;} /* FF 19-50 */
 *:focus:-ms-input-placeholder {opacity: 0;} /* IE 10+ */
 *:focus::placeholder {opacity: 0;} /* Modern Browsers */
+
+.List_Sub_Panels{
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: center;
+}
+
+.Resistor_Component_Tiles{
+  display: flex;
+  border-radius: 8px;
+  --Tile_Width: 220px;
+  --Tile_Width_Relative_To_Viewport: 35vw;
+  width: min(var(--Tile_Width_Relative_To_Viewport),var(--Tile_Width));
+  height: min(calc((2/3)*var(--Tile_Width_Relative_To_Viewport)),calc(var(--Tile_Width)*2/3));
+  margin: 5px;
+  background-color: rgb(35,35,35);
+  box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
+}
+
+.Capacitor_Component_Tiles{
+  display: flex;
+  border-radius: 8px;
+  --Tile_Width: 220px;
+  --Tile_Width_Relative_To_Viewport: 35vw;
+  width: min(var(--Tile_Width_Relative_To_Viewport),var(--Tile_Width));
+  height: min(calc((2/3)*var(--Tile_Width_Relative_To_Viewport)),calc(var(--Tile_Width)*2/3));
+  margin: 5px;
+  background-color: rgb(35,35,35);
+  box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
+}
 
 
 
