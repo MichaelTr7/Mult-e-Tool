@@ -25,10 +25,11 @@ window.onload = function(){
   document.getElementsByClassName('Button_Labels')[1].addEventListener("mouseleave",Remove_Hovered_Button_Animation);
   document.getElementsByClassName('Add_Buttons')[0].addEventListener("click",Animate_Clicked_Buttons);
   document.getElementsByClassName('Add_Buttons')[1].addEventListener("click",Animate_Clicked_Buttons);
-  document.addEventListener("keydown",Guard_Against_Text_Inputs);
+  // document.addEventListener("keydown",Guard_Against_Text_Inputs);
 }
 
 function Guard_Against_Text_Inputs(e){
+  
   //Validating the keys are numerical,a decimal point or backspace/delete key
   var Valid_Keys = ["0","1","2","3","4","5","6","7","8","9",".","Backspace"];
   if(!Valid_Keys.includes(String(e.key))){
@@ -116,7 +117,7 @@ function Create_Resistor_Tile(Resistance_In_Ohms){
   
   // Evaluating resistor colour bands (4 band and 5 band)
   var Sub_Panel = document.getElementById('Resistor_Sub_Panel');
-  var New_Tile = document.createElement('div');
+  var New_Tile = document.createElement('li');
   New_Tile.classList.add('Resistor_Component_Tiles');
   var Left_Sub_Panel = document.getElementById("Resistor_Sub_Panel");
   Left_Sub_Panel.appendChild(New_Tile);
@@ -127,18 +128,18 @@ function Create_Capacitor_Tile(Capacitance_In_Farads){
   
   // Evaluating capacitor code
   var Sub_Panel = document.getElementById('Capacitor_Sub_Panel');
-  var New_Tile = document.createElement('div');
+  var New_Tile = document.createElement('li');
   New_Tile.classList.add('Capacitor_Component_Tiles');
   var Right_Sub_Panel = document.getElementById("Capacitor_Sub_Panel");
   Right_Sub_Panel.appendChild(New_Tile);
 }
 
 function Check_If_Resistor_Exists(){
-  
+  console.log("");
 }
 
 function Check_If_Capacitor_Exists(){  
-  
+  console.log("");
 }
 
 
