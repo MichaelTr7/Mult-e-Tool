@@ -1,6 +1,8 @@
 
 window.onload = function(){
+  
   var Top_Bar_Buttons = document.getElementsByClassName('Menu_Buttons');
+  
   for(Navigation_Button_Index = 0; Navigation_Button_Index < Top_Bar_Buttons.length; Navigation_Button_Index++){
       Top_Bar_Buttons[Navigation_Button_Index].addEventListener("click",Navigation_Button_Pressed);
       Top_Bar_Buttons[Navigation_Button_Index].addEventListener("mouseenter",Move_Pointer);
@@ -23,7 +25,6 @@ window.onload = function(){
   document.getElementsByClassName('Button_Labels')[1].addEventListener("mouseleave",Remove_Hovered_Button_Animation);
   document.getElementsByClassName('Add_Buttons')[0].addEventListener("click",Animate_Clicked_Buttons);
   document.getElementsByClassName('Add_Buttons')[1].addEventListener("click",Animate_Clicked_Buttons);
-  
 }
 
 function Toggle_Units(){
@@ -76,17 +77,34 @@ function Add_Resistor_To_List(){
   var Unit_String = String(document.getElementById('Resistor_Units_Toggle').innerHTML);
   var Resistor_Units_Bank = {"mΩ":"-3", "Ω":"0", "KΩ":"3", "MΩ":"6"};
   var Multiplier = 10**parseInt(Resistor_Units_Bank[Unit_String]);
-  console.log(Multiplier);
+  var Input_Resistance_Value = parseFloat(document.getElementById('Resistor_Value_Field').value);
+  if(String(Input_Resistance_Value) != "NaN"){
+    var Resistance_In_Ohms = parseFloat(Input_Resistance_Value*Multiplier);
+    Create_Resistor_Tile(Resistance_In_Ohms)
+  }
 }
 
 function Add_Capacitor_To_List(){
   var Unit_String = String(document.getElementById('Capacitor_Units_Toggle').innerHTML);
   var Capacitor_Units_Bank = {"pF":"-12", "nF":"-9", "µF":"-6", "mF":"-3", "F":"0"};
   var Multiplier = 10**parseInt(Capacitor_Units_Bank[Unit_String]);
-  console.log(Multiplier);
+  var Input_Capacitance_Value = parseFloat(document.getElementById('Capacitor_Value_Field').value);
+  if(String(Input_Capacitance_Value) != "NaN"){
+    var Capacitance_In_Farads = parseFloat(Input_Capacitance_Value*Multiplier);
+    Create_Capacitor_Tile(Capacitance_In_Farads);
+  }
+}
+
+function Create_Resistor_Tile(Resistance_In_Ohms){
+  console.log(Resistance_In_Ohms);
+
 }
 
 
+function Create_Capacitor_Tile(Capacitance_In_Farads){
+  console.log(Capacitance_In_Farads);
+
+}
 
 
 
