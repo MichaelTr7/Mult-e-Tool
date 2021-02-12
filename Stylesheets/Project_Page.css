@@ -274,7 +274,7 @@ input{
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  --Right_Padding: 7%;
+  --Right_Padding: 6%;
   --Top_Padding: 0px;
   height: calc(100% - var(--Top_Padding));
   width: calc(100% - var(--Right_Padding));
