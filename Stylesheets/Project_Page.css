@@ -89,9 +89,16 @@ input{
   font-size: 12px;
   /* color: rgb(0,197,185); */
   color: rgb(170,170,170);
-  border: none;
   background-color: rgb(20,20,20);
+  border: none;
   box-shadow: inset 2px 2px 3px 1px rgba(0,0,0,0.5), inset -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
+  transition: background-color 0.2s linear;
+}
+
+.Input_Fields:hover,.Unit_Toggle_Buttons:hover{
+  cursor: text;
+  transition: background-color;
+  background-color: rgb(35,35,35);
 }
 
 .Unit_Toggle_Buttons{
@@ -100,12 +107,18 @@ input{
   --Generator_Panel_Height: 100px;
   height: var(--Toggle_Height);
   width: var(--Toggle_Height);
+  color: rgb(170,170,170);
+  font-size: 25px;
   border-radius: 10px;
   border: none;
   background-color: rgb(20,20,20);
   box-shadow: inset 2px 2px 3px 1px rgba(0,0,0,0.5), inset -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
   margin-left: calc((var(--Generator_Panel_Height) - var(--Toggle_Height))/2);
   top: calc(50% - var(--Toggle_Height)/2);
+}
+
+.Unit_Toggle_Buttons:hover{
+  cursor: pointer;  
 }
 
 .Calculator_Labels{
@@ -119,10 +132,6 @@ input{
   margin-top: var(--Gap);
   font-size: 18px;
   text-shadow: 0 2px 2px rgba(0,0,0,0.5);
-}
-
-.Button_Wrappers{
-  /* background-color: cyan; */
 }
 
 .Add_Buttons{
@@ -140,10 +149,7 @@ input{
   color: white;
   box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), inset 1px 1px 0.5px 0px rgba(255,255,255,0.2);
   filter: brightness(0.9);
-}
-
-.Add_Buttons:hover{
-  cursor: pointer;
+  overflow: hidden;
 }
 
 #Add_Resistor_Button{
@@ -156,6 +162,50 @@ input{
   float: left;
   background: linear-gradient(90deg, #F77733 0%, #F75400 100%);
 }
+
+.Button_Labels{
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200%;
+  text-align: center;
+}
+
+.Slide_Label_Left{
+  animation: Left_Slide_Label_Keyframes 0.2s ease-out forwards;
+}
+
+.Slide_Label_Right{
+  animation: Left_Slide_Label_Keyframes 0.1s ease-out forwards;
+  animation-direction: reverse;
+}
+
+@keyframes Left_Slide_Label_Keyframes{
+  from{left: 0;}
+  to{left: -100%;}
+}
+
+.Add_Buttons,.Default_Labels,.Alternative_Labels:hover{
+  cursor: pointer;
+}
+
+.Default_Labels,.Alternative_Labels{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.Alternative_Labels{
+  font-size: 20px;
+}
+
 
 @media only screen and (max-width: 640px){
 #Left_Panel{
@@ -175,14 +225,6 @@ input{
 margin-top: 0px;
 }
 
-#Add_Resistor_Button{
-  float: right;
-}
-
-#Add_Capacitor_Button{
-  float: left;
-}
-
 }
 
 @media only screen and (max-width: 570px) {
@@ -190,4 +232,16 @@ margin-top: 0px;
   margin-top: 60px;
 }
 }
+
+::-webkit-input-placeholder {opacity: 1; -webkit-transition: opacity 0.5s; transition: opacity 0.5s;}  /* Chrome <=56, Safari < 10 */
+:-moz-placeholder {opacity: 1; -moz-transition: opacity 0.5s; transition: opacity 0.5s;} /* FF 4-18 */
+::-moz-placeholder {opacity: 1; -moz-transition: opacity 0.5s; transition: opacity 0.5s;} /* FF 19-51 */
+:-ms-input-placeholder {opacity: 1; -ms-transition: opacity 0.5s; transition: opacity 0.5s;} /* IE 10+ */
+::placeholder {opacity: 1; transition: opacity 0.5s;} /* Modern Browsers */
+   
+*:focus::-webkit-input-placeholder {opacity: 0;} /* Chrome <=56, Safari < 10 */
+*:focus:-moz-placeholder {opacity: 0;} /* FF 4-18 */
+*:focus::-moz-placeholder {opacity: 0;} /* FF 19-50 */
+*:focus:-ms-input-placeholder {opacity: 0;} /* IE 10+ */
+*:focus::placeholder {opacity: 0;} /* Modern Browsers */
 

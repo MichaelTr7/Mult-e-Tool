@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src = "../JavaScript/Navigation_Bar.js"></script>
     <script src = "../JavaScript/Sign_Up.js"></script>
+    <script src = "../JavaScript/Project_Page.js"></script>
     <link rel="stylesheet" href="../Stylesheets/Resistor_Calculator.css">
     <!-- <link rel="stylesheet" href="../Stylesheets/Highlight_Configuration.css"> -->
     <link rel="stylesheet" href="../Stylesheets/Top_Bar.css">
@@ -41,21 +42,31 @@
 <div id="Generator_Panel">
 <div id="Left_Panel">
   <label class="Calculator_Labels" for="">Resistor</label>
-<input class="Input_Fields" type="text" name="Resistor_Field" placeholder="Resistor Value Input">
-<button class="Unit_Toggle_Buttons" type="button" name="button"></button>
+<input id="Resistor_Value_Field" class="Input_Fields" type="text" name="Resistor_Field" placeholder="Resistor Value Input">
+<button id="Resistor_Units_Toggle" class="Unit_Toggle_Buttons" type="button" name="button">Ω</button>
 </div>
 <div id="Right_Panel">
   <label class="Calculator_Labels" for="">Capacitor</label>
-<input class="Input_Fields" type="text" name="Capacitor_Field" placeholder="Capacitor Value Input">
-<button class="Unit_Toggle_Buttons" type="button" name="button"></button>
+<input id="Capacitor_Value_Field" class="Input_Fields" type="text" name="Capacitor_Field" placeholder="Capacitor Value Input">
+<button id="Capacitor_Units_Toggle" class="Unit_Toggle_Buttons" type="button" name="button">F</button>
 </div>
 
 <div class="Button_Wrappers">
-  <button id="Add_Resistor_Button" class="Add_Buttons" type="button" name="button">Add Resistor</button>
+  <div id="Add_Resistor_Button" class="Add_Buttons">
+<div class="Button_Labels">
+  <div class="Default_Labels">Add Resistor</div>
+  <div class="Alternative_Labels">+</div>
+</div>
+  </div>
 </div>
 
 <div class="Button_Wrappers">
-<button id="Add_Capacitor_Button" class="Add_Buttons" type="button" name="button">Add Capacitor</button>
+<div id="Add_Capacitor_Button" class="Add_Buttons">
+<div class="Button_Labels">
+  <div class="Default_Labels">Add Capacitor</div>
+  <div class="Alternative_Labels">+</div>
+</div>
+</div>
 </div>
 
 </div>
