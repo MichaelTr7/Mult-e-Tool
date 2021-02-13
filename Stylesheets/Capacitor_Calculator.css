@@ -1,4 +1,10 @@
 
+body{
+  margin: 0px 20px 20px 20px;
+  background-color: rgb(20,20,20);
+  font-size: 100%;
+}
+
 .Digit_Buttons[disabled] {
     background-color: rgb(35,35,35);
     color: rgb(245,245,245);

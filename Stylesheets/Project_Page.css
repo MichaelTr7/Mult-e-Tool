@@ -1,3 +1,10 @@
+
+body{
+  margin: 0px 20px 20px 20px;
+  background-color: rgb(20,20,20);
+  font-size: 100%;
+}
+
 /*Disabling highlighting on tap throughout application*/
 *{
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
@@ -44,7 +51,7 @@ input{
 #Generator_Panel > div:nth-of-type(1),#Generator_Panel > div:nth-of-type(2){
   display: flex;
   /* grid-row: 1 / span 1; */
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: rgb(35,35,35);
   border: none;
   box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
@@ -72,12 +79,8 @@ input{
   margin-top: var(--Top_Offset);
   /* height: 1000px; */
   width: var(--Generator_Panel_Width);
-  background: rgb(20,20,20);  
-}
-
-#List_Panel_Wrapper > div{
-  /* border: 2px solid orange; */
-  
+  background: rgb(20,20,20);
+  padding-bottom: 50px; 
 }
 
 .Input_Fields{
@@ -236,21 +239,88 @@ input{
   display: grid;
   grid-template-columns: 1fr 8fr 8fr;
   grid-template-rows: 1fr 5fr;
-  border-radius: 8px;
+  border-radius: 10px;
   --Tile_Width: 220px;
   --Tile_Width_Relative_To_Viewport: 40vw;
   width: min(var(--Tile_Width_Relative_To_Viewport),var(--Tile_Width));
   height: min(calc((2/3)*var(--Tile_Width_Relative_To_Viewport)),calc(var(--Tile_Width)*2/3));
   margin: 5px;
   background-color: rgb(35,35,35);
-  box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15);
+  /* box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.5), -0.2px -0.2px 0.4px 0.8px rgba(255,255,255,0.15); */
 }
 
-.Preview_Images{
+.Capacitor_Previews,.Resistor_Previews{
+  grid-column: 1 / span 3;
   height: 100%;
   width: 100%;
+  /* background-color: red; */
   color: rgb(170,170,170);
   font-family: sans-serif;
+  background-repeat: no-repeat;
+}
+
+.Resistor_Previews{
+  background-size: 88%;
+  background-position: 51% 39%;
+  background-image: url('./Assets/Resistor Symbol.png');
+}
+
+.Resistor_Bands_Block{
+  position: relative;
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(10,1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 1px;
+  --Bands_Container_Height: 27%;
+  --Bands_Container_Width: 38.5%;
+  height: var(--Bands_Container_Height);
+  width: var(--Bands_Container_Width);
+  top: calc(50% - 7px - var(--Bands_Container_Height)/2);
+  left: calc(50% - var(--Bands_Container_Width)/2);
+  background-color: rgb(255,255,255,1);
+}
+
+.Bands{
+  background-color: red;
+}
+
+.Value_Band_1{
+  grid-column: 1 / span 1;
+}
+
+.Value_Band_2{
+  grid-column: 3 / span 1;
+}
+
+.Value_Band_3{
+  grid-column: 5 / span 1;
+}
+
+.Value_Band_4{
+  grid-column: 7 / span 1;
+}
+
+.Value_Band_5{
+  grid-column: 10 / span 1;
+}
+
+
+.Capacitor_Previews{
+  background-size: 40%;
+  background-position: 51% 0%;
+  background-image: url('./Assets/Capacitor_Symbol_2.png');
+}
+
+.Capacitor_Value_Labels{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  height: 42%;
+  font-weight: bold;
+  color: rgb(35,35,35);
+  width: 100%;
 }
 
 .Component_Type_Labels{
@@ -285,12 +355,7 @@ input{
   text-shadow: 0 2px 2px rgba(0,0,0,0.5);
 }
 
-.Preview_Images{
-  grid-column: 1 / span 2;
-  grid-row: 2 / span 1;
-}
-
-.Delete_Buttons{
+ .Dot_Button{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -320,6 +385,7 @@ input{
   .Add_Buttons{
   margin-top: 0px;
   }
+  
   #List_Panel_Wrapper{
     --Top_Margin: 60px;
   }
@@ -337,6 +403,7 @@ input{
   .Tile_Labels{
     font-size: 10px;
   }
+
 }
 
 

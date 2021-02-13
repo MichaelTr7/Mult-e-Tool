@@ -26,9 +26,9 @@ var LED_Light_Bar_1 = document.getElementsByClassName('LED_Light_Bar_1');
 for(LED_Index = 0; LED_Index < LED_Light_Bar_1.length; LED_Index++){
   LED_Light_Bar_1[LED_Index].classList.add('LED_Light_Bar_Active');
 }
-
-var Slide_Menu_Button = document.getElementsByClassName('Slide_Menu_Button')[0];
-Slide_Menu_Button.addEventListener("click",Slide_Menu_Button_Update);
+// 
+// var Slide_Menu_Button = document.getElementsByClassName('Slide_Menu_Button')[0];
+// Slide_Menu_Button.addEventListener("click",Slide_Menu_Button_Update);
 
 var Top_Bar_Buttons = document.getElementsByClassName('Menu_Buttons');
 for(Navigation_Button_Index = 0; Navigation_Button_Index < Top_Bar_Buttons.length; Navigation_Button_Index++){
@@ -38,11 +38,11 @@ for(Navigation_Button_Index = 0; Navigation_Button_Index < Top_Bar_Buttons.lengt
 var Add_To_Recents_Button = document.getElementsByClassName('Add_To_Recents_Button')[0];
 Add_To_Recents_Button.addEventListener("click",Add_To_Recents);
 
-var Top_Bar_Wrapper = document.getElementsByClassName('Top_Bar')[0];
-Top_Bar_Wrapper.addEventListener("mouseenter",Entered_Navigation_Bar);
-
-var Top_Bar_Wrapper = document.getElementsByClassName('Top_Bar')[0];
-Top_Bar_Wrapper.addEventListener("mouseleave",Left_Navigation_Bar);
+// var Top_Bar_Wrapper = document.getElementsByClassName('Top_Bar')[0];
+// Top_Bar_Wrapper.addEventListener("mouseenter",Entered_Navigation_Bar);
+// 
+// var Top_Bar_Wrapper = document.getElementsByClassName('Top_Bar')[0];
+// Top_Bar_Wrapper.addEventListener("mouseleave",Left_Navigation_Bar);
 
 var Add_To_Recents_Button = document.getElementsByClassName('Add_To_Recents_Button')[0];
 Add_To_Recents_Button.addEventListener("click",Save_To_Recents);

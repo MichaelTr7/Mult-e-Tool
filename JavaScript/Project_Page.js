@@ -8,15 +8,15 @@ window.onload = function(){
       Top_Bar_Buttons[Navigation_Button_Index].addEventListener("mouseenter",Move_Pointer);
   }
 
-  var Slide_Menu_Button = document.getElementsByClassName('Slide_Menu_Button')[0];
-  Slide_Menu_Button.addEventListener("click",Slide_Menu_Button_Update);
-
-  var Top_Bar_Wrapper = document.getElementsByClassName('Top_Bar')[0];
-  Top_Bar_Wrapper.addEventListener("mouseenter",Entered_Navigation_Bar);
-
-  var Top_Bar_Wrapper = document.getElementsByClassName('Top_Bar')[0];
-  Top_Bar_Wrapper.addEventListener("mouseleave",Left_Navigation_Bar);
-  
+  // var Slide_Menu_Button = document.getElementsByClassName('Slide_Menu_Button')[0];
+  // Slide_Menu_Button.addEventListener("click",Slide_Menu_Button_Update);
+  // 
+  // var Top_Bar_Wrapper = document.getElementsByClassName('Top_Bar')[0];
+  // Top_Bar_Wrapper.addEventListener("mouseenter",Entered_Navigation_Bar);
+  // 
+  // var Top_Bar_Wrapper = document.getElementsByClassName('Top_Bar')[0];
+  // Top_Bar_Wrapper.addEventListener("mouseleave",Left_Navigation_Bar);
+  // 
   document.getElementsByClassName('Unit_Toggle_Buttons')[0].addEventListener("click",Toggle_Units);
   document.getElementsByClassName('Unit_Toggle_Buttons')[1].addEventListener("click",Toggle_Units);
   document.getElementsByClassName('Button_Labels')[0].addEventListener("mouseenter",Animate_Hovered_Button);
@@ -121,6 +121,43 @@ function Create_Resistor_Tile(Resistance_In_Ohms){
   New_Tile.classList.add('Resistor_Component_Tiles');
   var Left_Sub_Panel = document.getElementById("Resistor_Sub_Panel");
   Left_Sub_Panel.appendChild(New_Tile);
+  
+  //Appending dot symbol to tile
+  var Dot_Symbol = document.createElement('div');
+  Dot_Symbol.classList.add('Dot_Button');
+  Dot_Symbol.classList.add('Tile_Labels');
+  Dot_Symbol.innerHTML = "⦿";
+  New_Tile.appendChild(Dot_Symbol);
+  
+  //Appending component label to tile
+  var Component_Label = document.createElement('div');
+  Component_Label.classList.add('Component_Type_Labels');
+  Component_Label.classList.add('Tile_Labels');
+  Component_Label.innerHTML = "Resistor";
+  New_Tile.appendChild(Component_Label);
+  
+  //Appending value label to tile
+  var Component_Value_Label = document.createElement('div');
+  Component_Value_Label.classList.add('Component_Value_Labels');
+  Component_Value_Label.classList.add('Tile_Labels');
+  Component_Value_Label.innerHTML = "10KΩ";
+  New_Tile.appendChild(Component_Value_Label);
+  
+  //Appending resistor preview image to tile
+  var Resistor_Preview = document.createElement('div');
+  Resistor_Preview.classList.add('Resistor_Previews');
+  New_Tile.appendChild(Resistor_Preview);
+  
+  //Appending resistor band containers to the resistor preview
+  var Bands_Container = document.createElement('div');
+  Bands_Container.classList.add('Resistor_Bands_Block');
+  Resistor_Preview.appendChild(Bands_Container);
+  
+  //Appending div resistor bands to the resistor bands container
+  
+  
+  
+  
 }
 
 function Create_Capacitor_Tile(Capacitance_In_Farads){
@@ -130,8 +167,42 @@ function Create_Capacitor_Tile(Capacitance_In_Farads){
   var Sub_Panel = document.getElementById('Capacitor_Sub_Panel');
   var New_Tile = document.createElement('li');
   New_Tile.classList.add('Capacitor_Component_Tiles');
+  New_Tile.classList.add('Capacitor_Preview');
   var Right_Sub_Panel = document.getElementById("Capacitor_Sub_Panel");
-  Right_Sub_Panel.appendChild(New_Tile);
+  Right_Sub_Panel.appendChild(New_Tile);  
+  
+  //Appending dot symbol to tile
+  var Dot_Symbol = document.createElement('div');
+  Dot_Symbol.classList.add('Dot_Button');
+  Dot_Symbol.classList.add('Tile_Labels');
+  Dot_Symbol.innerHTML = "⦿";
+  New_Tile.appendChild(Dot_Symbol);
+  
+  //Appending component label to tile
+  var Component_Label = document.createElement('div');
+  Component_Label.classList.add('Component_Type_Labels');
+  Component_Label.classList.add('Tile_Labels');
+  Component_Label.innerHTML = "Capacitor";
+  New_Tile.appendChild(Component_Label);
+  
+  //Appending value label to tile
+  var Component_Value_Label = document.createElement('div');
+  Component_Value_Label.classList.add('Component_Value_Labels');
+  Component_Value_Label.classList.add('Tile_Labels');
+  Component_Value_Label.innerHTML = "1F";
+  New_Tile.appendChild(Component_Value_Label);
+  
+  //Appending capacitor preview image to tile
+  var Capacitor_Preview = document.createElement('div');
+  Capacitor_Preview.classList.add('Capacitor_Previews');
+  New_Tile.appendChild(Capacitor_Preview);
+  
+  //Appending div label to the capacitor preview div
+  var Capacitor_Value_Label = document.createElement('div');
+  Capacitor_Value_Label.classList.add('Capacitor_Value_Labels');
+  Capacitor_Value_Label.innerHTML = "104M";
+  Capacitor_Preview.appendChild(Capacitor_Value_Label);
+  
 }
 
 function Check_If_Resistor_Exists(){
