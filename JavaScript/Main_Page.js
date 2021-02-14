@@ -31,7 +31,7 @@ window.onload = function(){
 
 function Launch_Webapp(){
   var Webapp_Index = parseInt(document.getElementById(this.id).value) - 1;
-  var Webapp_Pages = ["./Resistor_Calculator.html","./Digital_Logic_Gates.html","../index.html","./Capacitor_Calculator.html","./Resistor_List_Maker.html"];
+  var Webapp_Pages = ["../index.html","./Pages/Resistor_Calculator.html","./Pages/Digital_Logic_Gates.html","./Pages/Capacitor_Calculator.html","./Pages/Resistor_List_Maker.html"];
   var Webapp_Link = Webapp_Pages[Webapp_Index];
   window.location.href = Webapp_Link;
 }
