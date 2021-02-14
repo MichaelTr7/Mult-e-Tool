@@ -8,15 +8,6 @@ window.onload = function(){
       Top_Bar_Buttons[Navigation_Button_Index].addEventListener("mouseenter",Move_Pointer);
   }
 
-  // var Slide_Menu_Button = document.getElementsByClassName('Slide_Menu_Button')[0];
-  // Slide_Menu_Button.addEventListener("click",Slide_Menu_Button_Update);
-  // 
-  // var Top_Bar_Wrapper = document.getElementsByClassName('Top_Bar')[0];
-  // Top_Bar_Wrapper.addEventListener("mouseenter",Entered_Navigation_Bar);
-  // 
-  // var Top_Bar_Wrapper = document.getElementsByClassName('Top_Bar')[0];
-  // Top_Bar_Wrapper.addEventListener("mouseleave",Left_Navigation_Bar);
-  // 
   document.getElementsByClassName('Unit_Toggle_Buttons')[0].addEventListener("click",Toggle_Units);
   document.getElementsByClassName('Unit_Toggle_Buttons')[1].addEventListener("click",Toggle_Units);
   document.getElementsByClassName('Button_Labels')[0].addEventListener("mouseenter",Animate_Hovered_Button);
@@ -25,6 +16,7 @@ window.onload = function(){
   document.getElementsByClassName('Button_Labels')[1].addEventListener("mouseleave",Remove_Hovered_Button_Animation);
   document.getElementsByClassName('Add_Buttons')[0].addEventListener("click",Animate_Clicked_Buttons);
   document.getElementsByClassName('Add_Buttons')[1].addEventListener("click",Animate_Clicked_Buttons);
+  // document.getElementsByClassName('Delete_Button').addEventListener("click",Delete_Component_Tile);
   // document.addEventListener("keydown",Guard_Against_Text_Inputs);
 }
 
@@ -113,7 +105,7 @@ function Add_Capacitor_To_List(){
 }
 
 function Create_Resistor_Tile(Resistance_In_Ohms){
-  console.log(Resistance_In_Ohms);
+  Create_Resistor_Diagram_Properties(Resistance_In_Ohms);
   
   // Evaluating resistor colour bands (4 band and 5 band)
   var Sub_Panel = document.getElementById('Resistor_Sub_Panel');
@@ -123,12 +115,13 @@ function Create_Resistor_Tile(Resistance_In_Ohms){
   Left_Sub_Panel.appendChild(New_Tile);
   
   //Appending dot symbol to tile
-  var Dot_Symbol = document.createElement('div');
-  Dot_Symbol.classList.add('Dot_Button');
-  Dot_Symbol.classList.add('Tile_Labels');
-  Dot_Symbol.innerHTML = "⦿";
-  New_Tile.appendChild(Dot_Symbol);
-  
+  var Delete_Symbol = document.createElement('div');
+  Delete_Symbol.classList.add('Delete_Button');
+  Delete_Symbol.classList.add('Tile_Labels');
+  Delete_Symbol.innerHTML = "⊗";
+  New_Tile.appendChild(Delete_Symbol);
+  Delete_Symbol.addEventListener("click",Delete_Component_Tile);
+
   //Appending component label to tile
   var Component_Label = document.createElement('div');
   Component_Label.classList.add('Component_Type_Labels');
@@ -154,14 +147,20 @@ function Create_Resistor_Tile(Resistance_In_Ohms){
   Resistor_Preview.appendChild(Bands_Container);
   
   //Appending div resistor bands to the resistor bands container
-  
-  
-  
-  
+  for(Resistor_Band = 1; Resistor_Band <= 5; Resistor_Band++){
+    var New_Band = document.createElement('div');
+    New_Band.classList.add('Bands');
+    var Grid_Column = parseInt(2*(Resistor_Band-1) + 1);
+    if(Grid_Column == 9){
+      Grid_Column = 10;
+    }
+    New_Band.style.gridColumn = Grid_Column;
+    Bands_Container.appendChild(New_Band);
+  }  
 }
 
 function Create_Capacitor_Tile(Capacitance_In_Farads){
-  console.log(Capacitance_In_Farads);
+  Create_Capacitor_Diagram_Properties(Capacitance_In_Farads);
   
   // Evaluating capacitor code
   var Sub_Panel = document.getElementById('Capacitor_Sub_Panel');
@@ -172,12 +171,13 @@ function Create_Capacitor_Tile(Capacitance_In_Farads){
   Right_Sub_Panel.appendChild(New_Tile);  
   
   //Appending dot symbol to tile
-  var Dot_Symbol = document.createElement('div');
-  Dot_Symbol.classList.add('Dot_Button');
-  Dot_Symbol.classList.add('Tile_Labels');
-  Dot_Symbol.innerHTML = "⦿";
-  New_Tile.appendChild(Dot_Symbol);
-  
+  var Delete_Symbol = document.createElement('div');
+  Delete_Symbol.classList.add('Delete_Button');
+  Delete_Symbol.classList.add('Tile_Labels');
+  Delete_Symbol.innerHTML = "⊗";
+  New_Tile.appendChild(Delete_Symbol);
+  Delete_Symbol.addEventListener("click",Delete_Component_Tile);
+
   //Appending component label to tile
   var Component_Label = document.createElement('div');
   Component_Label.classList.add('Component_Type_Labels');
@@ -205,15 +205,29 @@ function Create_Capacitor_Tile(Capacitance_In_Farads){
   
 }
 
-function Check_If_Resistor_Exists(){
-  console.log("");
+function Create_Resistor_Diagram_Properties(Resistance_In_Ohms){
+  // console.log(Resistance_In_Ohms);
+  var Input_Value = String(document.getElementById('Resistor_Value_Field').value);
+  var Unit_Symbol = String(document.getElementById('Resistor_Units_Toggle').innerHTML);
+  var Resistance_String = Input_Value + Unit_Symbol;
+  console.log(Resistance_String);
+
 }
 
-function Check_If_Capacitor_Exists(){  
-  console.log("");
+function Create_Capacitor_Diagram_Properties(Capacitance_In_Farads){
+  // console.log(Capacitance_In_Farads);
+  var Input_Value = String(document.getElementById('Capacitor_Value_Field').value);
+  var Unit_Symbol = String(document.getElementById('Capacitor_Units_Toggle').innerHTML);
+  var Capacitance_String = Input_Value + Unit_Symbol;
+  console.log(Capacitance_String);
+  
 }
 
-
+function Delete_Component_Tile(){
+  console.log(this);
+  
+  
+}
 
 
 

@@ -261,7 +261,7 @@ input{
 
 .Resistor_Previews{
   background-size: 88%;
-  background-position: 51% 39%;
+  background-position: 51% 40%;
   background-image: url('./Assets/Resistor Symbol.png');
 }
 
@@ -278,11 +278,13 @@ input{
   width: var(--Bands_Container_Width);
   top: calc(50% - 7px - var(--Bands_Container_Height)/2);
   left: calc(50% - var(--Bands_Container_Width)/2);
-  background-color: rgb(255,255,255,1);
+  /* background-color: rgb(255,255,255,1); */
 }
 
 .Bands{
-  background-color: red;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 1px;
+  box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.4), inset 1px 1px 1px 0px rgba(255,255,255,0.1);
 }
 
 .Value_Band_1{
@@ -355,7 +357,7 @@ input{
   text-shadow: 0 2px 2px rgba(0,0,0,0.5);
 }
 
- .Dot_Button{
+ .Delete_Button{
   display: flex;
   align-items: center;
   justify-content: center;
