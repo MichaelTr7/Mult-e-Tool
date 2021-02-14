@@ -8,6 +8,10 @@ window.onload = function(){
       Top_Bar_Buttons[Navigation_Button_Index].addEventListener("mouseenter",Move_Pointer);
   }
 
+  var Slide_Menu_Button = document.getElementsByClassName('Slide_Menu_Button')[0];
+  Slide_Menu_Button.addEventListener("click",Slide_Menu_Button_Update);
+  
+
   document.getElementsByClassName('Unit_Toggle_Buttons')[0].addEventListener("click",Toggle_Units);
   document.getElementsByClassName('Unit_Toggle_Buttons')[1].addEventListener("click",Toggle_Units);
   document.getElementsByClassName('Button_Labels')[0].addEventListener("mouseenter",Animate_Hovered_Button);
@@ -210,7 +214,8 @@ function Create_Resistor_Diagram_Properties(Resistance_In_Ohms){
   var Unit_Symbol = String(document.getElementById('Resistor_Units_Toggle').innerHTML);
   var Resistance_String = Input_Value + Unit_Symbol;
   //Compute resistor band colours
-   
+  
+  
 
   return{
     Label: Resistance_String,
@@ -223,6 +228,7 @@ function Create_Capacitor_Diagram_Properties(Capacitance_In_Farads){
   var Unit_Symbol = String(document.getElementById('Capacitor_Units_Toggle').innerHTML);
   var Capacitance_String = Input_Value + Unit_Symbol;
   //Compute capacitor code value
+  
   
   
   return{

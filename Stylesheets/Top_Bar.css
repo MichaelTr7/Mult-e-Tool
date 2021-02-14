@@ -2,7 +2,7 @@
 .Top_Bar{
   position: fixed;
   display: grid;
-  grid-template-columns: repeat(5,1fr);
+  grid-template-columns: repeat(4,1fr);
   grid-gap: 1%;
   background-color: rgb(20,20,20);
   padding: 6px 0px 6px 0px;
