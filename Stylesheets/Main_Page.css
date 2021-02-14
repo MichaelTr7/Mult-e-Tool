@@ -364,7 +364,7 @@ body{
   }
 }
 
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 820px){
   .Large_Support_Labels{
     font-size: 8vw;
     width: 100vw;
