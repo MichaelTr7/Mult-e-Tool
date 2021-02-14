@@ -105,8 +105,8 @@ function Add_Capacitor_To_List(){
 }
 
 function Create_Resistor_Tile(Resistance_In_Ohms){
-  Create_Resistor_Diagram_Properties(Resistance_In_Ohms);
-  
+  var Properties = Create_Resistor_Diagram_Properties(Resistance_In_Ohms);
+
   // Evaluating resistor colour bands (4 band and 5 band)
   var Sub_Panel = document.getElementById('Resistor_Sub_Panel');
   var New_Tile = document.createElement('li');
@@ -133,7 +133,7 @@ function Create_Resistor_Tile(Resistance_In_Ohms){
   var Component_Value_Label = document.createElement('div');
   Component_Value_Label.classList.add('Component_Value_Labels');
   Component_Value_Label.classList.add('Tile_Labels');
-  Component_Value_Label.innerHTML = "10KΩ";
+  Component_Value_Label.innerHTML = String(Properties.Label);
   New_Tile.appendChild(Component_Value_Label);
   
   //Appending resistor preview image to tile
@@ -160,8 +160,8 @@ function Create_Resistor_Tile(Resistance_In_Ohms){
 }
 
 function Create_Capacitor_Tile(Capacitance_In_Farads){
-  Create_Capacitor_Diagram_Properties(Capacitance_In_Farads);
-  
+  var Properties = Create_Capacitor_Diagram_Properties(Capacitance_In_Farads);
+
   // Evaluating capacitor code
   var Sub_Panel = document.getElementById('Capacitor_Sub_Panel');
   var New_Tile = document.createElement('li');
@@ -189,7 +189,7 @@ function Create_Capacitor_Tile(Capacitance_In_Farads){
   var Component_Value_Label = document.createElement('div');
   Component_Value_Label.classList.add('Component_Value_Labels');
   Component_Value_Label.classList.add('Tile_Labels');
-  Component_Value_Label.innerHTML = "1F";
+  Component_Value_Label.innerHTML = String(Properties.Label);
   New_Tile.appendChild(Component_Value_Label);
   
   //Appending capacitor preview image to tile
@@ -206,21 +206,29 @@ function Create_Capacitor_Tile(Capacitance_In_Farads){
 }
 
 function Create_Resistor_Diagram_Properties(Resistance_In_Ohms){
-  // console.log(Resistance_In_Ohms);
   var Input_Value = String(document.getElementById('Resistor_Value_Field').value);
   var Unit_Symbol = String(document.getElementById('Resistor_Units_Toggle').innerHTML);
   var Resistance_String = Input_Value + Unit_Symbol;
-  console.log(Resistance_String);
+  //Compute resistor band colours
+   
 
+  return{
+    Label: Resistance_String,
+    Sub_Label: Resistance_In_Ohms
+  };
 }
 
 function Create_Capacitor_Diagram_Properties(Capacitance_In_Farads){
-  // console.log(Capacitance_In_Farads);
   var Input_Value = String(document.getElementById('Capacitor_Value_Field').value);
   var Unit_Symbol = String(document.getElementById('Capacitor_Units_Toggle').innerHTML);
   var Capacitance_String = Input_Value + Unit_Symbol;
-  console.log(Capacitance_String);
+  //Compute capacitor code value
   
+  
+  return{
+    Label: Capacitance_String,
+    Sub_Label: Capacitance_In_Farads
+  };
 }
 
 function Delete_Component_Tile(){
@@ -228,14 +236,5 @@ function Delete_Component_Tile(){
   
   
 }
-
-
-
-
-
-
-
-
-
 
 
