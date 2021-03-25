@@ -1,6 +1,6 @@
- [<img src="./Preview Images/Mult_E_Tool_Favicon.png" width = "50">](https://michaeltr7.github.io/Mult-e-Kit/index.html)
+ [<img src="./Preview Images/Mult_E_Tool_Favicon.png" width = "50">](https://michaeltr7.github.io/Mult-e-Tool/)
  
- # [Mult-e-Tool](https://michaeltr7.github.io/Mult-e-Kit/index.html)
+ # [Mult-e-Tool](https://michaeltr7.github.io/Mult-e-Tool/)
 
 [<img src="./Preview Images/Launch Page.png" width = "1000">](https://michaeltr7.github.io/Mult-e-Kit/index.html)
  
