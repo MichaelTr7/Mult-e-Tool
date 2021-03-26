@@ -1,5 +1,7 @@
 window.onload = function(){
 
+  Adjust_Mobile_Menu();  
+
   var Top_Bar_Buttons = document.getElementsByClassName('Menu_Buttons');
   for(Navigation_Button_Index = 0; Navigation_Button_Index < Top_Bar_Buttons.length; Navigation_Button_Index++){
       Top_Bar_Buttons[Navigation_Button_Index].addEventListener("click",Navigation_Button_Pressed);
@@ -50,10 +52,7 @@ window.onload = function(){
   for(Button_Index = 0; Button_Index < Style_Toggle_Buttons.length; Button_Index++){
     Style_Toggle_Buttons[Button_Index].addEventListener("click",Toggle_Style);
   }
-  
-  
-  Adjust_Mobile_Menu();  
-  
+    
   // Logic gates initial states
   document.getElementById('NAND_Output').classList.add('LED_ON');
   document.getElementById('NOR_Output').classList.add('LED_ON');

@@ -1,6 +1,8 @@
 
 window.onload = function(){
 
+  Adjust_Mobile_Menu();
+
   var Top_Bar_Buttons = document.getElementsByClassName('Menu_Buttons');
   for(Navigation_Button_Index = 0; Navigation_Button_Index < Top_Bar_Buttons.length; Navigation_Button_Index++){
       Top_Bar_Buttons[Navigation_Button_Index].addEventListener("click",Navigation_Button_Pressed);
@@ -21,8 +23,6 @@ window.onload = function(){
   Launch_Buttons[Index].addEventListener("click",Launch_Webapp);
   }
   
-  Adjust_Mobile_Menu();
-
   const Launch_Rows = document.querySelectorAll("section");
   const options = {threshold: 0.7};
   let Scroll_Observer = new IntersectionObserver(Scroll_Check,options);

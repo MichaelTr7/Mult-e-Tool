@@ -1,4 +1,7 @@
 window.onload = function(){
+  
+  Adjust_Mobile_Menu_2();
+  
   var Top_Bar_Buttons = document.getElementsByClassName('Menu_Buttons');
   for(Navigation_Button_Index = 0; Navigation_Button_Index < Top_Bar_Buttons.length; Navigation_Button_Index++){
       Top_Bar_Buttons[Navigation_Button_Index].addEventListener("click",Navigation_Button_Pressed);
@@ -42,10 +45,7 @@ window.onload = function(){
     Code_Inputs[Code_Index].addEventListener("mouseleave",Unhighlight);
     Value_Inputs[Code_Index].addEventListener("mouseenter",Highlight);
     Value_Inputs[Code_Index].addEventListener("mouseleave",Unhighlight);
-  }  
-  
-  Adjust_Mobile_Menu_2();
-    
+  }      
   
 }
 
