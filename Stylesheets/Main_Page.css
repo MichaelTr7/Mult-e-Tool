@@ -507,7 +507,6 @@ body{
 
 @keyframes Pulse_Keyframes{
   0%{transform: translateY(50vh) scale(0.25); opacity: 0;}
-  50%{transform: scale(0.25);}
   100%{transform: translateY(-0.2vh) scale(0.25); opacity: 1;}
 }
 
