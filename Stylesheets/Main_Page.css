@@ -81,7 +81,7 @@ body{
   width: min(180vh,180vw);
   left: calc(50.1vw - min(90vh,90vw));
   transform: scale(0.25);
-  animation: Pulse_Keyframes 1s ease; 
+  animation: Pulse_Keyframes 1s ease forwards; 
 }
 
 #Hero_Page_Label{
