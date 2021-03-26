@@ -2,8 +2,8 @@
   "name": "Mult-e-Tool",
   "short_name": "Mult-e-Tool",
   "start_url": ".",
-  "background-color": "#141414",
-  "theme-color": "#141414",
+  "background_color": "#141414",
+  "theme_color": "#141414",
   "display": "standalone",
   "icons":[
     {
@@ -16,6 +16,5 @@
       "sizes": "1024x1024",
       "type": "image/png"
     }  
-  ]  
-  
+  ]   
 }
