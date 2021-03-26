@@ -1,7 +1,8 @@
 {
   "name": "Mult-e-Tool",
   "short_name": "Mult-e-Tool",
-  "start_url": "./index.html",
+  "start_url": ".",
   "background-color": "#141414",
-  "theme-color": "#141414"
+  "theme-color": "#141414",
+  "display": "standalone"
 }
