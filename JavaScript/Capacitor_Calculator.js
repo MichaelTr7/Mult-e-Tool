@@ -1,5 +1,4 @@
 window.onload = function(){
-  
   Adjust_Mobile_Menu_2();
   Check_Bounding_Box();
 
