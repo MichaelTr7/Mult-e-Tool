@@ -1,7 +1,8 @@
 window.onload = function(){
   
   Adjust_Mobile_Menu_2();
-  
+  Check_Bounding_Box();
+
   var Top_Bar_Buttons = document.getElementsByClassName('Menu_Buttons');
   for(Navigation_Button_Index = 0; Navigation_Button_Index < Top_Bar_Buttons.length; Navigation_Button_Index++){
       Top_Bar_Buttons[Navigation_Button_Index].addEventListener("click",Navigation_Button_Pressed);
@@ -388,6 +389,25 @@ function Field_Clicked(){
   Text_Field.focus();
   Text_Field.selectionStart = Text_Field.selectionEnd = 1;
 }
+
+function Check_Bounding_Box(){
+    let Capacitor_Digit_1 = document.getElementById('Digit_Button_1');
+    let Capacitor_Digit_2 = document.getElementById('Digit_Button_2');
+    
+    let Right_Constraint = Capacitor_Digit_1.getBoundingClientRect().right;
+    let Left_Constraint = Capacitor_Digit_2.getBoundingClientRect().left;
+    
+    console.log(Right_Constraint);
+    if(Right_Constraint >= Left_Constraint){
+        var Mobile_Menu = document.getElementsByClassName('Slide_Menu_Button')[0];
+        Mobile_Menu.classList.add('Slide_Menu_Button_Mobile');
+        var Digit_Buttons = document.getElementsByClassName('Digit_Buttons');
+        for(Button_Index = 0; Button_Index < Digit_Buttons.length; Button_Index++){
+        Digit_Buttons[Button_Index].classList.add('Digit_Buttons_Mobile_Configuration');    
+        }
+    } 
+}
+
 
 
  
