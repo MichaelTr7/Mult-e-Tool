@@ -17,7 +17,7 @@
 <a href="https://michaeltr7.github.io/Mult-e-Tool/Pages/Capacitor_Calculator.html"><img src="./QR Codes/Capacitor QR Code.png" width="25%"></a>
 </p>
 
-<p align="center">Press any image to directly launch the web-app.</p>
+<h4 align="center">Press any image to directly launch the web-app.</h4>
 <br>
 
 ## [Resistor Calculator](https://michaeltr7.github.io/Mult-e-Tool/Pages/Resistor_Calculator.html)
