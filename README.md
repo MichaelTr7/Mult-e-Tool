@@ -10,6 +10,13 @@
 • [Capacitor Calculator](https://michaeltr7.github.io/Mult-e-Tool/Pages/Capacitor_Calculator.html)<br>
 • [Interactive Digital Logic Gates Tool](https://michaeltr7.github.io/Mult-e-Tool/Pages/Digital_Logic_Gates.html)<br>
 
+<h3>Mult-e-Tool QR Links</h3>
+<p align="center">
+<a href="https://michaeltr7.github.io/Mult-e-Tool/Pages/Resistor_Calculator.html"><img src="./QR Codes/Resistor QR Code.png" width="25%"></a>
+<a href="https://michaeltr7.github.io/Mult-e-Tool/Pages/Digital_Logic_Gates.html"><img src="./QR Codes/Digital Logic Gates QR Code.png" width="25%"></a>
+<a href="https://michaeltr7.github.io/Mult-e-Tool/Pages/Capacitor_Calculator.html"><img src="./QR Codes/Capacitor QR Code.png" width="25%"></a>
+</p>
+
 Press any image to directly launch the web-app.
 <br>
 
