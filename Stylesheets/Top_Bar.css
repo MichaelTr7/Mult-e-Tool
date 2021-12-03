@@ -65,12 +65,12 @@
   left: 9.2%; 
   margin-bottom: -20px;
   padding-bottom: 2px;
-  background-color: rgb(20,20,20);
+  background-color: rgba(0,0,0,0);
   border-left: 9px solid rgb(20,20,20);
   border-right: 9px solid rgb(20,20,20);
   border-bottom: 9px solid rgb(20,20,20);
   transition: border-bottom 0.4s, left 0.5s ease-out;
-
+  display: none;
 }
 
 
